@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18018535, g: 0.22559482, b: 0.30677685, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1291,7 +1291,6 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
-  m_HasMigratedActions: 1
 --- !u!1 &471045078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,6 +1907,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1900725528}
   - component: {fileID: 1900725527}
+  - component: {fileID: 1900725529}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -1992,6 +1992,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1900725529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900725526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &1938221883
 GameObject:
   m_ObjectHideFlags: 0
@@ -2366,8 +2386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd22d1599cd9431ba59d2fd96b09cd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Open: 0
-  m_Animator: {fileID: 3478918882438729133}
 --- !u!95 &3478918882438729133
 Animator:
   serializedVersion: 5
@@ -2422,9 +2440,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e9e04aaf299f4022b526651a7bd4284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetScene: {fileID: 102900000, guid: 1bba4cece25a3458f8d2983b1cd85e83, type: 3}
-  _targetSceneName: Home
-  _stopSubsystems: 0
 --- !u!95 &3478918883822985354
 Animator:
   serializedVersion: 5
@@ -2458,8 +2473,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1561dbca3fb743ffbb4de1a52c23683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textFile: {fileID: 4900000, guid: 5adf8e3cd7b3740e9821be86fed913b7, type: 3}
-  uiTextBox: {fileID: 7223194441861925429}
 --- !u!114 &3478918883822985358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2472,8 +2485,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd22d1599cd9431ba59d2fd96b09cd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Open: 0
-  m_Animator: {fileID: 3478918883822985354}
 --- !u!222 &3678687881128105549
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2759,10 +2770,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb5f1c49293fa4f0cb01b0a1a1da46d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeSprite: {fileID: 3286163911610860551, guid: 21ac38c86bb5b408f9f091f34778c046, type: 3}
-  inactiveSprite: {fileID: 3286163911610860551, guid: 8d07141bb4bd74ca799794b539cf3206, type: 3}
-  targetButton: {fileID: 6743708397272642128}
-  animatorState: {fileID: 3478918882438729130}
 --- !u!1 &4744171188833737416
 GameObject:
   m_ObjectHideFlags: 0
@@ -3269,10 +3276,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6723877d2ed874f0bbab94d834b7b7fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LogEntryFontSize: 48
-  MaxLogCount: 100
-  LogHistory: {fileID: 5577709228637402661}
-  LogEntryPrefab: {fileID: 114082109570920010, guid: 728f0293d5062462bbdb3c51cdba5d35, type: 3}
 --- !u!114 &5577619187413085905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3615,7 +3618,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3637,7 +3640,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.00012207031}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -600}
   m_Pivot: {x: 0, y: 0}
 --- !u!224 &5759685604884879355
 RectTransform:
@@ -3912,7 +3915,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &7347810163881963584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3925,9 +3928,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ecb1b66c4774ff58f26be6ce7448a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ui_buttons:
-  - {fileID: 4728462129350821422}
-  - {fileID: 7949133231838622223}
 --- !u!224 &7391707832326734010
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4092,10 +4092,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb5f1c49293fa4f0cb01b0a1a1da46d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeSprite: {fileID: 3286163911610860551, guid: 4f02cdd498f944568ab2032807d474e4, type: 3}
-  inactiveSprite: {fileID: 3286163911610860551, guid: 540cdd998704e495cb42a557a61d8f55, type: 3}
-  targetButton: {fileID: 6612705662968466086}
-  animatorState: {fileID: 3478918883822985358}
 --- !u!1 &8038341466907298591
 GameObject:
   m_ObjectHideFlags: 0
