@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6276b119b5ba13d46ab434a8f1e22875, type: 3}
+  m_Name: Aloha Waters
+  m_EditorClassIdentifier: 
+  areaName: Aloha Waters
+  areaColor: blue
+  _boundaries:
+  - _points:
+    - _latitude: 21.278669357299805
+      _longitude: -157.84007263183594
+    - _latitude: 21.281856536865234
+      _longitude: -157.83868408203125
+    - _latitude: 21.281253814697266
+      _longitude: -157.8372344970703
+    - _latitude: 21.279388427734375
+      _longitude: -157.8355255126953
+    - _latitude: 21.27800941467285
+      _longitude: -157.83351135253906
+    - _latitude: 21.278993606567383
+      _longitude: -157.83253479003906
+    - _latitude: 21.2777099609375
+      _longitude: -157.83070373535156
+    - _latitude: 21.27504539489746
+      _longitude: -157.82469177246094
+    - _latitude: 21.270809173583984
+      _longitude: -157.82237243652344
+    - _latitude: 21.268829345703125
+      _longitude: -157.82290649414062
+  areaEntities: []
+  hasBeenVisited: 0

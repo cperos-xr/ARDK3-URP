@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7744bd4690271f40af18b97ac959ea4, type: 3}
+  m_Name: MyHouse
+  m_EditorClassIdentifier: 
+  entityName: My House
+  interactionIndex: 0
+  interactions:
+  - name: Get Rat
+    maxInteractions: 1
+    itemDatas: []
+    quest: {fileID: 11400000, guid: 1b981ae416222564a9b5eda796157953, type: 2}
+    notification:
+      notificationHeading: Get a Rat
+      notificationContent: Here is a rat buddy just for you!
+      buttonText0: Rat
+      buttonText1: 
+      notificationIcon: {fileID: 21300000, guid: 465a4b4f09175f040b5dddeda97cd4f3,
+        type: 3}
+    interactionIsLocked: 0
+  gpsCoordinates:
+    _latitude: 21.293380737304688
+    _longitude: -157.83290100097656
+  interactionRadius: 40
+  associatedItems: []
+  _cubeGOP: {fileID: 5627000923223712069, guid: 7c04cc5b15881d242b85649876bc0588,
+    type: 3}

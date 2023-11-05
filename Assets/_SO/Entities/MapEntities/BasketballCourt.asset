@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7744bd4690271f40af18b97ac959ea4, type: 3}
+  m_Name: BasketballCourt
+  m_EditorClassIdentifier: 
+  entityName: 
+  interactionIndex: 0
+  interactions:
+  - name: Give Surf
+    maxInteractions: 1
+    itemDatas:
+    - {fileID: 11400000, guid: d9bdeba91f62e9240bba5d3c5f28c442, type: 2}
+    quest: {fileID: 0}
+    notification:
+      notificationHeading: Surfs Up
+      notificationContent: A pair of surfboards for you
+      buttonText0: Take board
+      buttonText1: 
+      notificationIcon: {fileID: 21300000, guid: 3d9fe46b3f542de4da9210e48d2868bb,
+        type: 3}
+    interactionIsLocked: 0
+  gpsCoordinates:
+    _latitude: 21.292984008789062
+    _longitude: -157.83152770996094
+  interactionRadius: 15
+  associatedItems: []
+  _cubeGOP: {fileID: 4933070141646594233, guid: 727ac21199e624d43bd19c399c363e16,
+    type: 3}

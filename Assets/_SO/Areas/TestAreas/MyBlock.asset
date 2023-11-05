@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6276b119b5ba13d46ab434a8f1e22875, type: 3}
+  m_Name: MyBlock
+  m_EditorClassIdentifier: 
+  areaName: My Block
+  areaColor: green
+  _boundaries:
+  - _points:
+    - _latitude: 21.29337707007171
+      _longitude: -157.83077368316862
+    - _latitude: 21.294578029246967
+      _longitude: -157.83417025415025
+    - _latitude: 21.29380681411999
+      _longitude: -157.8344904121449
+    - _latitude: 21.294206973417324
+      _longitude: -157.83594283621818
+    - _latitude: 21.292482642860953
+      _longitude: -157.8356539131498
+    - _latitude: 21.291071150474167
+      _longitude: -157.83168707750883
+  areaEntities:
+  - {fileID: 11400000, guid: 1071243610f7cfc49b8697b982b00dcd, type: 2}
+  - {fileID: 11400000, guid: 304ed44593c7e98459c2d8b577cdf8e9, type: 2}
+  - {fileID: 11400000, guid: de8900d1ee926444f93905e3354f0db0, type: 2}
+  hasBeenVisited: 1

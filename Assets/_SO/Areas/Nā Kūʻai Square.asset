@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6276b119b5ba13d46ab434a8f1e22875, type: 3}
+  m_Name: "N\u0101 K\u016B\u02BBai Square"
+  m_EditorClassIdentifier: 
+  areaName: "N\u0101 K\u016B\u02BBai Square"
+  areaColor: teal
+  _boundaries:
+  - _points:
+    - _latitude: 21.2777099609375
+      _longitude: -157.83070373535156
+    - _latitude: 21.279338836669922
+      _longitude: -157.8291778564453
+    - _latitude: 21.282302856445312
+      _longitude: -157.83094787597656
+    - _latitude: 21.28470230102539
+      _longitude: -157.82862854003906
+    - _latitude: 21.27433967590332
+      _longitude: -157.8160858154297
+    - _latitude: 21.27334976196289
+      _longitude: -157.8167724609375
+    - _latitude: 21.271568298339844
+      _longitude: -157.8227081298828
+    - _latitude: 21.27504539489746
+      _longitude: -157.82469177246094
+  areaEntities: []
+  hasBeenVisited: 0

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487a20b1cc9f0a2409d124fbd9ea3720, type: 3}
+  m_Name: Yellow Surfboard
+  m_EditorClassIdentifier: 
+  itemName: Yellow Surfboard
+  icon: {fileID: 21300000, guid: b067683c55bbb5640ba3586440951acb, type: 3}
+  isUsable: 0
+  isLocked: 0
+  isDuplicable: 1
+  healthRecovery: 12
+  playerNotifications:
+  - notificationHeading: Congratulations, you've obtained a {0}!
+    notificationContent: Congratulations, Adventurer! You've just acquired the {0},
+      a legendary artifact shrouded in mystery and imbued with unparalleled power.
+      Crafted by the ancient elves, this item has been sought after by heroes and
+      collectors alike throughout the ages.
+    buttonText0: Accept Item
+    buttonText1: 
+    notificationIcon: {fileID: 21300000, guid: b067683c55bbb5640ba3586440951acb, type: 3}
+  givenByEntityName: Basketball Court Center

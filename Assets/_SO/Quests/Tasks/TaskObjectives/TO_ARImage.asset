@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e38dcb7a01f32924fa6db358bf68651c, type: 3}
+  m_Name: TO_ARImage
+  m_EditorClassIdentifier: 
+  objectiveName: Scan Power Logo
+  objectiveDescription: Scan the ShinRa Electric Power Company logo
+  requiredProgress: 1
+  isRetroactive: 0
+  referenceImageName: ShinRaPower
+  targetReferenceImage:
+    m_SerializedGuid:
+      m_GuidLow: 4917958815029599838
+      m_GuidHigh: 13549392563942353327
+    m_SerializedTextureGuid:
+      m_GuidLow: 6977311893015915083
+      m_GuidHigh: 9841302248778509496
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: ShinRaPower
+    m_Texture: {fileID: 0}
+  selectedImageIndex: 0
+  imageLibrary: {fileID: 11400000, guid: 4c129f8e93b2f5840ad59b219c594ae7, type: 2}

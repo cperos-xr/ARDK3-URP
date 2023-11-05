@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6276b119b5ba13d46ab434a8f1e22875, type: 3}
+  m_Name: Sacred Gardens
+  m_EditorClassIdentifier: 
+  areaName: Sacred Gardens
+  areaColor: green
+  _boundaries:
+  - _points:
+    - _latitude: 21.268829345703125
+      _longitude: -157.82290649414062
+    - _latitude: 21.270809173583984
+      _longitude: -157.82237243652344
+    - _latitude: 21.271568298339844
+      _longitude: -157.8227081298828
+    - _latitude: 21.27334976196289
+      _longitude: -157.8167724609375
+    - _latitude: 21.27433967590332
+      _longitude: -157.8160858154297
+    - _latitude: 21.26911735534668
+      _longitude: -157.81475830078125
+    - _latitude: 21.26471710205078
+      _longitude: -157.8167724609375
+    - _latitude: 21.260494232177734
+      _longitude: -157.8172607421875
+    - _latitude: 21.25959014892578
+      _longitude: -157.82057189941406
+    - _latitude: 21.264793395996094
+      _longitude: -157.82293701171875
+  areaEntities: []

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6276b119b5ba13d46ab434a8f1e22875, type: 3}
+  m_Name: Le'ahi Domain
+  m_EditorClassIdentifier: 
+  areaName: Le'ahi Domain
+  areaColor: red
+  _boundaries:
+  - _points:
+    - _latitude: 21.25959014892578
+      _longitude: -157.82057189941406
+    - _latitude: 21.260494232177734
+      _longitude: -157.8172607421875
+    - _latitude: 21.26983642578125
+      _longitude: -157.807861328125
+    - _latitude: 21.27337074279785
+      _longitude: -157.8007049560547
+    - _latitude: 21.271520614624023
+      _longitude: -157.79698181152344
+    - _latitude: 21.2672119140625
+      _longitude: -157.79837036132812
+    - _latitude: 21.256147384643555
+      _longitude: -157.80056762695312
+    - _latitude: 21.256202697753906
+      _longitude: -157.8153533935547
+  areaEntities: []

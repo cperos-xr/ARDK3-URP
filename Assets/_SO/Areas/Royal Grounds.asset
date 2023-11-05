@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6276b119b5ba13d46ab434a8f1e22875, type: 3}
+  m_Name: Royal Grounds
+  m_EditorClassIdentifier: 
+  areaName: Royal Grounds
+  areaColor: yellow
+  _boundaries:
+  - _points:
+    - _latitude: 21.28348731994629
+      _longitude: -157.8444061279297
+    - _latitude: 21.278669357299805
+      _longitude: -157.84007263183594
+    - _latitude: 21.281856536865234
+      _longitude: -157.83868408203125
+    - _latitude: 21.281253814697266
+      _longitude: -157.8372344970703
+    - _latitude: 21.279388427734375
+      _longitude: -157.8355255126953
+    - _latitude: 21.27800941467285
+      _longitude: -157.83351135253906
+    - _latitude: 21.278993606567383
+      _longitude: -157.83253479003906
+    - _latitude: 21.2777099609375
+      _longitude: -157.83070373535156
+    - _latitude: 21.279338836669922
+      _longitude: -157.8291778564453
+    - _latitude: 21.282302856445312
+      _longitude: -157.83094787597656
+    - _latitude: 21.28470230102539
+      _longitude: -157.82862854003906
+    - _latitude: 21.288803100585938
+      _longitude: -157.83377075195312
+    - _latitude: 21.28769874572754
+      _longitude: -157.8409423828125
+    - _latitude: 21.287073135375977
+      _longitude: -157.8432159423828
+  areaEntities: []
+  hasBeenVisited: 0

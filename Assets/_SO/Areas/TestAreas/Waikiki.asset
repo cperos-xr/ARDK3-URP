@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6276b119b5ba13d46ab434a8f1e22875, type: 3}
+  m_Name: Waikiki
+  m_EditorClassIdentifier: 
+  areaName: Waikiki
+  areaColor: red
+  _boundaries:
+  - _points:
+    - _latitude: 21.287100718153493
+      _longitude: -157.84117787543883
+    - _latitude: 21.28845052225643
+      _longitude: -157.8337117710136
+    - _latitude: 21.27374045050371
+      _longitude: -157.81658801907315
+    - _latitude: 21.271394072170416
+      _longitude: -157.82323736283294
+    - _latitude: 21.28102600932316
+      _longitude: -157.84028808610893
+  areaEntities: []
+  hasBeenVisited: 0
