@@ -31,9 +31,9 @@ public class SemanticChannelDetector : MonoBehaviour
         // Get the semantic channels at the tap position
         List<string> channelsAtPoint = _semanticsManager.GetChannelNamesAt(x, y);
 
-        if (channelsAtPoint.Count == 0) 
-        { 
-            Debug.Log($"No semantic channels at tap"); 
+        if (channelsAtPoint.Count == 0)
+        {
+            Debug.Log($"No semantic channels at tap");
         }
         // Process the channels as needed
         foreach (var channel in channelsAtPoint)
@@ -44,6 +44,24 @@ public class SemanticChannelDetector : MonoBehaviour
 
         OnSemanticChannelIdentified(channelsAtPoint);
     }
+
+#if UNITY_EDITOR
+
+    public void TestSemanticBroadcast()
+    {
+        string loungeable = "loungeable_experimental";
+        string grass = "grass";
+
+        List<string> list = new List<string>();
+
+        list.Add(loungeable);
+        list.Add(grass);
+
+        OnSemanticChannelIdentified(list);
+    }
+
+#endif
+
     public bool DoesChannelExistAtPoint(Vector2 point, string channelName)
     {
         // Convert to integer coordinates
