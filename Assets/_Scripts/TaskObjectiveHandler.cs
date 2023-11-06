@@ -22,6 +22,8 @@ public class TaskObjectiveHandler : MonoBehaviour
 
     public Dictionary<SO_TaskObjective_Interaction, bool> interactionObjectives = new Dictionary<SO_TaskObjective_Interaction, bool>();
 
+    public Dictionary<SO_TaskObjective_Semantic, bool> semanticObjectives = new Dictionary<SO_TaskObjective_Semantic, bool>();
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -186,6 +188,58 @@ public class TaskObjectiveHandler : MonoBehaviour
         }
     }
 
+    private void HandleSemanticChannelIdentified(string identifiedChannel)
+    {
+        // Assuming you have a dictionary to track the completion status of semantic objectives
+        foreach (KeyValuePair<SO_TaskObjective_Semantic, bool> kvp in semanticObjectives)
+        {
+            if (!kvp.Value) // If the task has not been completed
+            {
+                SO_TaskObjective_Semantic taskObjective = kvp.Key;
+
+                // Check if the identified channel matches the task objective
+                // or if it matches an experimental version of the channel
+                if (DoesChannelMatch(identifiedChannel, taskObjective.selectedChannel))
+                {
+                    semanticObjectives[taskObjective] = true; // Mark the task as complete
+                    Debug.Log($"Semantic task complete {taskObjective.objectiveName}");
+                }
+            }
+        }
+    }
+
+    private bool DoesChannelMatch(string identifiedChannel, string taskChannel)
+    {
+        // Check for an exact match
+        if (identifiedChannel == taskChannel)
+        {
+            return true;
+        }
+
+        // Check for a match with the experimental suffix removed
+        if (taskChannel.EndsWith("_experimental"))
+        {
+            string nonExperimentalChannel = taskChannel.Replace("_experimental", "");
+            if (identifiedChannel == nonExperimentalChannel)
+            {
+                return true;
+            }
+        }
+
+        // Check for a match with the experimental suffix added
+        if (!identifiedChannel.EndsWith("_experimental"))
+        {
+            string experimentalChannel = identifiedChannel + "_experimental";
+            if (taskChannel == experimentalChannel)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
 
     public bool IsObjectiveCompleted(SO_TaskObjective objective)
     {
@@ -267,6 +321,18 @@ public class TaskObjectiveHandler : MonoBehaviour
                 return false;
             }
         }
+        else if (objective is SO_TaskObjective_Semantic taskObjective_Semantic)
+        {
+            if (semanticObjectives.TryGetValue(taskObjective_Semantic, out bool isCompleted))
+            {
+                return isCompleted;
+            }
+            else
+            {
+                Debug.LogError("Task objective not found in interactionObjectives dictionary!");
+                return false;
+            }
+        }
 
         // Add similar checks for other objective types...
 
@@ -306,6 +372,10 @@ public class TaskObjectiveHandler : MonoBehaviour
         else if (objective is SO_TaskObjective_Interaction taskObjective_Interaction)
         {
             interactionObjectives.Add(taskObjective_Interaction, false);
+        }
+        else if (objective is SO_TaskObjective_Semantic taskObjective_Semantic)
+        {
+            semanticObjectives.Add(taskObjective_Semantic, false);
         }
         // Add similar cases for other objective types...
     }
