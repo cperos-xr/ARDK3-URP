@@ -46,6 +46,7 @@ public class TaskObjectiveHandler : MonoBehaviour
         ItemManager.OnPlayerGivenItem += HandlePlayerGivenItem;
         InteractionManager.OnPlayerInteraction += HandlePlayerInteraction;
         InteractionManager.OnPlayerEntityInteraction += HandlePlayerEntityInteraction;
+        SemanticChannelDetector.OnSemanticChannelIdentified += HandleSemanticChannelIdentified;
 
         //AR Image Tracking is called from ARTrack
 
@@ -58,6 +59,7 @@ public class TaskObjectiveHandler : MonoBehaviour
         ItemManager.OnPlayerGivenItem -= HandlePlayerGivenItem;
         InteractionManager.OnPlayerInteraction -= HandlePlayerInteraction;
         InteractionManager.OnPlayerEntityInteraction -= HandlePlayerEntityInteraction;
+        SemanticChannelDetector.OnSemanticChannelIdentified -= HandleSemanticChannelIdentified;
 
     }
 
@@ -202,9 +204,18 @@ public class TaskObjectiveHandler : MonoBehaviour
                 if (DoesChannelMatch(identifiedChannel, taskObjective.selectedChannel))
                 {
                     semanticObjectives[taskObjective] = true; // Mark the task as complete
-                    Debug.Log($"Semantic task complete {taskObjective.objectiveName}");
+                    Debug.Log($"Semantic {identifiedChannel} task complete {taskObjective.objectiveName}");
                 }
             }
+        }
+    }
+
+    private void HandleSemanticChannelIdentified(List <string> identifiedChannels)
+    {
+        // Assuming you have a dictionary to track the completion status of semantic objectives
+        foreach (var channel in identifiedChannels)
+        {
+            HandleSemanticChannelIdentified (channel);
         }
     }
 
