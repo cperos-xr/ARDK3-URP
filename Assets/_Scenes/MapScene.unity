@@ -7568,6 +7568,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _semanticsManager: {fileID: 1654950865}
   channelListContainer: {fileID: 11400000, guid: 21b8f983f42679a44a55c192c58afa1a, type: 2}
+  writeToCSV: 1
+  writeToJSON: 0
 --- !u!1 &1632634378
 GameObject:
   m_ObjectHideFlags: 0

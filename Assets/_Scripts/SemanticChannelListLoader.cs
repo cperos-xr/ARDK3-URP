@@ -8,8 +8,6 @@ using System.IO;
 
 public class SemanticChannelListLoader : MonoBehaviour
 {
-
-
     [SerializeField]
     private ARSemanticSegmentationManager _semanticsManager;
 
@@ -36,18 +34,12 @@ public class SemanticChannelListLoader : MonoBehaviour
 
     private string GetSavePath(string fileName)
     {
-        // Path to the Assets folder
         string assetsPath = Application.dataPath;
-        // Path to the EditorData folder within the Assets directory
-        string editorDataPath = Path.Combine(assetsPath, "EditorData");
-
-        // Check if the EditorData directory exists, if not, create it
+        string editorDataPath = Path.Combine(assetsPath, "SemanticData");
         if (!Directory.Exists(editorDataPath))
         {
             Directory.CreateDirectory(editorDataPath);
         }
-
-        // Return the full path to the file within the EditorData directory
         return Path.Combine(editorDataPath, fileName);
     }
 
@@ -64,28 +56,26 @@ public class SemanticChannelListLoader : MonoBehaviour
 
         if (writeToCSV)
         {
-            string filePath = GetSavePath("SemanticChannels.json");
-            WriteToCSV(channelListContainer.channelNames, filePath);
+            string csvFilePath = GetSavePath("SemanticChannels.csv");
+            WriteToCSV(channelListContainer.channelNames, csvFilePath);
         }
 
         if (writeToJSON)
         {
-            string filePath = GetSavePath("SemanticChannels.csv");
-            WriteToJSON(channelListContainer.channelNames, filePath);
+            string jsonFilePath = GetSavePath("SemanticChannels.json");
+            WriteToJSON(channelListContainer.channelNames, jsonFilePath);
         }
     }
 
     private void WriteToCSV(List<string> channelNames, string filePath)
     {
         StringBuilder sb = new StringBuilder();
-
         foreach (string name in channelNames)
         {
             sb.AppendLine(name);
         }
-
         File.WriteAllText(filePath, sb.ToString());
-        AssetDatabase.Refresh(); // Refresh the AssetDatabase to show the new file in Unity Editor
+        AssetDatabase.Refresh();
     }
 
     [System.Serializable]
@@ -99,11 +89,7 @@ public class SemanticChannelListLoader : MonoBehaviour
         ChannelNamesWrapper wrapper = new ChannelNamesWrapper { channelNames = channelNames };
         string json = JsonUtility.ToJson(wrapper, true);
         File.WriteAllText(filePath, json);
-        AssetDatabase.Refresh(); // Refresh the AssetDatabase to show the new file in Unity Editor
+        AssetDatabase.Refresh();
     }
-
-
-
-#endif
 }
-
+#endif
