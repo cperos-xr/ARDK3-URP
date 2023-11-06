@@ -6897,7 +6897,7 @@ MonoBehaviour:
   _parentObject: {fileID: 615102482}
   targetLayer:
     serializedVersion: 2
-    m_Bits: 6
+    m_Bits: 0
 --- !u!1 &1578936107
 GameObject:
   m_ObjectHideFlags: 0
@@ -7532,6 +7532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1612076299}
   - component: {fileID: 1612076300}
+  - component: {fileID: 1612076301}
   m_Layer: 0
   m_Name: SemanticManager
   m_TagString: Untagged
@@ -7570,6 +7571,19 @@ MonoBehaviour:
   channelListContainer: {fileID: 11400000, guid: 21b8f983f42679a44a55c192c58afa1a, type: 2}
   writeToCSV: 1
   writeToJSON: 0
+--- !u!114 &1612076301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612076298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f4df8fc94620b64d9ebcbaf6b2fa0a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _semanticsManager: {fileID: 1654950865}
 --- !u!1 &1632634378
 GameObject:
   m_ObjectHideFlags: 0
