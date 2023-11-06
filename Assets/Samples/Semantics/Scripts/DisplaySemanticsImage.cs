@@ -1,5 +1,4 @@
 // Copyright 2023 Niantic, Inc. All Rights Reserved.
-using System.Collections.Generic;
 using System.Linq;
 using Niantic.Lightship.AR.Semantics;
 using UnityEngine;
