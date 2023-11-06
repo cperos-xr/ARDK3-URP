@@ -1,4 +1,5 @@
 // Copyright 2023 Niantic, Inc. All Rights Reserved.
+using System.Collections.Generic;
 using System.Linq;
 using Niantic.Lightship.AR.Semantics;
 using UnityEngine;
@@ -16,6 +17,8 @@ namespace Niantic.Lightship.AR.Samples
 
         [SerializeField]
         private Dropdown _channelDropdown;
+
+        public List <string> channels = new List<string>();
 
         private string _semanticChannelName = string.Empty;
 
@@ -57,6 +60,11 @@ namespace Niantic.Lightship.AR.Samples
             // Initialize the channel names in the dropdown menu.
             var channelNames = _semanticsManager.ChannelNames;
             _channelDropdown.AddOptions(channelNames.ToList());
+
+            foreach (var channelName in channelNames) 
+            {
+                channels.Add(channelName);
+            }
 
             // Display artificial ground by default.
             _semanticChannelName = channelNames[3];
