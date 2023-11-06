@@ -14,6 +14,8 @@ public class InteractionManager : MonoBehaviour
 
     private Dictionary<BaseEntityData, Dictionary<Interaction, int>> entityInteractionCounts = new Dictionary<BaseEntityData, Dictionary<Interaction, int>>();
 
+    public Dictionary<BaseEntityData, int> interactionProgressionDictionary = new Dictionary<BaseEntityData, int>();
+
     //[SerializeField] QuestManager questManager;
 
 
@@ -32,7 +34,7 @@ public class InteractionManager : MonoBehaviour
             entityInteractionCounts[entity] = new Dictionary<Interaction, int>();
         }
 
-        Interaction interaction = entity.interactions[entity.interactionIndex];
+        Interaction interaction = entity.interactions[entity.startingInteractionIndex];
 
         if (!entityInteractionCounts[entity].ContainsKey(interaction))
         {
@@ -91,5 +93,9 @@ public struct Interaction
     public SO_Quest quest; // List of tasks associated with this interaction.
     public PlayerNotification notification;
     public bool interactionIsLocked;
+
+
+
+    public int nextInteractionIndex;
 
 }
