@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72fa381f77ca7d24ab5e544882eb95f7, type: 3}
-  m_Name: ChannelListContainer
+  m_Name: SemanticChannelList
   m_EditorClassIdentifier: 
   channelNames: []

@@ -18,10 +18,6 @@ namespace Niantic.Lightship.AR.Samples
         [SerializeField]
         private Dropdown _channelDropdown;
 
-        public List<string> channels = new List<string>();
-
-        public ChannelListContainer channelListContainer;
-
         private string _semanticChannelName = string.Empty;
 
         protected override void Awake()
@@ -62,15 +58,6 @@ namespace Niantic.Lightship.AR.Samples
             // Initialize the channel names in the dropdown menu.
             var channelNames = _semanticsManager.ChannelNames;
             _channelDropdown.AddOptions(channelNames.ToList());
-
-            foreach (var channelName in channelNames)
-            {
-                channels.Add(channelName);
-                if (!channelListContainer.channelNames.Contains(channelName))
-                {
-                    channelListContainer.channelNames.Add(channelName);
-                }
-            }
 
             // Display artificial ground by default.
             _semanticChannelName = channelNames[3];

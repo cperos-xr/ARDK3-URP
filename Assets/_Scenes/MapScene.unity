@@ -7563,12 +7563,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1612076298}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 622b2a3d1a229854e9b0a353750cc260, type: 3}
+  m_Script: {fileID: 11500000, guid: 8156260dfe144264b9ef1789d402bcc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _semanticMan: {fileID: 1654950865}
-  _channels: []
-  getCurrentChannelList: 0
+  _semanticsManager: {fileID: 1654950865}
+  channelListContainer: {fileID: 11400000, guid: 21b8f983f42679a44a55c192c58afa1a, type: 2}
 --- !u!1 &1632634378
 GameObject:
   m_ObjectHideFlags: 0
