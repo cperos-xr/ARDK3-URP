@@ -65,56 +65,129 @@ public class TaskObjectiveHandler : MonoBehaviour
 
     private void HandlePlayerEntityInteraction(BaseEntityData entity)
     {
-        //Check Player Interactions
-        foreach (KeyValuePair<SO_TaskObjective_EntityInteraction, bool> kvp in entityInteractionObjectives)
+        var keys = new List<SO_TaskObjective_EntityInteraction>(entityInteractionObjectives.Keys);
+        foreach (var key in keys)
         {
-            if (!kvp.Value) // If the task has not been completed
+            if (!entityInteractionObjectives[key]) // If the task has not been completed
             {
-                SO_TaskObjective_EntityInteraction taskObjective = kvp.Key;
-
-                if (entity == taskObjective.targetEntity)  // this line here???
+                if (entity == key.targetEntity)
                 {
-                    entityInteractionObjectives[taskObjective] = true;
-                    Debug.Log($"Entity Interaction task complete {taskObjective.objectiveName}");
+                    entityInteractionObjectives[key] = true;
+                    Debug.Log($"Entity Interaction task complete {key.objectiveName}");
                 }
-
             }
         }
     }
 
     private void HandlePlayerInteraction(Interaction interaction)
     {
-        //Check Player Interactions
-        foreach (KeyValuePair<SO_TaskObjective_Interaction, bool> kvp in interactionObjectives)
+        var keys = new List<SO_TaskObjective_Interaction>(interactionObjectives.Keys);
+        foreach (var key in keys)
         {
-            if (!kvp.Value) // If the task has not been completed
+            if (!interactionObjectives[key]) // If the task has not been completed
             {
-                SO_TaskObjective_Interaction taskObjective = kvp.Key;
-
-                if (interaction.Equals(taskObjective.targetInteraction))
+                if (interaction.Equals(key.targetInteraction))
                 {
-                    interactionObjectives[taskObjective] = true;
-                    Debug.Log($"Interaction task complete {taskObjective.objectiveName}");
+                    interactionObjectives[key] = true;
+                    Debug.Log($"Interaction task complete {key.objectiveName}");
                 }
-
             }
         }
     }
 
     private void HandlePlayerGivenItem(SO_ItemData item)
     {
-        foreach (KeyValuePair<SO_TaskObjective_ItemCollection, bool> kvp in itemCollectionObjectives)
+        var keys = new List<SO_TaskObjective_ItemCollection>(itemCollectionObjectives.Keys);
+        foreach (var key in keys)
         {
-            if (!kvp.Value) // If the task has not been completed
+            if (!itemCollectionObjectives[key]) // If the task has not been completed
             {
-                SO_TaskObjective_ItemCollection taskObjective = kvp.Key;
-
-                if (PlayerManager.Instance.inventory.CheckForItem(taskObjective.itemToCollect) >= taskObjective.requiredProgress)
+                if (PlayerManager.Instance.inventory.CheckForItem(key.itemToCollect) >= key.requiredProgress)
                 {
-                    itemCollectionObjectives[taskObjective] = true;
-                    Debug.Log($"Item Collection task complete {taskObjective.objectiveName}");
+                    itemCollectionObjectives[key] = true;
+                    Debug.Log($"Item Collection task complete {key.objectiveName}");
                 }
             }
+        }
+    }
+
+    public void CheckGPSLocationObjectivesForCompletions(LatLng newPosition)
+    {
+        var keys = new List<SO_TaskObjective_GPSLocation>(gpsLocationObjectives.Keys);
+        foreach (var key in keys)
+        {
+            if (!gpsLocationObjectives[key]) // If the task has not been completed
+            {
+                float distance = GeoUtility.CalculateDistance(key.targetLatLng, newPosition);
+
+                if (distance <= key.radius)
+                {
+                    gpsLocationObjectives[key] = true;
+                    Debug.Log($"GPS task Complete {key.objectiveName}");
+                }
+            }
+        }
+    }
+
+    public void CheckEnterAreaObjectivesForCompletions()
+    {
+        var keys = new List<SO_TaskObjective_EnterArea>(enterAreaObjectives.Keys);
+        foreach (var key in keys)
+        {
+            if (!enterAreaObjectives[key]) // If the task has not been completed
+            {
+                foreach (SO_AreaData area in AreaManager.Instance.currentAreas)
+                {
+                    if (area == key.targetArea)
+                    {
+                        enterAreaObjectives[key] = true;
+                        Debug.Log($"Enter area task complete {key.objectiveName}");
+                    }
+                }
+            }
+        }
+    }
+
+    public void CheckARTrackedImageObjectivesForCompletion(XRReferenceImage referenceImage)
+    {
+        var keys = new List<SO_TaskObjective_TrackedARImage>(arTrackedImageObjectives.Keys);
+        foreach (var key in keys)
+        {
+            if (!arTrackedImageObjectives[key]) // If the task has not been completed
+            {
+                if (key.targetReferenceImage.Equals(referenceImage)) //Does this Reference image complete the objective?
+                {
+                    arTrackedImageObjectives[key] = true;
+                    Debug.Log($"AR Tracking task complete based on reference image {key.objectiveName}");
+                }
+            }
+        }
+    }
+
+    private void HandleSemanticChannelIdentified(string identifiedChannel)
+    {
+        var keys = new List<SO_TaskObjective_Semantic>(semanticObjectives.Keys);
+        foreach (var key in keys)
+        {
+            if (!semanticObjectives[key]) // If the task has not been completed
+            {
+                if (DoesChannelMatch(identifiedChannel, key.selectedChannel))
+                {
+                    semanticObjectives[key] = true; // Mark the task as complete
+                    Debug.Log($"Semantic {identifiedChannel} task complete {key.objectiveName}");
+                }
+            }
+        }
+    }
+
+    private void HandleSemanticChannelIdentified(List <string> identifiedChannels)
+    {
+        Debug.Log("Handle Sematic Channel");
+        // Assuming you have a dictionary to track the completion status of semantic objectives
+        foreach (var channel in identifiedChannels)
+        {
+            Debug.Log("channel is " + channel);
+            HandleSemanticChannelIdentified (channel);
         }
     }
 
@@ -124,131 +197,47 @@ public class TaskObjectiveHandler : MonoBehaviour
         CheckEnterAreaObjectivesForCompletions();
     }
 
-    public void CheckGPSLocationObjectivesForCompletions(LatLng newPosition)
-    {
-        foreach (KeyValuePair<SO_TaskObjective_GPSLocation, bool> kvp in gpsLocationObjectives)
-        {
-            if (!kvp.Value) // If the task has not been completed
-            {
-                SO_TaskObjective_GPSLocation taskObjective = kvp.Key;
-
-                float distance = GeoUtility.CalculateDistance(taskObjective.targetLatLng, newPosition);
-
-                if (distance <= taskObjective.radius)
-                {
-                    Debug.Log($"GPS task Complete {taskObjective.objectiveName}");
-
-                    // Update the value in the dictionary
-                    gpsLocationObjectives[taskObjective] = true;
-                }
-            }
-        }
-    }
-
-    public void CheckEnterAreaObjectivesForCompletions()
-    {
-        foreach (KeyValuePair<SO_TaskObjective_EnterArea, bool> kvp in enterAreaObjectives)
-        {
-            if (!kvp.Value) // If the task has not been completed
-            {
-                SO_TaskObjective_EnterArea taskObjective = kvp.Key;
-
-                foreach (SO_AreaData area in AreaManager.Instance.currentAreas)
-                {
-                    if (area == taskObjective.targetArea)
-                    {
-                        Debug.Log($"Enter area task complete {taskObjective.objectiveName}");
-
-                        // Update the value in the dictionary
-                        enterAreaObjectives[taskObjective] = true;
-                    }
-                }
-
-            }
-        }
-    }
-
-    public void CheckARTrackedImageObjectivesForCompletion(XRReferenceImage referenceImage)
-    {
-        Debug.Log("Checking arTrackedImageObjectives for reference image " + referenceImage.name);
-
-        foreach (KeyValuePair<SO_TaskObjective_TrackedARImage, bool> kvp in arTrackedImageObjectives)
-        {
-
-            if (!kvp.Value) // If the task has not been completed
-            {
-                SO_TaskObjective_TrackedARImage taskObjective = kvp.Key;
-
-                Debug.Log($"Checking {referenceImage.name} against {taskObjective.targetReferenceImage.name}");
-
-                if (taskObjective.targetReferenceImage.Equals(referenceImage)) //Does this Reference image complete the objective?
-                {
-                    arTrackedImageObjectives[taskObjective] = true;
-                    Debug.Log($"AR Tracking task complete based on reference image {taskObjective.objectiveName}");
-                }
-            }
-        }
-    }
-
-    private void HandleSemanticChannelIdentified(string identifiedChannel)
-    {
-        // Assuming you have a dictionary to track the completion status of semantic objectives
-        foreach (KeyValuePair<SO_TaskObjective_Semantic, bool> kvp in semanticObjectives)
-        {
-            if (!kvp.Value) // If the task has not been completed
-            {
-                SO_TaskObjective_Semantic taskObjective = kvp.Key;
-
-                // Check if the identified channel matches the task objective
-                // or if it matches an experimental version of the channel
-                if (DoesChannelMatch(identifiedChannel, taskObjective.selectedChannel))
-                {
-                    semanticObjectives[taskObjective] = true; // Mark the task as complete
-                    Debug.Log($"Semantic {identifiedChannel} task complete {taskObjective.objectiveName}");
-                }
-            }
-        }
-    }
-
-    private void HandleSemanticChannelIdentified(List <string> identifiedChannels)
-    {
-        // Assuming you have a dictionary to track the completion status of semantic objectives
-        foreach (var channel in identifiedChannels)
-        {
-            HandleSemanticChannelIdentified (channel);
-        }
-    }
-
     private bool DoesChannelMatch(string identifiedChannel, string taskChannel)
     {
+        identifiedChannel = identifiedChannel.Trim();
+        taskChannel = taskChannel.Trim();
+
+        Debug.Log($"Checking for match with '{identifiedChannel}' and '{taskChannel}'");
+        Debug.Log($"Lengths - identifiedChannel: {identifiedChannel.Length}, taskChannel: {taskChannel.Length}");
+
         // Check for an exact match
-        if (identifiedChannel == taskChannel)
+        if (string.Equals(identifiedChannel, taskChannel, System.StringComparison.OrdinalIgnoreCase))
         {
+            Debug.Log("Exact match: true");
             return true;
         }
 
         // Check for a match with the experimental suffix removed
-        if (taskChannel.EndsWith("_experimental"))
+        if (taskChannel.EndsWith("_experimental", System.StringComparison.OrdinalIgnoreCase))
         {
             string nonExperimentalChannel = taskChannel.Replace("_experimental", "");
-            if (identifiedChannel == nonExperimentalChannel)
+            if (string.Equals(identifiedChannel, nonExperimentalChannel, System.StringComparison.OrdinalIgnoreCase))
             {
+                Debug.Log("Match with experimental suffix removed: true");
                 return true;
             }
         }
 
         // Check for a match with the experimental suffix added
-        if (!identifiedChannel.EndsWith("_experimental"))
+        if (!identifiedChannel.EndsWith("_experimental", System.StringComparison.OrdinalIgnoreCase))
         {
             string experimentalChannel = identifiedChannel + "_experimental";
-            if (taskChannel == experimentalChannel)
+            if (string.Equals(taskChannel, experimentalChannel, System.StringComparison.OrdinalIgnoreCase))
             {
+                Debug.Log("Match with experimental suffix added: true");
                 return true;
             }
         }
 
+        Debug.Log("No match: false");
         return false;
     }
+
 
 
 
