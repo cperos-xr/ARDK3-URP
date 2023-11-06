@@ -6,5 +6,4 @@ using UnityEngine;
 public class SO_TaskObjectiveSemantic : SO_TaskObjective
 {
     public string selectedChannel;
-
 }
