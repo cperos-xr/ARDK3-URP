@@ -188,6 +188,58 @@ public class TaskObjectiveHandler : MonoBehaviour
         }
     }
 
+    private void HandleSemanticChannelIdentified(string identifiedChannel)
+    {
+        // Assuming you have a dictionary to track the completion status of semantic objectives
+        foreach (KeyValuePair<SO_TaskObjective_Semantic, bool> kvp in semanticObjectives)
+        {
+            if (!kvp.Value) // If the task has not been completed
+            {
+                SO_TaskObjective_Semantic taskObjective = kvp.Key;
+
+                // Check if the identified channel matches the task objective
+                // or if it matches an experimental version of the channel
+                if (DoesChannelMatch(identifiedChannel, taskObjective.selectedChannel))
+                {
+                    semanticObjectives[taskObjective] = true; // Mark the task as complete
+                    Debug.Log($"Semantic task complete {taskObjective.objectiveName}");
+                }
+            }
+        }
+    }
+
+    private bool DoesChannelMatch(string identifiedChannel, string taskChannel)
+    {
+        // Check for an exact match
+        if (identifiedChannel == taskChannel)
+        {
+            return true;
+        }
+
+        // Check for a match with the experimental suffix removed
+        if (taskChannel.EndsWith("_experimental"))
+        {
+            string nonExperimentalChannel = taskChannel.Replace("_experimental", "");
+            if (identifiedChannel == nonExperimentalChannel)
+            {
+                return true;
+            }
+        }
+
+        // Check for a match with the experimental suffix added
+        if (!identifiedChannel.EndsWith("_experimental"))
+        {
+            string experimentalChannel = identifiedChannel + "_experimental";
+            if (taskChannel == experimentalChannel)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
 
     public bool IsObjectiveCompleted(SO_TaskObjective objective)
     {
