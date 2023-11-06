@@ -1,5 +1,6 @@
 using Niantic.Lightship.AR.Semantics;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SemanticChannelDetector : MonoBehaviour
@@ -7,7 +8,8 @@ public class SemanticChannelDetector : MonoBehaviour
     [SerializeField]
     private ARSemanticSegmentationManager _semanticsManager;
 
-
+    [SerializeField]
+    private TextMeshProUGUI _semanticsText;
 
     public delegate void IdentifySemanticChannelEvent(List<string> semanticChannels);
     public static event IdentifySemanticChannelEvent OnSemanticChannelIdentified;
@@ -30,16 +32,18 @@ public class SemanticChannelDetector : MonoBehaviour
         int y = Mathf.RoundToInt(point.y);
         // Get the semantic channels at the tap position
         List<string> channelsAtPoint = _semanticsManager.GetChannelNamesAt(x, y);
-
+        _semanticsText.text = "";
         if (channelsAtPoint.Count == 0)
         {
             Debug.Log($"No semantic channels at tap");
+            _semanticsText.text = "No semantic channels";
         }
         // Process the channels as needed
         foreach (var channel in channelsAtPoint)
         {
             // Check if the channel matches any task objectives, etc.
             Debug.Log($"Detected semantic channel at tap: {channel}");
+            _semanticsText.text = _semanticsText.text + channel + " ";
         }
 
         OnSemanticChannelIdentified(channelsAtPoint);
