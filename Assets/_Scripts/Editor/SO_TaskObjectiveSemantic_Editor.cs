@@ -3,7 +3,7 @@ using UnityEngine;
 using System.IO;
 using System.Collections.Generic;
 
-[CustomEditor(typeof(SO_TaskObjectiveSemantic))]
+[CustomEditor(typeof(SO_TaskObjective_Semantic))]
 public class SO_TaskObjectiveSemanticEditor : Editor
 {
     private const string CurrentFileRelativePath = "SemanticData/SemanticChannels.csv";
@@ -14,7 +14,7 @@ public class SO_TaskObjectiveSemanticEditor : Editor
         // Draw the default inspector
         DrawDefaultInspector();
 
-        SO_TaskObjectiveSemantic script = (SO_TaskObjectiveSemantic)target;
+        SO_TaskObjective_Semantic script = (SO_TaskObjective_Semantic)target;
 
         // Attempt to load the channel names from the current CSV data or fall back to the backup
         string[] options = LoadCsvData(CurrentFileRelativePath, BackupFileRelativePath);

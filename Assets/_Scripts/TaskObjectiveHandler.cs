@@ -22,6 +22,8 @@ public class TaskObjectiveHandler : MonoBehaviour
 
     public Dictionary<SO_TaskObjective_Interaction, bool> interactionObjectives = new Dictionary<SO_TaskObjective_Interaction, bool>();
 
+    public Dictionary<SO_TaskObjective_Semantic, bool> semanticObjectives = new Dictionary<SO_TaskObjective_Semantic, bool>();
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -267,6 +269,18 @@ public class TaskObjectiveHandler : MonoBehaviour
                 return false;
             }
         }
+        else if (objective is SO_TaskObjective_Semantic taskObjective_Semantic)
+        {
+            if (semanticObjectives.TryGetValue(taskObjective_Semantic, out bool isCompleted))
+            {
+                return isCompleted;
+            }
+            else
+            {
+                Debug.LogError("Task objective not found in interactionObjectives dictionary!");
+                return false;
+            }
+        }
 
         // Add similar checks for other objective types...
 
@@ -306,6 +320,10 @@ public class TaskObjectiveHandler : MonoBehaviour
         else if (objective is SO_TaskObjective_Interaction taskObjective_Interaction)
         {
             interactionObjectives.Add(taskObjective_Interaction, false);
+        }
+        else if (objective is SO_TaskObjective_Semantic taskObjective_Semantic)
+        {
+            semanticObjectives.Add(taskObjective_Semantic, false);
         }
         // Add similar cases for other objective types...
     }
