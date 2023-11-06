@@ -38,7 +38,7 @@ public class ScreenTapRaycaster : MonoBehaviour
         }
     }
 
-    private void PerformRaycastFromTap(Vector2 tapPosition)
+    public void PerformRaycastFromTap(Vector2 tapPosition)
     {
         Ray ray = mainCamera.ScreenPointToRay(tapPosition);
         RaycastHit hit;
