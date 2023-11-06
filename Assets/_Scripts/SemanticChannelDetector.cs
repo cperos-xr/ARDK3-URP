@@ -7,11 +7,17 @@ public class SemanticChannelDetector : MonoBehaviour
     [SerializeField]
     private ARSemanticSegmentationManager _semanticsManager;
 
+
+
+    public delegate void IdentifySemanticChannelEvent(List<string> semanticChannels);
+    public static event IdentifySemanticChannelEvent OnSemanticChannelIdentified;
+
     private void Update()
     {
         // Check for a screen tap
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
+            Debug.Log($"tap detected");
             Vector2 touchPosition = Input.GetTouch(0).position;
             IdentifySemanticChannelAtPoint(touchPosition);
         }
@@ -25,12 +31,18 @@ public class SemanticChannelDetector : MonoBehaviour
         // Get the semantic channels at the tap position
         List<string> channelsAtPoint = _semanticsManager.GetChannelNamesAt(x, y);
 
+        if (channelsAtPoint.Count == 0) 
+        { 
+            Debug.Log($"No semantic channels at tap"); 
+        }
         // Process the channels as needed
         foreach (var channel in channelsAtPoint)
         {
             // Check if the channel matches any task objectives, etc.
             Debug.Log($"Detected semantic channel at tap: {channel}");
         }
+
+        OnSemanticChannelIdentified(channelsAtPoint);
     }
     public bool DoesChannelExistAtPoint(Vector2 point, string channelName)
     {
