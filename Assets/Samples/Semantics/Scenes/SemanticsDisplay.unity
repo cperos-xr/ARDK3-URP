@@ -173,6 +173,8 @@ MonoBehaviour:
   m_ImageInfo: {fileID: 1354069819}
   _semanticsManager: {fileID: 416715330}
   _channelDropdown: {fileID: 207645634}
+  channels: []
+  channelListContainer: {fileID: 11400000, guid: 20a41e10b93c5e44197ef9b752e798a9, type: 2}
 --- !u!1 &149774762
 GameObject:
   m_ObjectHideFlags: 0
