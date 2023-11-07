@@ -42,65 +42,41 @@ public class InteractionManager : MonoBehaviour
             return; // Exit the method to avoid further issues.
         }
 
-        Debug.Log("Handling Entity Interaction" + entity.entityName);
+        Debug.Log("Handling Entity Interaction for " + entity.entityName);
         OnPlayerEntityInteraction?.Invoke(entity);
-        if (!entityInteractionCounts.ContainsKey(entity))
+
+        // Determine the current interaction for the entity
+        SO_Interaction interaction = interactionProgressionDictionary.ContainsKey(entity)
+            ? interactionProgressionDictionary[entity]
+            : entity.interactions[entity.startingInteractionIndex];
+
+        // Trigger the interaction
+        OnPlayerInteraction?.Invoke(interaction);
+
+        // Handle items and quests associated with the interaction
+        HandleInteractionItemsAndQuests(interaction, entity);
+
+        // Check for the next interaction and update if necessary
+        if (interaction.changes != null)
         {
-            entityInteractionCounts[entity] = new Dictionary<SO_Interaction, int>();
-        }
-
-        SO_Interaction interaction = entity.interactions[entity.startingInteractionIndex];
-
-        if (!entityInteractionCounts[entity].ContainsKey(interaction))
-        {
-            entityInteractionCounts[entity][interaction] = 0;
-        }
-
-        // Check if this interaction is related to tasks.
-        bool hasQuest = interaction.quest != null;
-
-        // Check if this interaction provides items.
-        bool hasItems = interaction.itemDatas != null && interaction.itemDatas.Count > 0;
-
-        if (entityInteractionCounts[entity][interaction] < interaction.maxInteractions)
-        {
-            OnPlayerInteraction?.Invoke(interaction);
-
-
-            interaction.UpdateAllAssociatedEntityInteractions();  // Triggers interaction to update all interations.
-            
-            
-            if (hasItems)
+            foreach(InteractionProgression.EntityInteractionChange interactionChange in  interaction.changes)
             {
-                // Handle item assignment to the player's inventory here.
-                foreach (SO_ItemData itemData in interaction.itemDatas)
-                {
-                    if (!itemData.isLocked)
-                    {
-
-                        itemManager.AddItemToPlayerInventory(itemData, entity);
-                    }
-                }
+                UpdateInteraction(entity, interactionChange.newInteraction);
             }
 
-            if (hasQuest)
-            {
-                // Handle quest assignment from TaskManager.
-                QuestManager.Instance.AssignQuest(interaction.quest); 
-            }
 
-            entityInteractionCounts[entity][interaction]++; // Increment the interaction count for this interaction.
         }
         else
         {
-            // Interaction limit reached, handle it (e.g., display a message).
-            Debug.Log("Interaction limit reached.");
+            Debug.Log("No next interaction specified, or interaction is meant to repeat.");
         }
     }
 
+
+
     internal void UpdateInteraction(BaseEntityData entity, SO_Interaction newInteraction)
     {
-        Debug.Log($"Updating interaction for entity: {entity.entityName}");
+        Debug.Log($"Updating Entity Interaction for {entity.entityName} and changing current interaction to {newInteraction.InteractionName}");
 
         // Check if the entity is already in the progression dictionary
         if (interactionProgressionDictionary.ContainsKey(entity))
@@ -108,33 +84,27 @@ public class InteractionManager : MonoBehaviour
             // Get the current interaction
             SO_Interaction currentInteraction = interactionProgressionDictionary[entity];
 
-            Debug.Log($"Current interaction: {currentInteraction.InteractionName}");
-
             // Check if the current interaction is different from the new interaction
             if (currentInteraction != newInteraction)
             {
-                Debug.Log($"New interaction detected: {newInteraction.InteractionName}");
-
                 // Reset the interaction count for the new interaction
                 if (entityInteractionCounts.ContainsKey(entity))
                 {
-                    if (entityInteractionCounts[entity].ContainsKey(currentInteraction))
-                    {
-                        // Reset the count for the current interaction
-                        entityInteractionCounts[entity][currentInteraction] = 0;
-                        Debug.Log($"Reset interaction count for current interaction: {currentInteraction.InteractionName}");
-                    }
+                    // Remove the current interaction count to reset it
+                    entityInteractionCounts[entity].Remove(currentInteraction);
+                    Debug.Log($"Removed interaction count for current interaction: {currentInteraction.InteractionName}");
 
-                    entityInteractionCounts[entity][newInteraction] = 0; // Initialize or reset the count for the new interaction
+                    // Initialize or reset the count for the new interaction
+                    entityInteractionCounts[entity][newInteraction] = 0;
                     Debug.Log($"Set interaction count to 0 for new interaction: {newInteraction.InteractionName}");
                 }
                 else
                 {
                     // If the entity is not in the dictionary, add it with the new interaction count initialized
-                    entityInteractionCounts[entity] = new Dictionary<SO_Interaction, int>
+                    entityInteractionCounts.Add(entity, new Dictionary<SO_Interaction, int>
                 {
                     { newInteraction, 0 }
-                };
+                });
                     Debug.Log($"Added new entity to interaction counts with interaction: {newInteraction.InteractionName}");
                 }
             }
@@ -151,14 +121,46 @@ public class InteractionManager : MonoBehaviour
         {
             // If the entity is not in the progression dictionary, add it with the new interaction
             interactionProgressionDictionary.Add(entity, newInteraction);
-            entityInteractionCounts.Add(entity, new Dictionary<SO_Interaction, int>
-        {
-            { newInteraction, 0 }
-        });
-            Debug.Log($"Added new entity to progression dictionary with interaction: {newInteraction.InteractionName}");
+
+            // Ensure the entity is also added to the interaction counts dictionary
+            if (!entityInteractionCounts.ContainsKey(entity))
+            {
+                entityInteractionCounts.Add(entity, new Dictionary<SO_Interaction, int>());
+                Debug.Log($"Added new entity to interaction counts dictionary: {entity.entityName}");
+            }
+
+            // Initialize or reset the count for the new interaction
+            entityInteractionCounts[entity][newInteraction] = 0;
+            Debug.Log($"Set interaction count to 0 for new entity: {newInteraction.InteractionName}");
         }
     }
 
+    private void HandleInteractionItemsAndQuests(SO_Interaction interaction, BaseEntityData entity)
+    {
+        // Check if this interaction is related to tasks.
+        bool hasQuest = interaction.quest != null;
+
+        // Check if this interaction provides items.
+        bool hasItems = interaction.itemDatas != null && interaction.itemDatas.Count > 0;
+
+        if (hasItems)
+        {
+            // Handle item assignment to the player's inventory here.
+            foreach (SO_ItemData itemData in interaction.itemDatas)
+            {
+                if (!itemData.isLocked)
+                {
+                    itemManager.AddItemToPlayerInventory(itemData, entity);
+                }
+            }
+        }
+
+        if (hasQuest)
+        {
+            // Handle quest assignment from TaskManager.
+            QuestManager.Instance.AssignQuest(interaction.quest);
+        }
+    }
 
 
 }
