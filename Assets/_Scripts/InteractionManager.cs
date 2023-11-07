@@ -15,7 +15,7 @@ public class InteractionManager : MonoBehaviour
 
     private Dictionary<BaseEntityData, Dictionary<SO_Interaction, int>> entityInteractionCounts = new Dictionary<BaseEntityData, Dictionary<SO_Interaction, int>>();
 
-    public Dictionary<BaseEntityData, int> interactionProgressionDictionary = new Dictionary<BaseEntityData, int>();
+    public Dictionary<BaseEntityData, SO_Interaction> interactionProgressionDictionary = new Dictionary<BaseEntityData, SO_Interaction>();
 
     //[SerializeField] QuestManager questManager;
 
@@ -93,15 +93,15 @@ public class InteractionManager : MonoBehaviour
         }
     }
 
-    internal void UpdateInteractionIndex(BaseEntityData entity, int newInteractionIndex)
+    internal void UpdateInteractionIndex(BaseEntityData entity, SO_Interaction newInteraction)
     {
         if (interactionProgressionDictionary.ContainsKey(entity))
         {
-            interactionProgressionDictionary[entity] = newInteractionIndex;
+            interactionProgressionDictionary[entity] = newInteraction;
         }
         else
         {
-            interactionProgressionDictionary.Add(entity, newInteractionIndex);
+            interactionProgressionDictionary.Add(entity, newInteraction);
         }
 
         // Here you can add additional code to handle the interaction update, such as triggering events or saving the state

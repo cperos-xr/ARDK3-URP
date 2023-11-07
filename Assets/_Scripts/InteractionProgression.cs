@@ -10,7 +10,7 @@ public class InteractionProgression : ScriptableObject
     public struct EntityInteractionChange
     {
         public BaseEntityData entity; // Unique identifier for the entity
-        public int newInteractionIndex; // The new interaction index for the entity
+        public SO_Interaction newInteraction; // The new interaction index for the entity
     }
 
     // Method to apply changes to the interaction indices
@@ -18,7 +18,7 @@ public class InteractionProgression : ScriptableObject
     {
         foreach (var change in changes)
         {
-            interactionManager.UpdateInteractionIndex(change.entity, change.newInteractionIndex);
+            interactionManager.UpdateInteractionIndex(change.entity, change.newInteraction);
         }
     }
 }
