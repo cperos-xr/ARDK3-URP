@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5adebe046a44fa548931b0aea32bf529, type: 3}
+  m_Name: GetRat
+  m_EditorClassIdentifier: 
+  changes: []
+  InteractionName: Rat
+  maxInteractions: 2
+  itemDatas:
+  - {fileID: 11400000, guid: b81d7e6f294a867419ad776dcf38f8f1, type: 2}
+  quest: {fileID: 0}
+  notification:
+    notificationHeading: Rat Rat
+    notificationContent: Here is a Rat
+    buttonText0: Rat
+    buttonText1: Rat Rat
+    notificationIcon: {fileID: 21300000, guid: 465a4b4f09175f040b5dddeda97cd4f3, type: 3}

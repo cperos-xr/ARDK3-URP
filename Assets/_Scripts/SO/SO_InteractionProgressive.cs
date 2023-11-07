@@ -10,7 +10,7 @@ public class SO_InteractionProgressive : ScriptableObject
     {
         if (interactionProgression != null)
         {
-            interactionProgression.ApplyChanges(InteractionManager.Instance);
+            interactionProgression.UpdateAllAssociatedEntityInteractions();
         }
     }
 }

@@ -15,7 +15,7 @@ public class InteractionManager : MonoBehaviour
 
     private Dictionary<BaseEntityData, Dictionary<SO_Interaction, int>> entityInteractionCounts = new Dictionary<BaseEntityData, Dictionary<SO_Interaction, int>>();
 
-    public Dictionary<BaseEntityData, int> interactionProgressionDictionary = new Dictionary<BaseEntityData, int>();
+    public Dictionary<BaseEntityData, SO_Interaction> interactionProgressionDictionary = new Dictionary<BaseEntityData, SO_Interaction>();
 
     //[SerializeField] QuestManager questManager;
 
@@ -65,6 +65,11 @@ public class InteractionManager : MonoBehaviour
         if (entityInteractionCounts[entity][interaction] < interaction.maxInteractions)
         {
             OnPlayerInteraction?.Invoke(interaction);
+
+
+            interaction.UpdateAllAssociatedEntityInteractions();  // Triggers interaction to update all interations.
+            
+            
             if (hasItems)
             {
                 // Handle item assignment to the player's inventory here.
@@ -93,17 +98,51 @@ public class InteractionManager : MonoBehaviour
         }
     }
 
-    internal void UpdateInteractionIndex(BaseEntityData entity, int newInteractionIndex)
+    internal void UpdateInteraction(BaseEntityData entity, SO_Interaction newInteraction)
     {
         if (interactionProgressionDictionary.ContainsKey(entity))
         {
-            interactionProgressionDictionary[entity] = newInteractionIndex;
+            // Get the current interaction
+            SO_Interaction currentInteraction = interactionProgressionDictionary[entity];
+
+            // Check if the current interaction is different from the new interaction
+            if (currentInteraction != newInteraction)
+            {
+                // Reset the interaction count for the new interaction
+                if (entityInteractionCounts.ContainsKey(entity))
+                {
+                    if (entityInteractionCounts[entity].ContainsKey(currentInteraction))
+                    {
+                        // Reset the count for the current interaction
+                        entityInteractionCounts[entity][currentInteraction] = 0;
+                    }
+                    entityInteractionCounts[entity][newInteraction] = 0; // Initialize or reset the count for the new interaction
+                }
+                else
+                {
+                    // If the entity is not in the dictionary, add it with the new interaction count initialized
+                    entityInteractionCounts[entity] = new Dictionary<SO_Interaction, int>
+                {
+                    { newInteraction, 0 }
+                };
+                }
+            }
+
+            // Update the interaction in the progression dictionary
+            interactionProgressionDictionary[entity] = newInteraction;
         }
         else
         {
-            interactionProgressionDictionary.Add(entity, newInteractionIndex);
+            // If the entity is not in the progression dictionary, add it with the new interaction
+            interactionProgressionDictionary.Add(entity, newInteraction);
+            entityInteractionCounts.Add(entity, new Dictionary<SO_Interaction, int> //error
+        {
+            { newInteraction, 0 }
+        });
         }
 
         // Here you can add additional code to handle the interaction update, such as triggering events or saving the state
     }
+
 }
+

@@ -16,3 +16,4 @@ MonoBehaviour:
   startingInteractionIndex: 0
   interactions:
   - {fileID: 11400000, guid: 1480f79aa3f60374d9fd6348bb9fddc6, type: 2}
+  - {fileID: 11400000, guid: 94827deb3c4c0d447864d2f062d50101, type: 2}
