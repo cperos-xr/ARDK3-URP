@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6276b119b5ba13d46ab434a8f1e22875, type: 3}
   m_Name: MyBlock
   m_EditorClassIdentifier: 
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 619889328f5de9645b1374e331f47c9b, type: 2}
+    newInteraction: {fileID: 11400000, guid: 1480f79aa3f60374d9fd6348bb9fddc6, type: 2}
   areaName: My Block
   areaColor: green
   _boundaries:

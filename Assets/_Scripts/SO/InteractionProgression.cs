@@ -21,12 +21,12 @@ public class InteractionProgression : ScriptableObject
             if (entityInteractionUpdate.newInteraction != null)
             {
                 Debug.Log($"New interaction is not null for {entityInteractionUpdate.entity.entityName}...");
-                InteractionManager.Instance.UpdateInteractionIndex(entityInteractionUpdate.entity, entityInteractionUpdate.newInteraction);
+                InteractionManager.Instance.UpdateInteraction(entityInteractionUpdate.entity, entityInteractionUpdate.newInteraction);
             }
             else
             {
                 Debug.Log($"New interaction is null for {entityInteractionUpdate.entity.entityName}...");
-                InteractionManager.Instance.UpdateInteractionIndex(entityInteractionUpdate.entity, null);
+                InteractionManager.Instance.UpdateInteraction(entityInteractionUpdate.entity, null);
             }
 
         

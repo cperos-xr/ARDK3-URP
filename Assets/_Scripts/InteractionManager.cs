@@ -121,7 +121,7 @@ public class InteractionManager : MonoBehaviour
     }
 
 
-    internal void UpdateInteractionIndex(BaseEntityData entity, SO_Interaction newInteraction)
+    internal void UpdateInteraction(BaseEntityData entity, SO_Interaction newInteraction)
     {
         if (newInteraction == null)
         {

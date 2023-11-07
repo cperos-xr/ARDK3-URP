@@ -91,11 +91,11 @@ public class EntityManager : MonoBehaviour
 
     private void HandlePlayerPositionChanged(LatLng newPosition)
     {
-        Debug.Log("handle player position change");
+        //Debug.Log("handle player position change");
         foreach (SO_MapEntityData entity in allCurrentAreaEntities)
         {
             float distanceFromEnity = GeoUtility.CalculateDistance(newPosition, entity.gpsCoordinates);
-            Debug.Log($"Player is {distanceFromEnity} meters from {entity.name}");
+            //Debug.Log($"Player is {distanceFromEnity} meters from {entity.name}");
             if (distanceFromEnity < entity.interactionRadius)
             {
                 Debug.Log($"Entity {entity.name} is within interaction distance");
