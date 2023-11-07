@@ -100,14 +100,21 @@ public class InteractionManager : MonoBehaviour
 
     internal void UpdateInteraction(BaseEntityData entity, SO_Interaction newInteraction)
     {
+        Debug.Log($"Updating interaction for entity: {entity.entityName}");
+
+        // Check if the entity is already in the progression dictionary
         if (interactionProgressionDictionary.ContainsKey(entity))
         {
             // Get the current interaction
             SO_Interaction currentInteraction = interactionProgressionDictionary[entity];
 
+            Debug.Log($"Current interaction: {currentInteraction.InteractionName}");
+
             // Check if the current interaction is different from the new interaction
             if (currentInteraction != newInteraction)
             {
+                Debug.Log($"New interaction detected: {newInteraction.InteractionName}");
+
                 // Reset the interaction count for the new interaction
                 if (entityInteractionCounts.ContainsKey(entity))
                 {
@@ -115,8 +122,11 @@ public class InteractionManager : MonoBehaviour
                     {
                         // Reset the count for the current interaction
                         entityInteractionCounts[entity][currentInteraction] = 0;
+                        Debug.Log($"Reset interaction count for current interaction: {currentInteraction.InteractionName}");
                     }
+
                     entityInteractionCounts[entity][newInteraction] = 0; // Initialize or reset the count for the new interaction
+                    Debug.Log($"Set interaction count to 0 for new interaction: {newInteraction.InteractionName}");
                 }
                 else
                 {
@@ -125,24 +135,31 @@ public class InteractionManager : MonoBehaviour
                 {
                     { newInteraction, 0 }
                 };
+                    Debug.Log($"Added new entity to interaction counts with interaction: {newInteraction.InteractionName}");
                 }
+            }
+            else
+            {
+                Debug.Log("New interaction is the same as the current interaction, no update needed.");
             }
 
             // Update the interaction in the progression dictionary
             interactionProgressionDictionary[entity] = newInteraction;
+            Debug.Log($"Interaction progression dictionary updated for entity: {entity.entityName}");
         }
         else
         {
             // If the entity is not in the progression dictionary, add it with the new interaction
             interactionProgressionDictionary.Add(entity, newInteraction);
-            entityInteractionCounts.Add(entity, new Dictionary<SO_Interaction, int> //error
+            entityInteractionCounts.Add(entity, new Dictionary<SO_Interaction, int>
         {
             { newInteraction, 0 }
         });
+            Debug.Log($"Added new entity to progression dictionary with interaction: {newInteraction.InteractionName}");
         }
-
-        // Here you can add additional code to handle the interaction update, such as triggering events or saving the state
     }
+
+
 
 }
 
