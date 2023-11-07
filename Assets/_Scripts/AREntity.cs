@@ -6,8 +6,7 @@ using UnityEngine;
 public class AREntity : MonoBehaviour
 {
     public SO_ArEntityData arEntityData;
-    public List<ARInteractionObject> interactionObjects;
-    public int currentInteraction;
+    public SO_Interaction currentInteraction;
 
 
     private void Start()
@@ -17,13 +16,15 @@ public class AREntity : MonoBehaviour
 
     void IntitializeArEntity()
     {
-        foreach (SO_Interaction arInteraction in arEntityData.interactions)
-        {
-            ARInteractionObject arInteractionObject;
-            arInteractionObject.arInteraction = arInteraction;
-            interactionObjects.Add(arInteractionObject);
+        currentInteraction = arEntityData.startingInteraction;
 
-        }
+        //foreach (SO_Interaction arInteraction in arEntityData.interactions)
+        //{
+        //    ARInteractionObject arInteractionObject;
+        //    arInteractionObject.arInteraction = arInteraction;
+        //    interactionObjects.Add(arInteractionObject);
+
+        //}
     }
 
 }

@@ -349,36 +349,52 @@ public class TaskObjectiveHandler : MonoBehaviour
             return;
         }
 
+        // Define a generic method to handle adding objectives to their respective dictionaries.
+        void AddObjective<T>(Dictionary<T, bool> dictionary, T key) where T : SO_TaskObjective
+        {
+            if (!dictionary.ContainsKey(key))
+            {
+                dictionary.Add(key, false);
+            }
+            else
+            {
+                Debug.LogWarning($"Objective {key.objectiveName} already exists in the dictionary and will not be added again.");
+                // Optionally, you could handle updating the existing entry here if needed.
+            }
+        }
+
+        // Use the generic method for each objective type.
         if (objective is SO_TaskObjective_ItemCollection taskObjective_ItemCollection)
         {
-            itemCollectionObjectives.Add(taskObjective_ItemCollection, false);
+            AddObjective(itemCollectionObjectives, taskObjective_ItemCollection);
         }
         else if (objective is SO_TaskObjective_GPSLocation taskObjective_GPSLocation)
         {
-            gpsLocationObjectives.Add(taskObjective_GPSLocation, false);
+            AddObjective(gpsLocationObjectives, taskObjective_GPSLocation);
         }
         else if (objective is SO_TaskObjective_TrackedARImage taskObjective_TrackedARImage)
         {
-            arTrackedImageObjectives.Add(taskObjective_TrackedARImage, false);
+            AddObjective(arTrackedImageObjectives, taskObjective_TrackedARImage);
         }
         else if (objective is SO_TaskObjective_EnterArea taskObjective_EnterArea)
         {
-            enterAreaObjectives.Add(taskObjective_EnterArea, false);
+            AddObjective(enterAreaObjectives, taskObjective_EnterArea);
         }
         else if (objective is SO_TaskObjective_EntityInteraction taskObjective_EntityInteraction)
         {
-            entityInteractionObjectives.Add(taskObjective_EntityInteraction, false);
+            AddObjective(entityInteractionObjectives, taskObjective_EntityInteraction);
         }
         else if (objective is SO_TaskObjective_Interaction taskObjective_Interaction)
         {
-            interactionObjectives.Add(taskObjective_Interaction, false);
+            AddObjective(interactionObjectives, taskObjective_Interaction);
         }
         else if (objective is SO_TaskObjective_Semantic taskObjective_Semantic)
         {
-            semanticObjectives.Add(taskObjective_Semantic, false);
+            AddObjective(semanticObjectives, taskObjective_Semantic);
         }
         // Add similar cases for other objective types...
     }
+
 
 
 

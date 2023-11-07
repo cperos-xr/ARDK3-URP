@@ -13,8 +13,6 @@ public class InteractionManager : MonoBehaviour
     public delegate void PlayerEntityInteractionEvent(BaseEntityData entity);
     public static event PlayerEntityInteractionEvent OnPlayerEntityInteraction;
 
-    private Dictionary<BaseEntityData, Dictionary<SO_Interaction, int>> entityInteractionCounts = new Dictionary<BaseEntityData, Dictionary<SO_Interaction, int>>();
-
     public Dictionary<BaseEntityData, SO_Interaction> interactionProgressionDictionary = new Dictionary<BaseEntityData, SO_Interaction>();
 
     //[SerializeField] QuestManager questManager;
@@ -36,65 +34,100 @@ public class InteractionManager : MonoBehaviour
 
     public void HandleEntityInteraction(BaseEntityData entity)
     {
+        // Check if the entity is null
         if (entity == null)
         {
             Debug.LogError("Entity is null.");
             return; // Exit the method to avoid further issues.
         }
 
-        Debug.Log("Handling Entity Interaction" + entity.entityName);
+        Debug.Log("Handling Entity Interaction for " + entity.entityName);
         OnPlayerEntityInteraction?.Invoke(entity);
-        if (!entityInteractionCounts.ContainsKey(entity))
+
+        // Check if this is the first interaction with the entity
+        if (!interactionProgressionDictionary.ContainsKey(entity))
         {
-            entityInteractionCounts[entity] = new Dictionary<SO_Interaction, int>();
-        }
-
-        SO_Interaction interaction = entity.interactions[entity.startingInteractionIndex];
-
-        if (!entityInteractionCounts[entity].ContainsKey(interaction))
-        {
-            entityInteractionCounts[entity][interaction] = 0;
-        }
-
-        // Check if this interaction is related to tasks.
-        bool hasQuest = interaction.quest != null;
-
-        // Check if this interaction provides items.
-        bool hasItems = interaction.itemDatas != null && interaction.itemDatas.Count > 0;
-
-        if (entityInteractionCounts[entity][interaction] < interaction.maxInteractions)
-        {
-            OnPlayerInteraction?.Invoke(interaction);
-            if (hasItems)
+            // If it is, use the starting interaction
+            if (entity.startingInteraction != null)
             {
-                // Handle item assignment to the player's inventory here.
-                foreach (SO_ItemData itemData in interaction.itemDatas)
-                {
-                    if (!itemData.isLocked)
-                    {
+                interactionProgressionDictionary.Add(entity, entity.startingInteraction);
+            }
+            else
+            {
+                Debug.LogError("Starting interaction for entity " + entity.entityName + " is null.");
+                return; // Exit the method to avoid further issues.
+            }
+        }
 
+        // Retrieve the current interaction for the entity
+        SO_Interaction interaction = interactionProgressionDictionary[entity];
+
+        // Ensure that the interaction is not null
+        if (interaction == null)
+        {
+            Debug.LogError("Interaction for entity " + entity.entityName + " is null.");
+            return; // Exit the method to avoid further issues.
+        }
+
+        // Invoke the interaction event
+        OnPlayerInteraction?.Invoke(interaction);
+
+        //Update all entity interations
+        if (interaction.entityInteractionUpdates.Count > 0)
+        {
+            Debug.Log("entityInteractionUpdates has count greater than 0 " + interaction.InteractionName);
+            interaction.UpdateAllEntityInteractions();
+        }
+
+        // Handle items if any are associated with this interaction
+        if (interaction.itemDatas != null)
+        {
+            foreach (SO_ItemData itemData in interaction.itemDatas)
+            {
+                if (!itemData.isLocked)
+                {
+                    // Ensure itemManager is not null
+                    if (itemManager != null)
+                    {
                         itemManager.AddItemToPlayerInventory(itemData, entity);
+                    }
+                    else
+                    {
+                        Debug.LogError("ItemManager is not set in InteractionManager.");
+                        return; // Exit the method to avoid further issues.
                     }
                 }
             }
-
-            if (hasQuest)
-            {
-                // Handle quest assignment from TaskManager.
-                QuestManager.Instance.AssignQuest(interaction.quest); 
-            }
-
-            entityInteractionCounts[entity][interaction]++; // Increment the interaction count for this interaction.
         }
-        else
+
+        // Handle quests if any are associated with this interaction
+        if (interaction.quest != null)
         {
-            // Interaction limit reached, handle it (e.g., display a message).
-            Debug.Log("Interaction limit reached.");
+            // Ensure QuestManager.Instance is not null
+            if (QuestManager.Instance != null)
+            {
+                QuestManager.Instance.AssignQuest(interaction.quest);
+            }
+            else
+            {
+                Debug.LogError("QuestManager.Instance is null.");
+                return; // Exit the method to avoid further issues.
+            }
         }
+
+        // If you want to update the interaction after handling, you can do so here
+        // For example, if the interaction should change after being handled once:
+        // UpdateInteractionIndex(entity, interaction.nextInteraction);
     }
+
 
     internal void UpdateInteractionIndex(BaseEntityData entity, SO_Interaction newInteraction)
     {
+        if (newInteraction == null)
+        {
+            Debug.Log("null interaction occured, no current interaction assigned for entity...");
+        }
+
         if (interactionProgressionDictionary.ContainsKey(entity))
         {
             interactionProgressionDictionary[entity] = newInteraction;

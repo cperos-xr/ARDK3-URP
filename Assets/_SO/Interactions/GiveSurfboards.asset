@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5adebe046a44fa548931b0aea32bf529, type: 3}
   m_Name: GiveSurfboards
   m_EditorClassIdentifier: 
-  changes: []
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 619889328f5de9645b1374e331f47c9b, type: 2}
+    newInteraction: {fileID: 11400000, guid: f2fdd0bfeb6419a4386895f72c8adf44, type: 2}
   InteractionName: Give Surf
-  maxInteractions: 1
   itemDatas:
   - {fileID: 11400000, guid: d9bdeba91f62e9240bba5d3c5f28c442, type: 2}
   - {fileID: 11400000, guid: 95a1b53e20757614fac6e27a3ccdd9da, type: 2}

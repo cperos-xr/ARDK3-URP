@@ -13,6 +13,4 @@ MonoBehaviour:
   m_Name: CubeMon
   m_EditorClassIdentifier: 
   entityName: Cube Mon
-  startingInteractionIndex: 0
-  interactions:
-  - {fileID: 11400000, guid: 1480f79aa3f60374d9fd6348bb9fddc6, type: 2}
+  startingInteraction: {fileID: 11400000, guid: 1480f79aa3f60374d9fd6348bb9fddc6, type: 2}

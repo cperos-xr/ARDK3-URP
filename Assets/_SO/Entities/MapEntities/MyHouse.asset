@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: MyHouse
   m_EditorClassIdentifier: 
   entityName: My House
-  startingInteractionIndex: 0
-  interactions:
-  - {fileID: 11400000, guid: 713dc553107aa36469fa27a5726ab587, type: 2}
+  startingInteraction: {fileID: 11400000, guid: 713dc553107aa36469fa27a5726ab587, type: 2}
   gpsCoordinates:
     _latitude: 21.293380737304688
     _longitude: -157.83290100097656

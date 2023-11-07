@@ -56,6 +56,13 @@ public class UINotificationManager : MonoBehaviour
 
     private void InteractionNotification(SO_Interaction EntityNotifyPlayer)
     {
+
+        if (EntityNotifyPlayer == null)
+        {
+            Debug.LogError("EntityNotifyPlayer is null in InteractionNotification.");
+            return;
+        }
+
         notificationQueue.Enqueue(EntityNotifyPlayer.notification);
 
         if (!displayingNotification)
