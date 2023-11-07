@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Lunalilo School
   m_EditorClassIdentifier: 
   entityName: 
-  startingInteraction: {fileID: 0}
+  startingInteraction: {fileID: 11400000, guid: d45822f6f0711be4fa8180309f786394, type: 2}
   gpsCoordinates:
     _latitude: 21.29246711730957
     _longitude: -157.83303833007812

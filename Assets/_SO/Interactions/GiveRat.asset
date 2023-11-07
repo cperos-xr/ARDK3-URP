@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: GiveRat
   m_EditorClassIdentifier: 
   entityInteractionUpdates:
-  - entity: {fileID: 11400000, guid: de8900d1ee926444f93905e3354f0db0, type: 2}
+  - entity: {fileID: 11400000, guid: 619889328f5de9645b1374e331f47c9b, type: 2}
     newInteraction: {fileID: 11400000, guid: f2fdd0bfeb6419a4386895f72c8adf44, type: 2}
+    returnToPreviousInsteadOfNewInteraction: 0
   InteractionName: Get Rat
   itemDatas:
   - {fileID: 11400000, guid: b81d7e6f294a867419ad776dcf38f8f1, type: 2}

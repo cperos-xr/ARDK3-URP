@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05737baa2d826724583cead346773d40, type: 3}
   m_Name: GPS_School
   m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
   objectiveName: go to school gps
   objectiveDescription: go to school
   requiredProgress: 1

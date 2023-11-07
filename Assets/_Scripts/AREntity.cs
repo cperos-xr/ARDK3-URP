@@ -18,13 +18,6 @@ public class AREntity : MonoBehaviour
     {
         currentInteraction = arEntityData.startingInteraction;
 
-        //foreach (SO_Interaction arInteraction in arEntityData.interactions)
-        //{
-        //    ARInteractionObject arInteractionObject;
-        //    arInteractionObject.arInteraction = arInteraction;
-        //    interactionObjects.Add(arInteractionObject);
-
-        //}
     }
 
 }

@@ -136,7 +136,7 @@ public class InteractionManager : MonoBehaviour
     {
         foreach (EntityInteractionChange entityInteractionUpdate in interactionProgression.entityInteractionUpdates)
         {
-            if(entityInteractionUpdate.newInteraction.returnToPreviousInteractionAfter)
+            if(entityInteractionUpdate.returnToPreviousInsteadOfNewInteraction)
             {
                 Debug.Log($"New interaction is now the previous interaction again for {entityInteractionUpdate.entity.entityName}...");
                 UpdateInteraction(entityInteractionUpdate.entity, entityInteractionUpdate.newInteraction);

@@ -8,7 +8,6 @@ using UnityEngine;
 public class SO_Interaction : InteractionProgression
 {
     public string InteractionName;
-    public bool returnToPreviousInteractionAfter;
     public List<SO_ItemData> itemDatas;
     public SO_Quest quest; // List of tasks associated with this interaction.
     public PlayerNotification notification;

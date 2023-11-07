@@ -11,6 +11,9 @@ public class InteractionProgression : ScriptableObject
     {
         public BaseEntityData entity; // Unique identifier for the entity
         public SO_Interaction newInteraction; // The new interaction index for the entity
+        public bool returnToPreviousInsteadOfNewInteraction; //alternative to utilizing newInteraction
+
+
     }
 
 

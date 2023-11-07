@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e318418990b8954db7c230119f3f47c, type: 3}
   m_Name: TestTask
   m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
   taskID: 232
-  taskName: Track Pup
+  taskName: Go To School
   icon: {fileID: 21300000, guid: ae204b11e7d4c7e43a6efa24c5f8588b, type: 3}
   taskDescription: Test the task
   objectives:
-  - {fileID: 11400000, guid: b0eeefdbdb74908458d13f588ea8ba00, type: 2}
+  - {fileID: 11400000, guid: c56fd199ca33ae442a1ca20bd4b471e7, type: 2}
   experienceReward: 0
   itemRewards: []
