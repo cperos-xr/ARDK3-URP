@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Item", menuName = "Game/Inventory/Item")]
-public class SO_ItemData : ScriptableObject, IButtonObject
+public class SO_ItemData : InteractionProgression, IButtonObject
 {
     public string itemName;
     public Sprite icon;

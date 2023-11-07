@@ -79,7 +79,7 @@ public class TaskObjectiveHandler : MonoBehaviour
         }
     }
 
-    private void HandlePlayerInteraction(Interaction interaction)
+    private void HandlePlayerInteraction(SO_Interaction interaction)
     {
         var keys = new List<SO_TaskObjective_Interaction>(interactionObjectives.Keys);
         foreach (var key in keys)

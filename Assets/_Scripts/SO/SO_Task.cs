@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "SO_Task", menuName = "Game/Quest System/Task")]
-public class SO_Task : ScriptableObject, IButtonObject
+public class SO_Task : InteractionProgression, IButtonObject
 {
     [Header("Task Information")]
     public string taskID;

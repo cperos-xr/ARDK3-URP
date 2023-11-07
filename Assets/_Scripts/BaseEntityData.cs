@@ -4,7 +4,7 @@ using UnityEngine;
 public class BaseEntityData : ScriptableObject
 {
     public string entityName;
-    public int interactionIndex;
-    public List<Interaction> interactions = new List<Interaction>();
+    public int startingInteractionIndex;
+    public List<SO_Interaction> interactions = new List<SO_Interaction>();
 
 }
