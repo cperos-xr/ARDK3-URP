@@ -103,7 +103,7 @@ public class AreaManager : MonoBehaviour
                     // Player has entered a new area
                     Debug.Log($"Player has entered area {areaData.name}");
                     EntityManager.Instance.LoadAllEntities(areaData);
-                    areaData.UpdateAllEntityInteractions();
+                    InteractionManager.Instance.UpdateAllEntityInteractions(areaData);
                 }
             }
             else if (currentAreas.Contains(areaData))

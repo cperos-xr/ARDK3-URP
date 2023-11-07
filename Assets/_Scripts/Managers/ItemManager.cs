@@ -54,6 +54,9 @@ public class ItemManager : MonoBehaviour
 
         Debug.Log($"Adding Item {itemData.itemName} to player inventory");
 
+        //updating any interactions that may have changed
+        InteractionManager.Instance.UpdateAllEntityInteractions(itemData);
+
 
     }
 

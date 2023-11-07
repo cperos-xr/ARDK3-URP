@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using static InteractionProgression;
 
 public class InteractionManager : MonoBehaviour
 {
@@ -15,6 +16,13 @@ public class InteractionManager : MonoBehaviour
 
     public Dictionary<BaseEntityData, SO_Interaction> interactionProgressionDictionary = new Dictionary<BaseEntityData, SO_Interaction>();
 
+    public Dictionary<BaseEntityData, SO_Interaction> previousInteractionDictionary = new Dictionary<BaseEntityData, SO_Interaction>();
+
+    public struct InteractionContainer
+    {
+        public SO_Interaction interaction;
+        public SO_Interaction previousInteraction;
+    }
     //[SerializeField] QuestManager questManager;
 
 
@@ -50,6 +58,7 @@ public class InteractionManager : MonoBehaviour
             // If it is, use the starting interaction
             if (entity.startingInteraction != null)
             {
+                previousInteractionDictionary.Add(entity, null); // no previous interaction
                 interactionProgressionDictionary.Add(entity, entity.startingInteraction);
             }
             else
@@ -76,8 +85,11 @@ public class InteractionManager : MonoBehaviour
         if (interaction.entityInteractionUpdates.Count > 0)
         {
             Debug.Log("entityInteractionUpdates has count greater than 0 " + interaction.InteractionName);
-            interaction.UpdateAllEntityInteractions();
+            UpdateAllEntityInteractions(interaction);
+
         }
+
+
 
         // Handle items if any are associated with this interaction
         if (interaction.itemDatas != null)
@@ -120,20 +132,58 @@ public class InteractionManager : MonoBehaviour
         // UpdateInteractionIndex(entity, interaction.nextInteraction);
     }
 
+    public void UpdateAllEntityInteractions(InteractionProgression interactionProgression)
+    {
+        foreach (EntityInteractionChange entityInteractionUpdate in interactionProgression.entityInteractionUpdates)
+        {
+            if(entityInteractionUpdate.newInteraction.returnToPreviousInteractionAfter)
+            {
+                Debug.Log($"New interaction is now the previous interaction again for {entityInteractionUpdate.entity.entityName}...");
+                UpdateInteraction(entityInteractionUpdate.entity, entityInteractionUpdate.newInteraction);
+            }
+            else if (entityInteractionUpdate.newInteraction != null)
+            {
+                Debug.Log($"New interaction is not null for {entityInteractionUpdate.entity.entityName}...");
+                UpdateInteraction(entityInteractionUpdate.entity, entityInteractionUpdate.newInteraction);
+            }
+            else
+            {
+                Debug.Log($"New interaction is null for {entityInteractionUpdate.entity.entityName}...");
+                UpdateInteraction(entityInteractionUpdate.entity, null);
+            }
+
+
+        }
+    }
 
     internal void UpdateInteraction(BaseEntityData entity, SO_Interaction newInteraction)
     {
+        InteractionContainer interactionContainer = new InteractionContainer();
+        interactionContainer.interaction = newInteraction;
+
         if (newInteraction == null)
         {
             Debug.Log("null interaction occured, no current interaction assigned for entity...");
         }
 
+        if (previousInteractionDictionary.ContainsKey(entity) && interactionProgressionDictionary.ContainsKey(entity))
+        {
+            previousInteractionDictionary[entity] = interactionProgressionDictionary[entity];
+        }
+        else
+        {
+            previousInteractionDictionary.Add(entity, null);
+        }
+
         if (interactionProgressionDictionary.ContainsKey(entity))
         {
+
+            //interactionContainer.previousInteraction = interactionProgressionDictionary[entity].interaction;
             interactionProgressionDictionary[entity] = newInteraction;
         }
         else
         {
+            //interactionContainer.previousInteraction = null;
             interactionProgressionDictionary.Add(entity, newInteraction);
         }
 

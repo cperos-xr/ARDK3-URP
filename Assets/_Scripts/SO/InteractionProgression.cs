@@ -14,22 +14,5 @@ public class InteractionProgression : ScriptableObject
     }
 
 
-    public void UpdateAllEntityInteractions()
-    {
-        foreach (EntityInteractionChange entityInteractionUpdate in entityInteractionUpdates) 
-        {
-            if (entityInteractionUpdate.newInteraction != null)
-            {
-                Debug.Log($"New interaction is not null for {entityInteractionUpdate.entity.entityName}...");
-                InteractionManager.Instance.UpdateInteraction(entityInteractionUpdate.entity, entityInteractionUpdate.newInteraction);
-            }
-            else
-            {
-                Debug.Log($"New interaction is null for {entityInteractionUpdate.entity.entityName}...");
-                InteractionManager.Instance.UpdateInteraction(entityInteractionUpdate.entity, null);
-            }
 
-        
-        }
-    }
 }

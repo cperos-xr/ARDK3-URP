@@ -238,9 +238,6 @@ public class TaskObjectiveHandler : MonoBehaviour
         return false;
     }
 
-
-
-
     public bool IsObjectiveCompleted(SO_TaskObjective objective)
     {
         if (objective == null)

@@ -8,6 +8,8 @@ public class TaskManager : MonoBehaviour
     public List<SO_Task> ActiveTasks = new List<SO_Task>();
     public List<SO_Task> CompletedTasks = new List<SO_Task>();
 
+    public List<SO_TaskObjective> CompletedTaskObjectives = new List<SO_TaskObjective>();
+
     private void Awake()
     {
         if (Instance == null)
@@ -61,6 +63,13 @@ public class TaskManager : MonoBehaviour
             else
             {
                 Debug.Log($"Objective '{objective.objectiveName}' in task '{task.taskName}' is completed.");
+                if (!CompletedTaskObjectives.Contains(objective))
+                {
+                    CompletedTaskObjectives.Add(objective);
+
+                    InteractionManager.Instance.UpdateAllEntityInteractions(objective);
+                }
+
             }
         }
 
@@ -91,5 +100,8 @@ public class TaskManager : MonoBehaviour
         Debug.Log($"Task {task.taskName} is complete!");
         CompletedTasks.Add(task);
         ActiveTasks.Remove(task);
+
+        InteractionManager.Instance.UpdateAllEntityInteractions(task);
+
     }
 }
