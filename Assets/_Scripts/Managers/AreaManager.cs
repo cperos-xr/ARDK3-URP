@@ -84,7 +84,7 @@ public class AreaManager : MonoBehaviour
 
     private void HandlePlayerPositionChanged(LatLng newPosition)
     {
-        Debug.Log("handle player position change");
+        //Debug.Log("handle player position change");
 
         List<SO_AreaData> newCurrentAreas = new List<SO_AreaData>();
 

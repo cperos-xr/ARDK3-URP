@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityInteractionUpdates:
   - entity: {fileID: 11400000, guid: 619889328f5de9645b1374e331f47c9b, type: 2}
-    newInteraction: {fileID: 11400000, guid: f2fdd0bfeb6419a4386895f72c8adf44, type: 2}
+    newInteraction: {fileID: 0}
+  - entity: {fileID: 11400000, guid: de8900d1ee926444f93905e3354f0db0, type: 2}
+    newInteraction: {fileID: 11400000, guid: e3f5627fce6e03049aef9a81090373d5, type: 2}
   InteractionName: Give Surf
   itemDatas:
   - {fileID: 11400000, guid: d9bdeba91f62e9240bba5d3c5f28c442, type: 2}

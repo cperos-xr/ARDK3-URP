@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5adebe046a44fa548931b0aea32bf529, type: 3}
   m_Name: NoneLeft
   m_EditorClassIdentifier: 
-  changes: []
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 1071243610f7cfc49b8697b982b00dcd, type: 2}
+    newInteraction: {fileID: 11400000}
   InteractionName: None Left
   itemDatas: []
   quest: {fileID: 0}

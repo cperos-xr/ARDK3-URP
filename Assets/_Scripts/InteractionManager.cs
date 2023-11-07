@@ -54,7 +54,7 @@ public class InteractionManager : MonoBehaviour
             }
             else
             {
-                Debug.LogError("Starting interaction for entity " + entity.entityName + " is null.");
+                Debug.Log("Starting interaction for entity " + entity.entityName + " is null.");
                 return; // Exit the method to avoid further issues.
             }
         }
@@ -65,7 +65,7 @@ public class InteractionManager : MonoBehaviour
         // Ensure that the interaction is not null
         if (interaction == null)
         {
-            Debug.LogError("Interaction for entity " + entity.entityName + " is null.");
+            Debug.Log("Interaction for entity " + entity.entityName + " is null.");
             return; // Exit the method to avoid further issues.
         }
 
