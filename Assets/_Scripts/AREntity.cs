@@ -17,11 +17,10 @@ public class AREntity : MonoBehaviour
 
     void IntitializeArEntity()
     {
-        foreach (Interaction arInteraction in arEntityData.interactions)
+        foreach (SO_Interaction arInteraction in arEntityData.interactions)
         {
             ARInteractionObject arInteractionObject;
             arInteractionObject.arInteraction = arInteraction;
-            arInteractionObject.interactionIsLocked = arInteraction.interactionIsLocked;
             interactionObjects.Add(arInteractionObject);
 
         }
@@ -32,7 +31,6 @@ public class AREntity : MonoBehaviour
 [Serializable]
 public struct ARInteractionObject
 {
-    public Interaction arInteraction;
-    public bool interactionIsLocked;
+    public SO_Interaction arInteraction;
 }
 

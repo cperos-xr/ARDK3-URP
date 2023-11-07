@@ -6,7 +6,7 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "Game/Level/Area")]
 [Serializable]
-public class SO_AreaData : ScriptableObject
+public class SO_AreaData : InteractionProgression
 {
     public string areaName;
     public string areaColor; //Colors must be attached and set in PolygonColorSelection object in scene

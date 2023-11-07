@@ -4,20 +4,35 @@ using UnityEngine;
 
 public class InteractionManager : MonoBehaviour
 {
+    public static InteractionManager Instance;
     [SerializeField] ItemManager itemManager;
 
-    public delegate void PlayerInteractionEvent(Interaction EntityNotifyPlayer);
+    public delegate void PlayerInteractionEvent(SO_Interaction EntityNotifyPlayer);
     public static event PlayerInteractionEvent OnPlayerInteraction;
 
     public delegate void PlayerEntityInteractionEvent(BaseEntityData entity);
     public static event PlayerEntityInteractionEvent OnPlayerEntityInteraction;
 
-    private Dictionary<BaseEntityData, Dictionary<Interaction, int>> entityInteractionCounts = new Dictionary<BaseEntityData, Dictionary<Interaction, int>>();
+    private Dictionary<BaseEntityData, Dictionary<SO_Interaction, int>> entityInteractionCounts = new Dictionary<BaseEntityData, Dictionary<SO_Interaction, int>>();
 
     public Dictionary<BaseEntityData, int> interactionProgressionDictionary = new Dictionary<BaseEntityData, int>();
 
     //[SerializeField] QuestManager questManager;
 
+
+    private void Awake()
+    {
+        // Ensure there is only one instance of QuestManager
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            // If an instance already exists, destroy this one
+            Destroy(gameObject);
+        }
+    }
 
     public void HandleEntityInteraction(BaseEntityData entity)
     {
@@ -31,10 +46,10 @@ public class InteractionManager : MonoBehaviour
         OnPlayerEntityInteraction?.Invoke(entity);
         if (!entityInteractionCounts.ContainsKey(entity))
         {
-            entityInteractionCounts[entity] = new Dictionary<Interaction, int>();
+            entityInteractionCounts[entity] = new Dictionary<SO_Interaction, int>();
         }
 
-        Interaction interaction = entity.interactions[entity.startingInteractionIndex];
+        SO_Interaction interaction = entity.interactions[entity.startingInteractionIndex];
 
         if (!entityInteractionCounts[entity].ContainsKey(interaction))
         {
@@ -78,24 +93,17 @@ public class InteractionManager : MonoBehaviour
         }
     }
 
+    internal void UpdateInteractionIndex(BaseEntityData entity, int newInteractionIndex)
+    {
+        if (interactionProgressionDictionary.ContainsKey(entity))
+        {
+            interactionProgressionDictionary[entity] = newInteractionIndex;
+        }
+        else
+        {
+            interactionProgressionDictionary.Add(entity, newInteractionIndex);
+        }
 
-
-
-}
-
-
-[Serializable]
-public struct Interaction
-{
-    public string name;
-    public int maxInteractions;
-    public List<SO_ItemData> itemDatas;
-    public SO_Quest quest; // List of tasks associated with this interaction.
-    public PlayerNotification notification;
-    public bool interactionIsLocked;
-
-
-
-    public int nextInteractionIndex;
-
+        // Here you can add additional code to handle the interaction update, such as triggering events or saving the state
+    }
 }

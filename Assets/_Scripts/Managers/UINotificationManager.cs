@@ -54,7 +54,7 @@ public class UINotificationManager : MonoBehaviour
         }
     }
 
-    private void InteractionNotification(Interaction EntityNotifyPlayer)
+    private void InteractionNotification(SO_Interaction EntityNotifyPlayer)
     {
         notificationQueue.Enqueue(EntityNotifyPlayer.notification);
 

@@ -5,6 +5,6 @@ public class BaseEntityData : ScriptableObject
 {
     public string entityName;
     public int startingInteractionIndex;
-    public List<Interaction> interactions = new List<Interaction>();
+    public List<SO_Interaction> interactions = new List<SO_Interaction>();
 
 }

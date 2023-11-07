@@ -4,7 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "SO_Quest", menuName = "Game/Quest System/Quest")]
 [Serializable]
-public class SO_Quest : ScriptableObject
+public class SO_Quest : InteractionProgression
 {
     [Header("Quest Information")]
     public string questID;
