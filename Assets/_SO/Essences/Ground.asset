@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ground
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  itemName: 
+  itemName: ground
   icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   isUsable: 0
   isLocked: 0
@@ -27,4 +27,4 @@ MonoBehaviour:
     notificationIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   givenByEntityName: 
   essenceMaterialSemanticChannelName: ground
-  essenceMaterialColor: {r: 0.5529412, g: 0.43137255, b: 0.3882353, a: 0}
+  essenceMaterialColor: {r: 0.5529412, g: 0.43137255, b: 0.3882353, a: 1}

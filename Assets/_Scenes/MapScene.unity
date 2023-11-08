@@ -1659,8 +1659,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 414302068}
+  - component: {fileID: 414302069}
   m_Layer: 0
-  m_Name: SamanticMaterialGrabber (ManaLens)
+  m_Name: ManaLens (Semantic Tool)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1674,14 +1675,49 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414302067}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01934421, y: -0.3544451, z: 3.5752301}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1818169433}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &414302069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414302067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61bd6ee418ef2ff4fb45d74f21c6441d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  essencePouch:
+    items: []
+    totalCapacity: 5
+  isActive: 1
+  essenceMaterialTypes:
+  - {fileID: 11400000, guid: c423dd4d148474442a17f78c15f34dde, type: 2}
+  - {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
+  - {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
+  - {fileID: 11400000, guid: 84c063cd72320b141be350ea6114174f, type: 2}
+  - {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
+  - {fileID: 11400000, guid: 2ca56bd43a0928f4184df63b8b18a55b, type: 2}
+  - {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}
+  - {fileID: 11400000, guid: f073f9f7daac0044580750aa747fb925, type: 2}
+  - {fileID: 11400000, guid: 9b76473e442f62142bae32c903da1646, type: 2}
+  - {fileID: 11400000, guid: 1c0bd690c5d034e459f3ae90c062bfbc, type: 2}
+  - {fileID: 11400000, guid: 95054bcd2122da040857f4f8b7876c66, type: 2}
+  - {fileID: 11400000, guid: 2f790e2943fc210419e97430dda9251b, type: 2}
+  - {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
+  - {fileID: 11400000, guid: 0427fcf0ce3220d48bb07abb75ac9e81, type: 2}
+  - {fileID: 11400000, guid: 28125671f9205fa4abb0a91015785627, type: 2}
+  - {fileID: 11400000, guid: 8e2c4d819d6b0aa4d9ba259ac5c68fea, type: 2}
+  - {fileID: 11400000, guid: 5654f2f89ceb1aa42bab5661b365a517, type: 2}
+  - {fileID: 11400000, guid: 68146c278b6c57c49acdd306f27ff912, type: 2}
+  - {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
 --- !u!1 &433147992
 GameObject:
   m_ObjectHideFlags: 0
@@ -7739,7 +7775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _semanticsManager: {fileID: 1654950865}
   channelListContainer: {fileID: 11400000, guid: 21b8f983f42679a44a55c192c58afa1a, type: 2}
-  writeToCSV: 1
+  writeToCSV: 0
   writeToJSON: 0
 --- !u!114 &1612076301
 MonoBehaviour:
@@ -8629,37 +8665,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &1818169432
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1818169433}
-  m_Layer: 0
-  m_Name: EssencePouch
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1818169433
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1818169432}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 414302068}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1823062189
 GameObject:
   m_ObjectHideFlags: 0

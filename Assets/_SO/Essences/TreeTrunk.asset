@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TreeTrunk
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  itemName: 
+  itemName: tree trunk
   icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   isUsable: 0
   isLocked: 0
@@ -26,5 +26,5 @@ MonoBehaviour:
     buttonText1: Release
     notificationIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   givenByEntityName: 
-  essenceMaterialSemanticChannelName: 
-  essenceMaterialColor: {r: 0.54509807, g: 0.27058825, b: 0.07450981, a: 0}
+  essenceMaterialSemanticChannelName: tree_trunk_experimental
+  essenceMaterialColor: {r: 0.54509807, g: 0.27058825, b: 0.07450981, a: 1}

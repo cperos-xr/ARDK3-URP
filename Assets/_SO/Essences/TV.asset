@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TV
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  itemName: 
+  itemName: tv
   icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   isUsable: 0
   isLocked: 0
@@ -27,4 +27,4 @@ MonoBehaviour:
     notificationIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   givenByEntityName: 
   essenceMaterialSemanticChannelName: tv_experimental
-  essenceMaterialColor: {r: 0.4117647, g: 0.4117647, b: 0.4117647, a: 0}
+  essenceMaterialColor: {r: 0.4117647, g: 0.4117647, b: 0.4117647, a: 1}

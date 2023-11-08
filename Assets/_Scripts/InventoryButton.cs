@@ -24,6 +24,12 @@ public class InventoryButton : MonoBehaviour
         this.iButtonObject = iButtonObject;
         icon.sprite = this.iButtonObject.Icon;
         buttonText.text = this.iButtonObject.ObjectName;
+
+        if (iButtonObject is SO_EssenceMaterialType essenceMaterialType)
+        {
+            icon.color = essenceMaterialType.essenceMaterialColor;
+        }
+
     }
 }
 

@@ -27,12 +27,14 @@ public class UINotificationManager : MonoBehaviour
     {
         ItemManager.OnPlayerGivenItem += ItemNotification;
         InteractionManager.OnPlayerInteraction += InteractionNotification;
+        ManaLens.OnPlayerGivenEssenceMaterial += ItemNotification;
     }
 
     private void OnDisable()
     {
         ItemManager.OnPlayerGivenItem -= ItemNotification;
         InteractionManager.OnPlayerInteraction -= InteractionNotification;
+        ManaLens.OnPlayerGivenEssenceMaterial -= ItemNotification;
     }
 
     private void ItemNotification(SO_ItemData item)
@@ -41,6 +43,16 @@ public class UINotificationManager : MonoBehaviour
         int index = r.Next(0, item.playerNotifications.Count);
 
         PlayerNotification playerNotification = item.playerNotifications[index];
+
+
+        if (item is SO_EssenceMaterialType essenceMaterialType)
+        {
+            playerNotification.notificationColor = essenceMaterialType.essenceMaterialColor;
+        }
+        else
+        {
+            playerNotification.notificationColor = Color.white;
+        }
 
         // Replace {0} with item name in all headings and descriptions
         playerNotification.notificationHeading = string.Format(playerNotification.notificationHeading, item.itemName);
@@ -86,6 +98,7 @@ public class UINotificationManager : MonoBehaviour
             {
                 notificationIcon.enabled = true;
                 notificationIcon.sprite = notification.notificationIcon;
+                notificationIcon.color = notification.notificationColor;
             }
             else
             {
@@ -131,5 +144,6 @@ public struct PlayerNotification
     public string buttonText0;
     public string buttonText1;
     public Sprite notificationIcon;
+    public Color notificationColor;
 
 }

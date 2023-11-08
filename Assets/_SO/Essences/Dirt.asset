@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dirt
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  itemName: 
+  itemName: dirt
   icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   isUsable: 0
   isLocked: 0
@@ -27,4 +27,4 @@ MonoBehaviour:
     notificationIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   givenByEntityName: 
   essenceMaterialSemanticChannelName: dirt_experimental
-  essenceMaterialColor: {r: 0.60784316, g: 0.4627451, b: 0.3254902, a: 0}
+  essenceMaterialColor: {r: 0.60784316, g: 0.4627451, b: 0.3254902, a: 1}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pet
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  itemName: 
+  itemName: pet
   icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   isUsable: 0
   isLocked: 0
@@ -27,4 +27,4 @@ MonoBehaviour:
     notificationIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   givenByEntityName: 
   essenceMaterialSemanticChannelName: pet_experimental
-  essenceMaterialColor: {r: 0.85490197, g: 0.64705884, b: 0.1254902, a: 0}
+  essenceMaterialColor: {r: 0.85490197, g: 0.64705884, b: 0.1254902, a: 1}

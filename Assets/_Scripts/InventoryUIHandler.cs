@@ -14,11 +14,13 @@ public class InventoryUIHandler: MonoBehaviour
     private void OnEnable()
     {
         ItemManager.OnPlayerGivenItem += MakeNewInventoryItemButton;
+        ManaLens.OnPlayerGivenEssenceMaterial += MakeNewInventoryItemButton;
     }
 
     private void OnDisable()
     {
         ItemManager.OnPlayerGivenItem -= MakeNewInventoryItemButton;
+        ManaLens.OnPlayerGivenEssenceMaterial -= MakeNewInventoryItemButton;
     }
 
     public void MakeNewInventoryItemButton(SO_ItemData itemData)
@@ -30,9 +32,5 @@ public class InventoryUIHandler: MonoBehaviour
         newItemButton.SetActive(true);
         Debug.Log("Created inventory item", newItemButton);
     }
-
-
-
-
 
 }

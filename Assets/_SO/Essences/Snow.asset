@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Snow
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  itemName: 
+  itemName: snow
   icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   isUsable: 0
   isLocked: 0
@@ -27,4 +27,4 @@ MonoBehaviour:
     notificationIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   givenByEntityName: 
   essenceMaterialSemanticChannelName: snow_experimental
-  essenceMaterialColor: {r: 1, g: 0.9764706, b: 0.9764706, a: 0}
+  essenceMaterialColor: {r: 1, g: 0.9764706, b: 0.9764706, a: 1}

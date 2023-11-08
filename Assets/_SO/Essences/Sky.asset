@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sky
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  itemName: 
+  itemName: sky
   icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   isUsable: 0
   isLocked: 0
@@ -27,4 +27,4 @@ MonoBehaviour:
     notificationIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   givenByEntityName: 
   essenceMaterialSemanticChannelName: sky
-  essenceMaterialColor: {r: 0.5294118, g: 0.80784315, b: 0.92156863, a: 0}
+  essenceMaterialColor: {r: 0.5294118, g: 0.80784315, b: 0.92156863, a: 1}

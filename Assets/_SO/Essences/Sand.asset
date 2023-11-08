@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sand
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  itemName: 
+  itemName: sand
   icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   isUsable: 0
   isLocked: 0
@@ -27,4 +27,4 @@ MonoBehaviour:
     notificationIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   givenByEntityName: 
   essenceMaterialSemanticChannelName: sand_experimental
-  essenceMaterialColor: {r: 0.7607843, g: 0.69803923, b: 0.5019608, a: 0}
+  essenceMaterialColor: {r: 0.7607843, g: 0.69803923, b: 0.5019608, a: 1}
