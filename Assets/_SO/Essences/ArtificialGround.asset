@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ArtificialGround
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  itemName: artificial ground
+  itemName: Honua Hana Lima
   icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   isUsable: 0
   isLocked: 0
@@ -25,6 +25,7 @@ MonoBehaviour:
     buttonText0: Keep
     buttonText1: Release
     notificationIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    notificationColor: {r: 0, g: 0, b: 0, a: 0}
   givenByEntityName: 
   essenceMaterialSemanticChannelName: artificial_ground
   essenceMaterialColor: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
