@@ -15,7 +15,7 @@ MonoBehaviour:
   entityInteractionUpdates:
   - entity: {fileID: 11400000, guid: 738cd74112d39da4da06a58aa19aefa8, type: 2}
     newInteraction: {fileID: 0}
-    returnToPreviousInsteadOfNewInteraction: 1
+    returnToPreviousInsteadOfNewInteraction: 0
   - entity: {fileID: 11400000, guid: de8900d1ee926444f93905e3354f0db0, type: 2}
     newInteraction: {fileID: 0}
     returnToPreviousInsteadOfNewInteraction: 0

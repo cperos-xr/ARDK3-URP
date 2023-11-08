@@ -136,7 +136,6 @@ public class InteractionManager : MonoBehaviour
     {
         foreach (EntityInteractionChange entityInteractionUpdate in interactionProgression.entityInteractionUpdates)
         {
-            // TODO: Fix Logic for return to previous state
             if (entityInteractionUpdate.returnToPreviousInsteadOfNewInteraction 
                 && previousInteractionDictionary.TryGetValue(entityInteractionUpdate.entity, out var value))
             {

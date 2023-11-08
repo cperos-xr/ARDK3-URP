@@ -38,15 +38,19 @@ public class SemanticChannelDetector : MonoBehaviour
             Debug.Log($"No semantic channels at tap");
             _semanticsText.text = "No semantic channels";
         }
-        // Process the channels as needed
-        foreach (var channel in channelsAtPoint)
+        else
         {
-            // Check if the channel matches any task objectives, etc.
-            Debug.Log($"Detected semantic channel at tap: {channel}");
-            _semanticsText.text = _semanticsText.text + channel + " ";
+            // Process the channels as needed
+            foreach (var channel in channelsAtPoint)
+            {
+                // Check if the channel matches any task objectives, etc.
+                Debug.Log($"Detected semantic channel at tap: {channel}");
+                _semanticsText.text = _semanticsText.text + channel + " ";
+            }
+
+            OnSemanticChannelIdentified(channelsAtPoint);
         }
 
-        OnSemanticChannelIdentified(channelsAtPoint);
     }
 
 #if UNITY_EDITOR
