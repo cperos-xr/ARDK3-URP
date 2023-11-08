@@ -31,11 +31,11 @@ public class ScreenTapRaycaster : MonoBehaviour
         }
 
         // Check for raycast from the middle of the screen
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector2 screenCenter = new Vector2(Screen.width / 2, Screen.height / 2);
-            PerformRaycastFromScreenCenter(screenCenter);
-        }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    Vector2 screenCenter = new Vector2(Screen.width / 2, Screen.height / 2);
+        //    PerformRaycastFromScreenCenter(screenCenter);
+        //}
     }
 
     public void PerformRaycastFromTap(Vector2 tapPosition)
@@ -68,7 +68,9 @@ public class ScreenTapRaycaster : MonoBehaviour
             hitTextHit.text = "No Hit";
         }
     }
+}
 
+    /*
     private void PerformRaycastFromScreenCenter(Vector2 screenCenter)
     {
         Ray ray = mainCamera.ScreenPointToRay(screenCenter);
@@ -102,4 +104,4 @@ public class ScreenTapRaycaster : MonoBehaviour
             hitTextCenter.text = "No Hit";
         }
     }
-}
+*/

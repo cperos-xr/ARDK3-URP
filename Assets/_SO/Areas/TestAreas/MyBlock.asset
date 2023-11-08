@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6276b119b5ba13d46ab434a8f1e22875, type: 3}
   m_Name: MyBlock
   m_EditorClassIdentifier: 
-  entityInteractionUpdates:
-  - entity: {fileID: 11400000, guid: 619889328f5de9645b1374e331f47c9b, type: 2}
-    newInteraction: {fileID: 11400000, guid: 1480f79aa3f60374d9fd6348bb9fddc6, type: 2}
+  entityInteractionUpdates: []
   areaName: My Block
   areaColor: green
   _boundaries:
@@ -35,4 +33,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1071243610f7cfc49b8697b982b00dcd, type: 2}
   - {fileID: 11400000, guid: 304ed44593c7e98459c2d8b577cdf8e9, type: 2}
   - {fileID: 11400000, guid: de8900d1ee926444f93905e3354f0db0, type: 2}
-  hasBeenVisited: 1
+  corruptedEssenceMaterialTypes:
+  - {fileID: 11400000, guid: f073f9f7daac0044580750aa747fb925, type: 2}
+  - {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
+  - {fileID: 11400000, guid: 2f790e2943fc210419e97430dda9251b, type: 2}
+  - {fileID: 11400000, guid: 95054bcd2122da040857f4f8b7876c66, type: 2}

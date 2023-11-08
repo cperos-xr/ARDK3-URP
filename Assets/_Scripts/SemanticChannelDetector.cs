@@ -59,13 +59,15 @@ public class SemanticChannelDetector : MonoBehaviour
     {
         string loungeable = "loungeable_experimental";
         string grass = "grass";
+        string ground = "ground";
 
         List<string> list = new List<string>();
 
         list.Add(loungeable);
         list.Add(grass);
+        list.Add(ground);
 
-        OnSemanticChannelIdentified(list, Vector2.zero);
+        OnSemanticChannelIdentified(list, new Vector2(600f, 600f));
     }
 
 #endif
