@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6276b119b5ba13d46ab434a8f1e22875, type: 3}
   m_Name: "N\u0101 K\u016B\u02BBai Square"
   m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
   areaName: "N\u0101 K\u016B\u02BBai Square"
   areaColor: teal
   _boundaries:
@@ -33,4 +34,5 @@ MonoBehaviour:
     - _latitude: 21.27504539489746
       _longitude: -157.82469177246094
   areaEntities: []
-  hasBeenVisited: 0
+  corruptedEssenceMaterialTypes:
+  - {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}

@@ -1,8 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class ManaLens : MonoBehaviour
 {
@@ -10,18 +9,26 @@ public class ManaLens : MonoBehaviour
     public enum ELensState
     {
         inactive,
-        receiveingEssenceMaterials,
-        seekingCorruptSpirits
+        Extracting,
+        Scouting
     }
     // Start is called before the first frame update
     public Inventory essencePouch;
     public bool isActive;
     public int lowerScreenLimit;  //Acts as bounds so doesnt work on menu taps.
 
+    public TMP_Dropdown lensStateDropdown; // UI Dropdown
+
     public List<SO_EssenceMaterialType> essenceMaterialTypes = new List<SO_EssenceMaterialType>();
 
     public delegate void PlayerGivenEssenceMaterialEvent(SO_EssenceMaterialType essenceMaterial);
     public static event PlayerGivenEssenceMaterialEvent OnPlayerGivenEssenceMaterial;
+
+
+    public delegate void PlayerEncounterCorruptEntityEvent(SO_CorruptEntity corruptEntity);
+    public static event PlayerEncounterCorruptEntityEvent OnPlayerEncounterCorruptEntity;
+
+
 
     public ELensState lensState = ELensState.inactive;
 
@@ -33,6 +40,29 @@ public class ManaLens : MonoBehaviour
     private void OnDisable()
     {
         SemanticChannelDetector.OnSemanticChannelIdentified -= ReceiveEssenceMaterial;
+    }
+
+    private void Start()
+    {
+        PopulateLensStateDropdown();
+        lensStateDropdown.onValueChanged.AddListener(delegate { DropdownItemSelected(lensStateDropdown); });
+    }
+
+    private void PopulateLensStateDropdown()
+    {
+        lensStateDropdown.ClearOptions();
+        List<string> options = new List<string>();
+        foreach (var state in Enum.GetValues(typeof(ELensState)))
+        {
+            options.Add(state.ToString());
+        }
+        lensStateDropdown.AddOptions(options);
+    }
+
+    private void DropdownItemSelected(TMP_Dropdown dropdown)
+    {
+        lensState = (ELensState)dropdown.value;
+        Debug.Log("Lens State changed to: " + lensState.ToString());
     }
 
     //public void ReceiveEssenceMaterial(List<string> semanticChannelList, Vector2 point)
@@ -53,22 +83,40 @@ public class ManaLens : MonoBehaviour
             {
                 case ELensState.inactive:
                     break;
-                case ELensState.receiveingEssenceMaterials:
+                case ELensState.Extracting:
                     ReceiveEssenceMaterial(semanticChannelList);
                     break;
-                case ELensState.seekingCorruptSpirits:
+                case ELensState.Scouting:
                     SeekCorruptSpirts(semanticChannelList);
                     break;
             }
-
-
-            
         }
     }
 
     private void SeekCorruptSpirts(List<string> semanticChannelList)
     {
+        foreach (string semanticChannel in semanticChannelList)
+        {
+            foreach (SO_AreaData currentArea in AreaManager.Instance.currentAreas)
+            {
+                foreach (SO_EssenceMaterialType essenceMaterialType in currentArea.corruptedEssenceMaterialTypes)
+                {
+                    if (semanticChannel.Equals(essenceMaterialType.essenceMaterialSemanticChannelName))
+                    {
+                        // Found a corrupt spirit
+                        FoundCorruptEntity(essenceMaterialType);
+                    }
+                }
+            }
 
+        }
+
+    }
+
+    private void FoundCorruptEntity(SO_EssenceMaterialType essenceMaterialType)
+    {
+        SO_CorruptEntity corruptEntity = CorruptEntityManager.Instance.GetEntityByEssenceAndScarcity(essenceMaterialType, AreaManager.Instance.currentAreas);
+        OnPlayerEncounterCorruptEntity?.Invoke(corruptEntity);
     }
 
 

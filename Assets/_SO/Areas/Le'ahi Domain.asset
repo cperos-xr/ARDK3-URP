@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6276b119b5ba13d46ab434a8f1e22875, type: 3}
   m_Name: Le'ahi Domain
   m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
   areaName: Le'ahi Domain
   areaColor: red
   _boundaries:
@@ -33,3 +34,6 @@ MonoBehaviour:
     - _latitude: 21.256202697753906
       _longitude: -157.8153533935547
   areaEntities: []
+  corruptedEssenceMaterialTypes:
+  - {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
+  - {fileID: 11400000, guid: 0427fcf0ce3220d48bb07abb75ac9e81, type: 2}

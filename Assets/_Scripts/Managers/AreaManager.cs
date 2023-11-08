@@ -67,13 +67,6 @@ public class AreaManager : MonoBehaviour
         layerSetter.SetLayerRecursive();
 
     }
-    private void Start()
-    {
-        foreach(SO_AreaData area in allAreas)
-        {
-            area.hasBeenVisited = false;
-        }
-    }
 
     private void OnEnable()
     {
@@ -96,7 +89,6 @@ public class AreaManager : MonoBehaviour
             if (IsPlayerInArea(areaData, newPosition))
             {
                 newCurrentAreas.Add(areaData);
-                areaData.hasBeenVisited = true;
 
                 if (!currentAreas.Contains(areaData))
                 {

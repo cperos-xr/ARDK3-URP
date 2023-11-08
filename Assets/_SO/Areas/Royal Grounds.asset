@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6276b119b5ba13d46ab434a8f1e22875, type: 3}
   m_Name: Royal Grounds
   m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
   areaName: Royal Grounds
   areaColor: yellow
   _boundaries:
@@ -45,4 +46,7 @@ MonoBehaviour:
     - _latitude: 21.287073135375977
       _longitude: -157.8432159423828
   areaEntities: []
-  hasBeenVisited: 0
+  corruptedEssenceMaterialTypes:
+  - {fileID: 11400000, guid: 84c063cd72320b141be350ea6114174f, type: 2}
+  - {fileID: 11400000, guid: 2ca56bd43a0928f4184df63b8b18a55b, type: 2}
+  - {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}

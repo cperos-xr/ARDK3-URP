@@ -15,7 +15,6 @@ public class SO_AreaData : InteractionProgression
     public List<Boundary> _boundaries = new();// For 3D objects representation
     public List<SO_MapEntityData> areaEntities; // Other SOs representing NPCs, items, etc.
 
-    public bool hasBeenVisited;
 
     public List<SO_EssenceMaterialType> corruptedEssenceMaterialTypes =  new List<SO_EssenceMaterialType>();
     // Add other properties as needed

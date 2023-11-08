@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6276b119b5ba13d46ab434a8f1e22875, type: 3}
   m_Name: Sacred Gardens
   m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
   areaName: Sacred Gardens
   areaColor: green
   _boundaries:
@@ -37,3 +38,6 @@ MonoBehaviour:
     - _latitude: 21.264793395996094
       _longitude: -157.82293701171875
   areaEntities: []
+  corruptedEssenceMaterialTypes:
+  - {fileID: 11400000, guid: 8e2c4d819d6b0aa4d9ba259ac5c68fea, type: 2}
+  - {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
