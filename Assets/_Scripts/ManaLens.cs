@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,13 @@ using UnityEngine.UIElements;
 
 public class ManaLens : MonoBehaviour
 {
+    [Serializable]
+    public enum ELensState
+    {
+        inactive,
+        receiveingEssenceMaterials,
+        seekingCorruptSpirits
+    }
     // Start is called before the first frame update
     public Inventory essencePouch;
     public bool isActive;
@@ -15,11 +23,11 @@ public class ManaLens : MonoBehaviour
     public delegate void PlayerGivenEssenceMaterialEvent(SO_EssenceMaterialType essenceMaterial);
     public static event PlayerGivenEssenceMaterialEvent OnPlayerGivenEssenceMaterial;
 
+    public ELensState lensState = ELensState.inactive;
+
     private void OnEnable()
     {
         SemanticChannelDetector.OnSemanticChannelIdentified += ReceiveEssenceMaterial;
-
-
     }
 
     private void OnDisable()
@@ -39,10 +47,28 @@ public class ManaLens : MonoBehaviour
 
     public void ReceiveEssenceMaterial(List<string> semanticChannelList, Vector2 point)
     {
-        if (isActive && point.y > lowerScreenLimit)
+        if (point.y > lowerScreenLimit)
         {
-            ReceiveEssenceMaterial(semanticChannelList);
+            switch(lensState)
+            {
+                case ELensState.inactive:
+                    break;
+                case ELensState.receiveingEssenceMaterials:
+                    ReceiveEssenceMaterial(semanticChannelList);
+                    break;
+                case ELensState.seekingCorruptSpirits:
+                    SeekCorruptSpirts(semanticChannelList);
+                    break;
+            }
+
+
+            
         }
+    }
+
+    private void SeekCorruptSpirts(List<string> semanticChannelList)
+    {
+
     }
 
 
