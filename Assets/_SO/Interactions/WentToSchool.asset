@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: WentToSchool
   m_EditorClassIdentifier: 
   entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 738cd74112d39da4da06a58aa19aefa8, type: 2}
+    newInteraction: {fileID: 0}
+    returnToPreviousInsteadOfNewInteraction: 1
   - entity: {fileID: 11400000, guid: de8900d1ee926444f93905e3354f0db0, type: 2}
     newInteraction: {fileID: 0}
     returnToPreviousInsteadOfNewInteraction: 0
   InteractionName: Went To School
-  itemDatas: []
+  itemDatas:
+  - {fileID: 11400000, guid: 95a1b53e20757614fac6e27a3ccdd9da, type: 2}
   quest: {fileID: 0}
   notification:
     notificationHeading: Went to school

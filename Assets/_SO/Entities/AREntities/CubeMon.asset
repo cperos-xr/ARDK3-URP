@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eda2ea000fab5d449a8ce97c9c6f7c5d, type: 3}
   m_Name: CubeMon
   m_EditorClassIdentifier: 
-  entityName: Cube Mon
+  entityName: Cubemon
   startingInteraction: {fileID: 11400000, guid: e3f5627fce6e03049aef9a81090373d5, type: 2}
