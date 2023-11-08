@@ -136,6 +136,12 @@ public class InteractionManager : MonoBehaviour
     {
         foreach (EntityInteractionChange entityInteractionUpdate in interactionProgression.entityInteractionUpdates)
         {
+            if (entityInteractionUpdate.entity == null)
+            {
+                Debug.LogWarning($"New interaction Entity is null...");
+                return;
+            }
+
             if (entityInteractionUpdate.returnToPreviousInsteadOfNewInteraction 
                 && previousInteractionDictionary.TryGetValue(entityInteractionUpdate.entity, out var value))
             {
