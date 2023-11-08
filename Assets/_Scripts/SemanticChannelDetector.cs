@@ -35,7 +35,7 @@ public class SemanticChannelDetector : MonoBehaviour
         _semanticsText.text = "";
         if (channelsAtPoint.Count == 0)
         {
-            Debug.Log($"No semantic channels at tap");
+            Debug.Log($"No semantic channels at tap {x},{y}");
             _semanticsText.text = "No semantic channels";
         }
         else
@@ -44,7 +44,7 @@ public class SemanticChannelDetector : MonoBehaviour
             foreach (var channel in channelsAtPoint)
             {
                 // Check if the channel matches any task objectives, etc.
-                Debug.Log($"Detected semantic channel at tap: {channel}");
+                Debug.Log($"Detected semantic channel at tap {x},{y}: {channel}");
                 _semanticsText.text = _semanticsText.text + channel + " ";
             }
 
