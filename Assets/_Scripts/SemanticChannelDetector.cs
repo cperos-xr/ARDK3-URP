@@ -11,7 +11,7 @@ public class SemanticChannelDetector : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _semanticsText;
 
-    public delegate void IdentifySemanticChannelEvent(List<string> semanticChannels);
+    public delegate void IdentifySemanticChannelEvent(List<string> semanticChannels, Vector2 point);
     public static event IdentifySemanticChannelEvent OnSemanticChannelIdentified;
 
     private void Update()
@@ -48,7 +48,7 @@ public class SemanticChannelDetector : MonoBehaviour
                 _semanticsText.text = _semanticsText.text + channel + " ";
             }
 
-            OnSemanticChannelIdentified(channelsAtPoint);
+            OnSemanticChannelIdentified(channelsAtPoint, point);
         }
 
     }
@@ -65,7 +65,7 @@ public class SemanticChannelDetector : MonoBehaviour
         list.Add(loungeable);
         list.Add(grass);
 
-        OnSemanticChannelIdentified(list);
+        OnSemanticChannelIdentified(list, Vector2.zero);
     }
 
 #endif

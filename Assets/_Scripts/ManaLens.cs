@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ManaLens : MonoBehaviour
 {
     // Start is called before the first frame update
     public Inventory essencePouch;
     public bool isActive;
+    public RectTransform maskRectTransform;
 
     public List<SO_EssenceMaterialType> essenceMaterialTypes = new List<SO_EssenceMaterialType>();
 
@@ -17,12 +19,43 @@ public class ManaLens : MonoBehaviour
     {
         SemanticChannelDetector.OnSemanticChannelIdentified += ReceiveEssenceMaterial;
 
-        
+
     }
 
     private void OnDisable()
     {
         SemanticChannelDetector.OnSemanticChannelIdentified -= ReceiveEssenceMaterial;
+    }
+
+    //public void ReceiveEssenceMaterial(List<string> semanticChannelList, Vector2 point)
+    //{
+    //    if (RectTransformUtility.RectangleContainsScreenPoint(maskRectTransform, point, Camera.main))
+    //    {
+    //        Debug.Log("Tap is within the mask area.");
+    //        // Handle valid tap
+    //        ReceiveEssenceMaterial(semanticChannelList);
+    //    }
+    //}
+
+    public void ReceiveEssenceMaterial(List<string> semanticChannelList, Vector2 point)
+    {
+        if (!isActive) return;
+
+
+        // Convert the screen point to the local point in the context of the RectTransform
+        Vector2 localPoint;
+        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(maskRectTransform, point, Camera.main, out localPoint))
+        {
+            if (maskRectTransform.rect.Contains(localPoint))
+            {
+                Debug.Log("Tap is within the mask area.");
+                ReceiveEssenceMaterial(semanticChannelList);
+            }
+            else
+            {
+                Debug.Log("Tap is outside the mask area.");
+            }
+        }
     }
 
     public void ReceiveEssenceMaterial(List <string> semanticChannelList)
