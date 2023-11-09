@@ -29,13 +29,43 @@ public class SO_CorruptEntity : ScriptableObject
 
     private void InitializeDictionaries()
     {
-        essenceEffectiveness = essenceEffectivenessList.ToDictionary(e => e.essenceMaterialType, e => e.effectiveness);
+        essenceEffectiveness = new Dictionary<SO_EssenceMaterialType, float>();
+        foreach (var essence in essenceEffectivenessList)
+        {
+            if (essence.essenceMaterialType == null)
+            {
+                Debug.LogWarning("Null essence material type detected in essenceEffectivenessList.");
+                continue; // Skip this iteration to avoid adding a null key
+            }
 
-        combinationMultipliers = combinationMultipliersList.ToDictionary(
-            c => Tuple.Create(c.essenceMaterialType1, c.essenceMaterialType2),
-            c => c.multiplier
-        );
+            if (essenceEffectiveness.ContainsKey(essence.essenceMaterialType))
+            {
+                Debug.LogWarning("Duplicate essence material type detected: " + essence.essenceMaterialType);
+                continue; // Skip this iteration to avoid the ArgumentException
+            }
+            essenceEffectiveness.Add(essence.essenceMaterialType, essence.effectiveness);
+        }
+
+        combinationMultipliers = new Dictionary<Tuple<SO_EssenceMaterialType, SO_EssenceMaterialType>, float>();
+        foreach (var combo in combinationMultipliersList)
+        {
+            if (combo.essenceMaterialType1 == null || combo.essenceMaterialType2 == null)
+            {
+                Debug.LogWarning("Null essence material type detected in combinationMultipliersList.");
+                continue; // Skip this iteration to avoid adding a null key
+            }
+
+            var comboKey = Tuple.Create(combo.essenceMaterialType1, combo.essenceMaterialType2);
+            if (combinationMultipliers.ContainsKey(comboKey))
+            {
+                Debug.LogWarning("Duplicate combination multiplier detected for: " + comboKey);
+                continue; // Skip this iteration to avoid the ArgumentException
+            }
+            combinationMultipliers.Add(comboKey, combo.multiplier);
+        }
     }
+
+
 
 
 

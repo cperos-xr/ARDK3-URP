@@ -40,4 +40,5 @@ MonoBehaviour:
   areaEntities: []
   corruptedEssenceMaterialTypes:
   - {fileID: 11400000, guid: 8e2c4d819d6b0aa4d9ba259ac5c68fea, type: 2}
-  - {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
+  - {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}
+  - {fileID: 11400000, guid: 1c0bd690c5d034e459f3ae90c062bfbc, type: 2}

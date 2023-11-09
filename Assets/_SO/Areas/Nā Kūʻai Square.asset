@@ -37,3 +37,4 @@ MonoBehaviour:
   corruptedEssenceMaterialTypes:
   - {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
   - {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
+  - {fileID: 11400000, guid: f073f9f7daac0044580750aa747fb925, type: 2}
