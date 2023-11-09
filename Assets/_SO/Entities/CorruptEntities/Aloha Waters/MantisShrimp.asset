@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
+  m_Name: MantisShrimp
+  m_EditorClassIdentifier: 
+  corruptEntityName: Makaukau Mantis
+  essenceMaterialType: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
+  spawnableAreas:
+  - areaData: {fileID: 11400000, guid: 73ef1a5567e9f2e469a26aa4100d4aef, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 2
+      Description: A mantis shrimp, its precision turned perilous, casting chaotic
+        energies through the sands.
+  - areaData: {fileID: 11400000, guid: 3eab2a47301376742aa8be9758841f1d, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 3
+      Description: A mantis shrimp, its precision turned perilous, casting chaotic
+        energies through the sands.
+  essenceEffectivenessList: []
+  combinationMultipliersList: []
+  corruptionLevelRangeMinMax: {x: 0, y: 0}
+  playerNotification:
+    notificationHeading: 
+    notificationContent: 
+    buttonText0: 
+    buttonText1: 
+    notificationIcon: {fileID: 0}
+    notificationColor: {r: 0, g: 0, b: 0, a: 0}

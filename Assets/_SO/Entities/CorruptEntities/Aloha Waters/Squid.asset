@@ -21,17 +21,16 @@ MonoBehaviour:
       Description: A squid ensnared by sorcery, dragging doom through the tides.
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
-      ScarcityLevel: 0
-      Description: A common squid found in the aloha waters
-  essenceMaterialCombinationsRequiredToHeal:
-  - essenceMaterialTypes:
-    - {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
-    - {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
-    - {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
-  - essenceMaterialTypes:
-    - {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
-    - {fileID: 11400000, guid: 0427fcf0ce3220d48bb07abb75ac9e81, type: 2}
-    - {fileID: 11400000, guid: c423dd4d148474442a17f78c15f34dde, type: 2}
+      ScarcityLevel: 1
+      Description: A squid ensnared by sorcery, dragging doom through the tides.
+  essenceEffectivenessList:
+  - essenceMaterialType: {fileID: 0}
+    effectiveness: 0
+  combinationMultipliersList:
+  - essenceMaterialType1: {fileID: 0}
+    essenceMaterialType2: {fileID: 0}
+    multiplier: 0
+  corruptionLevelRangeMinMax: {x: 10, y: 15}
   playerNotification:
     notificationHeading: Hexed He'e
     notificationContent: A squid ensnared by sorcery, dragging doom through the tides.

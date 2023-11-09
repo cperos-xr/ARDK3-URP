@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
+using System.Linq;
 
 [CreateAssetMenu(fileName = "New Corrupt Entity", menuName = "Game/Level/Entity/Corrupt Entity")]
 public class SO_CorruptEntity : ScriptableObject
@@ -8,11 +10,34 @@ public class SO_CorruptEntity : ScriptableObject
     public string corruptEntityName;
     public SO_EssenceMaterialType essenceMaterialType; // The type of essence associated with the corrupt entity
     public List<SpawnableArea> spawnableAreas; // Areas where the entity can appear
-    
-    
-    public List<EssenceMaterialSet> essenceMaterialCombinationsRequiredToHeal;
+
+
+    public List<EssenceEffectiveness> essenceEffectivenessList;
+    public List<CombinationMultiplier> combinationMultipliersList;
+
+    public Vector2 corruptionLevelRangeMinMax;   // The min and maximum corruption level (e.g., when the entity is fully corrupted).
+
+    private Dictionary<SO_EssenceMaterialType, float> essenceEffectiveness;
+    private Dictionary<Tuple<SO_EssenceMaterialType, SO_EssenceMaterialType>, float> combinationMultipliers;
 
     public PlayerNotification playerNotification;
+
+    public void OnEnable()
+    {
+        InitializeDictionaries();
+    }
+
+    private void InitializeDictionaries()
+    {
+        essenceEffectiveness = essenceEffectivenessList.ToDictionary(e => e.essenceMaterialType, e => e.effectiveness);
+
+        combinationMultipliers = combinationMultipliersList.ToDictionary(
+            c => Tuple.Create(c.essenceMaterialType1, c.essenceMaterialType2),
+            c => c.multiplier
+        );
+    }
+
+
 
     // You can add more properties related to the corrupt entity here
     // For example, health, damage, movement patterns, etc.
@@ -23,12 +48,6 @@ public struct SpawnableArea
 {
     public SO_AreaData areaData;
     public Scarcity scarcityLevel;
-}
-
-[System.Serializable]
-public struct EssenceMaterialSet
-{
-    public List<SO_EssenceMaterialType> essenceMaterialTypes;
 }
 
 [System.Serializable]
@@ -69,5 +88,20 @@ public struct Scarcity
             _ => "Unknown"
         };
     }
+}
+
+[System.Serializable]
+public struct EssenceEffectiveness
+{
+    public SO_EssenceMaterialType essenceMaterialType;
+    public float effectiveness;
+}
+
+[System.Serializable]
+public struct CombinationMultiplier
+{
+    public SO_EssenceMaterialType essenceMaterialType1;
+    public SO_EssenceMaterialType essenceMaterialType2;
+    public float multiplier;
 }
 

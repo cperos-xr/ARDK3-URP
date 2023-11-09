@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
+  m_Name: Lele
+  m_EditorClassIdentifier: 
+  corruptEntityName: Lele Lurker
+  essenceMaterialType: {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
+  spawnableAreas:
+  - areaData: {fileID: 11400000, guid: b57bedb8ad5b4cf4081f9af0064f01cf, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 1
+      Description: An unknown entity that clings to the dirt of Diamond Head, its
+        presence a blight upon the earth.
+  essenceEffectivenessList: []
+  combinationMultipliersList: []
+  corruptionLevelRangeMinMax: {x: 0, y: 0}
+  playerNotification:
+    notificationHeading: 
+    notificationContent: 
+    buttonText0: 
+    buttonText1: 
+    notificationIcon: {fileID: 0}
+    notificationColor: {r: 0, g: 0, b: 0, a: 0}

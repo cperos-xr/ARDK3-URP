@@ -10,22 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
-  m_Name: Chicken
+  m_Name: Cockroach
   m_EditorClassIdentifier: 
-  corruptEntityName: Moa Marauder
+  corruptEntityName: Evil 'Uli
   essenceMaterialType: {fileID: 11400000, guid: f073f9f7daac0044580750aa747fb925, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
-      ScarcityLevel: 1
-      Description: ' A once-vigilant bird now crowing with chaotic energy.'
-  essenceMaterialCombinationsRequiredToHeal:
-  - essenceMaterialTypes:
-    - {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
-    - {fileID: 11400000, guid: 2ca56bd43a0928f4184df63b8b18a55b, type: 2}
+      ScarcityLevel: 0
+      Description: ' A malevolent, essence-tainted insect spreading decay'
+  - areaData: {fileID: 11400000, guid: 73ef1a5567e9f2e469a26aa4100d4aef, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 0
+      Description: ' A malevolent, essence-tainted insect spreading decay'
+  essenceEffectivenessList: []
+  combinationMultipliersList: []
+  corruptionLevelRangeMinMax: {x: 5, y: 7}
   playerNotification:
-    notificationHeading: Moa Marauder
-    notificationContent: ' A once-vigilant bird now crowing with chaotic energy."      '
+    notificationHeading: Evil 'Uli
+    notificationContent: ' A malevolent, essence-tainted insect spreading decay'
     buttonText0: Oh No!
     buttonText1: 
     notificationIcon: {fileID: 21300000, guid: 465a4b4f09175f040b5dddeda97cd4f3, type: 3}
