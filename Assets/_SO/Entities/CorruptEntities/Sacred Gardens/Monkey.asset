@@ -25,8 +25,43 @@ MonoBehaviour:
       ScarcityLevel: 1
       Description: Escaped monkeys, their mischief magnified into mayhem, turning
         the treetops into turmoil.
-  essenceEffectivenessList: []
-  combinationMultipliersList: []
+  essenceEffectivenessList:
+  - essenceMaterialType: {fileID: 11400000, guid: 95054bcd2122da040857f4f8b7876c66, type: 2}
+    effectiveness: 4
+  - essenceMaterialType: {fileID: 11400000, guid: 2ca56bd43a0928f4184df63b8b18a55b, type: 2}
+    effectiveness: 3
+  - essenceMaterialType: {fileID: 11400000, guid: 8e2c4d819d6b0aa4d9ba259ac5c68fea, type: 2}
+    effectiveness: 2
+  - essenceMaterialType: {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}
+    effectiveness: 2
+  - essenceMaterialType: {fileID: 11400000, guid: 5654f2f89ceb1aa42bab5661b365a517, type: 2}
+    effectiveness: 3
+  - essenceMaterialType: {fileID: 11400000, guid: 68146c278b6c57c49acdd306f27ff912, type: 2}
+    effectiveness: -1
+  - essenceMaterialType: {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
+    effectiveness: -2
+  - essenceMaterialType: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
+    effectiveness: -3
+  - essenceMaterialType: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
+    effectiveness: -4
+  - essenceMaterialType: {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
+    effectiveness: -2
+  combinationMultipliersList:
+  - essenceMaterialType1: {fileID: 11400000, guid: 2ca56bd43a0928f4184df63b8b18a55b, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 95054bcd2122da040857f4f8b7876c66, type: 2}
+    multiplier: 1.9
+  - essenceMaterialType1: {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 5654f2f89ceb1aa42bab5661b365a517, type: 2}
+    multiplier: 1.5
+  - essenceMaterialType1: {fileID: 11400000, guid: 8e2c4d819d6b0aa4d9ba259ac5c68fea, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 95054bcd2122da040857f4f8b7876c66, type: 2}
+    multiplier: 1.5
+  - essenceMaterialType1: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
+    multiplier: 0.75
+  - essenceMaterialType1: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
+    multiplier: 0.5
   corruptionLevelRangeMinMax: {x: 10, y: 12}
   playerNotification:
     notificationHeading: Keko Chaos

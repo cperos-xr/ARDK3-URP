@@ -33,7 +33,7 @@ MonoBehaviour:
   - essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
     effectiveness: 2
   - essenceMaterialType: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
-    effectiveness: 2
+    effectiveness: -2
   - essenceMaterialType: {fileID: 11400000, guid: 84c063cd72320b141be350ea6114174f, type: 2}
     effectiveness: 4
   - essenceMaterialType: {fileID: 11400000, guid: 28125671f9205fa4abb0a91015785627, type: 2}
@@ -43,7 +43,7 @@ MonoBehaviour:
   - essenceMaterialType: {fileID: 11400000, guid: 68146c278b6c57c49acdd306f27ff912, type: 2}
     effectiveness: -2
   - essenceMaterialType: {fileID: 11400000, guid: 5654f2f89ceb1aa42bab5661b365a517, type: 2}
-    effectiveness: -3
+    effectiveness: 2
   - essenceMaterialType: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
     effectiveness: -4
   combinationMultipliersList:
@@ -56,6 +56,12 @@ MonoBehaviour:
   - essenceMaterialType1: {fileID: 11400000, guid: 84c063cd72320b141be350ea6114174f, type: 2}
     essenceMaterialType2: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
     multiplier: 1.5
+  - essenceMaterialType1: {fileID: 11400000, guid: 68146c278b6c57c49acdd306f27ff912, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
+    multiplier: 0.3
+  - essenceMaterialType1: {fileID: 11400000, guid: 9b76473e442f62142bae32c903da1646, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
+    multiplier: 0.5
   corruptionLevelRangeMinMax: {x: 25, y: 35}
   playerNotification:
     notificationHeading: "Man\u014D of Malice"

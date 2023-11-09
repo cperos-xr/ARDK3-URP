@@ -57,6 +57,9 @@ MonoBehaviour:
   - essenceMaterialType1: {fileID: 11400000, guid: 1c0bd690c5d034e459f3ae90c062bfbc, type: 2}
     essenceMaterialType2: {fileID: 11400000, guid: 84c063cd72320b141be350ea6114174f, type: 2}
     multiplier: 0.5
+  - essenceMaterialType1: {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
+    multiplier: 0.7
   corruptionLevelRangeMinMax: {x: 10, y: 15}
   playerNotification:
     notificationHeading: 

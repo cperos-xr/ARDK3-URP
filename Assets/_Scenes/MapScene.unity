@@ -7288,9 +7288,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   corruptEntities:
+  - {fileID: 11400000, guid: 976624e260f2bf444acae1200a627ea0, type: 2}
+  - {fileID: 11400000, guid: ce7da43b071f08b4fbcb4ec9d042eb3f, type: 2}
+  - {fileID: 11400000, guid: 1e7cb3f9c8c49dc448f0ee8ca9751563, type: 2}
+  - {fileID: 11400000, guid: ab0b1791191fee24d8187aa808e6da65, type: 2}
   - {fileID: 11400000, guid: 774a8e0dcaee1134280431fbca7855f8, type: 2}
+  - {fileID: 11400000, guid: eb7a8a7c084a3fc4885a0cda085a0b04, type: 2}
+  - {fileID: 11400000, guid: cc7be096f5c3c844fa4bf3aa13114dbc, type: 2}
+  - {fileID: 11400000, guid: bbb2f7f4526de4e4c9853e331f55a127, type: 2}
+  - {fileID: 11400000, guid: dba715766ce0a4f4592b3030b78ef0f0, type: 2}
   - {fileID: 11400000, guid: 25490ebe954e3524a8d38e72b4ab00ab, type: 2}
+  - {fileID: 11400000, guid: f010d97ba2acc3c4192553a1f03ace1c, type: 2}
+  - {fileID: 11400000, guid: 4bddc53bb79c32f469dc587516aa8edd, type: 2}
+  - {fileID: 11400000, guid: b187e7f6197e89848b95d538dcfc0764, type: 2}
+  - {fileID: 11400000, guid: 69a31edecc3e213409d572b7c9b0dd5c, type: 2}
+  - {fileID: 11400000, guid: aa33145a27deea74eb79347aac0b3d29, type: 2}
   - {fileID: 11400000, guid: ed98ed6d0c481ea48b9d940d53eaee7a, type: 2}
+  - {fileID: 11400000, guid: caaaac155077a0d44b7013e72a86b731, type: 2}
 --- !u!1 &1379913951
 GameObject:
   m_ObjectHideFlags: 0

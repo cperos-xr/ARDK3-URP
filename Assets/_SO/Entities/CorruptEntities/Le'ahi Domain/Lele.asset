@@ -20,9 +20,52 @@ MonoBehaviour:
       ScarcityLevel: 1
       Description: An unknown entity that clings to the dirt of Diamond Head, its
         presence a blight upon the earth.
-  essenceEffectivenessList: []
-  combinationMultipliersList: []
-  corruptionLevelRangeMinMax: {x: 0, y: 0}
+  - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 1
+      Description: An unknown entity that clings to the dirt of Diamond Head, its
+        presence a blight upon the earth.
+  essenceEffectivenessList:
+  - essenceMaterialType: {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
+    effectiveness: 0
+  - essenceMaterialType: {fileID: 11400000, guid: 1c0bd690c5d034e459f3ae90c062bfbc, type: 2}
+    effectiveness: 0
+  - essenceMaterialType: {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}
+    effectiveness: 0
+  - essenceMaterialType: {fileID: 11400000, guid: 8e2c4d819d6b0aa4d9ba259ac5c68fea, type: 2}
+    effectiveness: 0
+  - essenceMaterialType: {fileID: 11400000, guid: 68146c278b6c57c49acdd306f27ff912, type: 2}
+    effectiveness: 0
+  - essenceMaterialType: {fileID: 11400000, guid: 95054bcd2122da040857f4f8b7876c66, type: 2}
+    effectiveness: 0
+  - essenceMaterialType: {fileID: 0}
+    effectiveness: 0
+  - essenceMaterialType: {fileID: 0}
+    effectiveness: 0
+  - essenceMaterialType: {fileID: 0}
+    effectiveness: 0
+  - essenceMaterialType: {fileID: 0}
+    effectiveness: 0
+  combinationMultipliersList:
+  - essenceMaterialType1: {fileID: 11400000, guid: c423dd4d148474442a17f78c15f34dde, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 95054bcd2122da040857f4f8b7876c66, type: 2}
+    multiplier: 1.9
+  - essenceMaterialType1: {fileID: 11400000, guid: 2ca56bd43a0928f4184df63b8b18a55b, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 5654f2f89ceb1aa42bab5661b365a517, type: 2}
+    multiplier: 1.4
+  - essenceMaterialType1: {fileID: 11400000, guid: 95054bcd2122da040857f4f8b7876c66, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 2f790e2943fc210419e97430dda9251b, type: 2}
+    multiplier: 1.6
+  - essenceMaterialType1: {fileID: 11400000, guid: 95054bcd2122da040857f4f8b7876c66, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 9b76473e442f62142bae32c903da1646, type: 2}
+    multiplier: 1.8
+  - essenceMaterialType1: {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 0427fcf0ce3220d48bb07abb75ac9e81, type: 2}
+    multiplier: 0.5
+  - essenceMaterialType1: {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
+    multiplier: 0.7
+  corruptionLevelRangeMinMax: {x: 35, y: 45}
   playerNotification:
     notificationHeading: 
     notificationContent: 

@@ -61,6 +61,15 @@ MonoBehaviour:
   - essenceMaterialType1: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
     essenceMaterialType2: {fileID: 11400000, guid: 84c063cd72320b141be350ea6114174f, type: 2}
     multiplier: 1.8
+  - essenceMaterialType1: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 84c063cd72320b141be350ea6114174f, type: 2}
+    multiplier: 1.8
+  - essenceMaterialType1: {fileID: 11400000, guid: 95054bcd2122da040857f4f8b7876c66, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: c423dd4d148474442a17f78c15f34dde, type: 2}
+    multiplier: 0.7
+  - essenceMaterialType1: {fileID: 11400000, guid: 68146c278b6c57c49acdd306f27ff912, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
+    multiplier: 0.5
   corruptionLevelRangeMinMax: {x: 20, y: 30}
   playerNotification:
     notificationHeading: 
