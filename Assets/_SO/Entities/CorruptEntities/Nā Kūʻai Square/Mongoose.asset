@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mongoose
   m_EditorClassIdentifier: 
   corruptEntityName: "Al\u0101mona Anarchy"
-  essenceMaterialType: {fileID: 0}
+  essenceMaterialType: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 3eab2a47301376742aa8be9758841f1d, type: 2}
     scarcityLevel:
@@ -21,7 +21,7 @@ MonoBehaviour:
       Description: A mongoose once meek, now a marauder of the market
   essenceEffectivenessList: []
   combinationMultipliersList: []
-  corruptionLevelRangeMinMax: {x: 0, y: 0}
+  corruptionLevelRangeMinMax: {x: 10, y: 20}
   playerNotification:
     notificationHeading: 
     notificationContent: 

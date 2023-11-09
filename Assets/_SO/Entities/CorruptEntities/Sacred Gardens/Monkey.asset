@@ -12,20 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
   m_Name: Monkey
   m_EditorClassIdentifier: 
-  corruptEntityName: Moa Marauder
-  essenceMaterialType: {fileID: 11400000, guid: f073f9f7daac0044580750aa747fb925, type: 2}
+  corruptEntityName: Keko Chaos
+  essenceMaterialType: {fileID: 11400000, guid: 8e2c4d819d6b0aa4d9ba259ac5c68fea, type: 2}
   spawnableAreas:
+  - areaData: {fileID: 11400000, guid: 4a58ed3b4ae1c1e4cacb7a335887f4fb, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 1
+      Description: Escaped monkeys, their mischief magnified into mayhem, turning
+        the treetops into turmoil.
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
-      Description: ' A once-vigilant bird now crowing with chaotic energy.'
+      Description: Escaped monkeys, their mischief magnified into mayhem, turning
+        the treetops into turmoil.
   essenceEffectivenessList: []
   combinationMultipliersList: []
   corruptionLevelRangeMinMax: {x: 10, y: 12}
   playerNotification:
-    notificationHeading: Moa Marauder
-    notificationContent: ' A once-vigilant bird now crowing with chaotic energy."      '
-    buttonText0: Oh No!
+    notificationHeading: Keko Chaos
+    notificationContent: Escaped monkeys, their mischief magnified into mayhem, turning
+      the treetops into turmoil.
+    buttonText0: Heal
     buttonText1: 
     notificationIcon: {fileID: 21300000, guid: 465a4b4f09175f040b5dddeda97cd4f3, type: 3}
     notificationColor: {r: 1, g: 1, b: 1, a: 1}

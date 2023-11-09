@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
+  m_Name: Cockroach_Building
+  m_EditorClassIdentifier: 
+  corruptEntityName: Evil 'Uli
+  essenceMaterialType: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
+  spawnableAreas:
+  - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 0
+      Description: ' A malevolent, essence-tainted insect spreading decay'
+  - areaData: {fileID: 11400000, guid: 73ef1a5567e9f2e469a26aa4100d4aef, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 0
+      Description: ' A malevolent, essence-tainted insect spreading decay'
+  essenceEffectivenessList: []
+  combinationMultipliersList: []
+  corruptionLevelRangeMinMax: {x: 8, y: 9}
+  playerNotification:
+    notificationHeading: Evil 'Uli
+    notificationContent: ' A malevolent, essence-tainted insect spreading decay'
+    buttonText0: Oh No!
+    buttonText1: 
+    notificationIcon: {fileID: 21300000, guid: 465a4b4f09175f040b5dddeda97cd4f3, type: 3}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}

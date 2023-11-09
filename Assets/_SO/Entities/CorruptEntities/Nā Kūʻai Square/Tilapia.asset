@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
-  m_Name: Lizard 1
+  m_Name: Tilapia
   m_EditorClassIdentifier: 
-  corruptEntityName: Iole Royal Ruin
-  essenceMaterialType: {fileID: 0}
+  corruptEntityName: Tilapia Trouble
+  essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
   spawnableAreas:
-  - areaData: {fileID: 11400000, guid: 021cf3f44138b8c42bce8054291d1c56, type: 2}
+  - areaData: {fileID: 11400000, guid: 3eab2a47301376742aa8be9758841f1d, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
-      Description: ' A rat that scurries through the streets, its every step leaving
-        a legacy of decay.'
+      Description: Once a common sight in market waters, these tilapia now thrash
+        with a turbulent energy.
   essenceEffectivenessList: []
   combinationMultipliersList: []
-  corruptionLevelRangeMinMax: {x: 0, y: 0}
+  corruptionLevelRangeMinMax: {x: 8, y: 18}
   playerNotification:
     notificationHeading: 
     notificationContent: 

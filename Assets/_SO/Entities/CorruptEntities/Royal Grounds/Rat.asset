@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
   m_Name: Rat
   m_EditorClassIdentifier: 
-  corruptEntityName: Iole Intrigue
-  essenceMaterialType: {fileID: 11400000, guid: f073f9f7daac0044580750aa747fb925, type: 2}
+  corruptEntityName: Iole Royal Ruin
+  essenceMaterialType: {fileID: 0}
   spawnableAreas:
-  - areaData: {fileID: 11400000, guid: 3eab2a47301376742aa8be9758841f1d, type: 2}
+  - areaData: {fileID: 11400000, guid: 021cf3f44138b8c42bce8054291d1c56, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
-      Description: A rat, sly and cunning, now radiating a malevolent aura that taints
-        the marketplace.
+      Description: ' A rat that scurries through the streets, its every step leaving
+        a legacy of decay.'
   essenceEffectivenessList: []
   combinationMultipliersList: []
-  corruptionLevelRangeMinMax: {x: 5, y: 15}
+  corruptionLevelRangeMinMax: {x: 0, y: 0}
   playerNotification:
     notificationHeading: 
     notificationContent: 
