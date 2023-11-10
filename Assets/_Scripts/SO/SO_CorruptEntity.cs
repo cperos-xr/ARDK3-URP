@@ -15,12 +15,17 @@ public class SO_CorruptEntity : ScriptableObject
     public List<EssenceEffectiveness> essenceEffectivenessList;
     public List<CombinationMultiplier> combinationMultipliersList;
 
+    public Sprite corruptedStateSprite;
+    public Sprite healedStateSprite;
+    public Sprite notificationIcon;
+
+
     public Vector2 corruptionLevelRangeMinMax;   // The min and maximum corruption level (e.g., when the entity is fully corrupted).
 
     private Dictionary<SO_EssenceMaterialType, float> essenceEffectiveness;
     private Dictionary<Tuple<SO_EssenceMaterialType, SO_EssenceMaterialType>, float> combinationMultipliers;
 
-    public PlayerNotification playerNotification;
+    //public PlayerNotification playerNotification;
 
     public void OnEnable()
     {

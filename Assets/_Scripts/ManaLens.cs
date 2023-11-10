@@ -65,21 +65,11 @@ public class ManaLens : MonoBehaviour
         Debug.Log("Lens State changed to: " + lensState.ToString());
     }
 
-    //public void ReceiveEssenceMaterial(List<string> semanticChannelList, Vector2 point)
-    //{
-    //    if (RectTransformUtility.RectangleContainsScreenPoint(maskRectTransform, point, Camera.main))
-    //    {
-    //        Debug.Log("Tap is within the mask area.");
-    //        // Handle valid tap
-    //        ReceiveEssenceMaterial(semanticChannelList);
-    //    }
-    //}
-
     public void ReceiveEssenceMaterial(List<string> semanticChannelList, Vector2 point)
     {
         if (point.y > lowerScreenLimit)
         {
-            switch(lensState)
+            switch (lensState)
             {
                 case ELensState.inactive:
                     break;
@@ -120,7 +110,7 @@ public class ManaLens : MonoBehaviour
     }
 
 
-    public void ReceiveEssenceMaterial(List <string> semanticChannelList)
+    public void ReceiveEssenceMaterial(List<string> semanticChannelList)
     {
         foreach (string semanticChannel in semanticChannelList)
         {
@@ -144,4 +134,6 @@ public class ManaLens : MonoBehaviour
         }
     }
 }
+
+
 

@@ -42,7 +42,10 @@ public class UINotificationManager : MonoBehaviour
 
     private void CorruptEntity(SO_CorruptEntity corruptEntity)
     {
-        PlayerNotification playerNotification = corruptEntity.playerNotification;
+        PlayerNotification playerNotification = new PlayerNotification();
+
+        playerNotification.notificationHeading = corruptEntity.corruptEntityName;
+
         notificationQueue.Enqueue(playerNotification);
 
         if (!displayingNotification)
