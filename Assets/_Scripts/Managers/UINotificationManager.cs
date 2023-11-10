@@ -46,6 +46,10 @@ public class UINotificationManager : MonoBehaviour
 
         playerNotification.notificationHeading = corruptEntity.corruptEntityName;
 
+        playerNotification.notificationContent = corruptEntity.corruptEntityDescription;
+
+        playerNotification.notificationIcon = corruptEntity.corruptedStateSprite;
+
         notificationQueue.Enqueue(playerNotification);
 
         if (!displayingNotification)

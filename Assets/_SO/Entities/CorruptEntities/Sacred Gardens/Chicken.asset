@@ -13,20 +13,19 @@ MonoBehaviour:
   m_Name: Chicken
   m_EditorClassIdentifier: 
   corruptEntityName: Moa Marauder
+  corruptEntityDescription: A once-vigilant bird  common in Hawiian Backyards, now
+    crowing with chaotic energy.
   essenceMaterialType: {fileID: 11400000, guid: 1c0bd690c5d034e459f3ae90c062bfbc, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
-      Description: ' A once-vigilant bird now crowing with chaotic energy.'
   - areaData: {fileID: 11400000, guid: 4a58ed3b4ae1c1e4cacb7a335887f4fb, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
-      Description: ' A once-vigilant bird now crowing with chaotic energy.'
   - areaData: {fileID: 11400000, guid: 021cf3f44138b8c42bce8054291d1c56, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
-      Description: ' A once-vigilant bird now crowing with chaotic energy.'
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
     effectiveness: 2
@@ -64,11 +63,6 @@ MonoBehaviour:
   - essenceMaterialType1: {fileID: 11400000, guid: 5654f2f89ceb1aa42bab5661b365a517, type: 2}
     essenceMaterialType2: {fileID: 11400000, guid: 9b76473e442f62142bae32c903da1646, type: 2}
     multiplier: 0.4
-  corruptionLevelRangeMinMax: {x: 10, y: 12}
-  playerNotification:
-    notificationHeading: Moa Marauder
-    notificationContent: ' A once-vigilant bird now crowing with chaotic energy."      '
-    buttonText0: Oh No!
-    buttonText1: 
-    notificationIcon: {fileID: 21300000, guid: 465a4b4f09175f040b5dddeda97cd4f3, type: 3}
-    notificationColor: {r: 1, g: 1, b: 1, a: 1}
+  corruptedStateSprite: {fileID: 1487183313, guid: 9fd544b7bde2e65448e4cab5fef3924e, type: 3}
+  healedStateSprite: {fileID: 21300000, guid: d83d26fa1b7166a43b386e9d4c06f5f4, type: 3}
+  corruptionLevelRangeMinMax: {x: 20, y: 25}

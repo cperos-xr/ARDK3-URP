@@ -13,18 +13,16 @@ MonoBehaviour:
   m_Name: Crab
   m_EditorClassIdentifier: 
   corruptEntityName: Pilikua Pincer
+  corruptEntityDescription: A cursed crab that now devours the corals it once cherished,
+    spreading decay with every pinch.
   essenceMaterialType: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 73ef1a5567e9f2e469a26aa4100d4aef, type: 2}
     scarcityLevel:
       ScarcityLevel: 2
-      Description: A cursed crab that now devours the corals it once cherished, spreading
-        decay with every pinch.
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 2
-      Description: A cursed crab that now devours the corals it once cherished, spreading
-        decay with every pinch.
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
     effectiveness: 4
@@ -62,11 +60,6 @@ MonoBehaviour:
   - essenceMaterialType1: {fileID: 11400000, guid: c423dd4d148474442a17f78c15f34dde, type: 2}
     essenceMaterialType2: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
     multiplier: 0.4
+  corruptedStateSprite: {fileID: 21300000, guid: baef61e0fad79854fa37bff1dfcb8c2b, type: 3}
+  healedStateSprite: {fileID: 21300000, guid: 376b977053bdcef47a8afadd3c11f58e, type: 3}
   corruptionLevelRangeMinMax: {x: 10, y: 20}
-  playerNotification:
-    notificationHeading: 
-    notificationContent: 
-    buttonText0: 
-    buttonText1: 
-    notificationIcon: {fileID: 0}
-    notificationColor: {r: 0, g: 0, b: 0, a: 0}

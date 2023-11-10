@@ -57,15 +57,16 @@ public class SemanticChannelDetector : MonoBehaviour
 
     public void TestSemanticBroadcast()
     {
-        string loungeable = "loungeable_experimental";
-        string grass = "grass";
+        //string loungeable = "loungeable_experimental";
+        //string grass = "grass";
         string ground = "ground";
-
+        string artificial_ground = "artificial_ground";
         List<string> list = new List<string>();
 
-        list.Add(loungeable);
-        list.Add(grass);
+        //list.Add(loungeable);
+        //list.Add(grass);
         list.Add(ground);
+        list.Add(artificial_ground);
 
         OnSemanticChannelIdentified(list, new Vector2(600f, 600f));
     }

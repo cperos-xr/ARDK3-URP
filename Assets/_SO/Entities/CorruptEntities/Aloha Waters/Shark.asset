@@ -13,18 +13,16 @@ MonoBehaviour:
   m_Name: Shark
   m_EditorClassIdentifier: 
   corruptEntityName: "Man\u014D Mirage"
+  corruptEntityDescription: A spectral shark, its form barely visible as it glides
+    through the water, a ghostly predator in the depths.
   essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 73ef1a5567e9f2e469a26aa4100d4aef, type: 2}
     scarcityLevel:
       ScarcityLevel: 6
-      Description: A spectral shark, its form barely visible as it glides through
-        the water, a ghostly predator in the depths.
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 6
-      Description: A spectral shark, its form barely visible as it glides through
-        the water, a ghostly predator in the depths.
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
     effectiveness: 3
@@ -62,11 +60,6 @@ MonoBehaviour:
   - essenceMaterialType1: {fileID: 11400000, guid: 9b76473e442f62142bae32c903da1646, type: 2}
     essenceMaterialType2: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
     multiplier: 0.5
-  corruptionLevelRangeMinMax: {x: 25, y: 35}
-  playerNotification:
-    notificationHeading: "Man\u014D of Malice"
-    notificationContent: A spectral shark, its shadow lurking longer than its bite
-    buttonText0: 
-    buttonText1: 
-    notificationIcon: {fileID: 0}
-    notificationColor: {r: 0, g: 0, b: 0, a: 0}
+  corruptedStateSprite: {fileID: 21300000, guid: 43156f80fa9271c49a56cef159063d14, type: 3}
+  healedStateSprite: {fileID: 982408931, guid: f0543ddf49ecd4e458416159163ee9e4, type: 3}
+  corruptionLevelRangeMinMax: {x: 35, y: 45}

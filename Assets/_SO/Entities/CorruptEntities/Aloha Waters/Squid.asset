@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Squid
   m_EditorClassIdentifier: 
   corruptEntityName: Hexed He'e
+  corruptEntityDescription: A reef squid, twisted into a vessel of deep-sea sorcery,
+    disturbing the depths.
   essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 73ef1a5567e9f2e469a26aa4100d4aef, type: 2}
     scarcityLevel:
       ScarcityLevel: 0
-      Description: A squid ensnared by sorcery, dragging doom through the tides.
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
-      Description: A squid ensnared by sorcery, dragging doom through the tides.
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 5654f2f89ceb1aa42bab5661b365a517, type: 2}
     effectiveness: 3
@@ -60,11 +60,6 @@ MonoBehaviour:
   - essenceMaterialType1: {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
     essenceMaterialType2: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
     multiplier: 0.7
+  corruptedStateSprite: {fileID: 21300000, guid: 1569aad05b910e3419479f89953054e5, type: 3}
+  healedStateSprite: {fileID: 21300000, guid: 8a4222321de6ec943bc210e07f32a79e, type: 3}
   corruptionLevelRangeMinMax: {x: 10, y: 15}
-  playerNotification:
-    notificationHeading: 
-    notificationContent: 
-    buttonText0: Yes
-    buttonText1: No
-    notificationIcon: {fileID: 21300000, guid: 2b226220e71c971439ec1b09afd2a217, type: 3}
-    notificationColor: {r: 1, g: 1, b: 1, a: 1}

@@ -13,18 +13,16 @@ MonoBehaviour:
   m_Name: Lele
   m_EditorClassIdentifier: 
   corruptEntityName: Lele Lurker
+  corruptEntityDescription: An unknown entity that clings to the dirt of Diamond
+    Head, its presence a blight upon the earth.
   essenceMaterialType: {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: b57bedb8ad5b4cf4081f9af0064f01cf, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
-      Description: An unknown entity that clings to the dirt of Diamond Head, its
-        presence a blight upon the earth.
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
-      Description: An unknown entity that clings to the dirt of Diamond Head, its
-        presence a blight upon the earth.
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
     effectiveness: 0
@@ -65,11 +63,6 @@ MonoBehaviour:
   - essenceMaterialType1: {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
     essenceMaterialType2: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
     multiplier: 0.7
+  corruptedStateSprite: {fileID: 1014569803, guid: 605eab8e9dcf69c479f7efd6b2837553, type: 3}
+  healedStateSprite: {fileID: 1206355392, guid: e4bd320d8ae92f941bad8a45008e43e5, type: 3}
   corruptionLevelRangeMinMax: {x: 35, y: 45}
-  playerNotification:
-    notificationHeading: 
-    notificationContent: 
-    buttonText0: 
-    buttonText1: 
-    notificationIcon: {fileID: 0}
-    notificationColor: {r: 0, g: 0, b: 0, a: 0}

@@ -10,19 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
-  m_Name: Monkey
+  m_Name: GardenLizard
   m_EditorClassIdentifier: 
-  corruptEntityName: Keko Chaos
-  corruptEntityDescription: Escaped monkeys, their mischief magnified into mayhem,
-    turning the treetops into turmoil.
+  corruptEntityName: "Mo\u02BBo Myth"
+  corruptEntityDescription: A lizard of legend, now a creature of calamity, its gaze
+    bringing grief to the gardens. Now, let's assign scarcity and corruption level
+    ranges to each entity
   essenceMaterialType: {fileID: 11400000, guid: 8e2c4d819d6b0aa4d9ba259ac5c68fea, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 4a58ed3b4ae1c1e4cacb7a335887f4fb, type: 2}
     scarcityLevel:
-      ScarcityLevel: 3
+      ScarcityLevel: 1
+      Description: A lizard of legend, now a creature of calamity, its gaze bringing
+        grief to the gardens. Now, let's assign scarcity and corruption level ranges
+        to each entity
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
+      Description: A lizard of legend, now a creature of calamity, its gaze bringing
+        grief to the gardens. Now, let's assign scarcity and corruption level ranges
+        to each entity
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 95054bcd2122da040857f4f8b7876c66, type: 2}
     effectiveness: 4
@@ -60,6 +67,6 @@ MonoBehaviour:
   - essenceMaterialType1: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
     essenceMaterialType2: {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
     multiplier: 0.5
-  corruptedStateSprite: {fileID: 21300000, guid: f65b972bc8f1de44cb9b0d839adae4ae, type: 3}
-  healedStateSprite: {fileID: -409516913, guid: b0e5aa51396df7945b8952f3c6c26fab, type: 3}
-  corruptionLevelRangeMinMax: {x: 30, y: 40}
+  corruptedStateSprite: {fileID: -1446301772, guid: e96b7cf4f698e5d43b613f681f53644e, type: 3}
+  healedStateSprite: {fileID: 21300000, guid: 71820be6b1bec994b9478693f6bc22e8, type: 3}
+  corruptionLevelRangeMinMax: {x: 25, y: 35}

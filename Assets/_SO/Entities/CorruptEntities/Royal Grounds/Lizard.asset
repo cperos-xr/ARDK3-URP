@@ -13,23 +13,19 @@ MonoBehaviour:
   m_Name: Lizard
   m_EditorClassIdentifier: 
   corruptEntityName: "Mo\u02BBo Mischief"
+  corruptEntityDescription: A lizard, once a mere whisper in the foliage, now a prominent
+    purveyor of pandemonium.
   essenceMaterialType: {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 021cf3f44138b8c42bce8054291d1c56, type: 2}
     scarcityLevel:
       ScarcityLevel: 2
-      Description: A lizard, once a mere whisper in the foliage, now a prominent
-        purveyor of pandemonium.
   - areaData: {fileID: 11400000, guid: 4a58ed3b4ae1c1e4cacb7a335887f4fb, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
-      Description: A lizard, once a mere whisper in the foliage, now a prominent
-        purveyor of pandemonium.
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
-      Description: A lizard, once a mere whisper in the foliage, now a prominent
-        purveyor of pandemonium.
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 9b76473e442f62142bae32c903da1646, type: 2}
     effectiveness: 2
@@ -67,11 +63,6 @@ MonoBehaviour:
   - essenceMaterialType1: {fileID: 11400000, guid: 8e2c4d819d6b0aa4d9ba259ac5c68fea, type: 2}
     essenceMaterialType2: {fileID: 11400000, guid: 84c063cd72320b141be350ea6114174f, type: 2}
     multiplier: 0.5
+  corruptedStateSprite: {fileID: 21300000, guid: 465ca5dc2d079814baf393643e605788, type: 3}
+  healedStateSprite: {fileID: 2135975787, guid: 887611dfb774e384f96de86de8d3ff7e, type: 3}
   corruptionLevelRangeMinMax: {x: 20, y: 30}
-  playerNotification:
-    notificationHeading: 
-    notificationContent: 
-    buttonText0: 
-    buttonText1: 
-    notificationIcon: {fileID: 0}
-    notificationColor: {r: 0, g: 0, b: 0, a: 0}

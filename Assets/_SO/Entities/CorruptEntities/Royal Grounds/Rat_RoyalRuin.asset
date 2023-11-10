@@ -10,21 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
-  m_Name: Rat
+  m_Name: Rat_RoyalRuin
   m_EditorClassIdentifier: 
   corruptEntityName: Iole Royal Ruin
+  corruptEntityDescription: A rat that scurries through the ruins, its every step
+    leaving a legacy of decay. Sacred Gardens
   essenceMaterialType: {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 021cf3f44138b8c42bce8054291d1c56, type: 2}
     scarcityLevel:
       ScarcityLevel: 3
-      Description: ' A rat that scurries through the streets, its every step leaving
-        a legacy of decay.'
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 3
-      Description: ' A rat that scurries through the streets, its every step leaving
-        a legacy of decay.'
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 68146c278b6c57c49acdd306f27ff912, type: 2}
     effectiveness: 2
@@ -62,11 +60,6 @@ MonoBehaviour:
   - essenceMaterialType1: {fileID: 11400000, guid: 84c063cd72320b141be350ea6114174f, type: 2}
     essenceMaterialType2: {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
     multiplier: 0.7
+  corruptedStateSprite: {fileID: 21300000, guid: e0887bc6ad6bf7b4da2b33ff77250334, type: 3}
+  healedStateSprite: {fileID: 21300000, guid: 09c4d9c4e9b348e41b58e8346a286009, type: 3}
   corruptionLevelRangeMinMax: {x: 25, y: 35}
-  playerNotification:
-    notificationHeading: 
-    notificationContent: 
-    buttonText0: 
-    buttonText1: 
-    notificationIcon: {fileID: 0}
-    notificationColor: {r: 0, g: 0, b: 0, a: 0}

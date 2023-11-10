@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Tilapia
   m_EditorClassIdentifier: 
   corruptEntityName: Tilapia Trouble
+  corruptEntityDescription: Once a common sight in market waters, these tilapia now
+    thrash with a turbulent energy.
   essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 3eab2a47301376742aa8be9758841f1d, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
-      Description: Once a common sight in market waters, these tilapia now thrash
-        with a turbulent energy.
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
     effectiveness: 2
@@ -57,11 +57,6 @@ MonoBehaviour:
   - essenceMaterialType1: {fileID: 11400000, guid: 2ca56bd43a0928f4184df63b8b18a55b, type: 2}
     essenceMaterialType2: {fileID: 11400000, guid: 68146c278b6c57c49acdd306f27ff912, type: 2}
     multiplier: 0.4
+  corruptedStateSprite: {fileID: -708519762, guid: 7cf1be45ae1af2c46acb7e438ceebd7a, type: 3}
+  healedStateSprite: {fileID: 21300000, guid: 8be24c81c4cb314428fe2279df6474ac, type: 3}
   corruptionLevelRangeMinMax: {x: 8, y: 18}
-  playerNotification:
-    notificationHeading: 
-    notificationContent: 
-    buttonText0: 
-    buttonText1: 
-    notificationIcon: {fileID: 0}
-    notificationColor: {r: 0, g: 0, b: 0, a: 0}

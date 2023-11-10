@@ -13,23 +13,19 @@ MonoBehaviour:
   m_Name: MantisShrimp
   m_EditorClassIdentifier: 
   corruptEntityName: Makaukau Mantis
+  corruptEntityDescription: A mantis shrimp, its precision turned perilous, casting
+    chaotic energies through the sands.
   essenceMaterialType: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 73ef1a5567e9f2e469a26aa4100d4aef, type: 2}
     scarcityLevel:
       ScarcityLevel: 2
-      Description: A mantis shrimp, its precision turned perilous, casting chaotic
-        energies through the sands.
   - areaData: {fileID: 11400000, guid: 3eab2a47301376742aa8be9758841f1d, type: 2}
     scarcityLevel:
       ScarcityLevel: 3
-      Description: A mantis shrimp, its precision turned perilous, casting chaotic
-        energies through the sands.
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 3
-      Description: A mantis shrimp, its precision turned perilous, casting chaotic
-        energies through the sands.
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 84c063cd72320b141be350ea6114174f, type: 2}
     effectiveness: 2
@@ -61,7 +57,7 @@ MonoBehaviour:
   - essenceMaterialType1: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
     essenceMaterialType2: {fileID: 11400000, guid: 84c063cd72320b141be350ea6114174f, type: 2}
     multiplier: 1.8
-  - essenceMaterialType1: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
+  - essenceMaterialType1: {fileID: 11400000, guid: 8e2c4d819d6b0aa4d9ba259ac5c68fea, type: 2}
     essenceMaterialType2: {fileID: 11400000, guid: 84c063cd72320b141be350ea6114174f, type: 2}
     multiplier: 1.8
   - essenceMaterialType1: {fileID: 11400000, guid: 95054bcd2122da040857f4f8b7876c66, type: 2}
@@ -70,11 +66,6 @@ MonoBehaviour:
   - essenceMaterialType1: {fileID: 11400000, guid: 68146c278b6c57c49acdd306f27ff912, type: 2}
     essenceMaterialType2: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
     multiplier: 0.5
+  corruptedStateSprite: {fileID: 21300000, guid: ed7e1ccd1ac262745b75058744c12160, type: 3}
+  healedStateSprite: {fileID: 21300000, guid: cbb0763f05966d946853ce18b47bcc3a, type: 3}
   corruptionLevelRangeMinMax: {x: 20, y: 30}
-  playerNotification:
-    notificationHeading: 
-    notificationContent: 
-    buttonText0: 
-    buttonText1: 
-    notificationIcon: {fileID: 0}
-    notificationColor: {r: 0, g: 0, b: 0, a: 0}

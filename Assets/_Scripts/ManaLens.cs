@@ -106,6 +106,8 @@ public class ManaLens : MonoBehaviour
     private void FoundCorruptEntity(SO_EssenceMaterialType essenceMaterialType)
     {
         SO_CorruptEntity corruptEntity = CorruptEntityManager.Instance.GetEntityByEssenceAndScarcity(essenceMaterialType, AreaManager.Instance.currentAreas);
+        Debug.Log("Found Corrupt entity " + corruptEntity.corruptEntityName);
+
         OnPlayerEncounterCorruptEntity?.Invoke(corruptEntity);
     }
 

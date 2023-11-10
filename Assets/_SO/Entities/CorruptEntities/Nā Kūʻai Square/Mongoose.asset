@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Mongoose
   m_EditorClassIdentifier: 
   corruptEntityName: "Al\u0101mona of Anarchy "
+  corruptEntityDescription: A mongoose, its playful nature twisted into mischievous
+    malevolence, stalking the streets.
   essenceMaterialType: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 3eab2a47301376742aa8be9758841f1d, type: 2}
     scarcityLevel:
       ScarcityLevel: 3
-      Description: A mongoose once meek, now a marauder of the market
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 2ca56bd43a0928f4184df63b8b18a55b, type: 2}
     effectiveness: 2
@@ -53,11 +54,6 @@ MonoBehaviour:
   - essenceMaterialType1: {fileID: 11400000, guid: 9b76473e442f62142bae32c903da1646, type: 2}
     essenceMaterialType2: {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}
     multiplier: 0.75
+  corruptedStateSprite: {fileID: 21300000, guid: c75c90ae922a22341bece6d5497b8026, type: 3}
+  healedStateSprite: {fileID: 21300000, guid: 7461272b8e367f54bbabef3d8df24c45, type: 3}
   corruptionLevelRangeMinMax: {x: 10, y: 20}
-  playerNotification:
-    notificationHeading: 
-    notificationContent: 
-    buttonText0: 
-    buttonText1: 
-    notificationIcon: {fileID: 0}
-    notificationColor: {r: 0, g: 0, b: 0, a: 0}

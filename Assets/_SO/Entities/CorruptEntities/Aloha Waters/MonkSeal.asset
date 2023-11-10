@@ -13,18 +13,16 @@ MonoBehaviour:
   m_Name: MonkSeal
   m_EditorClassIdentifier: 
   corruptEntityName: Maluhia Mauler
+  corruptEntityDescription: A monk seal, once a peaceful icon, now wrapped in dark
+    sorcery, disrupting the calm of the seas.
   essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 73ef1a5567e9f2e469a26aa4100d4aef, type: 2}
     scarcityLevel:
       ScarcityLevel: 4
-      Description: A monk seal, once a peaceful icon, now wrapped in dark sorcery,
-        disrupting the calm of the seas.
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 4
-      Description: A monk seal, once a peaceful icon, now wrapped in dark sorcery,
-        disrupting the calm of the seas.
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
     effectiveness: 2
@@ -68,11 +66,6 @@ MonoBehaviour:
   - essenceMaterialType1: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
     essenceMaterialType2: {fileID: 11400000, guid: c423dd4d148474442a17f78c15f34dde, type: 2}
     multiplier: 0.8
+  corruptedStateSprite: {fileID: 21300000, guid: 9960bb7b8105dca44a18fed2a24e7da9, type: 3}
+  healedStateSprite: {fileID: 21300000, guid: 60c38b636f5c6ea4781acc9fde3342c4, type: 3}
   corruptionLevelRangeMinMax: {x: 15, y: 25}
-  playerNotification:
-    notificationHeading: 
-    notificationContent: 
-    buttonText0: 
-    buttonText1: 
-    notificationIcon: {fileID: 0}
-    notificationColor: {r: 0, g: 0, b: 0, a: 0}
