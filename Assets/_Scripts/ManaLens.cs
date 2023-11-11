@@ -109,7 +109,6 @@ public class ManaLens : MonoBehaviour
 
     private void FoundCorruptEntity(SO_CorruptEntity corruptEntity)
     {
-        PurificationManager.Instance.currentCorruptEntity = corruptEntity;
         Debug.Log("Found Corrupt entity " + corruptEntity.corruptEntityName);
         OnPlayerEncounterCorruptEntity?.Invoke(corruptEntity);
     }
