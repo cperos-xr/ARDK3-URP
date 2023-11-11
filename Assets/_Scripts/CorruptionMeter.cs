@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ public class CorruptionMeter : MonoBehaviour
     public Image meterImage; // Assign this in the inspector
     public float maxCorruptionLevel; // Set this to the maximum corruption level
     public float transitionDuration = 1.0f; // Duration of the lerp transition
+    public TextMeshProUGUI pointsText;
 
     private Coroutine transitionCoroutine;
 
@@ -22,8 +24,10 @@ public class CorruptionMeter : MonoBehaviour
     }
 
     // Call this method to initiate a smooth transition of the meter
+
     public void SetCorruptionLevel(float currentLevel)
     {
+        pointsText.text = currentLevel.ToString();
         float targetFillAmount = currentLevel / maxCorruptionLevel;
 
         // If there is an ongoing transition, stop it

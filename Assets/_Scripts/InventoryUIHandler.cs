@@ -15,18 +15,18 @@ public class InventoryUIHandler: MonoBehaviour
     {
         ItemManager.OnPlayerGivenItem += MakeNewInventoryItemButton;
         ManaLens.OnPlayerGivenEssenceMaterial += MakeNewInventoryItemButton;
+        PurificationManager.OnPlayerAddsEssenceBackToPouch += MakeNewInventoryItemButton;
     }
 
     private void OnDisable()
     {
         ItemManager.OnPlayerGivenItem -= MakeNewInventoryItemButton;
         ManaLens.OnPlayerGivenEssenceMaterial -= MakeNewInventoryItemButton;
+        PurificationManager.OnPlayerAddsEssenceBackToPouch -= MakeNewInventoryItemButton;
     }
 
     public void MakeNewInventoryItemButton(SO_ItemData itemData)
     {
-
-
         GameObject newItemButton = Instantiate(inventoryItemButtonTemplate, scrollBarInventoryContent.transform);
         InventoryButton inventoryButton = newItemButton.GetComponent<InventoryButton>();
         inventoryButton.InitialIzeItemButton(itemData);
@@ -36,13 +36,8 @@ public class InventoryUIHandler: MonoBehaviour
             EssenceMaterialTypeContainer essenceMaterialTypeContainer = newItemButton.AddComponent<EssenceMaterialTypeContainer>();
             essenceMaterialTypeContainer.essenceMaterialType = essenceMaterialType;
             Button button = newItemButton.GetComponent<Button>();
-
             button.onClick.AddListener(essenceMaterialTypeContainer.SelectEssenceMaterialType);
-
-
         }
-
-
         newItemButton.SetActive(true);
         Debug.Log("Created inventory item", newItemButton);
     }

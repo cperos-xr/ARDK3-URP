@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+[SerializeField]
 public struct PurificationEntity
 {
     public SO_CorruptEntity corruptionEntity;
@@ -31,6 +31,7 @@ public class PurificationManager : MonoBehaviour
     public Image corruptionMeter;
 
 
+
     private Dictionary<SO_EssenceMaterialType, GameObject> 
         SelectedEssenceToSelectedEssenceImageDictionary = new Dictionary<SO_EssenceMaterialType, GameObject>();
 
@@ -41,6 +42,12 @@ public class PurificationManager : MonoBehaviour
     public delegate void PlayerAttemptsPurification(float currentCoruptionLevel);
     public static event PlayerAttemptsPurification OnPlayerAttemptsPurification;
 
+    public delegate void PlayerAddsEssenceBackToPouch(SO_EssenceMaterialType essenceMaterialType);
+    public static event PlayerAddsEssenceBackToPouch OnPlayerAddsEssenceBackToPouch;
+
+
+    public delegate void PlayerRemovesEssenceFromPouch(SO_EssenceMaterialType essenceMaterialType);
+    public static event PlayerRemovesEssenceFromPouch OnPlayerRemovesEssenceFromPouch;
 
     private void Awake()
     {
@@ -165,6 +172,8 @@ public class PurificationManager : MonoBehaviour
 
             SelectedEssenceToSelectedEssenceImageDictionary.Add(essenceMaterialType, currentEssenceImagePrefab);
             playerEssencePouch.Remove(essenceMaterialType);
+
+            OnPlayerRemovesEssenceFromPouch?.Invoke(essenceMaterialType);  // currently no subscribers that I know of
         }
 
     }
@@ -176,6 +185,7 @@ public class PurificationManager : MonoBehaviour
 
         GameObject currentEssenceImagePrefab = SelectedEssenceToSelectedEssenceImageDictionary[essenceMaterialType];
         Destroy(currentEssenceImagePrefab);
+        OnPlayerAddsEssenceBackToPouch?.Invoke(essenceMaterialType);  //add button back to inventory
     }
 
 

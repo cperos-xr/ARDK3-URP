@@ -1,7 +1,4 @@
 using Niantic.Lightship.Maps.Core.Coordinates;
-using Niantic.Lightship.Maps.ObjectPools;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
