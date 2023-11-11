@@ -110,6 +110,7 @@ public class ManaLens : MonoBehaviour
     private void FoundCorruptEntity(SO_CorruptEntity corruptEntity)
     {
         Debug.Log("Found Corrupt entity " + corruptEntity.corruptEntityName);
+        lensState = ELensState.inactive;
         OnPlayerEncounterCorruptEntity?.Invoke(corruptEntity);
     }
 

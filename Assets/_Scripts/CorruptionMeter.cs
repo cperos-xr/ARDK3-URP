@@ -5,51 +5,48 @@ using UnityEngine.UI;
 
 public class CorruptionMeter : MonoBehaviour
 {
-    public Image meterImage; // Assign this in the inspector
+    public RectTransform meterTransform; // Assign this in the inspector
     public float maxCorruptionLevel; // Set this to the maximum corruption level
-    public float transitionDuration = 1.0f; // Duration of the lerp transition
     public TextMeshProUGUI pointsText;
-
-    private Coroutine transitionCoroutine;
+    public TextMeshProUGUI nameText;
 
     // Call this method to update the meter
     private void OnEnable()
     {
         PurificationManager.OnPlayerAttemptsPurification += SetCorruptionLevel;
+        PurificationManager.OnCreatedANewPurificationEntity += SetCorruptionLevel;
     }
 
     private void OnDisable()
     {
         PurificationManager.OnPlayerAttemptsPurification -= SetCorruptionLevel;
+        PurificationManager.OnCreatedANewPurificationEntity += SetCorruptionLevel;
     }
 
     // Call this method to initiate a smooth transition of the meter
 
+
+    public void SetCorruptionLevel(PurificationEntity purificationEntity)
+    {
+        
+        pointsText.text = purificationEntity.currentCorruptionLevel.ToString();
+        nameText.text = purificationEntity.corruptionEntity.corruptEntityName;
+
+        float targetFillAmount = purificationEntity.currentCorruptionLevel / (purificationEntity.currentCorruptionLevel * 1.5f);
+
+        meterTransform.localScale = new Vector3(targetFillAmount, 1f, 1f);
+
+    }
+
+
     public void SetCorruptionLevel(float currentLevel)
     {
         pointsText.text = currentLevel.ToString();
+
         float targetFillAmount = currentLevel / maxCorruptionLevel;
 
-        // If there is an ongoing transition, stop it
-        if (transitionCoroutine != null)
-            StopCoroutine(transitionCoroutine);
+        meterTransform.localScale = new Vector3(targetFillAmount, 1f, 1f);
 
-        // Start a new transition
-        transitionCoroutine = StartCoroutine(LerpMeter(targetFillAmount));
     }
 
-    private IEnumerator LerpMeter(float targetFillAmount)
-    {
-        float time = 0;
-        float startFillAmount = meterImage.fillAmount;
-
-        while (time < transitionDuration)
-        {
-            time += Time.deltaTime;
-            meterImage.fillAmount = Mathf.Lerp(startFillAmount, targetFillAmount, time / transitionDuration);
-            yield return null;
-        }
-
-        meterImage.fillAmount = targetFillAmount; // Ensure it ends exactly at the target value
-    }
 }

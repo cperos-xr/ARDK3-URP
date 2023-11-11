@@ -17,9 +17,13 @@ public class PurificationManager : MonoBehaviour
     public static PurificationManager Instance;
 
     public GameObject purificationPanel;
+    public GameObject inventoryPanel;
 
     public GameObject HorizontalLayoutObject;
     public GameObject selectedEssenceImagePrefab;
+
+    private List <GameObject> selectedEssenceImages = new List<GameObject>();
+
 
     public int maxSelectedEssences;
 
@@ -30,17 +34,15 @@ public class PurificationManager : MonoBehaviour
 
     public Image corruptionMeter;
 
-
-
-    private Dictionary<SO_EssenceMaterialType, GameObject> 
-        SelectedEssenceToSelectedEssenceImageDictionary = new Dictionary<SO_EssenceMaterialType, GameObject>();
-
     [SerializeField] private ManaLens manaLens;
 
 
     // Define a delegate and an event
     public delegate void PlayerAttemptsPurification(float currentCoruptionLevel);
     public static event PlayerAttemptsPurification OnPlayerAttemptsPurification;
+
+    public delegate void CreatedANewPurificationEntity(PurificationEntity purificationEntity);
+    public static event CreatedANewPurificationEntity OnCreatedANewPurificationEntity;
 
     public delegate void PlayerAddsEssenceBackToPouch(SO_EssenceMaterialType essenceMaterialType);
     public static event PlayerAddsEssenceBackToPouch OnPlayerAddsEssenceBackToPouch;
@@ -59,6 +61,7 @@ public class PurificationManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
     }
 
 
@@ -71,6 +74,13 @@ public class PurificationManager : MonoBehaviour
     private void InitializePurificationEntity(SO_CorruptEntity corruptEntity)
     {
         currentPurificationEntity = CreateNewPurificationEntity(corruptEntity);
+
+        purificationPanel.SetActive(true);
+        corruptEntityImage.sprite = currentPurificationEntity.corruptionEntity.corruptedStateSprite;
+
+
+        OnCreatedANewPurificationEntity(currentPurificationEntity);
+
     }
 
     private void OnDisable()
@@ -81,13 +91,13 @@ public class PurificationManager : MonoBehaviour
 
     void BeginPurification()
     {
+        PlayerManager.Instance.currentPlayerState = PlayerState.purification;
         selectedEssenceMaterials.Clear();
         CopyPlayerEssencePouch();
+        
 
 
-        purificationPanel.SetActive(true);
-        corruptEntityImage.sprite = currentPurificationEntity.corruptionEntity.corruptedStateSprite;
-        purificationPanel.gameObject.SetActive(true);
+
 
         Debug.Log("Begining the purification of " + currentPurificationEntity.corruptionEntity.corruptEntityName);
 
@@ -100,11 +110,29 @@ public class PurificationManager : MonoBehaviour
         float purificationPoints = CalculatePurificationPoints();
         currentPurificationEntity.currentCorruptionLevel -= purificationPoints;
 
+        foreach(SO_EssenceMaterialType essenceMaterialType in selectedEssenceMaterials)
+        {
+            manaLens.essencePouch.RemoveItem(essenceMaterialType);
+        }
+
 
         if (currentPurificationEntity.currentCorruptionLevel <= 0)
         {
             Debug.Log("Corrupt Entity hath been Purified!");
+            corruptEntityImage.sprite = currentPurificationEntity.corruptionEntity.healedStateSprite;
+            PlayerManager.Instance.currentPlayerState = PlayerState.normal;
         }
+
+        // Destroy all essence images
+        foreach (GameObject selectedEssenceImage in selectedEssenceImages)
+        {
+            Destroy(selectedEssenceImage);
+        }
+
+        // Now that we've finished iterating, clear the collections
+        selectedEssenceImages.Clear();
+        selectedEssenceMaterials.Clear();
+
 
         OnPlayerAttemptsPurification?.Invoke(currentPurificationEntity.currentCorruptionLevel);
     }
@@ -158,7 +186,7 @@ public class PurificationManager : MonoBehaviour
 
     public void SelectEssenceMaterial(SO_EssenceMaterialType essenceMaterialType)
     {
-        if (selectedEssenceMaterials.Count <= maxSelectedEssences)
+        if (selectedEssenceMaterials.Count < maxSelectedEssences)
         {
 
             GameObject currentEssenceImagePrefab = Instantiate(selectedEssenceImagePrefab, HorizontalLayoutObject.transform);
@@ -169,12 +197,18 @@ public class PurificationManager : MonoBehaviour
 
             Button button = currentEssenceImagePrefab.GetComponent<Button>();
             button.onClick.AddListener(() => DeselectEssenceMaterial(essenceMaterialType));
+            button.onClick.AddListener(() => Destroy(currentEssenceImagePrefab));
 
-            SelectedEssenceToSelectedEssenceImageDictionary.Add(essenceMaterialType, currentEssenceImagePrefab);
+            selectedEssenceImages.Add(currentEssenceImagePrefab);
             playerEssencePouch.Remove(essenceMaterialType);
 
             OnPlayerRemovesEssenceFromPouch?.Invoke(essenceMaterialType);  // currently no subscribers that I know of
         }
+        else
+        {
+            inventoryPanel.SetActive(false);
+        }
+
 
     }
 
@@ -183,8 +217,6 @@ public class PurificationManager : MonoBehaviour
         playerEssencePouch.Add(essenceMaterialType);
         selectedEssenceMaterials.Remove(essenceMaterialType);
 
-        GameObject currentEssenceImagePrefab = SelectedEssenceToSelectedEssenceImageDictionary[essenceMaterialType];
-        Destroy(currentEssenceImagePrefab);
         OnPlayerAddsEssenceBackToPouch?.Invoke(essenceMaterialType);  //add button back to inventory
     }
 

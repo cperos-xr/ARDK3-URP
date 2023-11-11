@@ -1,6 +1,11 @@
 using Niantic.Lightship.Maps.Core.Coordinates;
 using UnityEngine;
 
+public enum PlayerState
+{
+    normal,
+    purification,
+}
 public class PlayerManager : MonoBehaviour
 {
     static public PlayerManager Instance;
@@ -10,7 +15,7 @@ public class PlayerManager : MonoBehaviour
 
     [HideInInspector] public LatLng PlayerGPS;
 
-
+    public PlayerState currentPlayerState = PlayerState.normal;
 
     // Other variables such as health, magic, etc.
     public int health;

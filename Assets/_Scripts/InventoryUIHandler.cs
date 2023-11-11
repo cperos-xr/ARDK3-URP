@@ -37,6 +37,8 @@ public class InventoryUIHandler: MonoBehaviour
             essenceMaterialTypeContainer.essenceMaterialType = essenceMaterialType;
             Button button = newItemButton.GetComponent<Button>();
             button.onClick.AddListener(essenceMaterialTypeContainer.SelectEssenceMaterialType);
+            button.onClick.AddListener(() => Destroy(newItemButton));
+
         }
         newItemButton.SetActive(true);
         Debug.Log("Created inventory item", newItemButton);
