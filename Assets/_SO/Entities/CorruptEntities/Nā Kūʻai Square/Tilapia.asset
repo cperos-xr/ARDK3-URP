@@ -20,6 +20,9 @@ MonoBehaviour:
   - areaData: {fileID: 11400000, guid: 3eab2a47301376742aa8be9758841f1d, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
+  - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 1
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
     effectiveness: 2

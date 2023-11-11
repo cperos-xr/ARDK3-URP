@@ -25,10 +25,24 @@ public class InventoryUIHandler: MonoBehaviour
 
     public void MakeNewInventoryItemButton(SO_ItemData itemData)
     {
+
+
         GameObject newItemButton = Instantiate(inventoryItemButtonTemplate, scrollBarInventoryContent.transform);
         InventoryButton inventoryButton = newItemButton.GetComponent<InventoryButton>();
         inventoryButton.InitialIzeItemButton(itemData);
         //InventoryItems.Add(inventoryButton);
+        if (itemData is SO_EssenceMaterialType essenceMaterialType)
+        {
+            EssenceMaterialTypeContainer essenceMaterialTypeContainer = newItemButton.AddComponent<EssenceMaterialTypeContainer>();
+            essenceMaterialTypeContainer.essenceMaterialType = essenceMaterialType;
+            Button button = newItemButton.GetComponent<Button>();
+
+            button.onClick.AddListener(essenceMaterialTypeContainer.SelectEssenceMaterialType);
+
+
+        }
+
+
         newItemButton.SetActive(true);
         Debug.Log("Created inventory item", newItemButton);
     }

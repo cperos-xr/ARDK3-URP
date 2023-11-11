@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,6 +24,10 @@ public class UINotificationManager : MonoBehaviour
     private Queue<PlayerNotification> notificationQueue = new Queue<PlayerNotification>();
     private bool displayingNotification = false;
 
+    // Define a delegate and an event
+    public delegate void PlayerChoosesHealEvent();
+    public static event PlayerChoosesHealEvent OnPlayerChoosesPurify;
+
     private void OnEnable()
     {
         ItemManager.OnPlayerGivenItem += ItemNotification;
@@ -36,19 +41,22 @@ public class UINotificationManager : MonoBehaviour
         ItemManager.OnPlayerGivenItem -= ItemNotification;
         InteractionManager.OnPlayerInteraction -= InteractionNotification;
         ManaLens.OnPlayerGivenEssenceMaterial -= ItemNotification;
-
         ManaLens.OnPlayerEncounterCorruptEntity -= CorruptEntity;
     }
+
 
     private void CorruptEntity(SO_CorruptEntity corruptEntity)
     {
         PlayerNotification playerNotification = new PlayerNotification();
 
         playerNotification.notificationHeading = corruptEntity.corruptEntityName;
-
         playerNotification.notificationContent = corruptEntity.corruptEntityDescription;
-
         playerNotification.notificationIcon = corruptEntity.corruptedStateSprite;
+        playerNotification.notificationColor = Color.white;
+        playerNotification.notificationType = NotificationType.Purify;
+
+        playerNotification.buttonText1 = "Purify";
+        playerNotification.buttonText0 = "Run";
 
         notificationQueue.Enqueue(playerNotification);
 
@@ -58,13 +66,19 @@ public class UINotificationManager : MonoBehaviour
         }
     }
 
+    void InvokeOnPlayerChoosesPurifyEvent()
+    {
+        // Invoke the delegate event
+        OnPlayerChoosesPurify?.Invoke();
+    }
+
     private void ItemNotification(SO_ItemData item)
     {
         Random r = new Random();
         int index = r.Next(0, item.playerNotifications.Count);
 
         PlayerNotification playerNotification = item.playerNotifications[index];
-
+        playerNotification.notificationType = NotificationType.item;
 
         if (item is SO_EssenceMaterialType essenceMaterialType)
         {
@@ -126,6 +140,11 @@ public class UINotificationManager : MonoBehaviour
                 notificationIcon.enabled = false;
             }
 
+            if (!string.IsNullOrEmpty(notification.buttonText0))
+            {
+                notificationButtonText0.text = notification.buttonText0;
+            }
+
             if (string.IsNullOrEmpty(notification.buttonText1))
             {
                 notificationButton1_GO.SetActive(false);
@@ -144,6 +163,22 @@ public class UINotificationManager : MonoBehaviour
                 DisplayNextNotification();
             });
 
+            
+            switch(notification.notificationType)
+            {
+
+                case NotificationType.Purify:
+                    notificationButton1.onClick.AddListener(InvokeOnPlayerChoosesPurifyEvent);
+                    notificationButton1.onClick.AddListener(CloseWindow);
+                    ; break;
+
+                default:
+                    break;
+
+            }
+
+
+
             notificationPanel.SetActive(true);
         }
         else
@@ -151,6 +186,11 @@ public class UINotificationManager : MonoBehaviour
             displayingNotification = false;
             notificationPanel.SetActive(false);
         }
+    }
+
+    void CloseWindow()
+    {
+        notificationPanel.SetActive(false);
     }
 }
 
@@ -166,5 +206,16 @@ public struct PlayerNotification
     public string buttonText1;
     public Sprite notificationIcon;
     public Color notificationColor;
+    public NotificationType notificationType;
 
+}
+
+[Serializable]
+
+public enum NotificationType
+{
+    normal,
+    interaction,
+    item,
+    Purify
 }

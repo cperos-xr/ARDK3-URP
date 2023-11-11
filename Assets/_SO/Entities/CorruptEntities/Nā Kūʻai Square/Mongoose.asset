@@ -15,9 +15,12 @@ MonoBehaviour:
   corruptEntityName: "Al\u0101mona of Anarchy "
   corruptEntityDescription: A mongoose, its playful nature twisted into mischievous
     malevolence, stalking the streets.
-  essenceMaterialType: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
+  essenceMaterialType: {fileID: 11400000, guid: f073f9f7daac0044580750aa747fb925, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 3eab2a47301376742aa8be9758841f1d, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 3
+  - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 3
   essenceEffectivenessList:

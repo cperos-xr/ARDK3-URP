@@ -94,7 +94,11 @@ public class ManaLens : MonoBehaviour
                     if (semanticChannel.Equals(essenceMaterialType.essenceMaterialSemanticChannelName))
                     {
                         // Found a corrupt spirit
-                        FoundCorruptEntity(essenceMaterialType);
+                        SO_CorruptEntity corruptEntity = CorruptEntityManager.Instance.GetEntityByEssenceAndScarcity(essenceMaterialType, AreaManager.Instance.currentAreas);
+                        if (corruptEntity != null)
+                        {
+                            FoundCorruptEntity(corruptEntity);
+                        }
                     }
                 }
             }
@@ -103,11 +107,10 @@ public class ManaLens : MonoBehaviour
 
     }
 
-    private void FoundCorruptEntity(SO_EssenceMaterialType essenceMaterialType)
+    private void FoundCorruptEntity(SO_CorruptEntity corruptEntity)
     {
-        SO_CorruptEntity corruptEntity = CorruptEntityManager.Instance.GetEntityByEssenceAndScarcity(essenceMaterialType, AreaManager.Instance.currentAreas);
+        PurificationManager.Instance.currentCorruptEntity = corruptEntity;
         Debug.Log("Found Corrupt entity " + corruptEntity.corruptEntityName);
-
         OnPlayerEncounterCorruptEntity?.Invoke(corruptEntity);
     }
 
