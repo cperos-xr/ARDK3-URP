@@ -47,9 +47,12 @@ public class PurificationManager : MonoBehaviour
     public delegate void PlayerAddsEssenceBackToPouch(SO_EssenceMaterialType essenceMaterialType);
     public static event PlayerAddsEssenceBackToPouch OnPlayerAddsEssenceBackToPouch;
 
-
     public delegate void PlayerRemovesEssenceFromPouch(SO_EssenceMaterialType essenceMaterialType);
     public static event PlayerRemovesEssenceFromPouch OnPlayerRemovesEssenceFromPouch;
+
+
+    public delegate void PlayerPurifiesEntity(PurificationEntity purificationEntity);
+    public static event PlayerPurifiesEntity OnPlayerPurifiesEntity;
 
     private void Awake()
     {
@@ -94,20 +97,15 @@ public class PurificationManager : MonoBehaviour
         PlayerManager.Instance.currentPlayerState = PlayerState.purification;
         selectedEssenceMaterials.Clear();
         CopyPlayerEssencePouch();
-        
-
-
-
-
         Debug.Log("Begining the purification of " + currentPurificationEntity.corruptionEntity.corruptEntityName);
-
-
 
     }
 
     public void AttemptPurification()
     {
         float purificationPoints = CalculatePurificationPoints();
+        Debug.Log("Attempting to purify with " +  purificationPoints + "pts");
+        
         currentPurificationEntity.currentCorruptionLevel -= purificationPoints;
 
         foreach(SO_EssenceMaterialType essenceMaterialType in selectedEssenceMaterials)
@@ -115,18 +113,17 @@ public class PurificationManager : MonoBehaviour
             manaLens.essencePouch.RemoveItem(essenceMaterialType);
         }
 
+        // Destroy all essence images
+        foreach (GameObject selectedEssenceImage in selectedEssenceImages)
+        {
+            Destroy(selectedEssenceImage);
+        }
 
         if (currentPurificationEntity.currentCorruptionLevel <= 0)
         {
             Debug.Log("Corrupt Entity hath been Purified!");
             corruptEntityImage.sprite = currentPurificationEntity.corruptionEntity.healedStateSprite;
             PlayerManager.Instance.currentPlayerState = PlayerState.normal;
-        }
-
-        // Destroy all essence images
-        foreach (GameObject selectedEssenceImage in selectedEssenceImages)
-        {
-            Destroy(selectedEssenceImage);
         }
 
         // Now that we've finished iterating, clear the collections
@@ -149,9 +146,12 @@ public class PurificationManager : MonoBehaviour
                 if (corruptedEntityEffectiveEssence.essenceMaterialType.Equals(selectedEssenceMaterialType))
                 {
                     purificationPoints += corruptedEntityEffectiveEssence.effectiveness;
+                    Debug.Log($"Added effectiveness {corruptedEntityEffectiveEssence.effectiveness} from {selectedEssenceMaterialType.name}");
                 }
             }
         }
+
+        Debug.Log($"Base purification points: {purificationPoints}");
 
         // Apply combination multipliers
         for (int i = 0; i < selectedEssenceMaterials.Count; i++)
@@ -167,13 +167,16 @@ public class PurificationManager : MonoBehaviour
                         (combinationMultiplier.essenceMaterialType1.Equals(material2) && combinationMultiplier.essenceMaterialType2.Equals(material1)))
                     {
                         purificationPoints *= combinationMultiplier.multiplier;
+                        Debug.Log($"Applying multiplier {combinationMultiplier.multiplier} for pair {material1.name}, {material2.name}");
                     }
                 }
             }
         }
 
+        Debug.Log($"Total purification points after multipliers: {purificationPoints}");
         return purificationPoints;
     }
+
 
 
     PurificationEntity CreateNewPurificationEntity(SO_CorruptEntity corruptEntity)
@@ -202,11 +205,14 @@ public class PurificationManager : MonoBehaviour
             selectedEssenceImages.Add(currentEssenceImagePrefab);
             playerEssencePouch.Remove(essenceMaterialType);
 
+            if (selectedEssenceMaterials.Count == maxSelectedEssences)
+            {
+                inventoryPanel.SetActive(false);
+
+
+            }
+
             OnPlayerRemovesEssenceFromPouch?.Invoke(essenceMaterialType);  // currently no subscribers that I know of
-        }
-        else
-        {
-            inventoryPanel.SetActive(false);
         }
 
 

@@ -34,6 +34,7 @@ public class UINotificationManager : MonoBehaviour
         InteractionManager.OnPlayerInteraction += InteractionNotification;
         ManaLens.OnPlayerGivenEssenceMaterial += ItemNotification;
         ManaLens.OnPlayerEncounterCorruptEntity += CorruptEntity;
+        PurificationManager.OnPlayerPurifiesEntity += PurifyEntity;  
     }
 
     private void OnDisable()
@@ -42,6 +43,28 @@ public class UINotificationManager : MonoBehaviour
         InteractionManager.OnPlayerInteraction -= InteractionNotification;
         ManaLens.OnPlayerGivenEssenceMaterial -= ItemNotification;
         ManaLens.OnPlayerEncounterCorruptEntity -= CorruptEntity;
+        PurificationManager.OnPlayerPurifiesEntity -= PurifyEntity;
+    }
+
+    private void PurifyEntity(PurificationEntity purificationEntity)
+    {
+        PlayerNotification playerNotification = new PlayerNotification();
+
+        playerNotification.notificationHeading = "Success!";
+        playerNotification.notificationContent = "You Have Successfuly Purified the " + purificationEntity.corruptionEntity.corruptEntityName;
+        playerNotification.notificationIcon = purificationEntity.corruptionEntity.healedStateSprite;
+        playerNotification.notificationColor = Color.white;
+        playerNotification.notificationType = NotificationType.PurifySuccess;
+
+        //playerNotification.buttonText1 = "Mahalo";
+        playerNotification.buttonText0 = "Mahalo";
+
+        notificationQueue.Enqueue(playerNotification);
+
+        if (!displayingNotification)
+        {
+            DisplayNextNotification();
+        }
     }
 
 
@@ -53,7 +76,7 @@ public class UINotificationManager : MonoBehaviour
         playerNotification.notificationContent = corruptEntity.corruptEntityDescription;
         playerNotification.notificationIcon = corruptEntity.corruptedStateSprite;
         playerNotification.notificationColor = Color.white;
-        playerNotification.notificationType = NotificationType.Purify;
+        playerNotification.notificationType = NotificationType.CorruptEntity;
 
         playerNotification.buttonText1 = "Purify";
         playerNotification.buttonText0 = "Run";
@@ -78,7 +101,7 @@ public class UINotificationManager : MonoBehaviour
         int index = r.Next(0, item.playerNotifications.Count);
 
         PlayerNotification playerNotification = item.playerNotifications[index];
-        playerNotification.notificationType = NotificationType.item;
+        playerNotification.notificationType = NotificationType.Item;
 
         if (item is SO_EssenceMaterialType essenceMaterialType)
         {
@@ -167,7 +190,7 @@ public class UINotificationManager : MonoBehaviour
             switch(notification.notificationType)
             {
 
-                case NotificationType.Purify:
+                case NotificationType.CorruptEntity:
                     notificationButton1.onClick.AddListener(InvokeOnPlayerChoosesPurifyEvent);
                     notificationButton1.onClick.AddListener(CloseWindow);
                     ; break;
@@ -214,8 +237,10 @@ public struct PlayerNotification
 
 public enum NotificationType
 {
-    normal,
-    interaction,
-    item,
-    Purify
+    Normal,
+    Interaction,
+    Item,
+    CorruptEntity,
+    PurifySuccess,
+    PurifyFail,
 }

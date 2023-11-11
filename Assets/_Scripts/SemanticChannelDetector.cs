@@ -57,18 +57,49 @@ public class SemanticChannelDetector : MonoBehaviour
 
     public void TestSemanticBroadcast()
     {
-        //string loungeable = "loungeable_experimental";
-        //string grass = "grass";
+        string sky = "sky";
         string ground = "ground";
+        string natural_ground = "natural_ground";
         string artificial_ground = "artificial_ground";
-        List<string> list = new List<string>();
+        string water = "water";
+        string person = "person";
+        string building = "building";
+        string foliage = "foliage";
+        string grass = "grass";
+        string flower_experimental = "flower_experimental";
+        string tree_trunk_experimental = "tree_trunk_experimental";
+        string pet_experimental = "pet_experimental";
+        string sand_experimental = "sand_experimental";
+        string tv_experimental = "tv_experimental";
+        string dirt_experimental = "dirt_experimental";
+        string vehicle_experimental = "vehicle_experimental";
+        string food_experimental = "food_experimental";
+        string loungeable_experimental = "loungeable_experimental";
+        string snow_experimental = "snow_experimental";
 
-        //list.Add(loungeable);
-        //list.Add(grass);
-        list.Add(ground);
-        list.Add(artificial_ground);
+        List<string> semanticChannelList = new List<string>();
 
-        OnSemanticChannelIdentified(list, new Vector2(600f, 600f));
+        semanticChannelList.Add(sky);
+        semanticChannelList.Add(ground);
+        semanticChannelList.Add(natural_ground);
+        semanticChannelList.Add(artificial_ground);
+        semanticChannelList.Add(water);
+        semanticChannelList.Add(person);
+        semanticChannelList.Add(building);
+        semanticChannelList.Add(foliage);
+        semanticChannelList.Add(grass);
+        semanticChannelList.Add(flower_experimental);
+        semanticChannelList.Add(tree_trunk_experimental);
+        semanticChannelList.Add(pet_experimental);
+        semanticChannelList.Add(sand_experimental);
+        semanticChannelList.Add(tv_experimental);
+        semanticChannelList.Add(dirt_experimental);
+        semanticChannelList.Add(vehicle_experimental);
+        semanticChannelList.Add(food_experimental);
+        semanticChannelList.Add(loungeable_experimental);
+        semanticChannelList.Add(snow_experimental);
+
+        OnSemanticChannelIdentified(semanticChannelList, new Vector2(600f, 600f));
     }
 
 #endif

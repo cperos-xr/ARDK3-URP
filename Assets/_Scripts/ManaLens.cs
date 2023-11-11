@@ -77,35 +77,44 @@ public class ManaLens : MonoBehaviour
                     ReceiveEssenceMaterial(semanticChannelList);
                     break;
                 case ELensState.Scouting:
-                    SeekCorruptSpirts(semanticChannelList);
+                    SeekCorruptSpirits(semanticChannelList);
                     break;
             }
         }
     }
 
-    private void SeekCorruptSpirts(List<string> semanticChannelList)
+    private void SeekCorruptSpirits(List<string> semanticChannelList)
     {
-        foreach (string semanticChannel in semanticChannelList)
+        if (semanticChannelList.Count == 0)
         {
-            foreach (SO_AreaData currentArea in AreaManager.Instance.currentAreas)
+            Debug.Log("No semantic channels to search for.");
+            return;
+        }
+
+        // Select a random channel from the list
+        int randomIndex = UnityEngine.Random.Range(0, semanticChannelList.Count);
+        string randomSemanticChannel = semanticChannelList[randomIndex];
+        Debug.Log($"Selected random channel: {randomSemanticChannel}");
+
+        // Search for corrupt spirits in the selected channel
+        foreach (SO_AreaData currentArea in AreaManager.Instance.currentAreas)
+        {
+            foreach (SO_EssenceMaterialType essenceMaterialType in currentArea.corruptedEssenceMaterialTypes)
             {
-                foreach (SO_EssenceMaterialType essenceMaterialType in currentArea.corruptedEssenceMaterialTypes)
+                if (randomSemanticChannel.Equals(essenceMaterialType.essenceMaterialSemanticChannelName))
                 {
-                    if (semanticChannel.Equals(essenceMaterialType.essenceMaterialSemanticChannelName))
+                    // Found a corrupt spirit
+                    SO_CorruptEntity corruptEntity = CorruptEntityManager.Instance.GetEntityByEssenceAndScarcity(essenceMaterialType, AreaManager.Instance.currentAreas);
+                    if (corruptEntity != null)
                     {
-                        // Found a corrupt spirit
-                        SO_CorruptEntity corruptEntity = CorruptEntityManager.Instance.GetEntityByEssenceAndScarcity(essenceMaterialType, AreaManager.Instance.currentAreas);
-                        if (corruptEntity != null)
-                        {
-                            FoundCorruptEntity(corruptEntity);
-                        }
+                        FoundCorruptEntity(corruptEntity);
+                        return; // Stop after finding the first corrupt entity
                     }
                 }
             }
-
         }
-
     }
+
 
     private void FoundCorruptEntity(SO_CorruptEntity corruptEntity)
     {
