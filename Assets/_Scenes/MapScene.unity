@@ -3760,6 +3760,11 @@ MonoBehaviour:
     lng_degrees: 0
   ARLocationManifest: {fileID: 0}
   AssetGuid: 9891c86bf5b9b7647884e1d161104b49
+--- !u!1 &657658305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 545328227069103226, guid: 62c63bc17892cd04cad614a869b591a0, type: 3}
+  m_PrefabInstance: {fileID: 545328227855248413}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &657749047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7975,7 +7980,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 545328227069103217, guid: 62c63bc17892cd04cad614a869b591a0, type: 3}
   m_PrefabInstance: {fileID: 545328227855248413}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 657658305}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8c1cc302b6805546a40818d8bf3b7d4, type: 3}
@@ -12588,6 +12593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   purificationPanel: {fileID: 2052190298}
+  inventoryPanel: {fileID: 657658305}
   HorizontalLayoutObject: {fileID: 1055236422}
   selectedEssenceImagePrefab: {fileID: 7623063562428146471, guid: ced682d772bc6b2429a5dc51dcbbcf2a, type: 3}
   maxSelectedEssences: 3
