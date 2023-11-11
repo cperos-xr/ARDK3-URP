@@ -95,6 +95,7 @@ public class PurificationManager : MonoBehaviour
     void BeginPurification()
     {
         PlayerManager.Instance.currentPlayerState = PlayerState.purification;
+        InitializePurificationEntity(currentPurificationEntity.corruptionEntity);
         selectedEssenceMaterials.Clear();
         CopyPlayerEssencePouch();
         Debug.Log("Begining the purification of " + currentPurificationEntity.corruptionEntity.corruptEntityName);
@@ -124,6 +125,7 @@ public class PurificationManager : MonoBehaviour
             Debug.Log("Corrupt Entity hath been Purified!");
             corruptEntityImage.sprite = currentPurificationEntity.corruptionEntity.healedStateSprite;
             PlayerManager.Instance.currentPlayerState = PlayerState.normal;
+            OnPlayerPurifiesEntity?.Invoke(currentPurificationEntity);
         }
 
         // Now that we've finished iterating, clear the collections
@@ -147,6 +149,10 @@ public class PurificationManager : MonoBehaviour
                 {
                     purificationPoints += corruptedEntityEffectiveEssence.effectiveness;
                     Debug.Log($"Added effectiveness {corruptedEntityEffectiveEssence.effectiveness} from {selectedEssenceMaterialType.name}");
+                }
+                else
+                {
+                    purificationPoints += Random.Range(-1, 2f);
                 }
             }
         }

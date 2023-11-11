@@ -27,6 +27,8 @@ public class InventoryButton : MonoBehaviour
 
         if (iButtonObject is SO_EssenceMaterialType essenceMaterialType)
         {
+            string channelName = essenceMaterialType.essenceMaterialSemanticChannelName.Replace("_experimental", "");
+            buttonText.text = $"{buttonText.text} ({channelName})";
             icon.color = essenceMaterialType.essenceMaterialColor;
         }
 

@@ -78,8 +78,8 @@ public class UINotificationManager : MonoBehaviour
         playerNotification.notificationColor = Color.white;
         playerNotification.notificationType = NotificationType.CorruptEntity;
 
-        playerNotification.buttonText1 = "Purify";
-        playerNotification.buttonText0 = "Run";
+        playerNotification.buttonText0 = "Purify";
+        playerNotification.buttonText1 = "Run";
 
         notificationQueue.Enqueue(playerNotification);
 
@@ -87,12 +87,6 @@ public class UINotificationManager : MonoBehaviour
         {
             DisplayNextNotification();
         }
-    }
-
-    void InvokeOnPlayerChoosesPurifyEvent()
-    {
-        // Invoke the delegate event
-        OnPlayerChoosesPurify?.Invoke();
     }
 
     private void ItemNotification(SO_ItemData item)
@@ -178,24 +172,52 @@ public class UINotificationManager : MonoBehaviour
                 notificationButtonText1.text = notification.buttonText1;
             }
 
-            // You can add a button click event handler to dismiss the notification
-            notificationButton0.onClick.AddListener(() =>
-            {
-                displayingNotification = false;
-                notificationPanel.SetActive(false);
-                DisplayNextNotification();
-            });
+
 
             
             switch(notification.notificationType)
             {
 
                 case NotificationType.CorruptEntity:
-                    notificationButton1.onClick.AddListener(InvokeOnPlayerChoosesPurifyEvent);
-                    notificationButton1.onClick.AddListener(CloseWindow);
-                    ; break;
+                    // Player chooses purify
+                    notificationButton0.onClick.AddListener(() =>
+                    {
+                        OnPlayerChoosesPurify?.Invoke();
+                        displayingNotification = false;
+                        notificationPanel.SetActive(false);
+                        DisplayNextNotification();
+                    });
 
+                    // Button That runs away
+                    notificationButton1.onClick.AddListener(() =>
+                    {
+                        PurificationManager.Instance.purificationPanel.SetActive(false);
+                        PlayerManager.Instance.currentPlayerState = PlayerState.normal;
+                        displayingNotification = false;
+                        notificationPanel.SetActive(false);
+                        DisplayNextNotification();
+                    });
+
+                    break;
+                case NotificationType.PurifySuccess:
+                    // You can add a button click event handler to dismiss the notification
+                    notificationButton0.onClick.AddListener(() =>
+                    {
+                        PurificationManager.Instance.purificationPanel.SetActive(false);
+                        displayingNotification = false;
+                        notificationPanel.SetActive(false);
+                        DisplayNextNotification();
+                    });
+
+                    break;
                 default:
+                    // You can add a button click event handler to dismiss the notification
+                    notificationButton0.onClick.AddListener(() =>
+                    {
+                        displayingNotification = false;
+                        notificationPanel.SetActive(false);
+                        DisplayNextNotification();
+                    });
                     break;
 
             }
@@ -209,11 +231,6 @@ public class UINotificationManager : MonoBehaviour
             displayingNotification = false;
             notificationPanel.SetActive(false);
         }
-    }
-
-    void CloseWindow()
-    {
-        notificationPanel.SetActive(false);
     }
 }
 
