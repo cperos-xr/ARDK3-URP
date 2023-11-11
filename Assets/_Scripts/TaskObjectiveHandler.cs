@@ -349,36 +349,65 @@ public class TaskObjectiveHandler : MonoBehaviour
             return;
         }
 
+        // Check and add for SO_TaskObjective_ItemCollection
         if (objective is SO_TaskObjective_ItemCollection taskObjective_ItemCollection)
         {
-            itemCollectionObjectives.Add(taskObjective_ItemCollection, false);
+            if (!itemCollectionObjectives.ContainsKey(taskObjective_ItemCollection))
+            {
+                itemCollectionObjectives.Add(taskObjective_ItemCollection, false);
+            }
         }
+        // Check and add for SO_TaskObjective_GPSLocation
         else if (objective is SO_TaskObjective_GPSLocation taskObjective_GPSLocation)
         {
-            gpsLocationObjectives.Add(taskObjective_GPSLocation, false);
+            if (!gpsLocationObjectives.ContainsKey(taskObjective_GPSLocation))
+            {
+                gpsLocationObjectives.Add(taskObjective_GPSLocation, false);
+            }
         }
+        // Check and add for SO_TaskObjective_TrackedARImage
         else if (objective is SO_TaskObjective_TrackedARImage taskObjective_TrackedARImage)
         {
-            arTrackedImageObjectives.Add(taskObjective_TrackedARImage, false);
+            if (!arTrackedImageObjectives.ContainsKey(taskObjective_TrackedARImage))
+            {
+                arTrackedImageObjectives.Add(taskObjective_TrackedARImage, false);
+            }
         }
+        // Check and add for SO_TaskObjective_EnterArea
         else if (objective is SO_TaskObjective_EnterArea taskObjective_EnterArea)
         {
-            enterAreaObjectives.Add(taskObjective_EnterArea, false);
+            if (!enterAreaObjectives.ContainsKey(taskObjective_EnterArea))
+            {
+                enterAreaObjectives.Add(taskObjective_EnterArea, false);
+            }
         }
+        // Check and add for SO_TaskObjective_EntityInteraction
         else if (objective is SO_TaskObjective_EntityInteraction taskObjective_EntityInteraction)
         {
-            entityInteractionObjectives.Add(taskObjective_EntityInteraction, false);
+            if (!entityInteractionObjectives.ContainsKey(taskObjective_EntityInteraction))
+            {
+                entityInteractionObjectives.Add(taskObjective_EntityInteraction, false);
+            }
         }
+        // Check and add for SO_TaskObjective_Interaction
         else if (objective is SO_TaskObjective_Interaction taskObjective_Interaction)
         {
-            interactionObjectives.Add(taskObjective_Interaction, false);
+            if (!interactionObjectives.ContainsKey(taskObjective_Interaction))
+            {
+                interactionObjectives.Add(taskObjective_Interaction, false);
+            }
         }
+        // Check and add for SO_TaskObjective_Semantic
         else if (objective is SO_TaskObjective_Semantic taskObjective_Semantic)
         {
-            semanticObjectives.Add(taskObjective_Semantic, false);
+            if (!semanticObjectives.ContainsKey(taskObjective_Semantic))
+            {
+                semanticObjectives.Add(taskObjective_Semantic, false);
+            }
         }
         // Add similar cases for other objective types...
     }
+
 
 
 

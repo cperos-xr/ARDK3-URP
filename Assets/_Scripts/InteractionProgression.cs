@@ -4,7 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class InteractionProgression : ScriptableObject
 {
-    public List<EntityInteractionChange> changes;
+    public List<EntityInteractionChange> interactionModifications;
 
     [System.Serializable]
     public struct EntityInteractionChange
@@ -17,7 +17,7 @@ public class InteractionProgression : ScriptableObject
     public void UpdateAllAssociatedEntityInteractions()
     {
         Debug.Log("Updating All Associated Entity Interactions...");
-        foreach (var change in changes)
+        foreach (var change in interactionModifications)
         {
             Debug.Log($"Updating Entity Interaction for {change.entity.entityName} and changing current interaction to {change.newInteraction.InteractionName}");
             InteractionManager.Instance.UpdateInteraction(change.entity, change.newInteraction);
