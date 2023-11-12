@@ -34,7 +34,8 @@ public class UINotificationManager : MonoBehaviour
         InteractionManager.OnPlayerInteraction += InteractionNotification;
         ManaLens.OnPlayerGivenEssenceMaterial += ItemNotification;
         ManaLens.OnPlayerEncounterCorruptEntity += CorruptEntity;
-        PurificationManager.OnPlayerPurifiesEntity += PurifyEntity;  
+        PurificationManager.OnPlayerPurifiesEntity += PurifyEntity;
+        InteractionManager.OnPlayerCorruptEntityInteraction += CorruptEntity;
     }
 
     private void OnDisable()
@@ -44,6 +45,7 @@ public class UINotificationManager : MonoBehaviour
         ManaLens.OnPlayerGivenEssenceMaterial -= ItemNotification;
         ManaLens.OnPlayerEncounterCorruptEntity -= CorruptEntity;
         PurificationManager.OnPlayerPurifiesEntity -= PurifyEntity;
+        InteractionManager.OnPlayerCorruptEntityInteraction -= CorruptEntity;
     }
 
     private void PurifyEntity(PurificationEntity purificationEntity)

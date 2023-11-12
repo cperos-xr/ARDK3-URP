@@ -14,6 +14,9 @@ public class InteractionManager : MonoBehaviour
     public delegate void PlayerEntityInteractionEvent(BaseEntityData entity);
     public static event PlayerEntityInteractionEvent OnPlayerEntityInteraction;
 
+    public delegate void PlayerCorruptEntityInteractionEvent(SO_CorruptEntity corruptEntity);
+    public static event PlayerCorruptEntityInteractionEvent OnPlayerCorruptEntityInteraction;
+
     public Dictionary<BaseEntityData, SO_Interaction> interactionProgressionDictionary = new Dictionary<BaseEntityData, SO_Interaction>();
 
     public Dictionary<BaseEntityData, SO_Interaction> previousInteractionDictionary = new Dictionary<BaseEntityData, SO_Interaction>();
@@ -128,7 +131,7 @@ public class InteractionManager : MonoBehaviour
 
         if (interaction is SO_PurifyInteraction purifyInteraction )
         {
-            PurificationManager.Instance.InitializeAndBeginPurification(purifyInteraction.corruptEntity);
+            OnPlayerCorruptEntityInteraction?.Invoke(purifyInteraction.corruptEntity);
         }
 
         // If you want to update the interaction after handling, you can do so here

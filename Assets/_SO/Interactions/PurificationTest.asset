@@ -17,11 +17,11 @@ MonoBehaviour:
   itemDatas: []
   quest: {fileID: 0}
   notification:
-    notificationHeading: 
-    notificationContent: 
-    buttonText0: 
+    notificationHeading: Can you Purify the entity?
+    notificationContent: Please help purify this poor corrupted entity
+    buttonText0: OK
     buttonText1: 
-    notificationIcon: {fileID: 0}
+    notificationIcon: {fileID: 1487183313, guid: 9fd544b7bde2e65448e4cab5fef3924e, type: 3}
     notificationColor: {r: 0, g: 0, b: 0, a: 0}
     notificationType: 0
   corruptEntity: {fileID: 11400000, guid: ed98ed6d0c481ea48b9d940d53eaee7a, type: 2}

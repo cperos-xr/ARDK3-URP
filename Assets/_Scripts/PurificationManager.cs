@@ -72,6 +72,7 @@ public class PurificationManager : MonoBehaviour
     {
         ManaLens.OnPlayerEncounterCorruptEntity += InitializePurificationEntity;
         UINotificationManager.OnPlayerChoosesPurify += BeginPurification;
+        InteractionManager.OnPlayerCorruptEntityInteraction += InitializePurificationEntity;
     }
 
     private void InitializePurificationEntity(SO_CorruptEntity corruptEntity)
@@ -96,6 +97,7 @@ public class PurificationManager : MonoBehaviour
     private void OnDisable()
     {
         ManaLens.OnPlayerEncounterCorruptEntity -= InitializePurificationEntity;
+        InteractionManager.OnPlayerCorruptEntityInteraction -= InitializePurificationEntity;
         UINotificationManager.OnPlayerChoosesPurify -= BeginPurification;
     }
 
