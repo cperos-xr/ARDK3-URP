@@ -21,7 +21,7 @@ MonoBehaviour:
     notificationContent: Please help purify this poor corrupted entity
     buttonText0: OK
     buttonText1: 
-    notificationIcon: {fileID: 1487183313, guid: 9fd544b7bde2e65448e4cab5fef3924e, type: 3}
-    notificationColor: {r: 0, g: 0, b: 0, a: 0}
+    notificationIcon: {fileID: 21300000, guid: 0da53cd4e5c11a149bb870758de91a9f, type: 3}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
     notificationType: 0
-  corruptEntity: {fileID: 11400000, guid: ed98ed6d0c481ea48b9d940d53eaee7a, type: 2}
+  corruptEntity: {fileID: 11400000, guid: dba715766ce0a4f4592b3030b78ef0f0, type: 2}
