@@ -63,3 +63,4 @@ MonoBehaviour:
   corruptedStateSprite: {fileID: 21300000, guid: fef4a89f37a7a194d92868a0413a34b7, type: 3}
   healedStateSprite: {fileID: -963670558, guid: 0af652e99726c0c4d878a96d3eea9965, type: 3}
   corruptionLevelRangeMinMax: {x: 5, y: 15}
+  model: {fileID: 2836587617939297132, guid: 94b681d544c1d62468325a95ce4c6603, type: 3}
