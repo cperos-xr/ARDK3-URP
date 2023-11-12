@@ -2,13 +2,17 @@ using UnityEngine;
 using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "New Corrupt Entity", menuName = "Game/Level/Entity/Corrupt Entity")]
-public class SO_CorruptEntity : ScriptableObject
+public class SO_CorruptEntity : BaseEntityData
 {
-
     public string corruptEntityName;
     public string corruptEntityDescription;
+
+    public string funFact;
+
     public SO_EssenceMaterialType essenceMaterialType; // The type of essence associated with the corrupt entity
     public List<SpawnableArea> spawnableAreas; // Areas where the entity can appear
+
+    public List<ItemDrop> ItemsDroppedUponPurification;
 
 
     public List<EssenceEffectiveness> essenceEffectivenessList;
@@ -19,6 +23,16 @@ public class SO_CorruptEntity : ScriptableObject
 
     public Vector2 corruptionLevelRangeMinMax;   // The min and maximum corruption level (e.g., when the entity is fully corrupted).
     public GameObject model;
+
+
+
+}
+
+[System.Serializable]
+public struct ItemDrop
+{
+    public SO_ItemData item;
+    public float dropRate; // 1 = 100%, .5 = 50%... 
 }
 
 

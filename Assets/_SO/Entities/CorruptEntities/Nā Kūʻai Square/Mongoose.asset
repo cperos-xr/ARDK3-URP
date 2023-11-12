@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
   m_Name: Mongoose
   m_EditorClassIdentifier: 
+  entityName: "Al\u0101mona of Anarchy "
+  startingInteraction: {fileID: 0}
   corruptEntityName: "Al\u0101mona of Anarchy "
   corruptEntityDescription: A mongoose, its playful nature twisted into mischievous
     malevolence, stalking the streets.
+  funFact: The mongooses found in Hawai'i are native to India and were originally
+    introduced to Hawai'i Island in 1883 by the sugar industry to control rats in
+    sugarcane fields
   essenceMaterialType: {fileID: 11400000, guid: f073f9f7daac0044580750aa747fb925, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 3eab2a47301376742aa8be9758841f1d, type: 2}
@@ -23,6 +28,7 @@ MonoBehaviour:
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 3
+  ItemsDroppedUponPurification: []
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 2ca56bd43a0928f4184df63b8b18a55b, type: 2}
     effectiveness: 2
@@ -60,3 +66,4 @@ MonoBehaviour:
   corruptedStateSprite: {fileID: 21300000, guid: c75c90ae922a22341bece6d5497b8026, type: 3}
   healedStateSprite: {fileID: 21300000, guid: 7461272b8e367f54bbabef3d8df24c45, type: 3}
   corruptionLevelRangeMinMax: {x: 10, y: 20}
+  model: {fileID: 0}

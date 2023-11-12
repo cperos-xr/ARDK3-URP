@@ -18,18 +18,9 @@ public class PlayerManager : MonoBehaviour
     public PlayerState currentPlayerState = PlayerState.normal;
 
     // Other variables such as health, magic, etc.
-    public int health;
-    public int magic;
-    public int stepsTaken;
-
-    // Initialization, update player stats, etc.
-    void Start()
-    {
-        // Load data from PlayerData
-        //health = playerData.initialHealth;
-        //magic = playerData.initialMagic;
-        // ... more initialization
-    }
+    //public int health;
+    //public int magic;
+    //public int stepsTaken;
 
     private void Awake()
     {
@@ -43,6 +34,8 @@ public class PlayerManager : MonoBehaviour
             // If an instance already exists, destroy this one
             Destroy(gameObject);
         }
+
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
     }
 
     public void UseItem(SO_ItemData item)

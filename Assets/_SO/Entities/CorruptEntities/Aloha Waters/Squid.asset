@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
   m_Name: Squid
   m_EditorClassIdentifier: 
+  entityName: Hexed He'e
+  startingInteraction: {fileID: 0}
   corruptEntityName: Hexed He'e
   corruptEntityDescription: A reef squid, twisted into a vessel of deep-sea sorcery,
     disturbing the depths.
+  funFact: "The Hawaiian bobtail squid has an \u201Cinvisibility cloak,\u201D thanks
+    to a symbiotic relationship with bioluminescent bacteria"
   essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 73ef1a5567e9f2e469a26aa4100d4aef, type: 2}
@@ -23,6 +27,7 @@ MonoBehaviour:
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
+  ItemsDroppedUponPurification: []
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 5654f2f89ceb1aa42bab5661b365a517, type: 2}
     effectiveness: 3

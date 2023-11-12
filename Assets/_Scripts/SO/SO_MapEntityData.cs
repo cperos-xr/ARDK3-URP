@@ -17,21 +17,5 @@ public class SO_MapEntityData : BaseEntityData
 
     public LayerGameObjectPlacement _cubeGOP;
 
-    public void UnlockItem(int index)
-    {
-        if (index >= 0 && index < associatedItems.Count)
-        {
-            associatedItems[index].isLocked = false;
-        }
-    }
-
-    public void UnlockAllItems()
-    {
-        foreach (SO_ItemData item in associatedItems) 
-        { 
-            item.isLocked = false; 
-        }
-    }
-
 }
 

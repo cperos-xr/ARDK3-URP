@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
   m_Name: Monkey
   m_EditorClassIdentifier: 
+  entityName: Keko Chaos
+  startingInteraction: {fileID: 0}
   corruptEntityName: Keko Chaos
   corruptEntityDescription: Escaped monkeys, their mischief magnified into mayhem,
     turning the treetops into turmoil.
+  funFact: The Honolulu Zoo houses over 900 animals from around the world, where
+    you can see monekys, elephants, giraffes and more
   essenceMaterialType: {fileID: 11400000, guid: 8e2c4d819d6b0aa4d9ba259ac5c68fea, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 4a58ed3b4ae1c1e4cacb7a335887f4fb, type: 2}
@@ -23,6 +27,7 @@ MonoBehaviour:
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
+  ItemsDroppedUponPurification: []
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 95054bcd2122da040857f4f8b7876c66, type: 2}
     effectiveness: 4

@@ -12,14 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
   m_Name: Nene
   m_EditorClassIdentifier: 
+  entityName: Nene Nefarious
+  startingInteraction: {fileID: 0}
   corruptEntityName: Nene Nefarious
   corruptEntityDescription: The gentle Nene, transformed into a harbinger of havoc,
     its calls now a portent of chaos.
+  funFact: The nene goose descended from canadian geese and is now the rarest goose
+    in the world.
   essenceMaterialType: {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: b57bedb8ad5b4cf4081f9af0064f01cf, type: 2}
     scarcityLevel:
       ScarcityLevel: 2
+  ItemsDroppedUponPurification: []
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 1c0bd690c5d034e459f3ae90c062bfbc, type: 2}
     effectiveness: 2

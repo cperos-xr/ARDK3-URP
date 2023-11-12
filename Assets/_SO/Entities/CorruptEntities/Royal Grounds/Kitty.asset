@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
   m_Name: Kitty
   m_EditorClassIdentifier: 
+  entityName: "P\u014Dpoki Peril"
+  startingInteraction: {fileID: 0}
   corruptEntityName: "P\u014Dpoki Peril"
   corruptEntityDescription: Once a common sight in alleys and backstreets, this stray
     cat has become a harbinger of misfortune, its silent steps bringing a sense of
     impending doom to those who cross its path.
+  funFact: Although cute, feral cats are one of the most devastating predators of
+    Hawai'i's unique wildlife
   essenceMaterialType: {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 021cf3f44138b8c42bce8054291d1c56, type: 2}
@@ -30,6 +34,7 @@ MonoBehaviour:
   - areaData: {fileID: 11400000, guid: 3eab2a47301376742aa8be9758841f1d, type: 2}
     scarcityLevel:
       ScarcityLevel: 3
+  ItemsDroppedUponPurification: []
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 68146c278b6c57c49acdd306f27ff912, type: 2}
     effectiveness: 2

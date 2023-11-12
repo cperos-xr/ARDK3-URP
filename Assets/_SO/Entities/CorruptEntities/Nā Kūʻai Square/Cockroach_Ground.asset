@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
   m_Name: Cockroach_Ground
   m_EditorClassIdentifier: 
+  entityName: Evil 'Uli
+  startingInteraction: {fileID: 0}
   corruptEntityName: Evil 'Uli
   corruptEntityDescription: A once-common cockroach, a bearer of blight and decay,
     spreading corruption with its skittering steps.
+  funFact: "There are at least 19 species of cockroaches found in Hawai\u02BBi and
+    only the endemic Hawaiian wood cockroach, is native."
   essenceMaterialType: {fileID: 11400000, guid: f073f9f7daac0044580750aa747fb925, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
@@ -23,6 +27,7 @@ MonoBehaviour:
   - areaData: {fileID: 11400000, guid: 73ef1a5567e9f2e469a26aa4100d4aef, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
+  ItemsDroppedUponPurification: []
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
     effectiveness: 1

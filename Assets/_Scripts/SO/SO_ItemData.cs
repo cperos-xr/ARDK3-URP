@@ -8,9 +8,7 @@ public class SO_ItemData : InteractionProgression, IButtonObject
     public string itemName;
     public Sprite icon;
     public bool isUsable;
-    public bool isLocked;
     public bool isDuplicable;
-    public int healthRecovery;
     public List<PlayerNotification> playerNotifications; // Assuming Notification is another class or struct you've defined
 
     // No need to serialize this as it will be set dynamically

@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
   m_Name: Tilapia
   m_EditorClassIdentifier: 
+  entityName: Tilapia Trouble
+  startingInteraction: {fileID: 0}
   corruptEntityName: Tilapia Trouble
   corruptEntityDescription: Once a common sight in market waters, these tilapia now
     thrash with a turbulent energy.
+  funFact: Many species of tilapia are now well-established in Hawaiian waters after
+    their original introduction as baitfish and aquatic vegetation control
   essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 3eab2a47301376742aa8be9758841f1d, type: 2}
@@ -23,6 +27,7 @@ MonoBehaviour:
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
+  ItemsDroppedUponPurification: []
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
     effectiveness: 2

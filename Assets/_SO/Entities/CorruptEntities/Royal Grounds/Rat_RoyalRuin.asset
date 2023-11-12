@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
   m_Name: Rat_RoyalRuin
   m_EditorClassIdentifier: 
+  entityName: Iole Royal Ruin
+  startingInteraction: {fileID: 0}
   corruptEntityName: Iole Royal Ruin
   corruptEntityDescription: A rat that scurries through the ruins, its every step
     leaving a legacy of decay. Sacred Gardens
+  funFact: The introduction of rodents and mongooses resulted in, or contributed
+    to, the extinction or endangerment of many native Hawaiian species
   essenceMaterialType: {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 021cf3f44138b8c42bce8054291d1c56, type: 2}
@@ -23,6 +27,7 @@ MonoBehaviour:
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 3
+  ItemsDroppedUponPurification: []
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 68146c278b6c57c49acdd306f27ff912, type: 2}
     effectiveness: 2

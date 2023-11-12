@@ -98,18 +98,15 @@ public class InteractionManager : MonoBehaviour
         {
             foreach (SO_ItemData itemData in interaction.itemDatas)
             {
-                if (!itemData.isLocked)
+                // Ensure itemManager is not null
+                if (itemManager != null)
                 {
-                    // Ensure itemManager is not null
-                    if (itemManager != null)
-                    {
-                        itemManager.AddItemToPlayerInventory(itemData, entity);
-                    }
-                    else
-                    {
-                        Debug.LogError("ItemManager is not set in InteractionManager.");
-                        return; // Exit the method to avoid further issues.
-                    }
+                    itemManager.AddItemToPlayerInventory(itemData, entity);
+                }
+                else
+                {
+                    Debug.LogError("ItemManager is not set in InteractionManager.");
+                    return; // Exit the method to avoid further issues.
                 }
             }
         }

@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
   m_Name: Turtle2
   m_EditorClassIdentifier: 
+  entityName: Honu Havoc
+  startingInteraction: {fileID: 0}
   corruptEntityName: Honu Havoc
   corruptEntityDescription: 'A turtle, once a symbol of longevity and tranquility,
     now enveloped in an aura of chaos. Its once calm and slow movements are replaced
     with unpredictable bursts of speed, disrupting the serene waters it used to inhabit. '
+  funFact: Honu grow to around 3-4 feet, but weigh up to 300-350 lbs or more
   essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 021cf3f44138b8c42bce8054291d1c56, type: 2}
@@ -27,6 +30,7 @@ MonoBehaviour:
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
+  ItemsDroppedUponPurification: []
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 9b76473e442f62142bae32c903da1646, type: 2}
     effectiveness: 2

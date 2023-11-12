@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
   m_Name: Rat_Market
   m_EditorClassIdentifier: 
+  entityName: Iole Intrigue
+  startingInteraction: {fileID: 0}
   corruptEntityName: Iole Intrigue
   corruptEntityDescription: A rat, sly and cunning, now radiating a malevolent aura
     that taints the marketplace.
+  funFact: There are four types of Rodents in Hawaii Polynesian/Pacific rats, Black
+    rats, Norway rats, and the standard house mouse.
   essenceMaterialType: {fileID: 11400000, guid: f073f9f7daac0044580750aa747fb925, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 3eab2a47301376742aa8be9758841f1d, type: 2}
@@ -23,6 +27,7 @@ MonoBehaviour:
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
+  ItemsDroppedUponPurification: []
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
     effectiveness: 2

@@ -13,7 +13,7 @@ public class ItemManager : MonoBehaviour
 
     public delegate void PlayerGivenItemEvent(SO_ItemData item);
     public static event PlayerGivenItemEvent OnPlayerGivenItem;
-
+    /*
     public void LoadEntityItems(SO_MapEntityData entityData)
     {
         if (!currentInteractiveEntities.Contains(entityData))
@@ -40,6 +40,7 @@ public class ItemManager : MonoBehaviour
             currentInteractiveEntities.Remove(entity);
         }
     }
+    */
 
     public void AddItemToPlayerInventory(SO_ItemData itemData, BaseEntityData entity)
     {

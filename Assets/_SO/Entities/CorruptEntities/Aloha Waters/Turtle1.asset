@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
   m_Name: Turtle1
   m_EditorClassIdentifier: 
+  entityName: '''Ea Enigma'
+  startingInteraction: {fileID: 0}
   corruptEntityName: '''Ea Enigma'
   corruptEntityDescription: "A green sea turtle known as \u02BBea in Hawaiian, now
     cloaked in mysterious energies. It glides through the water leaving a trail of
     mystic fog in its wake."
+  funFact: The main predators of the Honu are large sharks. But human involvement
+    is a close second, please respect all wildlife found in our local waters
   essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 021cf3f44138b8c42bce8054291d1c56, type: 2}
@@ -30,6 +34,7 @@ MonoBehaviour:
   - areaData: {fileID: 11400000, guid: 73ef1a5567e9f2e469a26aa4100d4aef, type: 2}
     scarcityLevel:
       ScarcityLevel: 2
+  ItemsDroppedUponPurification: []
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 9b76473e442f62142bae32c903da1646, type: 2}
     effectiveness: 2

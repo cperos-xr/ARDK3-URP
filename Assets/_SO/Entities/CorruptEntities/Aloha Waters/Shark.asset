@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
   m_Name: Shark
   m_EditorClassIdentifier: 
+  entityName: "Man\u014D Mirage"
+  startingInteraction: {fileID: 0}
   corruptEntityName: "Man\u014D Mirage"
   corruptEntityDescription: A spectral shark, its form barely visible as it glides
     through the water, a ghostly predator in the depths.
+  funFact: Hawaii is home to approximately 40 species of sharks. There were once
+    Hawiians who could ride a big one similar to riding on a horse
   essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 73ef1a5567e9f2e469a26aa4100d4aef, type: 2}
@@ -23,6 +27,7 @@ MonoBehaviour:
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 6
+  ItemsDroppedUponPurification: []
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
     effectiveness: 3

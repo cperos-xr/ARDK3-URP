@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -5,4 +6,5 @@ using UnityEngine;
 public class SO_PurifyInteraction : SO_Interaction
 {
     public SO_CorruptEntity corruptEntity;
+
 }

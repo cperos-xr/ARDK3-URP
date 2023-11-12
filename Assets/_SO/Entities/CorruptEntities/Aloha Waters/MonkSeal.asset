@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
   m_Name: MonkSeal
   m_EditorClassIdentifier: 
+  entityName: Maluhia Mauler
+  startingInteraction: {fileID: 0}
   corruptEntityName: Maluhia Mauler
   corruptEntityDescription: A monk seal, once a peaceful icon, now wrapped in dark
     sorcery, disrupting the calm of the seas.
+  funFact: Hawaiian monk seals are endemic to the Hawaiian Islands and Johnston Atoll,
+    and can remain under water for up to 20 minutes
   essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 73ef1a5567e9f2e469a26aa4100d4aef, type: 2}
@@ -23,6 +27,7 @@ MonoBehaviour:
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 4
+  ItemsDroppedUponPurification: []
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
     effectiveness: 2

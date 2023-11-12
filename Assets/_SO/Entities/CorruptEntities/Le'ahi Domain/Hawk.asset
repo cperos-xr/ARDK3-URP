@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
   m_Name: Hawk
   m_EditorClassIdentifier: 
+  entityName: Io Ire
+  startingInteraction: {fileID: 0}
   corruptEntityName: Io Ire
   corruptEntityDescription: The Hawaiian hawk, its majestic flight now a dive through
     despair, casting shadows over the land.
+  funFact: "The 'io, or Hawaiian hawk, is the only broad-winged hawk in Hawai'i.
+    'Io are considered 'aum\u0101kua, or family gods, by Native Hawaiians."
   essenceMaterialType: {fileID: 11400000, guid: 0427fcf0ce3220d48bb07abb75ac9e81, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: b57bedb8ad5b4cf4081f9af0064f01cf, type: 2}
@@ -23,6 +27,7 @@ MonoBehaviour:
   - areaData: {fileID: 11400000, guid: b57bedb8ad5b4cf4081f9af0064f01cf, type: 2}
     scarcityLevel:
       ScarcityLevel: 3
+  ItemsDroppedUponPurification: []
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 0427fcf0ce3220d48bb07abb75ac9e81, type: 2}
     effectiveness: 2

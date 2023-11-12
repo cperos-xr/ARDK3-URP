@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
   m_Name: Lele 1
   m_EditorClassIdentifier: 
+  entityName: Lele Lurker
+  startingInteraction: {fileID: 0}
   corruptEntityName: Lele Lurker
   corruptEntityDescription: An unknown entity that clings to the dirt of Diamond
     Head, its presence a blight upon the earth.
+  funFact: In Hawaiian, the term "lele" means "to fly" or "to leap"
   essenceMaterialType: {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: b57bedb8ad5b4cf4081f9af0064f01cf, type: 2}
@@ -23,6 +26,7 @@ MonoBehaviour:
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
+  ItemsDroppedUponPurification: []
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
     effectiveness: 2

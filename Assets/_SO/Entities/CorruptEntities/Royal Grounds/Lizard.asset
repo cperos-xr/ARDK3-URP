@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
   m_Name: Lizard
   m_EditorClassIdentifier: 
+  entityName: "Mo\u02BBo Mischief"
+  startingInteraction: {fileID: 0}
   corruptEntityName: "Mo\u02BBo Mischief"
   corruptEntityDescription: A lizard, once a mere whisper in the foliage, now a prominent
     purveyor of pandemonium.
+  funFact: Currently all Hawaiian Lizards are introduced species. One lizard that
+    was native to Hawaii is the now extinct copper striped blue-tailed skink.
   essenceMaterialType: {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: 021cf3f44138b8c42bce8054291d1c56, type: 2}
@@ -26,6 +30,7 @@ MonoBehaviour:
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
+  ItemsDroppedUponPurification: []
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 9b76473e442f62142bae32c903da1646, type: 2}
     effectiveness: 2

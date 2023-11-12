@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 [SerializeField]
@@ -24,7 +25,6 @@ public class PurificationManager : MonoBehaviour
 
     private List <GameObject> selectedEssenceImages = new List<GameObject>();
 
-
     public int maxSelectedEssences;
 
     public List<SO_EssenceMaterialType> selectedEssenceMaterials;
@@ -35,6 +35,7 @@ public class PurificationManager : MonoBehaviour
     public Image corruptionMeter;
 
     [SerializeField] private ManaLens manaLens;
+    [SerializeField] private ItemManager itemManager;
 
 
     // Define a delegate and an event
@@ -135,6 +136,21 @@ public class PurificationManager : MonoBehaviour
             corruptEntityImage.sprite = currentPurificationEntity.corruptionEntity.healedStateSprite;
             PlayerManager.Instance.currentPlayerState = PlayerState.normal;
             OnPlayerPurifiesEntity?.Invoke(currentPurificationEntity);
+
+            //if there are items, give them to the player...
+            if (currentPurificationEntity.corruptionEntity.ItemsDroppedUponPurification.Count > 0)
+            {
+                foreach(ItemDrop itemDrop in currentPurificationEntity.corruptionEntity.ItemsDroppedUponPurification)
+                {
+                    float rand = Random.Range(0, 1);
+                    if (rand < itemDrop.dropRate)
+                    {
+                        //Give item to player
+                        itemManager.AddItemToPlayerInventory(itemDrop.item, currentPurificationEntity.corruptionEntity);
+                    }
+
+                }
+            }
         }
 
         // Now that we've finished iterating, clear the collections
@@ -161,7 +177,7 @@ public class PurificationManager : MonoBehaviour
                 }
                 else
                 {
-                    // purificationPoints += Random.Range(-1, 2f);
+                    // purificationPoints += Random.Range(-1, 2f);  Makes too easy...
                 }
             }
         }
@@ -191,8 +207,6 @@ public class PurificationManager : MonoBehaviour
         Debug.Log($"Total purification points after multipliers: {purificationPoints}");
         return purificationPoints;
     }
-
-
 
     PurificationEntity CreateNewPurificationEntity(SO_CorruptEntity corruptEntity)
     {
