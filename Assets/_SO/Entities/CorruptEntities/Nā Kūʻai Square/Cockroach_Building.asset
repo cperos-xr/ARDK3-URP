@@ -61,6 +61,6 @@ MonoBehaviour:
     essenceMaterialType2: {fileID: 11400000, guid: 84c063cd72320b141be350ea6114174f, type: 2}
     multiplier: 0.5
   corruptedStateSprite: {fileID: 21300000, guid: 6c6ab55af5efc404bb14ac4f823801b0, type: 3}
-  healedStateSprite: {fileID: 21300000, guid: efbe0f8b51d2b18419a86c838d757d21, type: 3}
+  healedStateSprite: {fileID: 21300000, guid: 0da53cd4e5c11a149bb870758de91a9f, type: 3}
   corruptionLevelRangeMinMax: {x: 8, y: 9}
   model: {fileID: 3059192673840713054, guid: 36cfa4c57e4fd47428b08294822fa744, type: 3}
