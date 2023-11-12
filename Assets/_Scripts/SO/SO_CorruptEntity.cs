@@ -18,7 +18,7 @@ public class SO_CorruptEntity : ScriptableObject
     public Sprite healedStateSprite;
 
     public Vector2 corruptionLevelRangeMinMax;   // The min and maximum corruption level (e.g., when the entity is fully corrupted).
-
+    public GameObject model;
 }
 
 
