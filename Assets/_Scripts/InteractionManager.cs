@@ -90,7 +90,6 @@ public class InteractionManager : MonoBehaviour
         }
 
 
-
         // Handle items if any are associated with this interaction
         if (interaction.itemDatas != null)
         {
@@ -125,6 +124,11 @@ public class InteractionManager : MonoBehaviour
                 Debug.LogError("QuestManager.Instance is null.");
                 return; // Exit the method to avoid further issues.
             }
+        }
+
+        if (interaction is SO_PurifyInteraction purifyInteraction )
+        {
+            PurificationManager.Instance.InitializeAndBeginPurification(purifyInteraction.corruptEntity);
         }
 
         // If you want to update the interaction after handling, you can do so here

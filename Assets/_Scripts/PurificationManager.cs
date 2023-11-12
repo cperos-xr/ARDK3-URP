@@ -82,9 +82,16 @@ public class PurificationManager : MonoBehaviour
         corruptEntityImage.sprite = currentPurificationEntity.corruptionEntity.corruptedStateSprite;
 
 
-        OnCreatedANewPurificationEntity(currentPurificationEntity);
+        OnCreatedANewPurificationEntity?.Invoke(currentPurificationEntity);
 
     }
+
+    public void InitializeAndBeginPurification(SO_CorruptEntity corruptEntity)
+    {
+        InitializePurificationEntity(corruptEntity);
+        BeginPurification();
+
+    } 
 
     private void OnDisable()
     {
