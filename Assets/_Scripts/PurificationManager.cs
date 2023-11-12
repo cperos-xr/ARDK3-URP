@@ -152,7 +152,7 @@ public class PurificationManager : MonoBehaviour
                 }
                 else
                 {
-                    purificationPoints += Random.Range(-1, 2f);
+                    // purificationPoints += Random.Range(-1, 2f);
                 }
             }
         }
