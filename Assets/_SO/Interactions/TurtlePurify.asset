@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd371c013f334b74f8a4b18a18aeacda, type: 3}
-  m_Name: PurificationTest
+  m_Name: TurtlePurify
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  InteractionName: Purify Chicen
+  InteractionName: Purify Turtle
   itemDatas: []
   quest: {fileID: 0}
   notification:
@@ -21,7 +21,7 @@ MonoBehaviour:
     notificationContent: Please help purify this poor corrupted entity
     buttonText0: OK
     buttonText1: 
-    notificationIcon: {fileID: 21300000, guid: 0da53cd4e5c11a149bb870758de91a9f, type: 3}
+    notificationIcon: {fileID: 21300000, guid: fddf47a3454d5ae47a3068241ff53d0a, type: 3}
     notificationColor: {r: 1, g: 1, b: 1, a: 1}
     notificationType: 0
-  corruptEntity: {fileID: 11400000, guid: dba715766ce0a4f4592b3030b78ef0f0, type: 2}
+  corruptEntity: {fileID: 11400000, guid: e5217ed6d4baa4547888fc67fd0fa603, type: 2}
