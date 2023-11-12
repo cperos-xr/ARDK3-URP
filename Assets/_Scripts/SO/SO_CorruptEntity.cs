@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 [CreateAssetMenu(fileName = "New Corrupt Entity", menuName = "Game/Level/Entity/Corrupt Entity")]
 public class SO_CorruptEntity : BaseEntityData
@@ -13,7 +14,7 @@ public class SO_CorruptEntity : BaseEntityData
     public List<SpawnableArea> spawnableAreas; // Areas where the entity can appear
 
     public List<ItemDrop> ItemsDroppedUponPurification;
-
+    public SO_Interaction InteractionToCompleteUponPurification;
 
     public List<EssenceEffectiveness> essenceEffectivenessList;
     public List<CombinationMultiplier> combinationMultipliersList;
@@ -27,6 +28,7 @@ public class SO_CorruptEntity : BaseEntityData
 
 
 }
+
 
 [System.Serializable]
 public struct ItemDrop

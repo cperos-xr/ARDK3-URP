@@ -72,22 +72,27 @@ public class UINotificationManager : MonoBehaviour
 
     private void CorruptEntity(SO_CorruptEntity corruptEntity)
     {
-        PlayerNotification playerNotification = new PlayerNotification();
-
-        playerNotification.notificationHeading = corruptEntity.corruptEntityName;
-        playerNotification.notificationContent = corruptEntity.corruptEntityDescription;
-        playerNotification.notificationIcon = corruptEntity.corruptedStateSprite;
-        playerNotification.notificationColor = Color.white;
-        playerNotification.notificationType = NotificationType.CorruptEntity;
-
-        playerNotification.buttonText0 = "Purify";
-        playerNotification.buttonText1 = "Run";
-
-        notificationQueue.Enqueue(playerNotification);
-
-        if (!displayingNotification)
+        if (PlayerManager.Instance.currentPlayerState == PlayerState.normal)
         {
-            DisplayNextNotification();
+            PlayerManager.Instance.currentPlayerState = PlayerState.purification;
+
+            PlayerNotification playerNotification = new PlayerNotification();
+
+            playerNotification.notificationHeading = corruptEntity.corruptEntityName;
+            playerNotification.notificationContent = corruptEntity.corruptEntityDescription;
+            playerNotification.notificationIcon = corruptEntity.corruptedStateSprite;
+            playerNotification.notificationColor = Color.white;
+            playerNotification.notificationType = NotificationType.CorruptEntity;
+
+            playerNotification.buttonText0 = "Purify";
+            playerNotification.buttonText1 = "Run";
+
+            notificationQueue.Enqueue(playerNotification);
+
+            if (!displayingNotification)
+            {
+                DisplayNextNotification();
+            }
         }
     }
 
@@ -113,6 +118,7 @@ public class UINotificationManager : MonoBehaviour
         playerNotification.notificationContent = string.Format(playerNotification.notificationContent, item.itemName);
 
         notificationQueue.Enqueue(playerNotification);
+        Debug.Log("Enqueued ItemNotification: " + playerNotification.notificationHeading);
 
         if (!displayingNotification)
         {
@@ -139,8 +145,13 @@ public class UINotificationManager : MonoBehaviour
 
     private void DisplayNextNotification()
     {
+        // Remove all existing listeners from the buttons to prevent overlap of events
+        notificationButton0.onClick.RemoveAllListeners();
+        notificationButton1.onClick.RemoveAllListeners();
+
         if (notificationQueue.Count > 0)
         {
+            Debug.Log("Displaying next notification. Queue size: " + notificationQueue.Count);
             PlayerNotification notification = notificationQueue.Dequeue();
             displayingNotification = true;
 
@@ -230,6 +241,7 @@ public class UINotificationManager : MonoBehaviour
         }
         else
         {
+            Debug.Log("No more notifications to display.");
             displayingNotification = false;
             notificationPanel.SetActive(false);
         }

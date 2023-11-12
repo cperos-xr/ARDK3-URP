@@ -104,7 +104,7 @@ public class PurificationManager : MonoBehaviour
 
     void BeginPurification()
     {
-        PlayerManager.Instance.currentPlayerState = PlayerState.purification;
+        //PlayerManager.Instance.currentPlayerState = PlayerState.purification; now done before notification ever happens
         InitializePurificationEntity(currentPurificationEntity.corruptionEntity);
         selectedEssenceMaterials.Clear();
         CopyPlayerEssencePouch();
@@ -148,8 +148,15 @@ public class PurificationManager : MonoBehaviour
                         //Give item to player
                         itemManager.AddItemToPlayerInventory(itemDrop.item, currentPurificationEntity.corruptionEntity);
                     }
-
                 }
+            }
+
+            if(currentPurificationEntity.corruptionEntity.InteractionToCompleteUponPurification != null)
+            {
+                // make the current interaction the interaction to complete up purification
+                InteractionManager.Instance.UpdateInteraction(currentPurificationEntity.corruptionEntity, currentPurificationEntity.corruptionEntity.InteractionToCompleteUponPurification);
+                // do the interaction
+                InteractionManager.Instance.HandleEntityInteraction(currentPurificationEntity.corruptionEntity);
             }
         }
 

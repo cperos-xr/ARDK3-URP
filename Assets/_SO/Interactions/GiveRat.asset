@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GiveRat
   m_EditorClassIdentifier: 
   entityInteractionUpdates:
-  - entity: {fileID: 11400000, guid: 738cd74112d39da4da06a58aa19aefa8, type: 2}
+  - entity: {fileID: 11400000, guid: 4bddc53bb79c32f469dc587516aa8edd, type: 2}
     newInteraction: {fileID: 11400000, guid: f2fdd0bfeb6419a4386895f72c8adf44, type: 2}
     returnToPreviousInsteadOfNewInteraction: 0
   InteractionName: Get Rat
@@ -26,3 +26,5 @@ MonoBehaviour:
     buttonText0: Rat
     buttonText1: Rat
     notificationIcon: {fileID: 21300000, guid: 465a4b4f09175f040b5dddeda97cd4f3, type: 3}
+    notificationColor: {r: 0, g: 0, b: 0, a: 0}
+    notificationType: 0
