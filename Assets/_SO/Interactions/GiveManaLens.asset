@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5adebe046a44fa548931b0aea32bf529, type: 3}
+  m_Name: GiveManaLens
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 9318d58208d72ae49b8f58f9b34282a5, type: 2}
+    newInteraction: {fileID: 11400000, guid: f2fdd0bfeb6419a4386895f72c8adf44, type: 2}
+    returnToPreviousInsteadOfNewInteraction: 0
+  InteractionName: Restore The Balance
+  itemDatas:
+  - {fileID: 11400000, guid: 9aac419fed3ecdf4c8efdc4d0dd7f1e0, type: 2}
+  quest: {fileID: 0}
+  notification:
+    notificationHeading: Mana Lens Acquired!
+    notificationContent: Harness the world's energies. Capture essences like lani
+      (sky), honua (ground), wai (water), and more. Store them in your mana pouch
+      to learn and restore balance.
+    buttonText0: Mahalo!
+    buttonText1: 
+    notificationIcon: {fileID: -1826067155, guid: b7e707e22533a2442bb3b23a8a06e35e, type: 3}
+    notificationColor: {r: 1, g: 1, b: 1, a: 0}
+    notificationType: 0

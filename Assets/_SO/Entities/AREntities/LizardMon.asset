@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: LizardMon
   m_EditorClassIdentifier: 
   entityName: LizardMon1
-  startingInteraction: {fileID: 11400000, guid: 6560331dc92ed334e8975107fa02b1a7, type: 2}
+  startingInteraction: {fileID: 11400000, guid: f2fdd0bfeb6419a4386895f72c8adf44, type: 2}

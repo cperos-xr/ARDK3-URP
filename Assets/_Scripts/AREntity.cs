@@ -6,7 +6,7 @@ using UnityEngine;
 public class AREntity : MonoBehaviour
 {
     public SO_ArEntityData arEntityData;
-    public SO_Interaction currentInteraction;
+    [HideInInspector] public SO_Interaction currentInteraction;
 
 
     private void Start()
