@@ -30,7 +30,7 @@ public class CorruptionMeter : MonoBehaviour
     {
         
         pointsText.text = purificationEntity.currentCorruptionLevel.ToString();
-        nameText.text = purificationEntity.corruptionEntity.corruptEntityName;
+        nameText.text = purificationEntity.corruptedEntity.corruptEntityName;
 
         float targetFillAmount = purificationEntity.currentCorruptionLevel / (purificationEntity.currentCorruptionLevel * 1.5f);
 

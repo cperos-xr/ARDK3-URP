@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [SerializeField]
 public struct PurificationEntity
 {
-    public SO_CorruptEntity corruptionEntity;
+    public SO_CorruptEntity corruptedEntity;
     public float currentCorruptionLevel;
 
 }
@@ -81,7 +81,7 @@ public class PurificationManager : MonoBehaviour
         currentPurificationEntity = CreateNewPurificationEntity(corruptEntity);
 
         purificationPanel.SetActive(true);
-        corruptEntityImage.sprite = currentPurificationEntity.corruptionEntity.corruptedStateSprite;
+        corruptEntityImage.sprite = currentPurificationEntity.corruptedEntity.corruptedStateSprite;
 
 
         OnCreatedANewPurificationEntity?.Invoke(currentPurificationEntity);
@@ -105,10 +105,10 @@ public class PurificationManager : MonoBehaviour
     void BeginPurification()
     {
         //PlayerManager.Instance.currentPlayerState = PlayerState.purification; now done before notification ever happens
-        InitializePurificationEntity(currentPurificationEntity.corruptionEntity);
+        InitializePurificationEntity(currentPurificationEntity.corruptedEntity);
         selectedEssenceMaterials.Clear();
         CopyPlayerEssencePouch();
-        Debug.Log("Begining the purification of " + currentPurificationEntity.corruptionEntity.corruptEntityName);
+        Debug.Log("Begining the purification of " + currentPurificationEntity.corruptedEntity.corruptEntityName);
 
     }
 
@@ -133,30 +133,30 @@ public class PurificationManager : MonoBehaviour
         if (currentPurificationEntity.currentCorruptionLevel <= 0)
         {
             Debug.Log("Corrupt Entity hath been Purified!");
-            corruptEntityImage.sprite = currentPurificationEntity.corruptionEntity.healedStateSprite;
+            corruptEntityImage.sprite = currentPurificationEntity.corruptedEntity.healedStateSprite;
             PlayerManager.Instance.currentPlayerState = PlayerState.normal;
             OnPlayerPurifiesEntity?.Invoke(currentPurificationEntity);
 
             //if there are items, give them to the player...
-            if (currentPurificationEntity.corruptionEntity.ItemsDroppedUponPurification.Count > 0)
+            if (currentPurificationEntity.corruptedEntity.ItemsDroppedUponPurification.Count > 0)
             {
-                foreach(ItemDrop itemDrop in currentPurificationEntity.corruptionEntity.ItemsDroppedUponPurification)
+                foreach(ItemDrop itemDrop in currentPurificationEntity.corruptedEntity.ItemsDroppedUponPurification)
                 {
                     float rand = Random.Range(0, 1);
                     if (rand < itemDrop.dropRate)
                     {
                         //Give item to player
-                        itemManager.AddItemToPlayerInventory(itemDrop.item, currentPurificationEntity.corruptionEntity); // not happening?
+                        itemManager.AddItemToPlayerInventory(itemDrop.item, currentPurificationEntity.corruptedEntity); // not happening?
                     }
                 }
             }
 
-            if(currentPurificationEntity.corruptionEntity.InteractionToCompleteUponPurification != null)
+            if(currentPurificationEntity.corruptedEntity.InteractionToCompleteUponPurification != null)
             {
                 // make the current interaction the interaction to complete up purification
-                InteractionManager.Instance.UpdateInteraction(currentPurificationEntity.corruptionEntity, currentPurificationEntity.corruptionEntity.InteractionToCompleteUponPurification);
+                InteractionManager.Instance.UpdateInteraction(currentPurificationEntity.corruptedEntity, currentPurificationEntity.corruptedEntity.InteractionToCompleteUponPurification);
                 // do the interaction
-                InteractionManager.Instance.HandleEntityInteraction(currentPurificationEntity.corruptionEntity);
+                InteractionManager.Instance.HandleEntityInteraction(currentPurificationEntity.corruptedEntity);
             }
         }
 
@@ -175,7 +175,7 @@ public class PurificationManager : MonoBehaviour
         // Calculate base healing points
         foreach (SO_EssenceMaterialType selectedEssenceMaterialType in selectedEssenceMaterials)
         {
-            foreach (EssenceEffectiveness corruptedEntityEffectiveEssence in currentPurificationEntity.corruptionEntity.essenceEffectivenessList)
+            foreach (EssenceEffectiveness corruptedEntityEffectiveEssence in currentPurificationEntity.corruptedEntity.essenceEffectivenessList)
             {
                 if (corruptedEntityEffectiveEssence.essenceMaterialType.Equals(selectedEssenceMaterialType))
                 {
@@ -199,7 +199,7 @@ public class PurificationManager : MonoBehaviour
                 SO_EssenceMaterialType material1 = selectedEssenceMaterials[i];
                 SO_EssenceMaterialType material2 = selectedEssenceMaterials[j];
 
-                foreach (CombinationMultiplier combinationMultiplier in currentPurificationEntity.corruptionEntity.combinationMultipliersList)
+                foreach (CombinationMultiplier combinationMultiplier in currentPurificationEntity.corruptedEntity.combinationMultipliersList)
                 {
                     if ((combinationMultiplier.essenceMaterialType1.Equals(material1) && combinationMultiplier.essenceMaterialType2.Equals(material2)) ||
                         (combinationMultiplier.essenceMaterialType1.Equals(material2) && combinationMultiplier.essenceMaterialType2.Equals(material1)))
@@ -218,7 +218,7 @@ public class PurificationManager : MonoBehaviour
     PurificationEntity CreateNewPurificationEntity(SO_CorruptEntity corruptEntity)
     {
         PurificationEntity purificationEntity = new PurificationEntity();
-        purificationEntity.corruptionEntity = corruptEntity;
+        purificationEntity.corruptedEntity = corruptEntity;
         purificationEntity.currentCorruptionLevel = Random.Range(corruptEntity.corruptionLevelRangeMinMax.x, corruptEntity.corruptionLevelRangeMinMax.y);
         return purificationEntity;
     }

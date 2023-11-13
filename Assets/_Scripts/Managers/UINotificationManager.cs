@@ -53,8 +53,8 @@ public class UINotificationManager : MonoBehaviour
         PlayerNotification playerNotification = new PlayerNotification();
 
         playerNotification.notificationHeading = "Did you Know?";
-        playerNotification.notificationContent = purificationEntity.corruptionEntity.funFact;
-        playerNotification.notificationIcon = purificationEntity.corruptionEntity.healedStateSprite;
+        playerNotification.notificationContent = purificationEntity.corruptedEntity.funFact;
+        playerNotification.notificationIcon = purificationEntity.corruptedEntity.healedStateSprite;
         playerNotification.notificationColor = Color.white;
         playerNotification.notificationType = NotificationType.PurifySuccess;
         playerNotification.buttonText0 = "Mahalo";
