@@ -57,8 +57,6 @@ public class UINotificationManager : MonoBehaviour
         playerNotification.notificationIcon = purificationEntity.corruptionEntity.healedStateSprite;
         playerNotification.notificationColor = Color.white;
         playerNotification.notificationType = NotificationType.PurifySuccess;
-
-        //playerNotification.buttonText1 = "Mahalo";
         playerNotification.buttonText0 = "Mahalo";
 
         notificationQueue.Enqueue(playerNotification);

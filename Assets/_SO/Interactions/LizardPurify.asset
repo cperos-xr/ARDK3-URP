@@ -17,9 +17,10 @@ MonoBehaviour:
   itemDatas: []
   quest: {fileID: 0}
   notification:
-    notificationHeading: Can you Purify the entity?
-    notificationContent: Please help purify this poor corrupted entity
-    buttonText0: OK
+    notificationHeading: A Cursed Creature!
+    notificationContent: Choose wisely from your Essence Pouch to restore the creature's
+      harmony.  Some essences soothe the curse, while others may worsen it
+    buttonText0: Got It!
     buttonText1: 
     notificationIcon: {fileID: 21300000, guid: 465ca5dc2d079814baf393643e605788, type: 3}
     notificationColor: {r: 1, g: 1, b: 1, a: 1}

@@ -13075,7 +13075,7 @@ MonoBehaviour:
   corruptEntityImage: {fileID: 1245490234}
   corruptionMeter: {fileID: 2087554042}
   manaLens: {fileID: 414302069}
-  itemManager: {fileID: 0}
+  itemManager: {fileID: 1155025340}
 --- !u!1 &2140700163
 GameObject:
   m_ObjectHideFlags: 0
