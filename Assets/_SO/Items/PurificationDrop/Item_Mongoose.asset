@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487a20b1cc9f0a2409d124fbd9ea3720, type: 3}
+  m_Name: Item_Mongoose
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
+  itemName: Mongoose Merriment Marble
+  icon: {fileID: 21300000, guid: 7461272b8e367f54bbabef3d8df24c45, type: 3}
+  isUsable: 0
+  isDuplicable: 0
+  playerNotifications:
+  - notificationHeading: Mongoose Merriment Marble
+    notificationContent: The small Asian Mongoose gave you a playful trinket, radiating
+      joy.
+    buttonText0: Mahalo
+    buttonText1: 
+    notificationIcon: {fileID: 21300000, guid: 376b977053bdcef47a8afadd3c11f58e, type: 3}
+    notificationColor: {r: 1, g: 1, b: 1, a: 0}
+    notificationType: 0
+  givenByEntityName: 

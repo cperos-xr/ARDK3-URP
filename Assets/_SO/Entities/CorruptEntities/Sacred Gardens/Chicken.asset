@@ -31,7 +31,10 @@ MonoBehaviour:
   - areaData: {fileID: 11400000, guid: 021cf3f44138b8c42bce8054291d1c56, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
-  ItemsDroppedUponPurification: []
+  ItemsDroppedUponPurification:
+  - item: {fileID: 11400000, guid: 439715dd4652c4f4aacd01a82a2e7957, type: 2}
+    dropRate: 1
+  InteractionToCompleteUponPurification: {fileID: 0}
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
     effectiveness: 2
