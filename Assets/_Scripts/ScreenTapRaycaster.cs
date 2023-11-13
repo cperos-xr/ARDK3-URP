@@ -49,7 +49,7 @@ public class ScreenTapRaycaster : MonoBehaviour
             // ...
 
             AREntity arEntity = hitObject.GetComponent<AREntity>();
-            if (arEntity)
+            if (arEntity && PlayerManager.Instance.currentPlayerState == PlayerState.normal)
             {
                 SO_ArEntityData sO_ArEntityData = arEntity.arEntityData;
                 if (interactionManager != null)
