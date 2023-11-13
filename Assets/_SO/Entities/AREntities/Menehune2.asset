@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Menehune2
   m_EditorClassIdentifier: 
   entityName: Menehune2
-  startingInteraction: {fileID: 11400000, guid: 91112235fce5ddf47858ab3eb89d0f84, type: 2}
+  startingInteraction: {fileID: 11400000, guid: 448338324285eb1408a1c370aab6b640, type: 2}

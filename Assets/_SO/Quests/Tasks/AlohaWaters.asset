@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e318418990b8954db7c230119f3f47c, type: 3}
+  m_Name: AlohaWaters
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
+  taskID: 0
+  taskName: AlohaWaters
+  icon: {fileID: 21300000, guid: 2b226220e71c971439ec1b09afd2a217, type: 3}
+  taskDescription: 
+  objectives:
+  - {fileID: 11400000, guid: e5e883631693ea54ca2d7b7bcbaaf35f, type: 2}
+  experienceReward: 0
+  itemRewards: []

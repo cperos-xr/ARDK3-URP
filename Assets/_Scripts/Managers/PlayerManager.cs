@@ -17,11 +17,6 @@ public class PlayerManager : MonoBehaviour
 
     public PlayerState currentPlayerState = PlayerState.normal;
 
-    // Other variables such as health, magic, etc.
-    //public int health;
-    //public int magic;
-    //public int stepsTaken;
-
     private void Awake()
     {
         // Ensure there is only one instance of QuestManager

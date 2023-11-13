@@ -12,3 +12,5 @@ public class SO_Interaction : InteractionProgression
     public SO_Quest quest; // List of tasks associated with this interaction.
     public PlayerNotification notification;
 }
+
+

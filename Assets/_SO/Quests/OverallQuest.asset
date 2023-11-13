@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85fb361c81613845bfed8c2913aaaff, type: 3}
+  m_Name: OverallQuest
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
+  questID: 0
+  questTitle: Save the Aina
+  questDescription: Aloha, chosen one. Our aina cries, overwhelmed by invasive species
+    and a deepening curse. Once, we Menehune kept harmony, but now... it's beyond
+    us. Take this Mana Lens, your kuleana. See the unseen, restore what's lost, bring
+    back balance to our lands.
+  tasks:
+  - {fileID: 11400000, guid: 955439ad727af3b4cbfaa648b3206b66, type: 2}
+  experienceReward: 0
+  rewardItem: {fileID: 0}

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5adebe046a44fa548931b0aea32bf529, type: 3}
+  m_Name: Go Forth
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 9318d58208d72ae49b8f58f9b34282a5, type: 2}
+    newInteraction: {fileID: 11400000}
+    returnToPreviousInsteadOfNewInteraction: 0
+  InteractionName: Go with a bundle
+  itemDatas: []
+  quest: {fileID: 0}
+  notification:
+    notificationHeading: "E hele me ka pu\u2019olo"
+    notificationContent: Use the Mana Lens wisely, brave one. Seek the essences,
+      heal our aina. Your path to restoring balance has begun.
+    buttonText0: Pono
+    buttonText1: 
+    notificationIcon: {fileID: -414832206, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
+    notificationColor: {r: 0, g: 0, b: 0, a: 0}
+    notificationType: 0

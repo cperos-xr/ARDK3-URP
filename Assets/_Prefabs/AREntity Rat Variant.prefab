@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2073216014800077335, guid: 81555eba339cb734ea981f7246eefdbd, type: 3}
       propertyPath: m_Name
-      value: AREntity Rat
+      value: AREntity Rat Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2896571063806913921, guid: 81555eba339cb734ea981f7246eefdbd, type: 3}
       propertyPath: m_RootOrder

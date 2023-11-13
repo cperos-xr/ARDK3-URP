@@ -17,6 +17,10 @@ public class InteractionManager : MonoBehaviour
     public delegate void PlayerCorruptEntityInteractionEvent(SO_CorruptEntity corruptEntity);
     public static event PlayerCorruptEntityInteractionEvent OnPlayerCorruptEntityInteraction;
 
+    public delegate void PlayerAREntityInteractionEvent(SO_InteractionAREntity arEntityInteraction);
+    public static event PlayerAREntityInteractionEvent OnPlayerAREntityInteraction;
+
+
     public Dictionary<BaseEntityData, SO_Interaction> interactionProgressionDictionary = new Dictionary<BaseEntityData, SO_Interaction>();
 
     public Dictionary<BaseEntityData, SO_Interaction> previousInteractionDictionary = new Dictionary<BaseEntityData, SO_Interaction>();
@@ -28,6 +32,7 @@ public class InteractionManager : MonoBehaviour
     }
     //[SerializeField] QuestManager questManager;
 
+    private Animator anim;
 
     private void Awake()
     {
@@ -126,9 +131,13 @@ public class InteractionManager : MonoBehaviour
             }
         }
 
-        if (interaction is SO_PurifyInteraction purifyInteraction )
+        if (interaction is SO_PurifyInteraction purifyInteraction)
         {
             OnPlayerCorruptEntityInteraction?.Invoke(purifyInteraction.corruptEntity);
+        }
+        else if (interaction is SO_InteractionAREntity arEntityInteraction)
+        {
+            OnPlayerAREntityInteraction?.Invoke(arEntityInteraction);
         }
 
         // If you want to update the interaction after handling, you can do so here
