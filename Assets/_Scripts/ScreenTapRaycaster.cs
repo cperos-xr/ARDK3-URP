@@ -51,6 +51,7 @@ public class ScreenTapRaycaster : MonoBehaviour
             AREntity arEntity = hitObject.GetComponent<AREntity>();
             if (arEntity && PlayerManager.Instance.currentPlayerState == PlayerState.normal)
             {
+                PlayerManager.Instance.currentPlayerState = PlayerState.notification;
                 SO_ArEntityData sO_ArEntityData = arEntity.arEntityData;
                 if (interactionManager != null)
                 {
@@ -59,6 +60,7 @@ public class ScreenTapRaycaster : MonoBehaviour
                 else
                 {
                     Debug.LogError("interactionManager is null.");
+                    PlayerManager.Instance.currentPlayerState = PlayerState.normal;
                 }
             }
         }

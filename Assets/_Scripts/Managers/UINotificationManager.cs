@@ -53,8 +53,8 @@ public class UINotificationManager : MonoBehaviour
         PlayerNotification playerNotification = new PlayerNotification();
 
         playerNotification.notificationHeading = "Did you Know?";
-        playerNotification.notificationContent = purificationEntity.corruptionEntity.funFact;
-        playerNotification.notificationIcon = purificationEntity.corruptionEntity.healedStateSprite;
+        playerNotification.notificationContent = purificationEntity.corruptEntity.funFact;
+        playerNotification.notificationIcon = purificationEntity.corruptEntity.healedStateSprite;
         playerNotification.notificationColor = Color.white;
         playerNotification.notificationType = NotificationType.PurifySuccess;
         playerNotification.buttonText0 = "Mahalo";
@@ -128,10 +128,10 @@ public class UINotificationManager : MonoBehaviour
 
     private void InteractionNotification(SO_Interaction EntityNotifyPlayer)
     {
-
         if (EntityNotifyPlayer == null)
         {
             Debug.LogError("EntityNotifyPlayer is null in InteractionNotification.");
+            PlayerManager.Instance.currentPlayerState = PlayerState.normal;
             return;
         }
 
@@ -145,6 +145,7 @@ public class UINotificationManager : MonoBehaviour
 
     private void DisplayNextNotification()
     {
+        PlayerManager.Instance.currentPlayerState = PlayerState.notification;
         // Remove all existing listeners from the buttons to prevent overlap of events
         notificationButton0.onClick.RemoveAllListeners();
         notificationButton1.onClick.RemoveAllListeners();
@@ -242,6 +243,7 @@ public class UINotificationManager : MonoBehaviour
         else
         {
             Debug.Log("No more notifications to display.");
+            PlayerManager.Instance.currentPlayerState = PlayerState.normal;
             displayingNotification = false;
             notificationPanel.SetActive(false);
         }

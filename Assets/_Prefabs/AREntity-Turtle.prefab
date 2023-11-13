@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2896571063806913921}
   - component: {fileID: 2035671786452750033}
-  - component: {fileID: 8305286395890968821}
+  - component: {fileID: 48121001045425272}
   m_Layer: 0
   m_Name: AREntity-Turtle
   m_TagString: Untagged
@@ -47,7 +47,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.3, z: 0.25}
   m_Center: {x: 0, y: 0.15, z: 0}
---- !u!114 &8305286395890968821
+--- !u!114 &48121001045425272
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,11 +56,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2073216014800077335}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73046f5a072453046bbbbd9ca65eda8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef990e72a9b31184aa79ebd31528d699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arEntityData: {fileID: 11400000, guid: d9d33455dab3baa42988804a8ab93b77, type: 2}
+  arEntityData: {fileID: 11400000, guid: 1bba43b391121da4583c704250ca5564, type: 2}
+  anim: {fileID: 0}
   currentInteraction: {fileID: 0}
+  setObjectsActiveStatus:
+  - objectToSet: {fileID: 0}
+    setStatus: 0
+  anim: {fileID: 0}
 --- !u!1 &6192358054012558141
 GameObject:
   m_ObjectHideFlags: 0

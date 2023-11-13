@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AREntity : MonoBehaviour
@@ -15,11 +16,13 @@ public class AREntity : MonoBehaviour
     {
         InteractionManager.OnPlayerAREntityInteraction += ARInteraction;
     }
+
     private void OnDisable()
     {
         InteractionManager.OnPlayerAREntityInteraction -= ARInteraction;
     }
-    private void ARInteraction(SO_InteractionAREntity arEntityInteraction)
+
+    public virtual void ARInteraction(SO_InteractionAREntity arEntityInteraction)
     {
         if (arEntityInteraction.arEntity.Equals(arEntityData))
         {

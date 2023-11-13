@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 48121001045425272, guid: 81555eba339cb734ea981f7246eefdbd, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 3211236348209121427}
+    - target: {fileID: 48121001045425272, guid: 81555eba339cb734ea981f7246eefdbd, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[0].objectToSet
+      value: 
+      objectReference: {fileID: 8358755421272884478}
     - target: {fileID: 2073216014800077335, guid: 81555eba339cb734ea981f7246eefdbd, type: 3}
       propertyPath: m_Name
       value: AREntity Rat Variant
@@ -60,11 +68,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8305286395890968821, guid: 81555eba339cb734ea981f7246eefdbd, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 3211236348209121427}
+    - target: {fileID: 8305286395890968821, guid: 81555eba339cb734ea981f7246eefdbd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8305286395890968821, guid: 81555eba339cb734ea981f7246eefdbd, type: 3}
       propertyPath: arEntityData
       value: 
       objectReference: {fileID: 11400000, guid: 1bba43b391121da4583c704250ca5564, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81555eba339cb734ea981f7246eefdbd, type: 3}
+--- !u!1 &8358755421272884478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2073216014800077335, guid: 81555eba339cb734ea981f7246eefdbd, type: 3}
+  m_PrefabInstance: {fileID: 7549661626158810857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8861945042058021364 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1314555417128275741, guid: 81555eba339cb734ea981f7246eefdbd, type: 3}
@@ -143,3 +164,8 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 98c41de03c337f644bc97c2ac44fb26d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22d152fe9641e56449eb85c2f03d2ed3, type: 3}
+--- !u!95 &3211236348209121427 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 22d152fe9641e56449eb85c2f03d2ed3, type: 3}
+  m_PrefabInstance: {fileID: 9077585419760268546}
+  m_PrefabAsset: {fileID: 0}
