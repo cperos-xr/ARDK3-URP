@@ -30,7 +30,7 @@ MonoBehaviour:
   ItemsDroppedUponPurification:
   - item: {fileID: 11400000, guid: 9b73e89362e292f4eb4ba9d34547f880, type: 2}
     dropRate: 1
-  InteractionToCompleteUponPurification: {fileID: 11400000, guid: e3f5627fce6e03049aef9a81090373d5, type: 2}
+  InteractionToCompleteUponPurification: {fileID: 0}
   essenceEffectivenessList:
   - essenceMaterialType: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
     effectiveness: 2
