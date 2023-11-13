@@ -29,16 +29,21 @@ public class InventoryUIHandler: MonoBehaviour
     {
         GameObject newItemButton = Instantiate(inventoryItemButtonTemplate, scrollBarInventoryContent.transform);
         InventoryButton inventoryButton = newItemButton.GetComponent<InventoryButton>();
-        inventoryButton.InitialIzeItemButton(itemData);
+
         //InventoryItems.Add(inventoryButton);
-        if (itemData is SO_EssenceMaterialType essenceMaterialType)
+        if (itemData is SO_EssenceMaterialType essenceMaterialType)  
         {
+            inventoryButton.InitialIzeItemButton(essenceMaterialType);  // should initialize with channel name, but does not...
             EssenceMaterialTypeContainer essenceMaterialTypeContainer = newItemButton.AddComponent<EssenceMaterialTypeContainer>();
             essenceMaterialTypeContainer.essenceMaterialType = essenceMaterialType;
             Button button = newItemButton.GetComponent<Button>();
             button.onClick.AddListener(essenceMaterialTypeContainer.SelectEssenceMaterialType);
             button.onClick.AddListener(() => Destroy(newItemButton));
 
+        }
+        else
+        {
+            inventoryButton.InitialIzeItemButton(itemData);
         }
         newItemButton.SetActive(true);
         Debug.Log("Created inventory item", newItemButton);

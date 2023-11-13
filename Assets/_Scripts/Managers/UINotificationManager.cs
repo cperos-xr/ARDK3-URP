@@ -52,8 +52,8 @@ public class UINotificationManager : MonoBehaviour
     {
         PlayerNotification playerNotification = new PlayerNotification();
 
-        playerNotification.notificationHeading = "Success!";
-        playerNotification.notificationContent = "You Have Successfuly Purified the " + purificationEntity.corruptionEntity.corruptEntityName;
+        playerNotification.notificationHeading = "Did you Know?";
+        playerNotification.notificationContent = purificationEntity.corruptionEntity.funFact;
         playerNotification.notificationIcon = purificationEntity.corruptionEntity.healedStateSprite;
         playerNotification.notificationColor = Color.white;
         playerNotification.notificationType = NotificationType.PurifySuccess;
@@ -106,7 +106,9 @@ public class UINotificationManager : MonoBehaviour
 
         if (item is SO_EssenceMaterialType essenceMaterialType)
         {
+            playerNotification.notificationIcon = essenceMaterialType.Icon;
             playerNotification.notificationColor = essenceMaterialType.essenceMaterialColor;
+
         }
         else
         {

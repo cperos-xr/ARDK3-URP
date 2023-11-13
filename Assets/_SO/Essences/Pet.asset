@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: Pet
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  itemName: pet
-  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  itemName: "holoholona ho\u02BBokipa"
+  icon: {fileID: -598895467, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
   isUsable: 0
-  isLocked: 0
   isDuplicable: 0
-  healthRecovery: 0
   playerNotifications:
   - notificationHeading: Essence Material {0}
     notificationContent: This is the essence of {0}
     buttonText0: Keep
     buttonText1: Release
     notificationIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    notificationColor: {r: 0, g: 0, b: 0, a: 0}
+    notificationType: 0
   givenByEntityName: 
   essenceMaterialSemanticChannelName: pet_experimental
   essenceMaterialColor: {r: 0.85490197, g: 0.64705884, b: 0.1254902, a: 1}

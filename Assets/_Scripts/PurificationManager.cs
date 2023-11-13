@@ -146,7 +146,7 @@ public class PurificationManager : MonoBehaviour
                     if (rand < itemDrop.dropRate)
                     {
                         //Give item to player
-                        itemManager.AddItemToPlayerInventory(itemDrop.item, currentPurificationEntity.corruptionEntity);
+                        itemManager.AddItemToPlayerInventory(itemDrop.item, currentPurificationEntity.corruptionEntity); // not happening?
                     }
                 }
             }

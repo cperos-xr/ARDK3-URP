@@ -17,7 +17,7 @@ MonoBehaviour:
   itemDatas: []
   quest: {fileID: 0}
   notification:
-    notificationHeading: a creature, cursed with a dark energy
+    notificationHeading: A creature, cursed with a dark energy!
     notificationContent: Choose wisely from your Essence Pouch to restore the creature's
       harmony.  Some essences soothe the curse, while others may worsen it
     buttonText0: Got it!
