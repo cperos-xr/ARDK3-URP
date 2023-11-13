@@ -67,6 +67,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dwarf Idle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 11122aa7e97e92a47b7195334dfa2d32, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 519a73c5c262a67458aad768cf5a1bff, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11122aa7e97e92a47b7195334dfa2d32, type: 3}
 --- !u!95 &8716740231498564248 stripped
@@ -127,7 +131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3181120305041248295, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_Name
-      value: AREntity Menehune Base Prefab
+      value: AREntity Menehune 9
       objectReference: {fileID: 0}
     - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: anim

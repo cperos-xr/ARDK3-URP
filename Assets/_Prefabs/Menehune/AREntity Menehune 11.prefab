@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3181120305041248295, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_Name
-      value: AREntity Menehune 12
+      value: AREntity Menehune 11
       objectReference: {fileID: 0}
     - target: {fileID: 3215638713023749345, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_Size.y
@@ -145,6 +145,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Unarmed Idle Looking Ver. 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 5dcd97b92bfad3845b0e1ec434f03944, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 17eb3172d3f573d49ac1fe04868d478c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dcd97b92bfad3845b0e1ec434f03944, type: 3}
 --- !u!95 &2500573801997541407 stripped

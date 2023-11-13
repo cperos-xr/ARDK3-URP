@@ -145,6 +145,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wave Hip Hop Dance
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 8982b2b3832bf294bbf271f3bfbdc7d1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6c70b5b63d5eb044fad09837dd5f40c5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8982b2b3832bf294bbf271f3bfbdc7d1, type: 3}
 --- !u!95 &3097446537753500376 stripped

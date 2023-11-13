@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3181120305041248295, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_Name
-      value: AREntity Menehune Base Prefab
+      value: AREntity Menehune 12
       objectReference: {fileID: 0}
     - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: anim
@@ -137,6 +137,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Idle 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: be22860a936faf4428033269cb887962, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 75c53a2d0bf13fd4097126aa7ba107e5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be22860a936faf4428033269cb887962, type: 3}
 --- !u!95 &831779694640477504 stripped

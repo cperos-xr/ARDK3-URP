@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3181120305041248295, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_Name
-      value: AREntity Menehune Base Prefab
+      value: AREntity Menehune 6
       objectReference: {fileID: 0}
     - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: anim
@@ -137,6 +137,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Happy Idle
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: c825363a669fb8b41bceec13ecc0ab99, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 81cb4e06f2e5ff84fa162ef1f0053ecf, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c825363a669fb8b41bceec13ecc0ab99, type: 3}
 --- !u!95 &2458095677917050727 stripped

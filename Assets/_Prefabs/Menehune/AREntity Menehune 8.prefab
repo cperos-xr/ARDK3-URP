@@ -67,6 +67,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pointing Forward
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 33bd3f844f86ee84dbb49f2c4a505d97, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f2cbfcb529384be4ea40c4cecaa93e35, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33bd3f844f86ee84dbb49f2c4a505d97, type: 3}
 --- !u!95 &1583899647219179601 stripped
