@@ -133,10 +133,12 @@ public class InteractionManager : MonoBehaviour
 
         if (interaction is SO_PurifyInteraction purifyInteraction)
         {
+            Debug.Log("Interaction is a purify Interaction");
             OnPlayerCorruptEntityInteraction?.Invoke(purifyInteraction.corruptEntity);
         }
         else if (interaction is SO_InteractionAREntity arEntityInteraction)
         {
+            Debug.Log("Interaction is an AR Entity Interaction");
             OnPlayerAREntityInteraction?.Invoke(arEntityInteraction);
         }
 
