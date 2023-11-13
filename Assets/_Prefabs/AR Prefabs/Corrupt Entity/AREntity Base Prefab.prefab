@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3215638713023749345}
   - component: {fileID: 4873557880877120197}
   m_Layer: 0
-  m_Name: AREntity Menehune Base Prefab
+  m_Name: AREntity Base Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
