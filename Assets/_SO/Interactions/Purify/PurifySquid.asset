@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd371c013f334b74f8a4b18a18aeacda, type: 3}
-  m_Name: RatPurify
+  m_Name: PurifySquid
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  InteractionName: Purify Rat
+  InteractionName: Purify Squid
   itemDatas: []
   quest: {fileID: 0}
   notification:
@@ -22,7 +22,7 @@ MonoBehaviour:
       harmony.  Some essences soothe the curse, while others may worsen it
     buttonText0: Got it!
     buttonText1: 
-    notificationIcon: {fileID: 21300000, guid: fef4a89f37a7a194d92868a0413a34b7, type: 3}
+    notificationIcon: {fileID: 21300000, guid: 1569aad05b910e3419479f89953054e5, type: 3}
     notificationColor: {r: 1, g: 1, b: 1, a: 1}
     notificationType: 0
-  corruptEntity: {fileID: 11400000, guid: 4bddc53bb79c32f469dc587516aa8edd, type: 2}
+  corruptEntity: {fileID: 11400000, guid: 774a8e0dcaee1134280431fbca7855f8, type: 2}

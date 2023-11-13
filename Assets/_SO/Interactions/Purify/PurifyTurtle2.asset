@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd371c013f334b74f8a4b18a18aeacda, type: 3}
-  m_Name: LizardPurify
+  m_Name: PurifyTurtle2
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  InteractionName: Purify Lizard
+  InteractionName: Purify Turtle
   itemDatas: []
   quest: {fileID: 0}
   notification:
     notificationHeading: A Cursed Creature!
     notificationContent: Choose wisely from your Essence Pouch to restore the creature's
       harmony.  Some essences soothe the curse, while others may worsen it
-    buttonText0: Got It!
+    buttonText0: Got it!
     buttonText1: 
-    notificationIcon: {fileID: 21300000, guid: 465ca5dc2d079814baf393643e605788, type: 3}
+    notificationIcon: {fileID: 21300000, guid: 252d93f83fae0ee47843b7334efea94c, type: 3}
     notificationColor: {r: 1, g: 1, b: 1, a: 1}
     notificationType: 0
-  corruptEntity: {fileID: 11400000, guid: 69a31edecc3e213409d572b7c9b0dd5c, type: 2}
+  corruptEntity: {fileID: 11400000, guid: 43e094caf9e85a744bcadf8b8d9d741e, type: 2}

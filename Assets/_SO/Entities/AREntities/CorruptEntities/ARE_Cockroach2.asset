@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eda2ea000fab5d449a8ce97c9c6f7c5d, type: 3}
-  m_Name: ARE_SquidMonster
+  m_Name: ARE_Cockroach2
   m_EditorClassIdentifier: 
-  entityName: Rat
-  startingInteraction: {fileID: 11400000, guid: f2e19dee5328afe4f9f207b4c896ff48, type: 2}
+  entityName: Cockroach
+  startingInteraction: {fileID: 11400000, guid: e7a404e192544e24f896b21b70b3f8ef, type: 2}

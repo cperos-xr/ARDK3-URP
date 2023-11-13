@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eda2ea000fab5d449a8ce97c9c6f7c5d, type: 3}
   m_Name: ARE_Turtle1
   m_EditorClassIdentifier: 
-  entityName: Rat
-  startingInteraction: {fileID: 11400000, guid: f2e19dee5328afe4f9f207b4c896ff48, type: 2}
+  entityName: Turtle1
+  startingInteraction: {fileID: 11400000, guid: eb66ef9674d1da047bc5318dabf4b9ce, type: 2}
