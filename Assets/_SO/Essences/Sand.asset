@@ -18,12 +18,12 @@ MonoBehaviour:
   isUsable: 0
   isDuplicable: 0
   playerNotifications:
-  - notificationHeading: Essence Material {0}
-    notificationContent: This is the essence of {0}
-    buttonText0: Keep
-    buttonText1: Release
-    notificationIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    notificationColor: {r: 0, g: 0, b: 0, a: 0}
+  - notificationHeading: '{0}'
+    notificationContent: Mana Essence {0} Harvested!
+    buttonText0: Add to Pouch
+    buttonText1: 
+    notificationIcon: {fileID: -598895467, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
     notificationType: 0
   givenByEntityName: 
   essenceMaterialSemanticChannelName: sand_experimental
