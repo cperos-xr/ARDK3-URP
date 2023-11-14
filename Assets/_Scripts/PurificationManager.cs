@@ -104,13 +104,11 @@ public class PurificationManager : MonoBehaviour
 
     void BeginPurification()
     {
-        PlayerManager.Instance.currentPlayerState = PlayerState.purification;
-        //PlayerManager.Instance.currentPlayerState = PlayerState.purification; now done before notification ever happens
+        //PlayerManager.Instance.currentPlayerState = PlayerState.purification; now done by the button
         InitializePurificationEntity(currentPurificationEntity.corruptedEntity);
         selectedEssenceMaterials.Clear();
         CopyPlayerEssencePouch();
         Debug.Log("Begining the purification of " + currentPurificationEntity.corruptedEntity.corruptEntityName);
-
     }
 
     public void AttemptPurification()

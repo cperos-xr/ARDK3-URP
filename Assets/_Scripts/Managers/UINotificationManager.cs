@@ -70,27 +70,22 @@ public class UINotificationManager : MonoBehaviour
 
     private void CorruptEntity(SO_CorruptEntity corruptEntity)
     {
-        if (PlayerManager.Instance.currentPlayerState == PlayerState.normal)
+        PlayerNotification playerNotification = new PlayerNotification();
+
+        playerNotification.notificationHeading = corruptEntity.corruptEntityName;
+        playerNotification.notificationContent = corruptEntity.corruptEntityDescription;
+        playerNotification.notificationIcon = corruptEntity.corruptedStateSprite;
+        playerNotification.notificationColor = Color.white;
+        playerNotification.notificationType = NotificationType.CorruptEntity;
+
+        playerNotification.buttonText0 = "Purify";
+        playerNotification.buttonText1 = "Run";
+
+        notificationQueue.Enqueue(playerNotification);
+
+        if (!displayingNotification)
         {
-            
-
-            PlayerNotification playerNotification = new PlayerNotification();
-
-            playerNotification.notificationHeading = corruptEntity.corruptEntityName;
-            playerNotification.notificationContent = corruptEntity.corruptEntityDescription;
-            playerNotification.notificationIcon = corruptEntity.corruptedStateSprite;
-            playerNotification.notificationColor = Color.white;
-            playerNotification.notificationType = NotificationType.CorruptEntity;
-
-            playerNotification.buttonText0 = "Purify";
-            playerNotification.buttonText1 = "Run";
-
-            notificationQueue.Enqueue(playerNotification);
-
-            if (!displayingNotification)
-            {
-                DisplayNextNotification();
-            }
+            DisplayNextNotification();
         }
     }
 
@@ -200,6 +195,7 @@ public class UINotificationManager : MonoBehaviour
                         displayingNotification = false;
                         notificationPanel.SetActive(false);
                         DisplayNextNotification();
+                        PlayerManager.Instance.currentPlayerState = PlayerState.purification;
                     });
 
                     // Button That runs away
@@ -243,7 +239,10 @@ public class UINotificationManager : MonoBehaviour
         else
         {
             Debug.Log("No more notifications to display.");
-            PlayerManager.Instance.currentPlayerState = PlayerState.normal;
+            if (PlayerManager.Instance.currentPlayerState != PlayerState.purification)
+            {
+                PlayerManager.Instance.currentPlayerState = PlayerState.normal;
+            }
             displayingNotification = false;
             notificationPanel.SetActive(false);
 
