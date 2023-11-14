@@ -104,6 +104,7 @@ public class PurificationManager : MonoBehaviour
 
     void BeginPurification()
     {
+        PlayerManager.Instance.currentPlayerState = PlayerState.purification;
         //PlayerManager.Instance.currentPlayerState = PlayerState.purification; now done before notification ever happens
         InitializePurificationEntity(currentPurificationEntity.corruptedEntity);
         selectedEssenceMaterials.Clear();

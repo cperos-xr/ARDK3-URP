@@ -72,7 +72,7 @@ public class UINotificationManager : MonoBehaviour
     {
         if (PlayerManager.Instance.currentPlayerState == PlayerState.normal)
         {
-            PlayerManager.Instance.currentPlayerState = PlayerState.purification;
+            
 
             PlayerNotification playerNotification = new PlayerNotification();
 
@@ -145,6 +145,7 @@ public class UINotificationManager : MonoBehaviour
 
     private void DisplayNextNotification()
     {
+        PlayerManager.Instance.currentPlayerState = PlayerState.notification;
         // Remove all existing listeners from the buttons to prevent overlap of events
         notificationButton0.onClick.RemoveAllListeners();
         notificationButton1.onClick.RemoveAllListeners();
@@ -242,8 +243,11 @@ public class UINotificationManager : MonoBehaviour
         else
         {
             Debug.Log("No more notifications to display.");
+            PlayerManager.Instance.currentPlayerState = PlayerState.normal;
             displayingNotification = false;
             notificationPanel.SetActive(false);
+
+
         }
     }
 }
