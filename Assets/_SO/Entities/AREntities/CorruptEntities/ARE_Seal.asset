@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ARE_Seal
   m_EditorClassIdentifier: 
   entityName: Seal
-  startingInteraction: {fileID: 11400000, guid: f2e19dee5328afe4f9f207b4c896ff48, type: 2}
+  startingInteraction: {fileID: 11400000, guid: d0fe521d7ca10414db9a8fab782af049, type: 2}

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ARE_Monkey
   m_EditorClassIdentifier: 
   entityName: Monkey
-  startingInteraction: {fileID: 11400000, guid: f2e19dee5328afe4f9f207b4c896ff48, type: 2}
+  startingInteraction: {fileID: 11400000, guid: dedf0a6314f67134b90af41e5883e2e3, type: 2}

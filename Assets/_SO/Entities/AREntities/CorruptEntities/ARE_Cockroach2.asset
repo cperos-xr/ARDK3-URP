@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ARE_Cockroach2
   m_EditorClassIdentifier: 
   entityName: Cockroach
-  startingInteraction: {fileID: 11400000, guid: e7a404e192544e24f896b21b70b3f8ef, type: 2}
+  startingInteraction: {fileID: 11400000, guid: 2bffa97da281150438fc556da883a163, type: 2}

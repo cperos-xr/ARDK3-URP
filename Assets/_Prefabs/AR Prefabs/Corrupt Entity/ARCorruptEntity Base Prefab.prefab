@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2061416738904674477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2912884925841063739}
+  - component: {fileID: 2026124868717075563}
+  - component: {fileID: 2870688674436089121}
+  m_Layer: 0
+  m_Name: ARCorruptEntity Base Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2912884925841063739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061416738904674477}
+  m_LocalRotation: {x: 0, y: 0.91393554, z: 0, w: 0.40585956}
+  m_LocalPosition: {x: -0.016, y: 0.952, z: -0.086}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 132.11, z: 0}
+--- !u!65 &2026124868717075563
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061416738904674477}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.3, z: 0.25}
+  m_Center: {x: 0, y: 0.15, z: 0}
+--- !u!114 &2870688674436089121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061416738904674477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f844d09dba4e0e4da7faea5117b0727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arEntityData: {fileID: 0}
+  anim: {fileID: 0}
+  currentInteraction: {fileID: 0}
+  setObjectsActiveStatus: []
+  corruptEntity: {fileID: 0}
+  setObjectsActiveStatusUponPurification:
+  - objectToSet: {fileID: 2061416738904674477}
+    setStatus: 0

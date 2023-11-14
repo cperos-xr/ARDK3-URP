@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ARE_Tilapia
   m_EditorClassIdentifier: 
   entityName: Tilapia
-  startingInteraction: {fileID: 11400000, guid: f2e19dee5328afe4f9f207b4c896ff48, type: 2}
+  startingInteraction: {fileID: 11400000, guid: 73126e684da9ba14b9bf2ca7649e9d6f, type: 2}

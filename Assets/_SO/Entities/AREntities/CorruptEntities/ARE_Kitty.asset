@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ARE_Kitty
   m_EditorClassIdentifier: 
   entityName: Kitty
-  startingInteraction: {fileID: 11400000, guid: f2e19dee5328afe4f9f207b4c896ff48, type: 2}
+  startingInteraction: {fileID: 11400000, guid: 428ffa934afcd0647a325c63c230ec42, type: 2}

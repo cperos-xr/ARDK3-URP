@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ARE_Lizard2
   m_EditorClassIdentifier: 
   entityName: Lizard2
-  startingInteraction: {fileID: 11400000, guid: f2e19dee5328afe4f9f207b4c896ff48, type: 2}
+  startingInteraction: {fileID: 11400000, guid: 701fa704ba2025046af34e0d6b29b331, type: 2}

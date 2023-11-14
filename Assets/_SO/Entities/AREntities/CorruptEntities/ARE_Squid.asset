@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ARE_Squid
   m_EditorClassIdentifier: 
   entityName: Squid
-  startingInteraction: {fileID: 11400000, guid: f2e19dee5328afe4f9f207b4c896ff48, type: 2}
+  startingInteraction: {fileID: 11400000, guid: e6ca9ed9038ff7747b25df5881f18a27, type: 2}

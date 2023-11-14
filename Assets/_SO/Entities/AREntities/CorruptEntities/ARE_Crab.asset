@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ARE_Crab
   m_EditorClassIdentifier: 
   entityName: Crab
-  startingInteraction: {fileID: 11400000, guid: f2e19dee5328afe4f9f207b4c896ff48, type: 2}
+  startingInteraction: {fileID: 11400000, guid: 0674f0d09f519ac4f8bd3d253ae787ad, type: 2}

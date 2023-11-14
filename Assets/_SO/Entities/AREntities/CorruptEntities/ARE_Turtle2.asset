@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ARE_Turtle2
   m_EditorClassIdentifier: 
   entityName: Turtle1
-  startingInteraction: {fileID: 11400000, guid: f2e19dee5328afe4f9f207b4c896ff48, type: 2}
+  startingInteraction: {fileID: 11400000, guid: f846d1424c617b14595f84665771e723, type: 2}

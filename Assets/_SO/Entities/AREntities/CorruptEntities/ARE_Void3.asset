@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ARE_Void3
   m_EditorClassIdentifier: 
   entityName: Void3
-  startingInteraction: {fileID: 11400000, guid: f2e19dee5328afe4f9f207b4c896ff48, type: 2}
+  startingInteraction: {fileID: 11400000, guid: 1ad9f4c4ab9dcee43b9ef5da48347e83, type: 2}

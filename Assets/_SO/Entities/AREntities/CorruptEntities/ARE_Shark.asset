@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ARE_Shark
   m_EditorClassIdentifier: 
   entityName: Shark
-  startingInteraction: {fileID: 11400000, guid: f2e19dee5328afe4f9f207b4c896ff48, type: 2}
+  startingInteraction: {fileID: 11400000, guid: 4e2f36e30df81b544a71dccc7f5eeeba, type: 2}

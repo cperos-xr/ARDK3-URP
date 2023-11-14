@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ARE_Rat2
   m_EditorClassIdentifier: 
   entityName: Rat2
-  startingInteraction: {fileID: 11400000, guid: f2e19dee5328afe4f9f207b4c896ff48, type: 2}
+  startingInteraction: {fileID: 11400000, guid: aa5e189247710004b87e08af194f79c7, type: 2}
