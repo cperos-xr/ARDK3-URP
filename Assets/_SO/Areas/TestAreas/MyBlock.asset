@@ -32,7 +32,6 @@ MonoBehaviour:
   areaEntities:
   - {fileID: 11400000, guid: 1071243610f7cfc49b8697b982b00dcd, type: 2}
   - {fileID: 11400000, guid: 304ed44593c7e98459c2d8b577cdf8e9, type: 2}
-  - {fileID: 11400000, guid: de8900d1ee926444f93905e3354f0db0, type: 2}
   corruptedEssenceMaterialTypes:
   - {fileID: 11400000, guid: c423dd4d148474442a17f78c15f34dde, type: 2}
   - {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}

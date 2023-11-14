@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Item_Squid
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  itemName: Squid's Ink Sac
+  itemName: He'e's Harmonious Pearl
   icon: {fileID: 21300000, guid: 8a4222321de6ec943bc210e07f32a79e, type: 3}
   isUsable: 0
   isDuplicable: 0
   playerNotifications:
-  - notificationHeading: Squid's Ink Sac
-    notificationContent: Full of natural ink from the Hawaiian Bobtail Squid, used
-      in traditional art.
+  - notificationHeading: He'e's Harmonious Pearl
+    notificationContent: ' A black pearl that radiates balance and harmony imbued
+      with the ink of a Hawaiian bobtail squid'
     buttonText0: Mahalo
     buttonText1: 
     notificationIcon: {fileID: 21300000, guid: 8a4222321de6ec943bc210e07f32a79e, type: 3}
