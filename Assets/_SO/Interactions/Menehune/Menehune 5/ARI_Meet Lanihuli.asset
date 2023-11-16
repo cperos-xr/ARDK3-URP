@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
-  m_Name: Meet Malia
+  m_Name: ARI_Meet Lanihuli
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  InteractionName: Meet Malia
+  InteractionName: Meet Lanihuli
   itemDatas: []
   quest: {fileID: 0}
   notification:
-    notificationHeading: Aloha
-    notificationContent: Im Malia....
-    buttonText0: Hey
+    notificationHeading: E komo mai
+    notificationContent: Im MaAloha, I'm Lanihuli of the Sacred Gardens. Our land
+      remembers every step and touch. Let's tread lightly, listening to nature's
+      whispers, and heal the traces we leave behind.lia....
+    buttonText0: Pono
     buttonText1: 
     notificationIcon: {fileID: 1296646077, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
     notificationColor: {r: 1, g: 1, b: 1, a: 1}
     notificationType: 0
   arEntity: {fileID: 11400000, guid: 3afe01a554bc64c4eadd392abced9acb, type: 2}
-  anim: {fileID: 0}
-  animationName: 

@@ -18,12 +18,12 @@ MonoBehaviour:
   isUsable: 0
   isDuplicable: 0
   playerNotifications:
-  - notificationHeading: He'e's Harmonious Pearl
-    notificationContent: A mystical ink sac from a Hawaiian Bobtail Squid. It's filled
-      with ink that holds magical properties.
+  - notificationHeading: 'He''e''s Ink Sac '
+    notificationContent: A mysterious ink sac from a Hawaiian Bobtail Squid. It's
+      filled with ink that holds magical properties.
     buttonText0: Mahalo
     buttonText1: 
     notificationIcon: {fileID: 21300000, guid: 8a4222321de6ec943bc210e07f32a79e, type: 3}
     notificationColor: {r: 1, g: 1, b: 1, a: 0}
     notificationType: 0
-  givenByEntityName: 
+  givenByEntityName: Hexed He'e

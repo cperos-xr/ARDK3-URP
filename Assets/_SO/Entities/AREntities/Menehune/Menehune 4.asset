@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eda2ea000fab5d449a8ce97c9c6f7c5d, type: 3}
   m_Name: Menehune 4
   m_EditorClassIdentifier: 
-  entityName: Kai
-  startingInteraction: {fileID: 11400000, guid: 14754da52f7aa934b9cd772bd5244eae, type: 2}
+  entityName: Makamae
+  startingInteraction: {fileID: 11400000, guid: 0ef1b394d2665234c9b5f0df0ff87bc5, type: 2}

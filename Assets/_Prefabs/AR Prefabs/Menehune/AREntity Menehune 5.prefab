@@ -91,15 +91,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1788675492382621617, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.016
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 1788675492382621617, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.952
+      value: 1.251
       objectReference: {fileID: 0}
     - target: {fileID: 1788675492382621617, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.086
+      value: 0.732
       objectReference: {fileID: 0}
     - target: {fileID: 1788675492382621617, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_LocalRotation.w
@@ -107,7 +107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1788675492382621617, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1788675492382621617, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_LocalRotation.y
@@ -115,7 +115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1788675492382621617, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1788675492382621617, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -132,6 +132,10 @@ PrefabInstance:
     - target: {fileID: 3181120305041248295, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_Name
       value: AREntity Menehune 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3181120305041248295, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: anim

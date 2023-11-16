@@ -36,6 +36,7 @@ public class AREntity : MonoBehaviour
                     {
                         animatorAnimationPair.anim.Play(animatorAnimationPair.animationName);
                     }
+
                 }
             }
         }
@@ -59,6 +60,7 @@ public class AREntity : MonoBehaviour
 public struct ObjectToSetActiveAndActivationStatus
 {
     public GameObject objectToSet;
+    //public Collider objectCollider;
     public InteractionProgression uponThisInteractionProgression;
     public bool setStatus;
 

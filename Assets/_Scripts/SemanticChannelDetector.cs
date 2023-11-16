@@ -1,7 +1,39 @@
 using Niantic.Lightship.AR.Semantics;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
+
+#if UNITY_EDITOR
+[Serializable]
+public enum ESemanticChannel
+{
+    sky,
+    ground,
+    natural_ground,
+    artificial_ground,
+    water,
+    person,
+    building,
+    foliage,
+    grass,
+    flower_experimental,
+    tree_trunk_experimental,
+    pet_experimental,
+    sand_experimental,
+    tv_experimental,
+    dirt_experimental,
+    vehicle_experimental,
+    food_experimental,
+    loungeable_experimental,
+    snow_experimental
+}
+
+
+
+#endif
 
 public class SemanticChannelDetector : MonoBehaviour
 {
@@ -55,51 +87,39 @@ public class SemanticChannelDetector : MonoBehaviour
 
 #if UNITY_EDITOR
 
+    [Serializable]
+    struct ChannelIntergerConatainer
+    {
+        [SerializeField]
+        public ESemanticChannel selectedChannel;
+
+        [SerializeField]
+        public int channelCount;
+
+    }
+
+
+    [SerializeField] private List <ChannelIntergerConatainer> testChannels = new List<ChannelIntergerConatainer>();
+
     public void TestSemanticBroadcast()
     {
-        string sky = "sky";
-        string ground = "ground";
-        string natural_ground = "natural_ground";
-        string artificial_ground = "artificial_ground";
-        string water = "water";
-        string person = "person";
-        string building = "building";
-        string foliage = "foliage";
-        string grass = "grass";
-        string flower_experimental = "flower_experimental";
-        string tree_trunk_experimental = "tree_trunk_experimental";
-        string pet_experimental = "pet_experimental";
-        string sand_experimental = "sand_experimental";
-        string tv_experimental = "tv_experimental";
-        string dirt_experimental = "dirt_experimental";
-        string vehicle_experimental = "vehicle_experimental";
-        string food_experimental = "food_experimental";
-        string loungeable_experimental = "loungeable_experimental";
-        string snow_experimental = "snow_experimental";
+        List<ESemanticChannel> semanticChannelList = new List<ESemanticChannel>();
 
-        List<string> semanticChannelList = new List<string>();
+        // Add each enum value to the list
 
-        semanticChannelList.Add(sky);
-        semanticChannelList.Add(ground);
-        semanticChannelList.Add(natural_ground);
-        semanticChannelList.Add(artificial_ground);
-        semanticChannelList.Add(water);
-        semanticChannelList.Add(person);
-        semanticChannelList.Add(building);
-        semanticChannelList.Add(foliage);
-        semanticChannelList.Add(grass);
-        semanticChannelList.Add(flower_experimental);
-        semanticChannelList.Add(tree_trunk_experimental);
-        semanticChannelList.Add(pet_experimental);
-        semanticChannelList.Add(sand_experimental);
-        semanticChannelList.Add(tv_experimental);
-        semanticChannelList.Add(dirt_experimental);
-        semanticChannelList.Add(vehicle_experimental);
-        semanticChannelList.Add(food_experimental);
-        semanticChannelList.Add(loungeable_experimental);
-        semanticChannelList.Add(snow_experimental);
+        foreach (ChannelIntergerConatainer selectedChannel in testChannels)
+        {
+            for (int i = 0; i <= selectedChannel.channelCount; i++)
+            {
+                semanticChannelList.Add(selectedChannel.selectedChannel);
+            }
 
-        OnSemanticChannelIdentified(semanticChannelList, new Vector2(600f, 600f));
+        }
+
+        // Convert the enum list to a string list for the method call
+        List<string> semanticChannelStringList = semanticChannelList.Select(c => c.ToString()).ToList();
+
+        OnSemanticChannelIdentified(semanticChannelStringList, new Vector2(600f, 600f));
     }
 
 #endif

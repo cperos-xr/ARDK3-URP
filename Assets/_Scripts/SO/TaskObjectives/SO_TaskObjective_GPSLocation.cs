@@ -2,7 +2,7 @@ using Niantic.Lightship.Maps.Coordinates;
 using Niantic.Lightship.Maps.Core.Coordinates;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SO_TaskObjective_GPSLocation", menuName = "Game/Quest System/Task Objective/GPSLocation")]
+[CreateAssetMenu(fileName = "TO_TaskObjective_GPSLocation", menuName = "Game/Quest System/Task Objective/GPSLocation")]
 public class SO_TaskObjective_GPSLocation : SO_TaskObjective
 {
     [SerializeField]

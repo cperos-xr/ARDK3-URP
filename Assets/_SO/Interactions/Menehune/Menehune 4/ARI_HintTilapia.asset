@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
+  m_Name: ARI_HintTilapia
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 6fbd272466ccff04ba1a93afde6b6dcc, type: 2}
+    newInteraction: {fileID: 11400000, guid: e39cddc52baf471469b48e4defd49400, type: 2}
+    returnToPreviousInsteadOfNewInteraction: 0
+  InteractionName: 
+  itemDatas: []
+  quest: {fileID: 0}
+  notification:
+    notificationHeading: Tilapia's Tranquil Scale
+    notificationContent: The Tilapia's Tranquil Scale glimmers near water. Recently,
+      one has been seen on Seaside Avenue, but it can also be fished out of the Ala
+      Wai Canal in a pinch.
+    buttonText0: Alright!
+    buttonText1: 
+    notificationIcon: {fileID: -1639542636, guid: 8be24c81c4cb314428fe2279df6474ac, type: 3}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
+    notificationType: 0
+  arEntity: {fileID: 11400000, guid: 6fbd272466ccff04ba1a93afde6b6dcc, type: 2}
