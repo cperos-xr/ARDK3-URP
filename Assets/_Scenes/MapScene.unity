@@ -9215,7 +9215,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1734786255}
+    m_TransformParent: {fileID: 1440058832}
     m_Modifications:
     - target: {fileID: 5794706833058558585, guid: 50985f24660ca954b9ca2e97cf600c30, type: 3}
       propertyPath: m_Name
@@ -9223,7 +9223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7250186114895863279, guid: 50985f24660ca954b9ca2e97cf600c30, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7250186114895863279, guid: 50985f24660ca954b9ca2e97cf600c30, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9469,6 +9469,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2504162860491296729, guid: b7fae9d6543560f45be3736b533135fc, type: 3}
   m_PrefabInstance: {fileID: 1431014582}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1440058831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1440058832}
+  - component: {fileID: 1440058833}
+  m_Layer: 0
+  m_Name: Pohaku
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1440058832
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440058831}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1407697874}
+  m_Father: {fileID: 1734786255}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1440058833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440058831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c1cc302b6805546a40818d8bf3b7d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialState: 0
 --- !u!1001 &1452674284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12349,7 +12395,7 @@ Transform:
   - {fileID: 954292439}
   - {fileID: 2048544118}
   - {fileID: 1290124499}
-  - {fileID: 1407697874}
+  - {fileID: 1440058832}
   - {fileID: 1609778824}
   - {fileID: 1431014583}
   - {fileID: 2046435991}
@@ -14499,7 +14545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7896084719928580540, guid: 2029e7a0dfabbbb4a823a7ef11fa7cd5, type: 3}
       propertyPath: setObjectsActiveStatus.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7896084719928580540, guid: 2029e7a0dfabbbb4a823a7ef11fa7cd5, type: 3}
       propertyPath: setObjectsActiveStatus.Array.data[0].setStatus
@@ -14512,7 +14558,7 @@ PrefabInstance:
     - target: {fileID: 7896084719928580540, guid: 2029e7a0dfabbbb4a823a7ef11fa7cd5, type: 3}
       propertyPath: setObjectsActiveStatus.Array.data[0].objectToSet
       value: 
-      objectReference: {fileID: 779648199}
+      objectReference: {fileID: 1440058831}
     - target: {fileID: 7896084719928580540, guid: 2029e7a0dfabbbb4a823a7ef11fa7cd5, type: 3}
       propertyPath: setObjectsActiveStatus.Array.data[1].objectToSet
       value: 
@@ -14524,7 +14570,7 @@ PrefabInstance:
     - target: {fileID: 7896084719928580540, guid: 2029e7a0dfabbbb4a823a7ef11fa7cd5, type: 3}
       propertyPath: setObjectsActiveStatus.Array.data[0].uponThisInteractionProgression
       value: 
-      objectReference: {fileID: 11400000, guid: b5bead574b6138443b0b06084ff7586b, type: 2}
+      objectReference: {fileID: 11400000, guid: 268b069da80fa3045a7a4608e9ad715a, type: 2}
     - target: {fileID: 8599530369517230616, guid: 2029e7a0dfabbbb4a823a7ef11fa7cd5, type: 3}
       propertyPath: m_IsActive
       value: 1

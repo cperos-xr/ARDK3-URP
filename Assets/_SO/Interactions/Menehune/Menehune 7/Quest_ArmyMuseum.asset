@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85fb361c81613845bfed8c2913aaaff, type: 3}
+  m_Name: Quest_ArmyMuseum
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
+  questID: 
+  questTitle: A message to the Army Museum
+  questDescription: "Deliver K\u0101nehoa's important message to a contact at the
+    army pill box near the army museum."
+  tasks:
+  - {fileID: 11400000, guid: a737c2d33b6fd6547b803ca3530aa99d, type: 2}
+  experienceReward: 1000
+  rewardItem: {fileID: 0}

@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
-  m_Name: ARI_Meet Lanihuli
+  m_Name: ARI_HintRepeating
   m_EditorClassIdentifier: 
   entityInteractionUpdates:
   - entity: {fileID: 11400000, guid: 3afe01a554bc64c4eadd392abced9acb, type: 2}
-    newInteraction: {fileID: 11400000, guid: 85bc5d94597507f4eb7c87742c04bca4, type: 2}
+    newInteraction: {fileID: 11400000}
     returnToPreviousInsteadOfNewInteraction: 0
-  InteractionName: Meet Lanihuli
+  InteractionName: Repeating Hint
   itemDatas: []
   quest: {fileID: 0}
   notification:
-    notificationHeading: E komo mai
-    notificationContent: Aloha, I'm Lanihuli of the Sacred Gardens. Our land remembers
-      every step and touch. Let's tread lightly, listening to nature's whispers,
-      and heal the traces we leave behind.lia....
-    buttonText0: Pono
+    notificationHeading: "K\u014Dkua"
+    notificationContent: Remember, for the lizard and chicken, the key lies in the
+      flower among the grass and food among the people. These elements will guide
+      your healing touch in the Sacred Gardens.
+    buttonText0: Great!
     buttonText1: 
     notificationIcon: {fileID: 1296646077, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
     notificationColor: {r: 1, g: 1, b: 1, a: 1}
     notificationType: 0
-  arEntity: {fileID: 11400000, guid: 3afe01a554bc64c4eadd392abced9acb, type: 2}
+  arEntity: {fileID: 0}

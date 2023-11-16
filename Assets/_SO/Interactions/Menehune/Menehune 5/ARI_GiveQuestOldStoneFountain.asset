@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
-  m_Name: ARI_Meet Lanihuli
+  m_Name: ARI_GiveQuestOldStoneFountain
   m_EditorClassIdentifier: 
   entityInteractionUpdates:
   - entity: {fileID: 11400000, guid: 3afe01a554bc64c4eadd392abced9acb, type: 2}
-    newInteraction: {fileID: 11400000, guid: 85bc5d94597507f4eb7c87742c04bca4, type: 2}
+    newInteraction: {fileID: 11400000, guid: 1f352cf23227f3e44b05bf8d802be5e6, type: 2}
     returnToPreviousInsteadOfNewInteraction: 0
   InteractionName: Meet Lanihuli
   itemDatas: []
   quest: {fileID: 0}
   notification:
-    notificationHeading: E komo mai
-    notificationContent: Aloha, I'm Lanihuli of the Sacred Gardens. Our land remembers
-      every step and touch. Let's tread lightly, listening to nature's whispers,
-      and heal the traces we leave behind.lia....
-    buttonText0: Pono
+    notificationHeading: Old Stone Fountain
+    notificationContent: The old stone fountain  by the zoo is troubled by cursed
+      beings. Can you help bring peace back there? Your actions will help heal the
+      land's scars.
+    buttonText0: Sure!
     buttonText1: 
     notificationIcon: {fileID: 1296646077, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
     notificationColor: {r: 1, g: 1, b: 1, a: 1}

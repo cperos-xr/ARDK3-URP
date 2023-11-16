@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22a690315dd67804d9467282c0daeead, type: 3}
+  m_Name: TO_Lizard
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
+  objectiveName: "Mo\u02BBo Myth"
+  objectiveDescription: Find this prominent purveyor of pandemonium before its too
+    late!
+  requiredProgress: 1
+  itemToCollect: {fileID: 11400000, guid: f8b24b468be84cf4297d33ec6cdb3bce, type: 2}
