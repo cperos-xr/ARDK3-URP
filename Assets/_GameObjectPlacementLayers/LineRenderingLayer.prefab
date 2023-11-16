@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3974371341459926753}
   - component: {fileID: 2135779865102301525}
   - component: {fileID: 4078361746621083826}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: LineRenderingLayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

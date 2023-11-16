@@ -137,7 +137,7 @@ public class InteractionManager : MonoBehaviour
         }
         else if (interaction is SO_InteractionAREntity arEntityInteraction)
         {
-            OnPlayerAREntityInteraction?.Invoke(arEntityInteraction);
+            OnPlayerAREntityInteraction?.Invoke(arEntityInteraction); // line 140
         }
 
         // If you want to update the interaction after handling, you can do so here

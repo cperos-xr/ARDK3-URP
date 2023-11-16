@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c85fb361c81613845bfed8c2913aaaff, type: 3}
-  m_Name: OverallQuest
+  m_Name: Quest_CollectInkAndCompass
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  questID: 0
-  questTitle: Save the Aina
-  questDescription: Aloha, chosen one. Our aina cries, overwhelmed by invasive species
-    and a deepening curse. Once, we Menehune kept harmony, but now... it's beyond
-    us. Take this Mana Lens, your kuleana. See the unseen, restore what's lost, bring
-    back balance to our lands.
+  questID: 
+  questTitle: Squid & Turtle - Aloha Waters
+  questDescription: 'Nui, the Cartographer Menehune, can create a special map for
+    your journey, but needs two key items: the mystical ink sac from a Bobtail Squid
+    and the compass from a Green Sea Turtle. Find and heal these creatures nearby
+    to obtain their gifts.'
   tasks:
-  - {fileID: 11400000, guid: 955439ad727af3b4cbfaa648b3206b66, type: 2}
+  - {fileID: 11400000, guid: 3fcfe34b9d5b87049b0fd73a66b33678, type: 2}
   experienceReward: 0
   rewardItem: {fileID: 0}

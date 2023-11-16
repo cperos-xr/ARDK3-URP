@@ -73,6 +73,11 @@ public class TaskManager : MonoBehaviour
             }
         }
 
+        if (allObjectivesCompleted)
+        {
+            InteractionManager.Instance.UpdateAllEntityInteractions(task);
+        }
+
         return allObjectivesCompleted; // Return the flag indicating whether all objectives are completed.
     }
 

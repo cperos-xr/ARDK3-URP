@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
+  m_Name: ARI_GiveQuest_SquidTurtle
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 9318d58208d72ae49b8f58f9b34282a5, type: 2}
+    newInteraction: {fileID: 11400000, guid: f6b486943a3f5794f9189b0bd17a6f68, type: 2}
+    returnToPreviousInsteadOfNewInteraction: 0
+  InteractionName: Assign Quest, Squid and Turtle
+  itemDatas: []
+  quest: {fileID: 11400000, guid: d366046a21799f14f8d337a329b937d7, type: 2}
+  notification:
+    notificationHeading: Map Quest!
+    notificationContent: Bring me the squid's ink and the turtle's compass, and I'll
+      craft a map to guide your quest.
+    buttonText0: I'll Try
+    buttonText1: 
+    notificationIcon: {fileID: -1821777005, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
+    notificationColor: {r: 0, g: 0.5019608, b: 0.5019608, a: 1}
+    notificationType: 0
+  arEntity: {fileID: 11400000, guid: 9318d58208d72ae49b8f58f9b34282a5, type: 2}

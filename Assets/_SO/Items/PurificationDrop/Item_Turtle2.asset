@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Item_Turtle2
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  itemName: Sea Turtle's Guiding Compass
+  itemName: Honu's Guiding Compass
   icon: {fileID: 21300000, guid: 9a4cebc8a9a9b864d93e6bc7ef5e4eeb, type: 3}
   isUsable: 0
   isDuplicable: 0
   playerNotifications:
-  - notificationHeading: Sea Turtle's Guiding Compass
+  - notificationHeading: Honu's Guiding Compass
     notificationContent: An ornate compass, embodies the sea turtle's remarkable
       navigation skills.
     buttonText0: Mahalo
@@ -26,4 +26,4 @@ MonoBehaviour:
     notificationIcon: {fileID: 21300000, guid: 9a4cebc8a9a9b864d93e6bc7ef5e4eeb, type: 3}
     notificationColor: {r: 1, g: 1, b: 1, a: 0}
     notificationType: 0
-  givenByEntityName: 
+  givenByEntityName: '''Ea Enigma'

@@ -8,8 +8,7 @@ public class AREntity : MonoBehaviour
     [SerializeField] private Animator anim;
     [HideInInspector] public SO_Interaction currentInteraction;
 
-    public List<ObjectToSetActive> setObjectsActiveStatus = new List<ObjectToSetActive>();
-
+    public List<ObjectToSetActiveAndActivationStatus> setObjectsActiveStatus = new List<ObjectToSetActiveAndActivationStatus>();
 
     private void OnEnable()
     {
@@ -23,20 +22,20 @@ public class AREntity : MonoBehaviour
     {
         if (arEntityInteraction.arEntity.Equals(arEntityData))
         {
-            if (arEntityInteraction.anim != null)
-            {
-                anim = arEntityInteraction.anim;
-                if (!string.IsNullOrEmpty(arEntityInteraction.animationName))
-                {
-                    anim.Play(arEntityInteraction.animationName);
-                }
-            }
 
             if (setObjectsActiveStatus.Count > 0)
             {
-                foreach (ObjectToSetActive obj in setObjectsActiveStatus)
+                foreach (ObjectToSetActiveAndActivationStatus obj in setObjectsActiveStatus)
                 {
-                    obj.objectToSet.SetActive(obj.setStatus);
+                    if (obj.uponThisInteractionProgression.Equals(arEntityInteraction))
+                    {
+                        obj.objectToSet.SetActive(obj.setStatus);
+                    }
+
+                    foreach(AnimatorAnimationPair animatorAnimationPair in obj.animationEvents)
+                    {
+                        animatorAnimationPair.anim.Play(animatorAnimationPair.animationName);
+                    }
                 }
             }
         }
@@ -57,10 +56,21 @@ public class AREntity : MonoBehaviour
 
 
 [Serializable]
-public struct ObjectToSetActive
+public struct ObjectToSetActiveAndActivationStatus
 {
     public GameObject objectToSet;
+    public InteractionProgression uponThisInteractionProgression;
     public bool setStatus;
+
+    public List<AnimatorAnimationPair> animationEvents;
+
+}
+
+[Serializable]
+public struct AnimatorAnimationPair
+{
+    public Animator anim;
+    public string animationName;
 }
 
 [Serializable]

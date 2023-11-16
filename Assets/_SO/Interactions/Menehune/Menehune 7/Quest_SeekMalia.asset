@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c85fb361c81613845bfed8c2913aaaff, type: 3}
-  m_Name: Quest_AlohaWaters
+  m_Name: Quest_SeekMalia
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  questID: 
-  questTitle: Ahi - Aloha Waters
-  questDescription: Ahi needs your help in Aloha Waters
+  questID: Seek Malia
+  questTitle: Seek Malia
+  questDescription: ' Seek Ahi''s sister, Malia, near the statue of the little girl
+    in kapiolani park. She''ll lead you in restoring balance.'
   tasks:
-  - {fileID: 11400000, guid: 3fcfe34b9d5b87049b0fd73a66b33678, type: 2}
-  experienceReward: 0
+  - {fileID: 11400000, guid: 8b9b9943f0b791f458462f44c47a1c30, type: 2}
+  experienceReward: 1
   rewardItem: {fileID: 0}

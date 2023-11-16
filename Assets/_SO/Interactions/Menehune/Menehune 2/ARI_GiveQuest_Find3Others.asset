@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
-  m_Name: MetAhi
+  m_Name: ARI_GiveQuest_Find3Others
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
   InteractionName: 
   itemDatas: []
-  quest: {fileID: 0}
+  quest: {fileID: 11400000, guid: cd5ca813fa2fe93498f8ceabda8bf0da, type: 2}
   notification:
-    notificationHeading: Met Ahi
-    notificationContent: You Have met Ahi Now do other things...
+    notificationHeading: Seek the guardians in Waikiki
+    notificationContent: "Find 3 others , one lies west toward the Royal Grounds,
+      another east in the Sacred Gardens, and the third in the heart of N\u0101 K\u016B\u02BBai
+      Square. Their locations are marked on your map."
     buttonText0: 
     buttonText1: 
     notificationIcon: {fileID: 0}
     notificationColor: {r: 0, g: 0, b: 0, a: 0}
     notificationType: 0
   arEntity: {fileID: 0}
-  anim: {fileID: 0}
-  animationName: 

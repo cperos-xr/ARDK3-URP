@@ -9,11 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22a690315dd67804d9467282c0daeead, type: 3}
-  m_Name: Collect Shell
+  m_Script: {fileID: 11500000, guid: 3e318418990b8954db7c230119f3f47c, type: 3}
+  m_Name: TO_NKA_SeekMenehune2
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  objectiveName: Shrimp's Spectrum Shell
-  objectiveDescription: Collect Shrimp's Spectrum Shell
-  requiredProgress: 1
-  itemToCollect: {fileID: 11400000, guid: ba432c659018e4648ab086cdcfc123f3, type: 2}
+  taskID: 
+  taskName: 
+  icon: {fileID: 0}
+  taskDescription: 
+  objectives: []
+  experienceReward: 0
+  itemRewards: []

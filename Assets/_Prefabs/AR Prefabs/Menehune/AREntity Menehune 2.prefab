@@ -39923,6 +39923,7 @@ MonoBehaviour:
   currentInteraction: {fileID: 0}
   setObjectsActiveStatus:
   - objectToSet: {fileID: 8234185767323682144}
+    uponThisInteractionProgression: {fileID: 11400000, guid: d3cb14b68b66be54f9bb13d6f427e4ac, type: 2}
     setStatus: 0
 --- !u!1001 &6185199697381427046
 PrefabInstance:
@@ -39977,7 +39978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3181120305041248295, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_Name
-      value: AREntity Menehune Base Prefab
+      value: AREntity Menehune 2
       objectReference: {fileID: 0}
     - target: {fileID: 3181120305041248295, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_IsActive
@@ -40003,6 +40004,10 @@ PrefabInstance:
       propertyPath: setObjectsActiveStatus.Array.data[0].objectToSet
       value: 
       objectReference: {fileID: 8234185767323682144}
+    - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[0].uponThisInteractionProgression
+      value: 
+      objectReference: {fileID: 11400000, guid: 448338324285eb1408a1c370aab6b640, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
 --- !u!4 &5549728559128361175 stripped

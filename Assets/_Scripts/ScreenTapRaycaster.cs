@@ -24,18 +24,12 @@ public class ScreenTapRaycaster : MonoBehaviour
     private void Update()
     {
         // Check for a screen tap on mobile
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) //liun 27
         {
             Vector2 touchPosition = Input.GetTouch(0).position;
             PerformRaycastFromTap(touchPosition);  // line 30
         }
 
-        // Check for raycast from the middle of the screen
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    Vector2 screenCenter = new Vector2(Screen.width / 2, Screen.height / 2);
-        //    PerformRaycastFromScreenCenter(screenCenter);
-        //}
     }
 
     public void PerformRaycastFromTap(Vector2 tapPosition)

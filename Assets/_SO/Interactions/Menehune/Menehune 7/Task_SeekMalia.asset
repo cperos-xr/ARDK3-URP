@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e318418990b8954db7c230119f3f47c, type: 3}
-  m_Name: AlohaWaters
+  m_Name: Task_SeekMalia
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  taskID: 0
-  taskName: AlohaWaters
-  icon: {fileID: 21300000, guid: 2b226220e71c971439ec1b09afd2a217, type: 3}
-  taskDescription: 
+  taskID: 
+  taskName: Seek Malia
+  icon: {fileID: -414832206, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
+  taskDescription: ' Seek Ahi''s sister, Malia, near the statue of the little girl
+    in kapiolani park. She''ll lead you in restoring balance.'
   objectives:
-  - {fileID: 11400000, guid: e5e883631693ea54ca2d7b7bcbaaf35f, type: 2}
-  - {fileID: 11400000, guid: 076cf4810ac7097439303d7a56300b49, type: 2}
-  experienceReward: 0
+  - {fileID: 11400000, guid: 16d886a18aedf9e4ab5cbbf6b560c8ae, type: 2}
+  experienceReward: 500
   itemRewards: []

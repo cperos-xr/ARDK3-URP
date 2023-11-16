@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
+  m_Name: ARI_SeekMalia
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
+  InteractionName: SeekMalia
+  itemDatas: []
+  quest: {fileID: 0}
+  notification:
+    notificationHeading: Hana Maika'i
+    notificationContent: More creatures here need help, but a crucial task awaits
+      in the Sacred Gardens. Find my sister, Malia, near the great banyan tree. She'll
+      guide your next steps towards harmony.
+    buttonText0: Mahalo
+    buttonText1: 
+    notificationIcon: {fileID: -414832206, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
+    notificationType: 0
+  arEntity: {fileID: 0}
+  anim: {fileID: 0}
+  animationName: 

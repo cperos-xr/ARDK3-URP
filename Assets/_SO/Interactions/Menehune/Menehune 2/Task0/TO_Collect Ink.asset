@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22a690315dd67804d9467282c0daeead, type: 3}
-  m_Name: Collect Pearl
+  m_Name: TO_Collect Ink
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  objectiveName: He'e's Harmonious Pearl
-  objectiveDescription: Collect He'e's Harmonious Pearl
+  objectiveName: He'e's Ink Sac
+  objectiveDescription: Collect He'e's Ink Sac
   requiredProgress: 1
   itemToCollect: {fileID: 11400000, guid: f735e252aab81fd4fb19320efd577f08, type: 2}

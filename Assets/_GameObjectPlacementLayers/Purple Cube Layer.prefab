@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5521294064360989702}
   - component: {fileID: 4861869465204102418}
   - component: {fileID: 4754968440832987959}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Purple Cube Layer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

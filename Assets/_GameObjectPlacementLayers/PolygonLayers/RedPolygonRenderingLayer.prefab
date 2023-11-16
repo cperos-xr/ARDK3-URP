@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8125016914855987924}
   - component: {fileID: 8372708483248860639}
   - component: {fileID: 4148881265634917067}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RedPolygonRenderingLayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

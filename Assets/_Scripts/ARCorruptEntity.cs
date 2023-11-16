@@ -2,7 +2,7 @@ using System.Collections.Generic;
 public class ARCorruptEntity : AREntity
 {
     public SO_CorruptEntity corruptEntity;
-    public List<ObjectToSetActive> setObjectsActiveStatusUponPurification = new List<ObjectToSetActive>();
+    public List<ObjectToSetActiveAndActivationStatus> setObjectsActiveStatusUponPurification = new List<ObjectToSetActiveAndActivationStatus>();
     private void OnEnable()
     {
         PurificationManager.OnPlayerPurifiesEntity += ARPurification;
@@ -17,7 +17,7 @@ public class ARCorruptEntity : AREntity
         {
             if (setObjectsActiveStatusUponPurification.Count > 0)
             {
-                foreach (ObjectToSetActive obj in setObjectsActiveStatusUponPurification)
+                foreach (ObjectToSetActiveAndActivationStatus obj in setObjectsActiveStatusUponPurification)
                 {
                     obj.objectToSet.SetActive(obj.setStatus);
                 }

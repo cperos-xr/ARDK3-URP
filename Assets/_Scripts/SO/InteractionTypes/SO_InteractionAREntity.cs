@@ -6,6 +6,4 @@ using UnityEngine;
 public class SO_InteractionAREntity : SO_Interaction
 {
     public SO_ArEntityData arEntity;
-    public Animator anim;
-    public string animationName;
 }
