@@ -18,12 +18,12 @@ MonoBehaviour:
   isUsable: 0
   isDuplicable: 0
   playerNotifications:
-  - notificationHeading: Mongoose Merriment Marble
-    notificationContent: The small Asian Mongoose gave you a playful trinket, radiating
-      joy.
+  - notificationHeading: Mongoose's Marble
+    notificationContent: The small Asian Mongoose gave you his Marble of Merriment,
+      a playful trinket, radiating joy.
     buttonText0: Mahalo
     buttonText1: 
-    notificationIcon: {fileID: 21300000, guid: 376b977053bdcef47a8afadd3c11f58e, type: 3}
+    notificationIcon: {fileID: 21300000, guid: 7461272b8e367f54bbabef3d8df24c45, type: 3}
     notificationColor: {r: 1, g: 1, b: 1, a: 0}
     notificationType: 0
-  givenByEntityName: 
+  givenByEntityName: "Al\u0101mona of Anarchy "
