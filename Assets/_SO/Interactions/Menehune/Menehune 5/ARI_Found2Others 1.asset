@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
-  m_Name: ARI_Found2Others
+  m_Name: ARI_Found2Others 1
   m_EditorClassIdentifier: 
   entityInteractionUpdates:
   - entity: {fileID: 11400000, guid: 3afe01a554bc64c4eadd392abced9acb, type: 2}
-    newInteraction: {fileID: 11400000, guid: 80a57cb394d52024187e1fdbcf1ca217, type: 2}
+    newInteraction: {fileID: 11400000, guid: 040cad75a65016e468c8d5a661f415a5, type: 2}
     returnToPreviousInsteadOfNewInteraction: 0
-  InteractionName: Found others
+  InteractionName: 
   itemDatas: []
   quest: {fileID: 0}
   notification:
-    notificationHeading: Kupaianaha!
-    notificationContent: You've connected with the guardians by the Natatorium and
-      Aquarium. Your journey's making waves, just like the ocean they overlook. Keep
-      riding this tide of success!
-    buttonText0: Alright!
+    notificationHeading: Ho'omaika'i 'ana!
+    notificationContent: Your efforts have woven new strands of harmony across our
+      lands. The guardians by the natatorium and aquarium have been found, thanks
+      to your diligence. Your journey is shaping the very spirit of our islands.
+    buttonText0: "K\u016Bpa\u02BBa!"
     buttonText1: 
     notificationIcon: {fileID: 1296646077, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
     notificationColor: {r: 1, g: 1, b: 1, a: 1}

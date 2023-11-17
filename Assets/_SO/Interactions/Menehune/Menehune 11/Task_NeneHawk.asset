@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e318418990b8954db7c230119f3f47c, type: 3}
+  m_Name: Task_NeneHawk
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: ac40edbb81fed43499305c19957b8662, type: 2}
+    newInteraction: {fileID: 11400000, guid: 4fbd16e982b310c4e9b1e0d41f02d95b, type: 2}
+    returnToPreviousInsteadOfNewInteraction: 0
+  taskID: 
+  taskName: Save Moanaiki
+  icon: {fileID: 21300000, guid: b9f1f62b264476943b5e09d4586abb08, type: 3}
+  taskDescription: Save Moanaiki from immediate pecking peril!
+  objectives:
+  - {fileID: 11400000, guid: 6899843155f0b454f9bc32a5d975503d, type: 2}
+  - {fileID: 11400000, guid: eb374b0a2bd3e0545889381a1c911999, type: 2}
+  experienceReward: 2000
+  itemRewards: []

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0550dbde1d3d1ee419408a5343ac66f0, type: 3}
+  m_Name: TO_FindMoanaiki
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
+  objectiveName: Find Moanaiki
+  objectiveDescription: Find Moanaiki by the Aquarium
+  requiredProgress: 1
+  targetEntity: {fileID: 11400000, guid: ac40edbb81fed43499305c19957b8662, type: 2}

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
+  m_Name: ARI_GiveQuestLeleLurker
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 24b9301edfc61eb4588fe79ff0dad0bb, type: 2}
+    newInteraction: {fileID: 11400000, guid: 75a25329a7d59fd48a01485263c18219, type: 2}
+    returnToPreviousInsteadOfNewInteraction: 0
+  InteractionName: Calm the Lele Lurker
+  itemDatas: []
+  quest: {fileID: 11400000, guid: dbd4b3c840ae25e47ba444907afcc045, type: 2}
+  notification:
+    notificationHeading: Calm the Lele Lurker
+    notificationContent: A troubling spirit has descended from Le'ahi to our memorial,
+      threatening to corrupt the memories of our fallen heroes. We must act to preserve
+      their honor. Calm this malevolent presence, and safeguard the sanctity of their
+      memory.
+    buttonText0: On it!
+    buttonText1: 
+    notificationIcon: {fileID: 2144203908, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
+    notificationType: 0
+  arEntity: {fileID: 0}

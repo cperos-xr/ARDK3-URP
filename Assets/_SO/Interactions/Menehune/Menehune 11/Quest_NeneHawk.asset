@@ -10,15 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c85fb361c81613845bfed8c2913aaaff, type: 3}
-  m_Name: Quest_Find2Others
+  m_Name: Quest_NeneHawk
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
   questID: 
-  questTitle: Find 2 Others
-  questDescription: Find the guardians by the Natatorium and Aquarium. Good thing
-    there isn't a nearby Planetarium, or you'd have to visit there too! Seems like
-    our guardians have a thing for 'RIUM' endings.
+  questTitle: Save Moanaiki from the Nene and Hawk
+  questDescription: Save Moanaiki from immediate peril!
   tasks:
-  - {fileID: 11400000, guid: c119abd8fabb3ea41b530dc9193c6729, type: 2}
+  - {fileID: 11400000, guid: 9d5c3f48611bd154eaaf185e50645b57, type: 2}
   experienceReward: 2000
   rewardItem: {fileID: 0}

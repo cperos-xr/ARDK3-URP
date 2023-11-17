@@ -23,6 +23,7 @@ MonoBehaviour:
     there isn't a nearby Planetarium, or you'd have to visit there too! Seems like
     our guardians have a thing for 'RIUM' endings.
   objectives:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 0f655ccd2cf349848ae7bf85a5dd32fa, type: 2}
+  - {fileID: 11400000, guid: 911e316ae45058b4782238819e774760, type: 2}
   experienceReward: 2000
   itemRewards: []

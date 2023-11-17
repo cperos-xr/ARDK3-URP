@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e318418990b8954db7c230119f3f47c, type: 3}
+  m_Name: Task_SaveAhi
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 966b88ca0bd601742abf9fd259260ef6, type: 2}
+    newInteraction: {fileID: 11400000, guid: 6a3e1d7cfbdfef94db15677f8a2aa1e1, type: 2}
+    returnToPreviousInsteadOfNewInteraction: 0
+  taskID: 
+  taskName: 
+  icon: {fileID: -1794054071, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
+  taskDescription: Heal the Seal and Save Ahi
+  objectives:
+  - {fileID: 11400000, guid: 93aa52df49d4d4e45a7b8c54caaad13e, type: 2}
+  experienceReward: 0
+  itemRewards: []

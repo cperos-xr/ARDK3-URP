@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eda2ea000fab5d449a8ce97c9c6f7c5d, type: 3}
-  m_Name: Menehune 1
+  m_Script: {fileID: 11500000, guid: 22a690315dd67804d9467282c0daeead, type: 3}
+  m_Name: TO_LeleLurker
   m_EditorClassIdentifier: 
-  entityName: Lono
-  startingInteraction: {fileID: 11400000, guid: 448338324285eb1408a1c370aab6b640, type: 2}
+  entityInteractionUpdates: []
+  objectiveName: 
+  objectiveDescription: 
+  requiredProgress: 1
+  itemToCollect: {fileID: 11400000, guid: bf8782028dbf3124085dbc636e659fed, type: 2}

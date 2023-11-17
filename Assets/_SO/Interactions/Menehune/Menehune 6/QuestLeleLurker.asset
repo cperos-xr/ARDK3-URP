@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c85fb361c81613845bfed8c2913aaaff, type: 3}
-  m_Name: Quest_Find2Others
+  m_Name: QuestLeleLurker
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
   questID: 
-  questTitle: Find 2 Others
-  questDescription: Find the guardians by the Natatorium and Aquarium. Good thing
-    there isn't a nearby Planetarium, or you'd have to visit there too! Seems like
-    our guardians have a thing for 'RIUM' endings.
+  questTitle: Calm the Lurker
+  questDescription: A troubling spirit has descended from Le'ahi.  We must act to
+    preserve their honor. Calm this malevolent presence.
   tasks:
-  - {fileID: 11400000, guid: c119abd8fabb3ea41b530dc9193c6729, type: 2}
+  - {fileID: 11400000, guid: a3459e27af553094fbc912e9a538d4be, type: 2}
   experienceReward: 2000
   rewardItem: {fileID: 0}
