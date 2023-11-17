@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
   m_Name: ARI_FoundMonkeys
   m_EditorClassIdentifier: 
-  entityInteractionUpdates: []
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 3afe01a554bc64c4eadd392abced9acb, type: 2}
+    newInteraction: {fileID: 11400000, guid: d3bfb4a837f230e4abb600005995f574, type: 2}
+    returnToPreviousInsteadOfNewInteraction: 0
   InteractionName: 
   itemDatas: []
   quest: {fileID: 0}

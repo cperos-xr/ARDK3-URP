@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
   questID: 
-  questTitle: 
-  questDescription: 
+  questTitle: Heal 5 Monkeys
+  questDescription: The Monkeys, once residents of the Honolulu Zoo, now roam free
+    in Queen Kapiolani Park.  Find and Heal 5 of them, although there are more, 5
+    should be enough to make an impact.
   tasks:
-  - {fileID: 0}
-  experienceReward: 0
+  - {fileID: 11400000, guid: a122eff4e5c988346b2ef49a90d53e5e, type: 2}
+  experienceReward: 5000
   rewardItem: {fileID: 0}

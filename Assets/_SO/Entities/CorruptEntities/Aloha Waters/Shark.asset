@@ -52,6 +52,8 @@ MonoBehaviour:
     effectiveness: 2
   - essenceMaterialType: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
     effectiveness: -4
+  - essenceMaterialType: {fileID: 11400000, guid: a1bfb80bdfe9ad44ba0469ce84e17fd0, type: 2}
+    effectiveness: 10
   combinationMultipliersList:
   - essenceMaterialType1: {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
     essenceMaterialType2: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}

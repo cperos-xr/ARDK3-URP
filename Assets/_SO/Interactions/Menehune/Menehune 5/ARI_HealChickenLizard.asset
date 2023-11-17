@@ -14,19 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityInteractionUpdates:
   - entity: {fileID: 11400000, guid: 3afe01a554bc64c4eadd392abced9acb, type: 2}
-    newInteraction: {fileID: 11400000}
+    newInteraction: {fileID: 11400000, guid: 89479fde8d289ec4ca8f07ace815844d, type: 2}
     returnToPreviousInsteadOfNewInteraction: 0
   InteractionName: 
   itemDatas: []
   quest: {fileID: 0}
   notification:
-    notificationHeading: Aloha & Mahalo!
+    notificationHeading: Mahalo!
     notificationContent: 'Your gentle touch has soothed the spirits of the lizard
       and chicken, restoring peace to this sacred place. The Sacred Gardens breathe
       easier thanks to your efforts. '
     buttonText0: Great!
     buttonText1: 
-    notificationIcon: {fileID: 21300000, guid: d83d26fa1b7166a43b386e9d4c06f5f4, type: 3}
+    notificationIcon: {fileID: 1296646077, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
     notificationColor: {r: 1, g: 1, b: 1, a: 1}
     notificationType: 0
   arEntity: {fileID: 11400000, guid: 3afe01a554bc64c4eadd392abced9acb, type: 2}

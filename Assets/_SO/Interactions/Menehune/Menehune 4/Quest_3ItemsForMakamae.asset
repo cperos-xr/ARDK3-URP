@@ -20,7 +20,5 @@ MonoBehaviour:
     to restore balance.
   tasks:
   - {fileID: 11400000, guid: 9adfc73f82c95864fb88ff392b86f28b, type: 2}
-  - {fileID: 11400000, guid: ab942c795e60aae46b09f59f4e0f4804, type: 2}
-  - {fileID: 11400000, guid: 4a317a72734f5b04595c7bccbf8afdca, type: 2}
-  experienceReward: 500
+  experienceReward: 3000
   rewardItem: {fileID: 0}
