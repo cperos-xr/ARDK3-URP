@@ -23,6 +23,6 @@ MonoBehaviour:
     buttonText0: Mahalo
     buttonText1: 
     notificationIcon: {fileID: -1639542636, guid: 8be24c81c4cb314428fe2279df6474ac, type: 3}
-    notificationColor: {r: 1, g: 1, b: 1, a: 0}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
     notificationType: 0
-  givenByEntityName: 
+  givenByEntityName: Tilapia Trouble

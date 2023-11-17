@@ -17,7 +17,7 @@ MonoBehaviour:
     newInteraction: {fileID: 11400000, guid: b8e2c417ad4307f42975d086f5d414ac, type: 2}
     returnToPreviousInsteadOfNewInteraction: 0
   - entity: {fileID: 11400000, guid: b68d2bacda9f35b4485bf2f64dfe643d, type: 2}
-    newInteraction: {fileID: 11400000, guid: b8e2c417ad4307f42975d086f5d414ac, type: 2}
+    newInteraction: {fileID: 11400000, guid: 442a3a1e17cba614083dd05f3a98e0f4, type: 2}
     returnToPreviousInsteadOfNewInteraction: 0
   InteractionName: 
   itemDatas: []
@@ -30,6 +30,6 @@ MonoBehaviour:
     buttonText0: OK
     buttonText1: 
     notificationIcon: {fileID: 1623316448, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
-    notificationColor: {r: 1, g: 1, b: 1, a: 0}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
     notificationType: 0
   arEntity: {fileID: 11400000, guid: b68d2bacda9f35b4485bf2f64dfe643d, type: 2}

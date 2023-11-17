@@ -17,7 +17,8 @@ MonoBehaviour:
   corruptEntityName: Lele Lurker
   corruptEntityDescription: An unknown entity that clings to the dirt of Diamond
     Head, its presence a blight upon the earth.
-  funFact: In Hawaiian, the term "lele" means "to fly" or "to leap"
+  funFact: "The Hawaiian name for Diamondhead is L\u0113'ahi and translates to \u201Cforehead
+    [of the] ahi [fish].\u201D "
   essenceMaterialType: {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
   spawnableAreas:
   - areaData: {fileID: 11400000, guid: b57bedb8ad5b4cf4081f9af0064f01cf, type: 2}
@@ -27,7 +28,7 @@ MonoBehaviour:
     scarcityLevel:
       ScarcityLevel: 1
   ItemsDroppedUponPurification:
-  - item: {fileID: 11400000, guid: ea8b67cbb9fab3b4fba3fc16f6f8fd3b, type: 2}
+  - item: {fileID: 11400000, guid: bf8782028dbf3124085dbc636e659fed, type: 2}
     dropRate: 1
   InteractionToCompleteUponPurification: {fileID: 0}
   essenceEffectivenessList:

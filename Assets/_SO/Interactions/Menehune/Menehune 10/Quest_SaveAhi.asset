@@ -18,5 +18,5 @@ MonoBehaviour:
   questDescription: Heal the Seal and Save Ahi
   tasks:
   - {fileID: 11400000, guid: a46b20d5a57dc244bb74ea0f8668b736, type: 2}
-  experienceReward: 0
+  experienceReward: 1000
   rewardItem: {fileID: 0}

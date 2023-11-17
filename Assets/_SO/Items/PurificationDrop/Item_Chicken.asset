@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: Item_Chicken
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  itemName: Junglefowl's Joyful Feather
+  itemName: Cheerful Quill
   icon: {fileID: 21300000, guid: d83d26fa1b7166a43b386e9d4c06f5f4, type: 3}
   isUsable: 0
   isDuplicable: 0
   playerNotifications:
-  - notificationHeading: Junglefowl's Joyful Feather
+  - notificationHeading: Cheerful Quill
     notificationContent: Bright and uplifting, this feather from Red Junglefowl is
       as colorful as the sunset.
     buttonText0: Mahalo
     buttonText1: 
     notificationIcon: {fileID: 21300000, guid: d83d26fa1b7166a43b386e9d4c06f5f4, type: 3}
-    notificationColor: {r: 1, g: 1, b: 1, a: 0}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
     notificationType: 0
-  givenByEntityName: 
+  givenByEntityName: Moa Marauder

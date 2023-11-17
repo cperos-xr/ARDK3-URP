@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TO_RatRoyalRuin
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  objectiveName: 
-  objectiveDescription: 
+  objectiveName: Heal Rat
+  objectiveDescription: Heal Rat
   requiredProgress: 1
   itemToCollect: {fileID: 11400000, guid: e252230f4291ec34e8ee5964f0946214, type: 2}

@@ -1633,7 +1633,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &284056916
 MonoBehaviour:
@@ -2299,6 +2299,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5654f2f89ceb1aa42bab5661b365a517, type: 2}
   - {fileID: 11400000, guid: 68146c278b6c57c49acdd306f27ff912, type: 2}
   - {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
+  - {fileID: 11400000, guid: a1bfb80bdfe9ad44ba0469ce84e17fd0, type: 2}
   lensState: 0
 --- !u!1001 &416698878
 PrefabInstance:
@@ -7344,7 +7345,7 @@ RectTransform:
   - {fileID: 1959419330}
   - {fileID: 1113784618}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -16064,6 +16065,7 @@ MonoBehaviour:
   corruptionMeter: {fileID: 2087554042}
   manaLens: {fileID: 414302069}
   itemManager: {fileID: 1155025340}
+  testCorruptEntity: {fileID: 0}
 --- !u!1 &2140700163
 GameObject:
   m_ObjectHideFlags: 0

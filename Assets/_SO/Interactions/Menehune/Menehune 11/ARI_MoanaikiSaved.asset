@@ -22,7 +22,7 @@ MonoBehaviour:
   notification:
     notificationHeading: Mahalo nui loa
     notificationContent: Mahalo nui loa for your kokua! Your actions have calmed
-      the storm in the hearts of these creatures, restoring peace to ou
+      the storm in the hearts of these creatures, restoring peace.
     buttonText0: No Problem!
     buttonText1: 
     notificationIcon: {fileID: 1755123188, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}

@@ -5,7 +5,8 @@ public enum PlayerState
 {
     normal,
     purification,
-    notification
+    notification,
+    menuOpen,
 }
 public class PlayerManager : MonoBehaviour
 {

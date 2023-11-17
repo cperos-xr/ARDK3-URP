@@ -37,6 +37,10 @@ public class PurificationManager : MonoBehaviour
     [SerializeField] private ManaLens manaLens;
     [SerializeField] private ItemManager itemManager;
 
+#if UNITY_EDITOR
+    public SO_CorruptEntity testCorruptEntity;
+#endif
+
 
     // Define a delegate and an event
     public delegate void PlayerAttemptsPurification(float currentCoruptionLevel);
@@ -131,6 +135,7 @@ public class PurificationManager : MonoBehaviour
 
         if (currentPurificationEntity.currentCorruptionLevel <= 0)
         {
+            inventoryPanel.SetActive(false);
             Debug.Log("Corrupt Entity hath been Purified!");
             corruptEntityImage.sprite = currentPurificationEntity.corruptedEntity.healedStateSprite;
             PlayerManager.Instance.currentPlayerState = PlayerState.normal;
@@ -243,8 +248,6 @@ public class PurificationManager : MonoBehaviour
             if (selectedEssenceMaterials.Count == maxSelectedEssences)
             {
                 inventoryPanel.SetActive(false);
-
-
             }
 
             OnPlayerRemovesEssenceFromPouch?.Invoke(essenceMaterialType);  // currently no subscribers that I know of

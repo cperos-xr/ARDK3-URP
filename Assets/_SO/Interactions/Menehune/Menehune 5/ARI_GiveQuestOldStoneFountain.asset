@@ -18,7 +18,7 @@ MonoBehaviour:
     returnToPreviousInsteadOfNewInteraction: 0
   InteractionName: Meet Lanihuli
   itemDatas: []
-  quest: {fileID: 0}
+  quest: {fileID: 11400000, guid: 23e111153519a4e429d9ed09acaa7cbf, type: 2}
   notification:
     notificationHeading: Old Stone Fountain
     notificationContent: The old stone fountain  by the zoo is troubled by cursed

@@ -30,4 +30,4 @@ MonoBehaviour:
     notificationIcon: {fileID: 2144203908, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
     notificationColor: {r: 1, g: 1, b: 1, a: 1}
     notificationType: 0
-  arEntity: {fileID: 0}
+  arEntity: {fileID: 11400000, guid: 24b9301edfc61eb4588fe79ff0dad0bb, type: 2}

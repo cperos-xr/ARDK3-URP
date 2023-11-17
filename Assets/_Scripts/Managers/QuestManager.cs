@@ -25,13 +25,15 @@ public class QuestManager : MonoBehaviour
 
     public void AssignQuest(SO_Quest quest)
     {
-        AssignedQuests.Add(quest);
-        OnPlayerAssignedQuest?.Invoke(quest);
-
-        foreach(SO_Task task in quest.tasks)
+        if (!AssignedQuests.Contains(quest))
         {
-            TaskManager.Instance.AssignTask(task);
-        }
+            AssignedQuests.Add(quest);
+            OnPlayerAssignedQuest?.Invoke(quest);
 
+            foreach (SO_Task task in quest.tasks)
+            {
+                TaskManager.Instance.AssignTask(task);
+            }
+        }
     }
 }

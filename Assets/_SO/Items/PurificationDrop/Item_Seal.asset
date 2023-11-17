@@ -24,6 +24,6 @@ MonoBehaviour:
     buttonText0: Mahalo
     buttonText1: 
     notificationIcon: {fileID: 21300000, guid: 60c38b636f5c6ea4781acc9fde3342c4, type: 3}
-    notificationColor: {r: 1, g: 1, b: 1, a: 0}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
     notificationType: 0
-  givenByEntityName: 
+  givenByEntityName: Maluhia Mauler

@@ -24,6 +24,6 @@ MonoBehaviour:
     buttonText0: Mahalo
     buttonText1: 
     notificationIcon: {fileID: 21300000, guid: 71820be6b1bec994b9478693f6bc22e8, type: 3}
-    notificationColor: {r: 1, g: 1, b: 1, a: 0}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
     notificationType: 0
   givenByEntityName: 

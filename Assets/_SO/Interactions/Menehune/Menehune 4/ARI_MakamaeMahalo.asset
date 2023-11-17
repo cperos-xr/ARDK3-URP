@@ -27,6 +27,6 @@ MonoBehaviour:
     buttonText0: Of Course!
     buttonText1: 
     notificationIcon: {fileID: 418723998, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
-    notificationColor: {r: 1, g: 1, b: 1, a: 0}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
     notificationType: 0
   arEntity: {fileID: 11400000, guid: 6fbd272466ccff04ba1a93afde6b6dcc, type: 2}

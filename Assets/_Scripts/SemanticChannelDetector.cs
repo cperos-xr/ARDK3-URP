@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 #if UNITY_EDITOR
@@ -28,7 +27,8 @@ public enum ESemanticChannel
     vehicle_experimental,
     food_experimental,
     loungeable_experimental,
-    snow_experimental
+    snow_experimental,
+    harmony
 }
 
 

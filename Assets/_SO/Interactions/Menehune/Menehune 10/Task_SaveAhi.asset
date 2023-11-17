@@ -17,10 +17,11 @@ MonoBehaviour:
     newInteraction: {fileID: 11400000, guid: 6a3e1d7cfbdfef94db15677f8a2aa1e1, type: 2}
     returnToPreviousInsteadOfNewInteraction: 0
   taskID: 
-  taskName: 
+  taskName: Heal the Seal and save Ahi
   icon: {fileID: -1794054071, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
   taskDescription: Heal the Seal and Save Ahi
   objectives:
   - {fileID: 11400000, guid: 93aa52df49d4d4e45a7b8c54caaad13e, type: 2}
   experienceReward: 0
-  itemRewards: []
+  itemRewards:
+  - {fileID: 11400000, guid: a1bfb80bdfe9ad44ba0469ce84e17fd0, type: 2}

@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
   questID: 
-  questTitle: 
-  questDescription: 
-  tasks: []
-  experienceReward: 0
+  questTitle: A Navigator Lost
+  questDescription: The Royal Navigator, the best in all the seas, has gone to the
+    Illikai and hasn't come back.
+  tasks:
+  - {fileID: 11400000, guid: 14c0cbe386df0254c9471ebd38fb89dc, type: 2}
+  experienceReward: 1500
   rewardItem: {fileID: 0}

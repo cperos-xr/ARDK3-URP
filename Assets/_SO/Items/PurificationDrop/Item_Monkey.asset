@@ -23,6 +23,6 @@ MonoBehaviour:
     buttonText0: Mahalo
     buttonText1: 
     notificationIcon: {fileID: -409516913, guid: b0e5aa51396df7945b8952f3c6c26fab, type: 3}
-    notificationColor: {r: 1, g: 1, b: 1, a: 0}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
     notificationType: 0
-  givenByEntityName: 
+  givenByEntityName: Keko Chaos

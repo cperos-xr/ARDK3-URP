@@ -17,7 +17,7 @@ MonoBehaviour:
     newInteraction: {fileID: 11400000, guid: 37e087854200e1c4da95441f12592df3, type: 2}
     returnToPreviousInsteadOfNewInteraction: 0
   taskID: 
-  taskName: 
+  taskName: Calm the Lurker
   icon: {fileID: 1384916062, guid: ddfa50b3f665c804187313a2058dd0a3, type: 3}
   taskDescription: A troubling spirit has descended from Le'ahi to our memorial,
     threatening to corrupt the memories of our fallen heroes. We must act to preserve

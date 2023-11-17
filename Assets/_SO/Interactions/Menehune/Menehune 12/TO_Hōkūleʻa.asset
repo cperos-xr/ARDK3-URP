@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22a690315dd67804d9467282c0daeead, type: 3}
-  m_Name: TO_Lizard
+  m_Script: {fileID: 11500000, guid: 0550dbde1d3d1ee419408a5343ac66f0, type: 3}
+  m_Name: "TO_H\u014Dk\u016Ble\u02BBa"
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  objectiveName: Heal Lizard
-  objectiveDescription: Heal Lizard
+  objectiveName: "Find H\u014Dk\u016Ble\u02BBa"
+  objectiveDescription: "Find H\u014Dk\u016Ble\u02BBa the Royal Navigator"
   requiredProgress: 1
-  itemToCollect: {fileID: 11400000, guid: 22fcdb717f1e65047934c3a310204558, type: 2}
+  targetEntity: {fileID: 11400000, guid: 887838075c29eb14fb9f9170e87a0a95, type: 2}
