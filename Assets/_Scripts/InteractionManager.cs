@@ -6,7 +6,7 @@ using static InteractionProgression;
 public class InteractionManager : MonoBehaviour
 {
     public static InteractionManager Instance;
-    [SerializeField] ItemManager itemManager;
+    //[SerializeField] ItemManager itemManager;
 
     public delegate void PlayerInteractionEvent(SO_Interaction EntityNotifyPlayer);
     public static event PlayerInteractionEvent OnPlayerInteraction;
@@ -19,6 +19,9 @@ public class InteractionManager : MonoBehaviour
 
     public delegate void PlayerAREntityInteractionEvent(SO_InteractionAREntity arEntityInteraction);
     public static event PlayerAREntityInteractionEvent OnPlayerAREntityInteraction;
+
+    public delegate void PlayerReceiveItemEvent(SO_ItemData itemData, BaseEntityData entityData);
+    public static event PlayerReceiveItemEvent OnPlayerReceiveItem;
 
 
     public Dictionary<BaseEntityData, SO_Interaction> interactionProgressionDictionary = new Dictionary<BaseEntityData, SO_Interaction>();
@@ -103,16 +106,7 @@ public class InteractionManager : MonoBehaviour
         {
             foreach (SO_ItemData itemData in interaction.itemDatas)
             {
-                // Ensure itemManager is not null
-                if (itemManager != null)
-                {
-                    itemManager.AddItemToPlayerInventory(itemData, entity);
-                }
-                else
-                {
-                    Debug.LogError("ItemManager is not set in InteractionManager.");
-                    return; // Exit the method to avoid further issues.
-                }
+                OnPlayerReceiveItem?.Invoke(itemData, entity);
             }
         }
 

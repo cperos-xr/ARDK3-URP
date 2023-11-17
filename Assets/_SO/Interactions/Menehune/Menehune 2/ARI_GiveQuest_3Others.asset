@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
-  m_Name: ARI_ExploreThe5Realms
+  m_Name: ARI_GiveQuest_3Others
   m_EditorClassIdentifier: 
   entityInteractionUpdates:
   - entity: {fileID: 11400000, guid: 9318d58208d72ae49b8f58f9b34282a5, type: 2}
-    newInteraction: {fileID: 11400000, guid: b5bead574b6138443b0b06084ff7586b, type: 2}
+    newInteraction: {fileID: 0}
     returnToPreviousInsteadOfNewInteraction: 0
   InteractionName: Explore the 5 Realms
   itemDatas: []
-  quest: {fileID: 0}
+  quest: {fileID: 11400000, guid: cd5ca813fa2fe93498f8ceabda8bf0da, type: 2}
   notification:
     notificationHeading: Explore the 5 Realms
     notificationContent: "Now you can see the 5 realms on your map: Aloha Waters,

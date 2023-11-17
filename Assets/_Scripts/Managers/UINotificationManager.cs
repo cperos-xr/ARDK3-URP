@@ -202,10 +202,10 @@ public class UINotificationManager : MonoBehaviour
                     notificationButton1.onClick.AddListener(() =>
                     {
                         PurificationManager.Instance.purificationPanel.SetActive(false);
-                        PlayerManager.Instance.currentPlayerState = PlayerState.normal;
                         displayingNotification = false;
                         notificationPanel.SetActive(false);
                         DisplayNextNotification();
+                        PlayerManager.Instance.currentPlayerState = PlayerState.normal;
                     });
 
                     break;
@@ -217,6 +217,7 @@ public class UINotificationManager : MonoBehaviour
                         displayingNotification = false;
                         notificationPanel.SetActive(false);
                         DisplayNextNotification();
+                        PlayerManager.Instance.currentPlayerState = PlayerState.normal;
                     });
 
                     break;
@@ -227,6 +228,7 @@ public class UINotificationManager : MonoBehaviour
                         displayingNotification = false;
                         notificationPanel.SetActive(false);
                         DisplayNextNotification();
+                        PlayerManager.Instance.currentPlayerState = PlayerState.normal;
                     });
                     break;
 

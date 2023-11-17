@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e318418990b8954db7c230119f3f47c, type: 3}
   m_Name: Task_FindKing
   m_EditorClassIdentifier: 
-  entityInteractionUpdates: []
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: aa1803fbff44c1c49a806c0bb814625a, type: 2}
+    newInteraction: {fileID: 11400000, guid: b8e2c417ad4307f42975d086f5d414ac, type: 2}
+    returnToPreviousInsteadOfNewInteraction: 0
   taskID: 
   taskName: King Kalolani
   icon: {fileID: 1623316448, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}

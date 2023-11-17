@@ -11,6 +11,16 @@ public class ItemManager : MonoBehaviour
     public static event PlayerGivenItemEvent OnPlayerGivenItem;
 
 
+    private void OnEnable()
+    {
+        InteractionManager.OnPlayerReceiveItem += AddItemToPlayerInventory;
+    }
+
+    private void OnDisable()
+    {
+        InteractionManager.OnPlayerReceiveItem -= AddItemToPlayerInventory;
+    }
+
     public void AddItemToPlayerInventory(SO_ItemData itemData, BaseEntityData entity)
     {
 

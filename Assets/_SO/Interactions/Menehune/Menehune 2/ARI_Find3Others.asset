@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
-  m_Name: ARI_GiveQuest_Find3Others
+  m_Name: ARI_Find3Others
   m_EditorClassIdentifier: 
   entityInteractionUpdates:
   - entity: {fileID: 11400000, guid: 9318d58208d72ae49b8f58f9b34282a5, type: 2}
@@ -18,13 +18,13 @@ MonoBehaviour:
     returnToPreviousInsteadOfNewInteraction: 0
   InteractionName: Seek the guardians in Waikiki
   itemDatas: []
-  quest: {fileID: 11400000, guid: cd5ca813fa2fe93498f8ceabda8bf0da, type: 2}
+  quest: {fileID: 0}
   notification:
     notificationHeading: Seek the guardians in Waikiki
     notificationContent: "Find 3 others , one lies west toward the Royal Grounds,
       another east in the Sacred Gardens, and the third in the heart of N\u0101 K\u016B\u02BBai
       Square. Their locations are marked on your map."
-    buttonText0: Pono
+    buttonText0: Got it!
     buttonText1: 
     notificationIcon: {fileID: -1821777005, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
     notificationColor: {r: 0, g: 0.5019608, b: 0.5019608, a: 1}

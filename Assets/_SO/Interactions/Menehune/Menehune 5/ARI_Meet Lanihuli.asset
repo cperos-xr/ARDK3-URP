@@ -23,8 +23,8 @@ MonoBehaviour:
     notificationHeading: E komo mai
     notificationContent: Aloha, I'm Lanihuli of the Sacred Gardens. Our land remembers
       every step and touch. Let's tread lightly, listening to nature's whispers,
-      and heal the traces we leave behind.lia....
-    buttonText0: Pono
+      and heal the traces we leave behind.
+    buttonText0: Aloha!
     buttonText1: 
     notificationIcon: {fileID: 1296646077, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
     notificationColor: {r: 1, g: 1, b: 1, a: 1}

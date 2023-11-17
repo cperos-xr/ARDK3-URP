@@ -28,18 +28,21 @@ public class ManaLens : MonoBehaviour
     public delegate void PlayerEncounterCorruptEntityEvent(SO_CorruptEntity corruptEntity);
     public static event PlayerEncounterCorruptEntityEvent OnPlayerEncounterCorruptEntity;
 
-
-
+    [SerializeField] private SO_ItemData manaLensItemData;
     public ELensState lensState = ELensState.inactive;
+
+    [SerializeField] private bool playerHasManaLens = false;
 
     private void OnEnable()
     {
         SemanticChannelDetector.OnSemanticChannelIdentified += ReceiveEssenceMaterial;
+        InteractionManager.OnPlayerReceiveItem += CheckForManaLens;
     }
 
     private void OnDisable()
     {
         SemanticChannelDetector.OnSemanticChannelIdentified -= ReceiveEssenceMaterial;
+        InteractionManager.OnPlayerReceiveItem -= CheckForManaLens;
     }
 
     private void Start()
@@ -83,8 +86,22 @@ public class ManaLens : MonoBehaviour
         }
     }
 
+    public void CheckForManaLens(SO_ItemData itemData, BaseEntityData entityData)
+    {
+        if (!playerHasManaLens && 
+            itemData.Equals(manaLensItemData))
+        { 
+            playerHasManaLens = true;
+        }
+    }
+
     private void SeekCorruptSpirits(List<string> semanticChannelList)
     {
+        if (!playerHasManaLens)
+        {
+            Debug.Log("Player doesnt have a Mana Lens");
+            return;
+        }
         if (semanticChannelList.Count == 0)
         {
             Debug.Log("No semantic channels to search for.");
@@ -126,22 +143,25 @@ public class ManaLens : MonoBehaviour
 
     public void ReceiveEssenceMaterial(List<string> semanticChannelList)
     {
-        foreach (string semanticChannel in semanticChannelList)
+        if (playerHasManaLens)
         {
-            foreach (SO_EssenceMaterialType essenceMaterialType in essenceMaterialTypes)
+            foreach (string semanticChannel in semanticChannelList)
             {
-                if (semanticChannel.Equals(essenceMaterialType.essenceMaterialSemanticChannelName))
+                foreach (SO_EssenceMaterialType essenceMaterialType in essenceMaterialTypes)
                 {
+                    if (semanticChannel.Equals(essenceMaterialType.essenceMaterialSemanticChannelName))
+                    {
 
-                    if (essencePouch.AddItem(essenceMaterialType))
-                    {
-                        Debug.Log($"Successfully added {essenceMaterialType.itemName} to the essence pouch");
-                        OnPlayerGivenEssenceMaterial?.Invoke(essenceMaterialType);
-                    }
-                    else
-                    {
-                        // Pouch is full
-                        Debug.Log($"Could not add {essenceMaterialType.itemName} to the essence pouch");
+                        if (essencePouch.AddItem(essenceMaterialType))
+                        {
+                            Debug.Log($"Successfully added {essenceMaterialType.itemName} to the essence pouch");
+                            OnPlayerGivenEssenceMaterial?.Invoke(essenceMaterialType);
+                        }
+                        else
+                        {
+                            // Pouch is full
+                            Debug.Log($"Could not add {essenceMaterialType.itemName} to the essence pouch");
+                        }
                     }
                 }
             }
