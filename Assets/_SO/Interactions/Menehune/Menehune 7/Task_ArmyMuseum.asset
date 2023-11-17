@@ -19,6 +19,6 @@ MonoBehaviour:
   taskDescription: "Deliver K\u0101nehoa's important message to a contact at the
     army pill box near the army museum."
   objectives:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: b098d8dd3b12841489c92ce2092ad7bc, type: 2}
   experienceReward: 0
   itemRewards: []

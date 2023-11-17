@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e318418990b8954db7c230119f3f47c, type: 3}
   m_Name: Task_OldStoneFountain
   m_EditorClassIdentifier: 
-  entityInteractionUpdates: []
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 3afe01a554bc64c4eadd392abced9acb, type: 2}
+    newInteraction: {fileID: 11400000, guid: ab9307726853d7747b63e2641d7da916, type: 2}
+    returnToPreviousInsteadOfNewInteraction: 0
   taskID: 
   taskName: Old Stone Fountain
   icon: {fileID: 1296646077, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
@@ -20,5 +23,6 @@ MonoBehaviour:
     Can you help bring peace back there? Your actions will help heal the land's scars.
   objectives:
   - {fileID: 11400000, guid: ec1a12db7b462f244bede7d4f520dc18, type: 2}
+  - {fileID: 11400000, guid: ad5d5a3ae7356fb418e7c664fe0eea7d, type: 2}
   experienceReward: 1000
   itemRewards: []

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eda2ea000fab5d449a8ce97c9c6f7c5d, type: 3}
   m_Name: Menehune 5
   m_EditorClassIdentifier: 
-  entityName: Menehune 5
+  entityName: Lanihuli
   startingInteraction: {fileID: 11400000, guid: 60e003dc5b3e77e44b104f16f5c2e20d, type: 2}

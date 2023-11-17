@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
+  m_Name: ARI_GiveQuestFindMonkeys
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 3afe01a554bc64c4eadd392abced9acb, type: 2}
+    newInteraction: {fileID: 11400000, guid: c95d748956a585642ae4ab5562d9a7d4, type: 2}
+    returnToPreviousInsteadOfNewInteraction: 0
+  InteractionName: Monkey Business
+  itemDatas: []
+  quest: {fileID: 11400000, guid: b15619c7ee64c2f45bf6f09945c23bf3, type: 2}
+  notification:
+    notificationHeading: Monkey Business
+    notificationContent: The monkeys, once residents of the Honolulu Zoo, now roam
+      free in Queen Kapiolani Park, their spirits clouded by a strange malaise. Their
+      joyous energy, once a delight within the zoo's walls, is vital to the harmony
+      of this place. I ask you to seek out and heal at least five of these spirited
+      escapees. While there are more who might need your help, healing five will
+      significantly restore balance.
+    buttonText0: Go Bananas!
+    buttonText1: 
+    notificationIcon: {fileID: -409516913, guid: b0e5aa51396df7945b8952f3c6c26fab, type: 3}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
+    notificationType: 0
+  arEntity: {fileID: 11400000, guid: 3afe01a554bc64c4eadd392abced9acb, type: 2}

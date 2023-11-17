@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
+  m_Name: "ARI_FoundH\u014Dk\u016Ble\u02BBa"
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: b68d2bacda9f35b4485bf2f64dfe643d, type: 2}
+    newInteraction: {fileID: 11400000}
+    returnToPreviousInsteadOfNewInteraction: 0
+  InteractionName: A Navigator Found!
+  itemDatas: []
+  quest: {fileID: 0}
+  notification:
+    notificationHeading: A Navigator Found!
+    notificationContent: "Your efforts have brought H\u014Dk\u016Ble\u02BBa back
+      safe. The winds and tides of fate can be unpredictable. H\u014Dk\u016Ble\u02BBa's
+      return is crucial for our journey ahead."
+    buttonText0: 
+    buttonText1: 
+    notificationIcon: {fileID: 1623316448, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
+    notificationType: 0
+  arEntity: {fileID: 11400000, guid: b68d2bacda9f35b4485bf2f64dfe643d, type: 2}

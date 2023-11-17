@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
+  m_Name: ARI_FoundKing
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: aa1803fbff44c1c49a806c0bb814625a, type: 2}
+    newInteraction: {fileID: 11400000}
+    returnToPreviousInsteadOfNewInteraction: 0
+  InteractionName: 
+  itemDatas: []
+  quest: {fileID: 0}
+  notification:
+    notificationHeading: Fantastic!
+    notificationContent: 'You''ve found Kalolani, our Menehune King. Your journey''s
+      been remarkable, showing true aloha spirit. With the King''s wisdom, our path
+      to restoring balance becomes clearer. '
+    buttonText0: Hooray
+    buttonText1: 
+    notificationIcon: {fileID: -1321869479, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
+    notificationColor: {r: 1, g: 1, b: 1, a: 0}
+    notificationType: 0
+  arEntity: {fileID: 11400000, guid: aa1803fbff44c1c49a806c0bb814625a, type: 2}

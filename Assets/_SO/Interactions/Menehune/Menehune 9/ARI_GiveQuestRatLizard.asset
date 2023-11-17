@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
+  m_Name: ARI_GiveQuestRatLizard
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
+  InteractionName: Cursed Creatures
+  itemDatas: []
+  quest: {fileID: 11400000, guid: 4e36fa5451b6d75458c582657c7941b4, type: 2}
+  notification:
+    notificationHeading: Cursed Creatures
+    notificationContent: Near the hula statue, a lizard has been ensnared by dark
+      energies. And at the marina sign, a rat struggles under a similar curse. Your
+      help is crucial in purifying these creatures. Free them, and you'll aid in
+      restoring harmony to these areas.
+    buttonText0: Right Away!
+    buttonText1: 
+    notificationIcon: {fileID: 2135975787, guid: 887611dfb774e384f96de86de8d3ff7e, type: 3}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
+    notificationType: 0
+  arEntity: {fileID: 11400000, guid: 887838075c29eb14fb9f9170e87a0a95, type: 2}

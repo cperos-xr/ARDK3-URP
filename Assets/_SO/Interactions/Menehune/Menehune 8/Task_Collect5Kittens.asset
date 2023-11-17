@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e318418990b8954db7c230119f3f47c, type: 3}
+  m_Name: Task_Collect5Kittens
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: aa1803fbff44c1c49a806c0bb814625a, type: 2}
+    newInteraction: {fileID: 11400000, guid: 21e505002beaef94a8631c4f9d2d528b, type: 2}
+    returnToPreviousInsteadOfNewInteraction: 0
+  taskID: 
+  taskName: Purify 5 Kitten Spirits
+  icon: {fileID: 21300000, guid: 98623b3cb25d7ab408d350e272dea3b5, type: 3}
+  taskDescription: Can you find and purify at least five of them in Fort De Russy
+    Park? There are more, but helping these five will make a significant difference.
+  objectives:
+  - {fileID: 11400000, guid: 15ebb235a5d549b4dbd32480fbe71427, type: 2}
+  experienceReward: 5000
+  itemRewards: []
