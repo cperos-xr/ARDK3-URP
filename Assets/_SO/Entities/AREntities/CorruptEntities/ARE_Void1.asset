@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eda2ea000fab5d449a8ce97c9c6f7c5d, type: 3}
   m_Name: ARE_Void1
   m_EditorClassIdentifier: 
-  entityName: Void1
+  entityName: Lele Lurker
   startingInteraction: {fileID: 11400000, guid: 0d5fedc99ed487142be916cd7a1d0357, type: 2}

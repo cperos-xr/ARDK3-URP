@@ -18,7 +18,7 @@ MonoBehaviour:
   isUsable: 0
   isDuplicable: 0
   playerNotifications:
-  - notificationHeading: Diamond Head's Deception Gem
+  - notificationHeading: "L\u0113\u02BBahi's  Deception Gem"
     notificationContent: A sparkling crystal mistaken for a diamond by early sailors.
       It's not a true diamond, but its radiant beauty is undeniable
     buttonText0: Mahalo
@@ -26,4 +26,4 @@ MonoBehaviour:
     notificationIcon: {fileID: 1206355392, guid: e4bd320d8ae92f941bad8a45008e43e5, type: 3}
     notificationColor: {r: 1, g: 1, b: 1, a: 1}
     notificationType: 0
-  givenByEntityName: 
+  givenByEntityName: Lele Lurker

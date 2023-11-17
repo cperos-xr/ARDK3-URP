@@ -9,14 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e318418990b8954db7c230119f3f47c, type: 3}
-  m_Name: TO_NKA_SeekMenehune2
+  m_Script: {fileID: 11500000, guid: 0550dbde1d3d1ee419408a5343ac66f0, type: 3}
+  m_Name: TO_Lanihuli
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  taskID: 
-  taskName: 
-  icon: {fileID: 0}
-  taskDescription: 
-  objectives: []
-  experienceReward: 0
-  itemRewards: []
+  objectiveName: Find Lanihuli
+  objectiveDescription: Find Lanihuli
+  requiredProgress: 1
+  targetEntity: {fileID: 11400000, guid: 3afe01a554bc64c4eadd392abced9acb, type: 2}

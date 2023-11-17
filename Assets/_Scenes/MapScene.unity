@@ -3102,6 +3102,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1618029529848774051, guid: 3e086e2fbb7bfa442b2d4c16e7586e1b, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[6].setStatus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618029529848774051, guid: 3e086e2fbb7bfa442b2d4c16e7586e1b, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[7].setStatus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618029529848774051, guid: 3e086e2fbb7bfa442b2d4c16e7586e1b, type: 3}
       propertyPath: setObjectsActiveStatus.Array.data[1].objectToSet
       value: 
       objectReference: {fileID: 1040420014}
@@ -3121,6 +3129,14 @@ PrefabInstance:
       propertyPath: setObjectsActiveStatus.Array.data[5].objectToSet
       value: 
       objectReference: {fileID: 1290124498}
+    - target: {fileID: 1618029529848774051, guid: 3e086e2fbb7bfa442b2d4c16e7586e1b, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[6].objectToSet
+      value: 
+      objectReference: {fileID: 1186660436}
+    - target: {fileID: 1618029529848774051, guid: 3e086e2fbb7bfa442b2d4c16e7586e1b, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[7].objectToSet
+      value: 
+      objectReference: {fileID: 1478590101}
     - target: {fileID: 1618029529848774051, guid: 3e086e2fbb7bfa442b2d4c16e7586e1b, type: 3}
       propertyPath: setObjectsActiveStatus.Array.data[0].animationEvents.Array.size
       value: 1
@@ -3145,6 +3161,14 @@ PrefabInstance:
       propertyPath: setObjectsActiveStatus.Array.data[5].uponThisInteractionProgression
       value: 
       objectReference: {fileID: 11400000, guid: b5bead574b6138443b0b06084ff7586b, type: 2}
+    - target: {fileID: 1618029529848774051, guid: 3e086e2fbb7bfa442b2d4c16e7586e1b, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[6].uponThisInteractionProgression
+      value: 
+      objectReference: {fileID: 11400000, guid: d3cb14b68b66be54f9bb13d6f427e4ac, type: 2}
+    - target: {fileID: 1618029529848774051, guid: 3e086e2fbb7bfa442b2d4c16e7586e1b, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[7].uponThisInteractionProgression
+      value: 
+      objectReference: {fileID: 11400000, guid: d8c40dc5ed575e144be08e061df5154a, type: 2}
     - target: {fileID: 1618029529848774051, guid: 3e086e2fbb7bfa442b2d4c16e7586e1b, type: 3}
       propertyPath: setObjectsActiveStatus.Array.data[0].animationEvents.Array.data[0].anim
       value: 
@@ -3240,7 +3264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5061753630530415176, guid: 5d1b5e0b0b6ef5141a155300d14c6e7e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8271367495305299422, guid: 5d1b5e0b0b6ef5141a155300d14c6e7e, type: 3}
       propertyPath: m_RootOrder
@@ -9091,8 +9115,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6776868334021006544, guid: 27701042b9b9c7a4882e3cf7921a8668, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7296225441572929884, guid: 27701042b9b9c7a4882e3cf7921a8668, type: 3}
+      propertyPath: corruptEntity
+      value: 
+      objectReference: {fileID: 11400000, guid: f816443c8ce436048ac0a9463a9a2bff, type: 2}
     - target: {fileID: 7708895006324947782, guid: 27701042b9b9c7a4882e3cf7921a8668, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -11882,12 +11910,8 @@ MonoBehaviour:
   _semanticsManager: {fileID: 1654950865}
   _semanticsText: {fileID: 596167505}
   testChannels:
-  - selectedChannel: 13
-    channelCount: 5
-  - selectedChannel: 15
-    channelCount: 5
-  - selectedChannel: 16
-    channelCount: 5
+  - selectedChannel: 19
+    channelCount: 30
 --- !u!1 &1632634378
 GameObject:
   m_ObjectHideFlags: 0

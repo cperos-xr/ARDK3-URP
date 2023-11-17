@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c85fb361c81613845bfed8c2913aaaff, type: 3}
-  m_Name: Find3Others
+  m_Name: Quest_Find3Others
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
   questID: Seek 3 Guardians
@@ -19,8 +19,6 @@ MonoBehaviour:
     another east in the Sacred Gardens, and the third in the heart of N\u0101 K\u016B\u02BBai
     Square. Their locations are marked on your map."
   tasks:
-  - {fileID: 11400000, guid: f76d1943895b4114c8d70738c7fd751c, type: 2}
-  - {fileID: 11400000, guid: f4638e6485de6994cb901cadaf7b3e2d, type: 2}
-  - {fileID: 11400000, guid: 3cef05c68dfa79d4e8ec2b390e6dbf5e, type: 2}
+  - {fileID: 11400000, guid: fe58eb7a7e88dee4b8a8f5466577aefe, type: 2}
   experienceReward: 3000
   rewardItem: {fileID: 0}
