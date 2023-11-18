@@ -41,6 +41,11 @@ public class PlayerManager : MonoBehaviour
         inventory.RemoveItem(item);
     }
 
+    public void SetPlayerBackToNormal()
+    {
+        currentPlayerState = PlayerState.normal;
+    }
+
     public void PlacePlayerObject() => playerData._cubeGOP.PlaceInstance(PlayerGPS);
 
 }
