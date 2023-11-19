@@ -4962,7 +4962,7 @@ MonoBehaviour:
   _defaultAnchorGameobject: {fileID: 0}
   _ContinuousLocalizationEnabled: 1
   _InterpolationEnabled: 1
-  _autoTrack: 1
+  _autoTrack: 0
 --- !u!114 &690613721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5422,6 +5422,144 @@ MonoBehaviour:
     polygonRenderer: {fileID: 1755092027}
   - colorName: red
     polygonRenderer: {fileID: 1072201481}
+--- !u!1 &774333933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 774333934}
+  - component: {fileID: 774333935}
+  - component: {fileID: 774333936}
+  m_Layer: 0
+  m_Name: AnchorTrackingManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &774333934
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774333933}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2067728289}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &774333935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774333933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 949dc75be12ddf74e913b019a8a9c6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _arLocationManager: {fileID: 690613720}
+  _AnchorTrackingStateText: {fileID: 1183015364}
+--- !u!114 &774333936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774333933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd35d4f47c6ad8498b9ca8bcb5ea93c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _arLocationManager: {fileID: 690613720}
+  _closestLocation: {fileID: 0}
+  _arLocations:
+  - arLocation: {fileID: 79300610}
+    gpsCoordinates:
+      _latitude: 21.292988
+      _longitude: -157.83199
+  - arLocation: {fileID: 197151080}
+    gpsCoordinates:
+      _latitude: 21.275513
+      _longitude: -157.8253
+  - arLocation: {fileID: 651304105}
+    gpsCoordinates:
+      _latitude: 21.269109
+      _longitude: -157.821067
+  - arLocation: {fileID: 1569916904}
+    gpsCoordinates:
+      _latitude: 21.265772
+      _longitude: -157.82143
+  - arLocation: {fileID: 249837675}
+    gpsCoordinates:
+      _latitude: 21.281776
+      _longitude: -157.83102
+  - arLocation: {fileID: 1632634380}
+    gpsCoordinates:
+      _latitude: 21.279107
+      _longitude: -157.833823
+  - arLocation: {fileID: 2270923880173014671}
+    gpsCoordinates:
+      _latitude: 21.270535
+      _longitude: -157.82246
+  - arLocation: {fileID: 116037435}
+    gpsCoordinates:
+      _latitude: 21.273937
+      _longitude: -157.82382
+  - arLocation: {fileID: 404666053}
+    gpsCoordinates:
+      _latitude: 21.282145
+      _longitude: -157.83675
+  - arLocation: {fileID: 1894526788}
+    gpsCoordinates:
+      _latitude: 21.284834
+      _longitude: -157.83835
+  - arLocation: {fileID: 639242030}
+    gpsCoordinates:
+      _latitude: 21.277208
+      _longitude: -157.82593
+  - arLocation: {fileID: 1507154959}
+    gpsCoordinates:
+      _latitude: 21.280323
+      _longitude: -157.82557
+  - arLocation: {fileID: 1162545854}
+    gpsCoordinates:
+      _latitude: 21.27498
+      _longitude: -157.820991
+  - arLocation: {fileID: 1121357787}
+    gpsCoordinates:
+      _latitude: 21.271364
+      _longitude: -157.822374
+  - arLocation: {fileID: 922122374}
+    gpsCoordinates:
+      _latitude: 21.284601
+      _longitude: -157.835963
+  - arLocation: {fileID: 1262824304}
+    gpsCoordinates:
+      _latitude: 21.278579999999998
+      _longitude: -157.82753
+  - arLocation: {fileID: 641193652}
+    gpsCoordinates:
+      _latitude: 21.26471
+      _longitude: -157.82149
+  - arLocation: {fileID: 1967076170}
+    gpsCoordinates:
+      _latitude: 21.264631
+      _longitude: -157.82198
+  - arLocation: {fileID: 1101936470}
+    gpsCoordinates:
+      _latitude: 21.280338
+      _longitude: -157.826744
 --- !u!1 &775555054
 GameObject:
   m_ObjectHideFlags: 0
@@ -8543,7 +8681,7 @@ GameObject:
   - component: {fileID: 1183015365}
   - component: {fileID: 1183015364}
   m_Layer: 5
-  m_Name: Hit Text Center (TMP)
+  m_Name: AR Tracking (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12116,7 +12254,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 73ef1a5567e9f2e469a26aa4100d4aef, type: 2}
   - {fileID: 11400000, guid: b57bedb8ad5b4cf4081f9af0064f01cf, type: 2}
   - {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
-  - {fileID: 11400000, guid: e8e89f269ad743243ae2c91e766658be, type: 2}
   currentAreas: []
   lineRenderer: {fileID: 917534143}
   polygonColorSelection: {fileID: 763827305}
@@ -16796,6 +16933,7 @@ Transform:
   - {fileID: 1612076299}
   - {fileID: 1367395506}
   - {fileID: 2134344524}
+  - {fileID: 774333934}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

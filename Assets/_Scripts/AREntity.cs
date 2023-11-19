@@ -7,7 +7,6 @@ public class AREntity : MonoBehaviour
     public SO_ArEntityData arEntityData;
     [SerializeField] private Animator anim;
     [HideInInspector] public SO_Interaction currentInteraction;
-
     public List<ObjectToSetActiveAndActivationStatus> setObjectsActiveStatus = new List<ObjectToSetActiveAndActivationStatus>();
 
     private void OnEnable()
