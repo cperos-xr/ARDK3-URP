@@ -10,7 +10,7 @@ using UnityEngine;
 
 
 [Serializable]
-struct ARLocationCoordinateContainer
+public struct ARLocationCoordinateContainer
 {
     public ARLocation arLocation;
     public SerializableLatLng gpsCoordinates;

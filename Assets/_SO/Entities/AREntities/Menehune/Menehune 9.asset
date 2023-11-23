@@ -14,3 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Hokule'a
   startingInteraction: {fileID: 11400000, guid: 8bc69373bc4175747b00147f8fcc9925, type: 2}
+  gpsCoordinates:
+    _latitude: 21.284833908081055
+    _longitude: -157.83834838867188
+  interactionRadius: 15
+  associatedItems:
+  - {fileID: 11400000, guid: a1bfb80bdfe9ad44ba0469ce84e17fd0, type: 2}
+  _cubeGOP: {fileID: 4933070141646594233, guid: 727ac21199e624d43bd19c399c363e16, type: 3}

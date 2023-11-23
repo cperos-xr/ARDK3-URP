@@ -14,3 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Moanaiki
   startingInteraction: {fileID: 11400000, guid: 9b55cf2c979392a498bf5c5eba9ba180, type: 2}
+  gpsCoordinates:
+    _latitude: 21.265771865844727
+    _longitude: -157.82142639160156
+  interactionRadius: 15
+  associatedItems:
+  - {fileID: 11400000, guid: a1bfb80bdfe9ad44ba0469ce84e17fd0, type: 2}
+  _cubeGOP: {fileID: 4933070141646594233, guid: 727ac21199e624d43bd19c399c363e16, type: 3}

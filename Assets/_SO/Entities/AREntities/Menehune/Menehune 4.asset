@@ -14,3 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Makamae
   startingInteraction: {fileID: 11400000, guid: 0ef1b394d2665234c9b5f0df0ff87bc5, type: 2}
+  gpsCoordinates:
+    _latitude: 21.280323028564453
+    _longitude: -157.82557678222656
+  interactionRadius: 15
+  associatedItems:
+  - {fileID: 11400000, guid: a1bfb80bdfe9ad44ba0469ce84e17fd0, type: 2}
+  _cubeGOP: {fileID: 4933070141646594233, guid: 727ac21199e624d43bd19c399c363e16, type: 3}

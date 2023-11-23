@@ -14,3 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: "Kai\u0101ulu"
   startingInteraction: {fileID: 11400000, guid: b3bb47ebb38f4fe4e9b2bddd465b4f57, type: 2}
+  gpsCoordinates:
+    _latitude: 21.26470947265625
+    _longitude: -157.8214874267578
+  interactionRadius: 15
+  associatedItems:
+  - {fileID: 11400000, guid: a1bfb80bdfe9ad44ba0469ce84e17fd0, type: 2}
+  _cubeGOP: {fileID: 4933070141646594233, guid: 727ac21199e624d43bd19c399c363e16, type: 3}

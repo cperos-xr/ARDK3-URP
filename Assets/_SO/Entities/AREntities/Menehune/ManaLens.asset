@@ -14,3 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: ManaLens
   startingInteraction: {fileID: 11400000, guid: d3cb14b68b66be54f9bb13d6f427e4ac, type: 2}
+  gpsCoordinates:
+    _latitude: 21.2755126953125
+    _longitude: -157.82530212402344
+  interactionRadius: 0
+  associatedItems: []
+  _cubeGOP: {fileID: 0}

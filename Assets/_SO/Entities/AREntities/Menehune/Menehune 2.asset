@@ -14,3 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Nui
   startingInteraction: {fileID: 11400000, guid: 448338324285eb1408a1c370aab6b640, type: 2}
+  gpsCoordinates:
+    _latitude: 21.2755126953125
+    _longitude: -157.82530212402344
+  interactionRadius: 15
+  associatedItems:
+  - {fileID: 11400000, guid: a1bfb80bdfe9ad44ba0469ce84e17fd0, type: 2}
+  _cubeGOP: {fileID: 4933070141646594233, guid: 727ac21199e624d43bd19c399c363e16, type: 3}

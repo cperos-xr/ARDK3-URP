@@ -14,3 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: King Kalolani
   startingInteraction: {fileID: 11400000, guid: 1ee21097cf8f7a846bb23890d52c8276, type: 2}
+  gpsCoordinates:
+    _latitude: 21.28214454650879
+    _longitude: -157.8367462158203
+  interactionRadius: 15
+  associatedItems:
+  - {fileID: 11400000, guid: a1bfb80bdfe9ad44ba0469ce84e17fd0, type: 2}
+  _cubeGOP: {fileID: 4933070141646594233, guid: 727ac21199e624d43bd19c399c363e16, type: 3}

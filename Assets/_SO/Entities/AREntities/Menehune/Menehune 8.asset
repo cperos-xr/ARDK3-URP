@@ -14,3 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Pohaku
   startingInteraction: {fileID: 11400000, guid: 9ed3a0d234d7d294fa71cdc7136daa81, type: 2}
+  gpsCoordinates:
+    _latitude: 21.27910614013672
+    _longitude: -157.8338165283203
+  interactionRadius: 15
+  associatedItems:
+  - {fileID: 11400000, guid: a1bfb80bdfe9ad44ba0469ce84e17fd0, type: 2}
+  _cubeGOP: {fileID: 4933070141646594233, guid: 727ac21199e624d43bd19c399c363e16, type: 3}
