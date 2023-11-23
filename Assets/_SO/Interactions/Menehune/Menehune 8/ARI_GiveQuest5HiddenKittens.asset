@@ -23,8 +23,8 @@ MonoBehaviour:
     notificationHeading: "Pohaku's P\u014Dpoki"
     notificationContent: The park's serenity is disrupted by hidden kitten spirits,
       once gentle but now corrupted. They're adorable yet harmful to our wildlife.
-      Can you find and purify at least five of them in Fort De Russy Park? There
-      are more, but helping these five will make a significant difference.
+      Can you find and purify at least 3 of them in Fort De Russy Park? There are
+      more, but helping these 3 will make a significant difference.
     buttonText0: On it, Right Meow!
     buttonText1: 
     notificationIcon: {fileID: 21300000, guid: 98623b3cb25d7ab408d350e272dea3b5, type: 3}

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: TO_5Monkeys
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  objectiveName: Heal 5 Monkeys
+  objectiveName: Heal 3 Monkeys
   objectiveDescription: The monkeys, once residents of the Honolulu Zoo, now roam
     free in Queen Kapiolani Park
-  requiredProgress: 5
+  requiredProgress: 3
   itemToCollect: {fileID: 11400000, guid: 897d7abacd8717f47bdd97e2e4fb9164, type: 2}

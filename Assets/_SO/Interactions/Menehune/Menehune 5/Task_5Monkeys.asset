@@ -17,10 +17,10 @@ MonoBehaviour:
     newInteraction: {fileID: 11400000, guid: 6c7e67444c5448843bd7e250835c02ab, type: 2}
     returnToPreviousInsteadOfNewInteraction: 0
   taskID: 
-  taskName: 5 Monkeys
+  taskName: 3 Monkeys
   icon: {fileID: -409516913, guid: b0e5aa51396df7945b8952f3c6c26fab, type: 3}
   taskDescription: The monkeys, once residents of the Honolulu Zoo, now roam free
-    in Queen Kapiolani Park.  Find and Heal 5 of them, although there are more, 5
+    in Queen Kapiolani Park.  Find and Heal 3 of them, although there are more, 3
     should be enough to make an impact.
   objectives:
   - {fileID: 11400000, guid: ecfd393cc7644dc498830b1d04d544d0, type: 2}

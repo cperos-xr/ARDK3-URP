@@ -7,73 +7,59 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed,
-        type: 3}
+    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed,
-        type: 3}
+    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed, type: 3}
       propertyPath: m_LocalScale.y
       value: 25
       objectReference: {fileID: 0}
-    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed,
-        type: 3}
+    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed,
-        type: 3}
+    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed,
-        type: 3}
+    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed,
-        type: 3}
+    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed,
-        type: 3}
+    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed,
-        type: 3}
+    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed,
-        type: 3}
+    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed,
-        type: 3}
+    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed,
-        type: 3}
+    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed,
-        type: 3}
+    - target: {fileID: 1990177017301499672, guid: 24af64df16d80c8428809a2b090ac3ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2177249737473951736, guid: 24af64df16d80c8428809a2b090ac3ed,
-        type: 3}
+    - target: {fileID: 2177249737473951736, guid: 24af64df16d80c8428809a2b090ac3ed, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1d1fab4015cac46c08cbc1fe0a1eb0c2, type: 2}
-    - target: {fileID: 4811222737788254481, guid: 24af64df16d80c8428809a2b090ac3ed,
-        type: 3}
+    - target: {fileID: 4811222737788254481, guid: 24af64df16d80c8428809a2b090ac3ed, type: 3}
       propertyPath: m_Name
       value: Cube Variant Black
       objectReference: {fileID: 0}

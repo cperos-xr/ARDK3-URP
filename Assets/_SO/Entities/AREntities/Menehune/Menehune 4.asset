@@ -20,4 +20,4 @@ MonoBehaviour:
   interactionRadius: 15
   associatedItems:
   - {fileID: 11400000, guid: a1bfb80bdfe9ad44ba0469ce84e17fd0, type: 2}
-  _cubeGOP: {fileID: 4933070141646594233, guid: 727ac21199e624d43bd19c399c363e16, type: 3}
+  _cubeGOP: {fileID: 9158753300364065724, guid: 53a83992f51549847a031997d0faf17b, type: 3}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TO_ItemKitty
   m_EditorClassIdentifier: 
   entityInteractionUpdates: []
-  objectiveName: Purify 5 Kitten Spirits
-  objectiveDescription: Purify 5 Kitten Spirits located within Fort DeRussy Park
-  requiredProgress: 5
+  objectiveName: Purify 3 Kitten Spirits
+  objectiveDescription: Purify 3 Kitten Spirits located within Fort DeRussy Park
+  requiredProgress: 3
   itemToCollect: {fileID: 11400000, guid: bd1bd17b62c4ad54aa854ff7fb493f8b, type: 2}

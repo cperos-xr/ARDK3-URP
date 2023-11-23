@@ -18,7 +18,7 @@ MonoBehaviour:
     returnToPreviousInsteadOfNewInteraction: 0
   InteractionName: Assign Quest, Squid and Turtle
   itemDatas: []
-  quest: {fileID: 11400000, guid: d366046a21799f14f8d337a329b937d7, type: 2}
+  quest: {fileID: 0}
   notification:
     notificationHeading: Map Quest!
     notificationContent: Bring me the squid's ink and the turtle's compass, and I'll
