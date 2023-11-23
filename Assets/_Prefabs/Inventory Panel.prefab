@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 545328227069103223}
   - component: {fileID: 545328227069103220}
   - component: {fileID: 545328227069103217}
-  - component: {fileID: 2347237438931303834}
   m_Layer: 5
   m_Name: Inventory Panel
   m_TagString: Untagged
@@ -94,19 +93,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialState: 0
---- !u!114 &2347237438931303834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545328227069103226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b671e3e874a9ef498f6a541b8e96b5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerStateBeforeMenuOpen: 0
 --- !u!1 &545328227679942575
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using Niantic.Lightship.Maps.Core.Coordinates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 
@@ -21,6 +22,8 @@ public class AnchorTrackingManager : MonoBehaviour
 
     [SerializeField] private ARLocation _closestLocation;
     [SerializeField] private List <ARLocationCoordinateContainer> _arLocations;
+
+    public TextMeshProUGUI closestLocationText;
 
 
     private void OnEnable()
@@ -65,6 +68,7 @@ public class AnchorTrackingManager : MonoBehaviour
                     Debug.Log("Closest Ar Entity has changed");
                     _arLocationManager.StopTracking();
                     _closestLocation = arLocation.arLocation;
+                    closestLocationText.text = _closestLocation.name;
                     _arLocationManager.SetARLocations(arLocation.arLocation);
                     _arLocationManager.StartTracking();
                     break; // Break after finding and setting the closest location
