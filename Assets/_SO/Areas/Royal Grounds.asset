@@ -45,7 +45,11 @@ MonoBehaviour:
       _longitude: -157.8409423828125
     - _latitude: 21.287073135375977
       _longitude: -157.8432159423828
-  areaEntities: []
+  areaEntities:
+  - {fileID: 11400000, guid: b68d2bacda9f35b4485bf2f64dfe643d, type: 2}
+  - {fileID: 11400000, guid: 887838075c29eb14fb9f9170e87a0a95, type: 2}
+  - {fileID: 11400000, guid: 1858894ddc5a461439e796f28051e6d8, type: 2}
+  - {fileID: 11400000, guid: 24b9301edfc61eb4588fe79ff0dad0bb, type: 2}
   corruptedEssenceMaterialTypes:
   - {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
   - {fileID: 11400000, guid: 2ca56bd43a0928f4184df63b8b18a55b, type: 2}

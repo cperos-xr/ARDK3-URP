@@ -33,7 +33,8 @@ MonoBehaviour:
       _longitude: -157.8227081298828
     - _latitude: 21.27504539489746
       _longitude: -157.82469177246094
-  areaEntities: []
+  areaEntities:
+  - {fileID: 11400000, guid: 6fbd272466ccff04ba1a93afde6b6dcc, type: 2}
   corruptedEssenceMaterialTypes:
   - {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
   - {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
