@@ -37,6 +37,8 @@ public class PurificationManager : MonoBehaviour
     [SerializeField] private ManaLens manaLens;
     [SerializeField] private ItemManager itemManager;
 
+    [SerializeField] private GameObject energyBeam;
+
 #if UNITY_EDITOR
     public SO_CorruptEntity testCorruptEntity;
 #endif
@@ -133,6 +135,10 @@ public class PurificationManager : MonoBehaviour
             Destroy(selectedEssenceImage);
         }
 
+        //Energy Beam
+        energyBeam.SetActive(false);
+        energyBeam.SetActive(true);
+
         if (currentPurificationEntity.currentCorruptionLevel <= 0)
         {
             inventoryPanel.SetActive(false);
@@ -226,6 +232,13 @@ public class PurificationManager : MonoBehaviour
         purificationEntity.corruptedEntity = corruptEntity;
         purificationEntity.currentCorruptionLevel = Random.Range(corruptEntity.corruptionLevelRangeMinMax.x, corruptEntity.corruptionLevelRangeMinMax.y);
         return purificationEntity;
+    }
+
+    public void RunAway()
+    {
+        purificationPanel.SetActive(false);
+        inventoryPanel.SetActive(false);
+        PlayerManager.Instance.currentPlayerState = PlayerState.normal;
     }
 
     public void SelectEssenceMaterial(SO_EssenceMaterialType essenceMaterialType)
