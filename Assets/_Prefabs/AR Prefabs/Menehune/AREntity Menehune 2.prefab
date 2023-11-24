@@ -39922,9 +39922,14 @@ MonoBehaviour:
   anim: {fileID: 7530602418915723686}
   currentInteraction: {fileID: 0}
   setObjectsActiveStatus:
+  - objectToSet: {fileID: 0}
+    uponThisInteractionProgression: {fileID: 11400000, guid: d3cb14b68b66be54f9bb13d6f427e4ac, type: 2}
+    setStatus: 1
+    animationEvents: []
   - objectToSet: {fileID: 8234185767323682144}
     uponThisInteractionProgression: {fileID: 11400000, guid: d3cb14b68b66be54f9bb13d6f427e4ac, type: 2}
     setStatus: 0
+    animationEvents: []
 --- !u!1001 &6185199697381427046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39938,15 +39943,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1788675492382621617, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.016
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1788675492382621617, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.952
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1788675492382621617, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.086
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1788675492382621617, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_LocalRotation.w
@@ -39954,7 +39959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1788675492382621617, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1788675492382621617, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_LocalRotation.y
@@ -39962,7 +39967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1788675492382621617, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1788675492382621617, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -39978,7 +39983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3181120305041248295, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_Name
-      value: AREntity Menehune 2
+      value: AREntity Menehune2 (Sad)
       objectReference: {fileID: 0}
     - target: {fileID: 3181120305041248295, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: m_IsActive
@@ -39994,10 +39999,38 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 9318d58208d72ae49b8f58f9b34282a5, type: 2}
     - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: setObjectsActiveStatus.Array.size
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: setObjectsActiveStatus.Array.data[0].setStatus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[1].setStatus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[2].setStatus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[3].setStatus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[4].setStatus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[5].setStatus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[6].setStatus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[7].setStatus
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
@@ -40005,9 +40038,49 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8234185767323682144}
     - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[0].animationEvents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
       propertyPath: setObjectsActiveStatus.Array.data[0].uponThisInteractionProgression
       value: 
       objectReference: {fileID: 11400000, guid: 448338324285eb1408a1c370aab6b640, type: 2}
+    - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[1].uponThisInteractionProgression
+      value: 
+      objectReference: {fileID: 11400000, guid: 7de58bdb0e3b487468a32b1b3eef5b2e, type: 2}
+    - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[2].uponThisInteractionProgression
+      value: 
+      objectReference: {fileID: 11400000, guid: 7de58bdb0e3b487468a32b1b3eef5b2e, type: 2}
+    - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[3].uponThisInteractionProgression
+      value: 
+      objectReference: {fileID: 11400000, guid: d8c40dc5ed575e144be08e061df5154a, type: 2}
+    - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[4].uponThisInteractionProgression
+      value: 
+      objectReference: {fileID: 11400000, guid: d8c40dc5ed575e144be08e061df5154a, type: 2}
+    - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[5].uponThisInteractionProgression
+      value: 
+      objectReference: {fileID: 11400000, guid: d8c40dc5ed575e144be08e061df5154a, type: 2}
+    - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[6].uponThisInteractionProgression
+      value: 
+      objectReference: {fileID: 11400000, guid: 7de58bdb0e3b487468a32b1b3eef5b2e, type: 2}
+    - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[7].uponThisInteractionProgression
+      value: 
+      objectReference: {fileID: 11400000, guid: 7de58bdb0e3b487468a32b1b3eef5b2e, type: 2}
+    - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[0].animationEvents.Array.data[0].anim
+      value: 
+      objectReference: {fileID: 7530602418915723686}
+    - target: {fileID: 4873557880877120197, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[0].animationEvents.Array.data[0].animationName
+      value: Idle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d86c60acd55efa0429bc2a8b022ab4fe, type: 3}
 --- !u!4 &5549728559128361175 stripped
