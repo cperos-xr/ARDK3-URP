@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 678741000167719258}
   - component: {fileID: 2177249737473951736}
   - component: {fileID: 1635063841133616443}
+  - component: {fileID: 7713841682063659819}
   m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
@@ -61,8 +62,7 @@ MeshRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a23d1b0dc553640f682d502af95e7789, type: 2}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,3 +97,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7713841682063659819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4811222737788254481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0704a46bbfe5d804abab26edb23a162f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemReceived: {fileID: 11400000, guid: ebbaf2f89f1103744be1af4dd3f8e2b0, type: 2}
+  meshRenderer: {fileID: 2177249737473951736}
+  setMeshRendererMaterial: {fileID: 2100000, guid: a23d1b0dc553640f682d502af95e7789, type: 2}

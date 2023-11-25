@@ -10845,8 +10845,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -700}
-  m_SizeDelta: {x: 1000, y: 1000}
+  m_AnchoredPosition: {x: 0, y: -1200}
+  m_SizeDelta: {x: 1000, y: 1700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1113784619
 MonoBehaviour:
@@ -12785,8 +12785,8 @@ MonoBehaviour:
   coordinateText: {fileID: 1421473416}
   useMockCoodinatesIfLocationServisesNotEnabled: 1
   mockCoordinates:
-    x: 21.2933876515534
-    y: -157.83286481225824
+    x: 21.27552
+    y: -157.825324
   movementSpeed: 0.00001
 --- !u!114 &1303036456
 MonoBehaviour:
@@ -15771,11 +15771,11 @@ PrefabInstance:
       objectReference: {fileID: 917534144}
     - target: {fileID: 4679712108560714345, guid: 652c0f1d2f3184a959f719dbc90057a4, type: 3}
       propertyPath: _defaultLocation._latitude
-      value: 21.2925139737707
+      value: 21.27552
       objectReference: {fileID: 0}
     - target: {fileID: 4679712108560714345, guid: 652c0f1d2f3184a959f719dbc90057a4, type: 3}
       propertyPath: _defaultLocation._longitude
-      value: -157.833032464302
+      value: -157.825324
       objectReference: {fileID: 0}
     - target: {fileID: 4679712108560714347, guid: 652c0f1d2f3184a959f719dbc90057a4, type: 3}
       propertyPath: m_RootOrder
@@ -16404,7 +16404,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3eab2a47301376742aa8be9758841f1d, type: 2}
   - {fileID: 11400000, guid: 73ef1a5567e9f2e469a26aa4100d4aef, type: 2}
   - {fileID: 11400000, guid: b57bedb8ad5b4cf4081f9af0064f01cf, type: 2}
-  - {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
   currentAreas: []
   lineRenderer: {fileID: 917534143}
   polygonColorSelection: {fileID: 763827305}
