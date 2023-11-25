@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
+  m_Name: Monkey 2
+  m_EditorClassIdentifier: 
+  entityName: Keko Chaos
+  startingInteraction: {fileID: 0}
+  corruptEntityName: Keko Chaos
+  corruptEntityDescription: Escaped monkeys, their mischief magnified into mayhem,
+    turning the treetops into turmoil.
+  funFact: The Honolulu Zoo houses over 900 animals from around the world, where
+    you can see monekys, elephants, giraffes and more
+  essenceMaterialType: {fileID: 11400000, guid: 8e2c4d819d6b0aa4d9ba259ac5c68fea, type: 2}
+  spawnableAreas:
+  - areaData: {fileID: 11400000, guid: 4a58ed3b4ae1c1e4cacb7a335887f4fb, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 3
+  - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 1
+  ItemsDroppedUponPurification:
+  - item: {fileID: 11400000, guid: 897d7abacd8717f47bdd97e2e4fb9164, type: 2}
+    dropRate: 1
+  InteractionToCompleteUponPurification: {fileID: 0}
+  essenceEffectivenessList:
+  - essenceMaterialType: {fileID: 11400000, guid: 95054bcd2122da040857f4f8b7876c66, type: 2}
+    effectiveness: 4
+  - essenceMaterialType: {fileID: 11400000, guid: 2ca56bd43a0928f4184df63b8b18a55b, type: 2}
+    effectiveness: 3
+  - essenceMaterialType: {fileID: 11400000, guid: 8e2c4d819d6b0aa4d9ba259ac5c68fea, type: 2}
+    effectiveness: 2
+  - essenceMaterialType: {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}
+    effectiveness: 2
+  - essenceMaterialType: {fileID: 11400000, guid: 5654f2f89ceb1aa42bab5661b365a517, type: 2}
+    effectiveness: 3
+  - essenceMaterialType: {fileID: 11400000, guid: 68146c278b6c57c49acdd306f27ff912, type: 2}
+    effectiveness: -1
+  - essenceMaterialType: {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
+    effectiveness: -2
+  - essenceMaterialType: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
+    effectiveness: -3
+  - essenceMaterialType: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
+    effectiveness: -4
+  - essenceMaterialType: {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
+    effectiveness: -2
+  - essenceMaterialType: {fileID: 11400000, guid: a1bfb80bdfe9ad44ba0469ce84e17fd0, type: 2}
+    effectiveness: 10
+  combinationMultipliersList:
+  - essenceMaterialType1: {fileID: 11400000, guid: 2ca56bd43a0928f4184df63b8b18a55b, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 95054bcd2122da040857f4f8b7876c66, type: 2}
+    multiplier: 1.9
+  - essenceMaterialType1: {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 5654f2f89ceb1aa42bab5661b365a517, type: 2}
+    multiplier: 1.5
+  - essenceMaterialType1: {fileID: 11400000, guid: 8e2c4d819d6b0aa4d9ba259ac5c68fea, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 95054bcd2122da040857f4f8b7876c66, type: 2}
+    multiplier: 1.5
+  - essenceMaterialType1: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
+    multiplier: 0.75
+  - essenceMaterialType1: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 50c2f5eecedc0a449a540bfd1c854a32, type: 2}
+    multiplier: 0.5
+  corruptedStateSprite: {fileID: 21300000, guid: f65b972bc8f1de44cb9b0d839adae4ae, type: 3}
+  healedStateSprite: {fileID: -409516913, guid: b0e5aa51396df7945b8952f3c6c26fab, type: 3}
+  corruptionLevelRangeMinMax: {x: 30, y: 40}
+  model: {fileID: 8132489474182148278, guid: ddd9c58e89008b443ac0ba7462b500bb, type: 3}
