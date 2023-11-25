@@ -5404,6 +5404,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 518278514}
+  - component: {fileID: 518278515}
   m_Layer: 0
   m_Name: DemoLevel
   m_TagString: Untagged
@@ -5444,6 +5445,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &518278515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518278513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10dad9121bed0984a9d3305397591686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notificationManager: {fileID: 1657220149}
+  notificationIcon: {fileID: 1481395084, guid: de320cfc37fabec4695e769597957a40, type: 3}
 --- !u!1 &522748899
 GameObject:
   m_ObjectHideFlags: 0

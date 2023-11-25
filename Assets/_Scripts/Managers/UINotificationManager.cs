@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Net.Http.Headers;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Random = System.Random;
 
@@ -61,6 +62,15 @@ public class UINotificationManager : MonoBehaviour
 
         notificationQueue.Enqueue(playerNotification);
 
+        if (!displayingNotification)
+        {
+            DisplayNextNotification();
+        }
+    }
+
+    public void GeneralNotification(PlayerNotification playerNotification)
+    {
+        notificationQueue.Enqueue(playerNotification);
         if (!displayingNotification)
         {
             DisplayNextNotification();
