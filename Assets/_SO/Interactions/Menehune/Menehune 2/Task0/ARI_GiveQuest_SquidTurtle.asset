@@ -17,7 +17,8 @@ MonoBehaviour:
     newInteraction: {fileID: 11400000, guid: f6b486943a3f5794f9189b0bd17a6f68, type: 2}
     returnToPreviousInsteadOfNewInteraction: 0
   InteractionName: Assign Quest, Squid and Turtle
-  itemDatas: []
+  itemDatas:
+  - {fileID: 11400000, guid: a1bfb80bdfe9ad44ba0469ce84e17fd0, type: 2}
   quest: {fileID: 0}
   notification:
     notificationHeading: Map Quest!
