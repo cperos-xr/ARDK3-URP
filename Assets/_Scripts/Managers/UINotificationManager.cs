@@ -228,7 +228,6 @@ public class UINotificationManager : MonoBehaviour
                         displayingNotification = false;
                         notificationPanel.SetActive(false);
                         DisplayNextNotification();
-                        PlayerManager.Instance.currentPlayerState = PlayerState.normal;
                     });
                     break;
 

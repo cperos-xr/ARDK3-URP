@@ -108,6 +108,11 @@ public class ManaLens : MonoBehaviour
             Debug.Log("No semantic channels to search for.");
             return;
         }
+        if (PlayerManager.Instance.currentPlayerState == PlayerState.notification)
+        {
+            Debug.Log("Player notification active");
+            return;
+        }
 
         // Select a random channel from the list
         int randomIndex = UnityEngine.Random.Range(0, semanticChannelList.Count);
@@ -144,7 +149,7 @@ public class ManaLens : MonoBehaviour
 
     public void ReceiveEssenceMaterial(List<string> semanticChannelList)
     {
-        if (playerHasManaLens)
+        if (playerHasManaLens && PlayerManager.Instance.currentPlayerState != PlayerState.notification)
         {
             foreach (string semanticChannel in semanticChannelList)
             {

@@ -63,39 +63,3 @@ public class ScreenTapRaycaster : MonoBehaviour
         }
     }
 }
-
-    /*
-    private void PerformRaycastFromScreenCenter(Vector2 screenCenter)
-    {
-        Ray ray = mainCamera.ScreenPointToRay(screenCenter);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
-        {
-            GameObject hitObject = hit.collider.gameObject;
-            Debug.Log("Hit object (from screen center): " + hitObject.name);
-            Debug.Log("Hit point: " + hit.point);
-            Debug.Log("Hit normal: " + hit.normal);
-            hitTextCenter.text = hitObject.name;
-
-            AREntity arEntity = hitObject.GetComponent<AREntity>();
-            if (arEntity)
-            {
-                SO_ArEntityData sO_ArEntityData = arEntity.arEntityData;
-                if (interactionManager != null)
-                {
-                    interactionManager.HandleEntityInteraction(sO_ArEntityData);
-                }
-                else
-                {
-                    Debug.LogError("interactionManager is null.");
-                }
-            }
-        }
-        else
-        {
-            Debug.Log("No object was hit (from screen center).");
-            hitTextCenter.text = "No Hit";
-        }
-    }
-*/
