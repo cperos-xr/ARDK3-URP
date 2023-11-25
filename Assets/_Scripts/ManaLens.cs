@@ -16,6 +16,7 @@ public class ManaLens : MonoBehaviour
     public Inventory essencePouch;
     public bool isActive;
     public int lowerScreenLimit;  //Acts as bounds so doesnt work on menu taps.
+    public int upperScreenLimit;  //Acts as bounds so doesnt work on menu taps.
 
     public TMP_Dropdown lensStateDropdown; // UI Dropdown
 
@@ -70,7 +71,7 @@ public class ManaLens : MonoBehaviour
 
     public void ReceiveEssenceMaterial(List<string> semanticChannelList, Vector2 point)
     {
-        if (point.y > lowerScreenLimit)
+        if (point.y > lowerScreenLimit  && point.y < upperScreenLimit)
         {
             switch (lensState)
             {

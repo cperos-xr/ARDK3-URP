@@ -65,10 +65,21 @@ public class SemanticChannelDetector : MonoBehaviour
         // Get the semantic channels at the tap position
         List<string> channelsAtPoint = _semanticsManager.GetChannelNamesAt(x, y);
         _semanticsText.text = "";
+
+// For in editor testing only, will send a random channel
+#if UNITY_EDITOR
+
+        ESemanticChannel randomChannel = (ESemanticChannel)UnityEngine.Random.Range(0, Enum.GetNames(typeof(ESemanticChannel)).Length);
+        channelsAtPoint.Add(randomChannel.ToString());
+        _semanticsText.text = randomChannel.ToString();
+
+#endif
         if (channelsAtPoint.Count == 0)
         {
             Debug.Log($"No semantic channels at tap {x},{y}");
             _semanticsText.text = "No semantic channels";
+
+
         }
         else
         {

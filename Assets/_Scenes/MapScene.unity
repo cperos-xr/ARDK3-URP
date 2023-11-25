@@ -1462,7 +1462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eae8866c14919742b77abc73b7569bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menehuneMap: {fileID: 0}
+  menehuneMap: {fileID: 11400000, guid: ebbaf2f89f1103744be1af4dd3f8e2b0, type: 2}
   mapDataHasBeenPlaced: 0
   playerHasMenehuneMap: 0
 --- !u!4 &228656656
@@ -2747,6 +2747,7 @@ MonoBehaviour:
     totalCapacity: 50
   isActive: 1
   lowerScreenLimit: 320
+  upperScreenLimit: 1300
   lensStateDropdown: {fileID: 1931529737}
   essenceMaterialTypes:
   - {fileID: 11400000, guid: c423dd4d148474442a17f78c15f34dde, type: 2}
@@ -16404,7 +16405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1899680156
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16425,7 +16426,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 226, y: 271}
+  m_AnchoredPosition: {x: 226, y: 2275}
   m_SizeDelta: {x: 450, y: 550}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1899680157
@@ -16486,7 +16487,7 @@ MonoBehaviour:
   seekingColor: {r: 0.6037736, g: 0, b: 0, a: 1}
   extractingColor: {r: 0, g: 0.4339623, b: 0.13588491, a: 1}
   manaLensStateText: {fileID: 1897234687}
-  manaLensScript: {fileID: 0}
+  manaLensScript: {fileID: 414302069}
 --- !u!1 &1920207779
 GameObject:
   m_ObjectHideFlags: 0
