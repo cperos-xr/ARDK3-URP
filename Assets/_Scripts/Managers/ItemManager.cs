@@ -11,6 +11,8 @@ public class ItemManager : MonoBehaviour
     public static event PlayerGivenItemEvent OnPlayerGivenItem;
 
 
+
+
     private void OnEnable()
     {
         InteractionManager.OnPlayerReceiveItem += AddItemToPlayerInventory;
@@ -36,6 +38,8 @@ public class ItemManager : MonoBehaviour
 
         //updating any interactions that may have changed
         InteractionManager.Instance.UpdateAllEntityInteractions(itemData);
+
+        QuestUIHandler.Instance.CheckQuests();
 
 
     }

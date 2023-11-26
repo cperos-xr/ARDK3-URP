@@ -28,8 +28,6 @@ public class InteractionManager : MonoBehaviour
 
     public Dictionary<BaseEntityData, SO_Interaction> previousInteractionDictionary = new Dictionary<BaseEntityData, SO_Interaction>();
 
-    [SerializeField] private QuestUIHandler questUIHandler;
-
     public struct InteractionContainer
     {
         public SO_Interaction interaction;
@@ -73,6 +71,7 @@ public class InteractionManager : MonoBehaviour
             {
                 previousInteractionDictionary.Add(entity, null); // no previous interaction
                 interactionProgressionDictionary.Add(entity, entity.startingInteraction);
+                QuestUIHandler.Instance.CheckQuests();
             }
             else
             {
