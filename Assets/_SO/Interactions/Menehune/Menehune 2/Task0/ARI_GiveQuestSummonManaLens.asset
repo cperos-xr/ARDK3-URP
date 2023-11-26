@@ -18,7 +18,7 @@ MonoBehaviour:
     returnToPreviousInsteadOfNewInteraction: 0
   InteractionName: Summon Mana Lens
   itemDatas: []
-  quest: {fileID: 11400000, guid: d366046a21799f14f8d337a329b937d7, type: 2}
+  quest: {fileID: 11400000, guid: 6f58374bbecaac04392acc95843121cf, type: 2}
   notification:
     notificationHeading: Please Help!
     notificationContent: Our aina cries, overwhelmed by invasive species and a deepening

@@ -19,7 +19,7 @@ MonoBehaviour:
   InteractionName: Restore The Balance
   itemDatas:
   - {fileID: 11400000, guid: 9aac419fed3ecdf4c8efdc4d0dd7f1e0, type: 2}
-  quest: {fileID: 0}
+  quest: {fileID: 11400000, guid: d366046a21799f14f8d337a329b937d7, type: 2}
   notification:
     notificationHeading: Nui's Mana Lens
     notificationContent: I entrust you with the Mana Lens. Gather the essence of
@@ -30,5 +30,3 @@ MonoBehaviour:
     notificationColor: {r: 1, g: 1, b: 1, a: 1}
     notificationType: 0
   arEntity: {fileID: 11400000, guid: f43e25b923386cc4aa34732a9384ee9c, type: 2}
-  anim: {fileID: 0}
-  animationName: 
