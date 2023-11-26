@@ -4343,6 +4343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d8b642f2df48f4985665437a5ace85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questUIHandler: {fileID: 1307342720}
 --- !u!1001 &579873961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13305,6 +13306,7 @@ MonoBehaviour:
   testChannels:
   - selectedChannel: 19
     channelCount: 30
+  manaLens: {fileID: 414302069}
 --- !u!1 &1632634378
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+
+
 public class ManaLens : MonoBehaviour
 {
     [Serializable]
@@ -12,6 +14,7 @@ public class ManaLens : MonoBehaviour
         Extracting,
         Scouting
     }
+
     // Start is called before the first frame update
     public Inventory essencePouch;
     public bool isActive;

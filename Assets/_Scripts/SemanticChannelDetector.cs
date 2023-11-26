@@ -112,6 +112,8 @@ public class SemanticChannelDetector : MonoBehaviour
 
     [SerializeField] private List <ChannelIntergerConatainer> testChannels = new List<ChannelIntergerConatainer>();
 
+    [SerializeField] private ManaLens manaLens;
+
     public void TestSemanticBroadcast()
     {
         List<ESemanticChannel> semanticChannelList = new List<ESemanticChannel>();
@@ -131,6 +133,17 @@ public class SemanticChannelDetector : MonoBehaviour
         List<string> semanticChannelStringList = semanticChannelList.Select(c => c.ToString()).ToList();
 
         OnSemanticChannelIdentified(semanticChannelStringList, new Vector2(600f, 600f));
+    }
+
+    public void GivePono()
+    {
+        ManaLens.ELensState originalLensState = manaLens.lensState;
+        manaLens.lensState = ManaLens.ELensState.Extracting;
+        ESemanticChannel pono = ESemanticChannel.harmony;
+        List<string> semanticChannelStringList = new List<string>();
+        semanticChannelStringList.Add(pono.ToString());
+        OnSemanticChannelIdentified(semanticChannelStringList, new Vector2(600f, 600f));
+        manaLens.lensState = originalLensState;
     }
 
 #endif

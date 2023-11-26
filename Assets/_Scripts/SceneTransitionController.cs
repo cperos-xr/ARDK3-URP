@@ -14,6 +14,8 @@ public class SceneTransitionController : MonoBehaviour
     [SerializeField] private float secondSetDuration = 5f;
     [SerializeField] private float fadeDuration = 2f;
 
+    private bool lastTime = false;
+
     private void Start()
     {
         StartCoroutine(TransitionRoutine());
@@ -35,6 +37,7 @@ public class SceneTransitionController : MonoBehaviour
         // Fade in black panel, then switch to final set
         yield return StartCoroutine(FadePanel(true)); // Fade in
         SwitchObjects(secondSetObjects, finalSetObjects);
+        lastTime = true;
         yield return StartCoroutine(FadePanel(false)); // Fade out
     }
 
@@ -52,6 +55,11 @@ public class SceneTransitionController : MonoBehaviour
         }
 
         blackPanel.color = new Color(blackPanel.color.r, blackPanel.color.g, blackPanel.color.b, endAlpha); // Ensure final alpha is set
+
+        if (lastTime)
+        {
+            blackPanel.gameObject.SetActive(false);
+        }
     }
 
     private void SetActiveObjects(List<GameObject> objects, bool active)
