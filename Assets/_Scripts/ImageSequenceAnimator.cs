@@ -17,21 +17,25 @@ public class ImageSequenceAnimator : MonoBehaviour
     private IEnumerator AnimateImages()
     {
         // Calculate the duration for each image to stay on screen
-        float displayDuration = (overallDuration - images.Count * fadeDuration * 2) / images.Count;
+        float displayDuration = (overallDuration - images.Count * fadeDuration) / images.Count;
 
-        foreach (Image image in images)
+        for (int i = 0; i < images.Count; i++)
         {
+            Image image = images[i];
             // Initially set each image to transparent
             image.color = new Color(image.color.r, image.color.g, image.color.b, 0);
             image.gameObject.SetActive(true);
 
             // Fade in
             yield return StartCoroutine(FadeImage(image, 1f)); // Fade to opaque
-            yield return new WaitForSeconds(displayDuration);
 
-            // Fade out
-            yield return StartCoroutine(FadeImage(image, 0f)); // Fade to transparent
-            image.gameObject.SetActive(false);
+            // If it's not the last image, display it for the duration and then fade out
+            if (i < images.Count - 1)
+            {
+                yield return new WaitForSeconds(displayDuration);
+                yield return StartCoroutine(FadeImage(image, 0f)); // Fade to transparent
+                image.gameObject.SetActive(false);
+            }
         }
     }
 
