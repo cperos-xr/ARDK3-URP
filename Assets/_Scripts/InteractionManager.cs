@@ -55,8 +55,6 @@ public class InteractionManager : MonoBehaviour
 
     public void HandleEntityInteraction(BaseEntityData entity)
     {
-        questUIHandler.CheckQuests();
-
         // Check if the entity is null
         if (entity == null)
         {
@@ -96,7 +94,7 @@ public class InteractionManager : MonoBehaviour
         // Invoke the interaction event
         OnPlayerInteraction?.Invoke(interaction);
 
-        //Update all entity interations
+        //Update all entity interactions
         if (interaction.entityInteractionUpdates.Count > 0)
         {
             Debug.Log("entityInteractionUpdates has count greater than 0 " + interaction.InteractionName);

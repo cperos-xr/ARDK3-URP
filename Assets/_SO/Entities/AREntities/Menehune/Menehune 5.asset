@@ -17,7 +17,6 @@ MonoBehaviour:
   gpsCoordinates:
     _latitude: 21.26910972595215
     _longitude: -157.82106018066406
-  interactionRadius: 15
-  associatedItems:
-  - {fileID: 11400000, guid: a1bfb80bdfe9ad44ba0469ce84e17fd0, type: 2}
+  interactionRadius: 0
+  associatedItems: []
   _cubeGOP: {fileID: 9158753300364065724, guid: 53a83992f51549847a031997d0faf17b, type: 3}

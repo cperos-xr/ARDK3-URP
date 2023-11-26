@@ -11,10 +11,6 @@ public class QuestUIHandler : MonoBehaviour
 
     [SerializeField] private List<InventoryButton> buttonObjects;
 
-    //private Dictionary <IButtonObject, InventoryButton> iButtonDictionary = new Dictionary<IButtonObject, InventoryButton>();
-
-
-    // Start is called before the first frame update
 
     private void OnEnable()
     {
