@@ -142,7 +142,7 @@ public class InteractionManager : MonoBehaviour
 
     public void UpdateAllEntityInteractions(InteractionProgression interactionProgression)
     {
-        foreach (EntityInteractionChange entityInteractionUpdate in interactionProgression.entityInteractionUpdates)
+       foreach (EntityInteractionChange entityInteractionUpdate in interactionProgression.entityInteractionUpdates)
         {
             if (entityInteractionUpdate.entity == null)
             {

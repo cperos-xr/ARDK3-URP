@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityInteractionUpdates:
   - entity: {fileID: 11400000, guid: 9318d58208d72ae49b8f58f9b34282a5, type: 2}
-    newInteraction: {fileID: 11400000, guid: d8c40dc5ed575e144be08e061df5154a, type: 2}
+    newInteraction: {fileID: 11400000, guid: bfe81f98528f3164bbeb70f8f35b2f5b, type: 2}
     returnToPreviousInsteadOfNewInteraction: 0
   taskID: Ink and Compass
   taskName: The Squid and Turtle

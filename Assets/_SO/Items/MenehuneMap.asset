@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487a20b1cc9f0a2409d124fbd9ea3720, type: 3}
   m_Name: MenehuneMap
   m_EditorClassIdentifier: 
-  entityInteractionUpdates: []
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 9318d58208d72ae49b8f58f9b34282a5, type: 2}
+    newInteraction: {fileID: 11400000, guid: b5bead574b6138443b0b06084ff7586b, type: 2}
+    returnToPreviousInsteadOfNewInteraction: 0
   itemName: MenehuneMap
   icon: {fileID: -1443623616, guid: 655c01616ffd8bf4390ec3aa75448f6e, type: 3}
   isUsable: 0
@@ -27,4 +30,4 @@ MonoBehaviour:
     notificationIcon: {fileID: -1443623616, guid: 655c01616ffd8bf4390ec3aa75448f6e, type: 3}
     notificationColor: {r: 1, g: 1, b: 1, a: 1}
     notificationType: 0
-  givenByEntityName: 
+  givenByEntityName: Nui

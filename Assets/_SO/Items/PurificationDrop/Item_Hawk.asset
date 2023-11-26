@@ -19,8 +19,8 @@ MonoBehaviour:
   isDuplicable: 0
   playerNotifications:
   - notificationHeading: Hawk's Eye Agate
-    notificationContent: A feather of the Nene goose, representing freedom and the
-      spirit of Hawaii.
+    notificationContent: A gem that mirrors the keen sight of a hawk, offering clarity
+      and insight. Its deep blues and grays symbolize wisdom and protection.
     buttonText0: Mahalo
     buttonText1: 
     notificationIcon: {fileID: 21300000, guid: 82e783ffb380ffc43a6188d0a3a60914, type: 3}

@@ -6,7 +6,7 @@ public class TaskManager : MonoBehaviour
     public static TaskManager Instance;
 
     public List<SO_Task> ActiveTasks = new List<SO_Task>();
-    public List<SO_Task> CompletedTasks = new List<SO_Task>();
+    public List<SO_Task> completedTasks = new List<SO_Task>();
 
     public List<SO_TaskObjective> CompletedTaskObjectives = new List<SO_TaskObjective>();
 
@@ -66,15 +66,15 @@ public class TaskManager : MonoBehaviour
                 if (!CompletedTaskObjectives.Contains(objective))
                 {
                     CompletedTaskObjectives.Add(objective);
-
                     InteractionManager.Instance.UpdateAllEntityInteractions(objective);
                 }
 
             }
         }
 
-        if (allObjectivesCompleted)
+        if (allObjectivesCompleted && !completedTasks.Contains(task))
         {
+            completedTasks.Add(task);
             InteractionManager.Instance.UpdateAllEntityInteractions(task);
         }
 
@@ -103,7 +103,7 @@ public class TaskManager : MonoBehaviour
     public void CompleteTask(SO_Task task)
     {
         Debug.Log($"Task {task.taskName} is complete!");
-        CompletedTasks.Add(task);
+        completedTasks.Add(task);
         ActiveTasks.Remove(task);
 
         InteractionManager.Instance.UpdateAllEntityInteractions(task);

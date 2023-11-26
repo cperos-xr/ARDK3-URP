@@ -28,7 +28,7 @@ MonoBehaviour:
     notificationContent: "Now you can see the 5 realms on your map: Aloha Waters,
       N\u0101 K\u016B\u02BBai Square's market life, Sacred Gardens' nature whispers,
       Royal Grounds' ancestral echoes, and Le'ahi Domain's fiery challenge"
-    buttonText0: 
+    buttonText0: Thanks!
     buttonText1: 
     notificationIcon: {fileID: -1821777005, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
     notificationColor: {r: 0, g: 0.5019608, b: 0.5019608, a: 1}
