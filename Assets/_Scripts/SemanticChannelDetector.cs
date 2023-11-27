@@ -5,7 +5,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-#if UNITY_EDITOR
+
 [Serializable]
 public enum ESemanticChannel
 {
@@ -32,9 +32,6 @@ public enum ESemanticChannel
 }
 
 
-
-#endif
-
 public class SemanticChannelDetector : MonoBehaviour
 {
     [SerializeField]
@@ -45,6 +42,8 @@ public class SemanticChannelDetector : MonoBehaviour
 
     public delegate void IdentifySemanticChannelEvent(List<string> semanticChannels, Vector2 point);
     public static event IdentifySemanticChannelEvent OnSemanticChannelIdentified;
+
+    [SerializeField] private ManaLens manaLens;
 
     private void Update()
     {
@@ -112,7 +111,7 @@ public class SemanticChannelDetector : MonoBehaviour
 
     [SerializeField] private List <ChannelIntergerConatainer> testChannels = new List<ChannelIntergerConatainer>();
 
-    [SerializeField] private ManaLens manaLens;
+
 
     public void TestSemanticBroadcast()
     {
@@ -135,6 +134,8 @@ public class SemanticChannelDetector : MonoBehaviour
         OnSemanticChannelIdentified(semanticChannelStringList, new Vector2(600f, 600f));
     }
 
+#endif
+
     public void GivePono()
     {
         ManaLens.ELensState originalLensState = manaLens.lensState;
@@ -145,8 +146,6 @@ public class SemanticChannelDetector : MonoBehaviour
         OnSemanticChannelIdentified(semanticChannelStringList, new Vector2(600f, 600f));
         manaLens.lensState = originalLensState;
     }
-
-#endif
 
     public bool DoesChannelExistAtPoint(Vector2 point, string channelName)
     {

@@ -32,7 +32,6 @@ public class PlayerManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        Screen.sleepTimeout = SleepTimeout.NeverSleep;
     }
 
     public void UseItem(SO_ItemData item)
