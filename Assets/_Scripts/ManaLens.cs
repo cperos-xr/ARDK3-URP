@@ -41,12 +41,19 @@ public class ManaLens : MonoBehaviour
     {
         SemanticChannelDetector.OnSemanticChannelIdentified += ReceiveEssenceMaterial;
         InteractionManager.OnPlayerReceiveItem += CheckForManaLens;
+        TapButtonActivator.OnPlayerEnterDebugMode += EnableManaLens;
     }
 
     private void OnDisable()
     {
         SemanticChannelDetector.OnSemanticChannelIdentified -= ReceiveEssenceMaterial;
         InteractionManager.OnPlayerReceiveItem -= CheckForManaLens;
+        TapButtonActivator.OnPlayerEnterDebugMode -= EnableManaLens;
+    }
+
+    private void EnableManaLens()
+    {
+        playerHasManaLens = true;
     }
 
     private void Start()
