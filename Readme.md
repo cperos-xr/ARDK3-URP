@@ -37,14 +37,21 @@ Join us in this enchanting exploration of Hawaii's cultural and natural beauty, 
 - Location: Aloha Girl in Kapiolani Park
 - Quest 1: Old Stone Fountain
   - Objective: Uncover the mystery of the Old Stone Fountain.
+    - Task Locations: 
+    - Kāhi Hāliʻa Aloha
 - Quest 2: Monkey Business
   - Objective: Address the chaos caused by monkeys near the Honolulu Zoo.
 - Quest 3: Find Two Others
-  - Objective: Locate Moanaiki near the Hypnotizing Rock by Waikiki Aquarium and Kaiāulu at the Roll of Honor, War Memorial.
+  - Objective: Locate Moanaiki outside of the Waikiki Aquarium and Kaiāulu near the War Memorial.
+  - Task Locations:
+    - Hypnotizing Rock in Front of Waikiki Aquarium
+    - Roll of Honor
 #### 3. Kaiāulu - Lēʻahi Domain
 - Location: Roll of Honor, War Memorial
 - Quest: Calm the Lurker
   - Objective: Pacify a mysterious entity causing unrest.
+  - Task Locations: 
+    - Waikiki Natatorium
 #### 4. Moanaiki - Lēʻahi Domain 
 - Location: Hypnotizing Rock near Waikiki Aquarium
 - Quest: Save Moanaiki from Nene and Hawk
@@ -52,7 +59,7 @@ Join us in this enchanting exploration of Hawaii's cultural and natural beauty, 
 #### 5. Makamae - Nā Kūʻai Square
 - Location: White Sands Tiki
 - Quest: Collect three items for Makamae.
--   - Task Locations: 
+  - Task Locations: 
     - Tiki Mural of Tapas Waikiki Alley
     - Waikiki Banyan Lobby
     - Paul Whitney Trousdale
@@ -60,21 +67,29 @@ Join us in this enchanting exploration of Hawaii's cultural and natural beauty, 
 - Location: Rooftop Guitar Collection at the Hard Rock Cafe
 - Quest: Urgent Delivery
   - Objective: Deliver an important item to Kānehoa.
-  - Objective Location: US Prefab Pill Box
+  - Task Location: 
+    - US Prefab Pill Box
 #### 7. Pohaku - Royal Grounds 
 - Location: US Prefab Pill Box
 - Quest 1: Find 3 Kittens
 - Quest 2: King's Quest
+  - Task Locations: 
+    - Menehune King
 #### 8. King Kalolani - Royal Grounds
 - Location: Menehune King Statue
 - Quest: A Navigator Lost
   - Objective: Assist in finding a lost navigator.
+  - Task Locations: 
+        - Ilikai Hotel Sign
 #### 9. Hōkūleʻa - Royal Grounds 
 - Location: Ilikai Hotel Sign
    1. *Note*: No quests currently assigned.
-#### 10. Ahi - Surfer On Wave (Bonus Quest)
+#### 10. Ahi - Aloha Waters (Bonus Quest)
+- Location: Surfer On Wave
 - Quest: Save Ahi from Monk Seal
   - Objective: Rescue Ahi from a perilous situation.
+  - Task Locations: 
+        - Surfer On Wave
 
 ## Game Mechanics:
 
