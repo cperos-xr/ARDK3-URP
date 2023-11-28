@@ -165,7 +165,7 @@ Outcome: Successful purification rewards the player with a fun fact about the Ha
 
 ## Game Script: "Secret of the Menehune"
 
-Scene 1: Introduction at Duke Kahanamoku Statue
+### Scene 1: Introduction at Duke Kahanamoku Statue
 
 Nui: (Greeting the player, looking sad) "Our aina cries, overwhelmed by invasive species and a deepening curse. Once, we Menehune kept harmony, but now... it's beyond us. Take this Mana Lens, your kuleana. See the unseen, restore what's lost, bring back balance to our lands."
 
@@ -179,7 +179,7 @@ Nui: "Bring me the squid's ink and the turtle's compass, and I'll craft a map to
 
 Cursed Creature Notification: "A Cursed Creature! Choose wisely from your Essence Pouch to restore the creature's harmony. Some essences soothe the curse, while others may worsen it."
 
-Scene 2: Map Quest - The Turtle and the Squid
+### Scene 2: Map Quest - The Turtle and the Squid
 
 (Player finds 'Ea Enigma' and 'Hexed He'e' at specified locations.)
 
@@ -197,7 +197,7 @@ Drop Item: "He'e's Ink Sac. A mysterious ink sac from a Hawaiian Bobtail Squid. 
 
 (Quest completes and the player returns to Nui.)
 
-Scene 3: Nui - Map Quest Completion
+### Scene 3: Nui - Map Quest Completion
 
 Nui: "Now you can see the 5 realms on your map: Aloha Waters, Nā Kūʻai Square's market life, Sacred Gardens' nature whispers, Royal Grounds' ancestral echoes, and Le'ahi Domain's fiery challenge."
 
@@ -209,7 +209,7 @@ Nui: "Seek the guardians in Waikiki. Find 3 others, one lies west toward the Roy
 
 (Nui provides rotating dialog for three prompts: Sacred Gardens, Nā Kūʻai Square, and Royal Grounds.)
 
-Scene 4: Lanihuli - Sacred Gardens
+### Scene 4: Lanihuli - Sacred Gardens
 
 Lanihuli: (Welcoming the player) "E komo mai. Aloha, I'm Lanihuli of the Sacred Gardens. Our land remembers every step and touch. Let's tread lightly, listening to nature's whispers, and heal the traces we leave behind."
 
@@ -221,7 +221,7 @@ Lanihuli: (Regarding the Old Stone Fountain) "The old stone fountain by the zoo 
 
 Lanihuli: (Upon quest completion) "Mahalo! Your gentle touch has soothed the spirits of the lizard and chicken, restoring peace to this sacred place. The Sacred Gardens breathe easier thanks to your efforts."
 
-Scene 5: Lanihuli's Monkey Business Quest
+### Scene 5: Lanihuli's Monkey Business Quest
 
 Lanihuli: "The monkeys, once residents of the Honolulu Zoo, now roam free in Queen Kapiolani Park, their spirits clouded by a strange malaise. Their joyous energy, once a delight within the zoo's walls, is vital to the harmony of this place. I ask you to seek out and heal at least five of these spirited escapees. While there are more who might need your help, healing five will significantly restore balance."
 
@@ -243,7 +243,7 @@ Lanihuli: "Mahalo! Your gentle touch has soothed the spirits of these monkeys, b
 
 Lanihuli: "Next up, find the guardians by the Natatorium and Aquarium. Good thing there isn't a nearby Planetarium, or you'd probably have to visit there too! Seems like our guardians have a thing for a 'RIUM' and Coke."
 
-Scene 6: Moanaiki's Quest at the Aquarium
+### Scene 6: Moanaiki's Quest at the Aquarium
 
 (Player locates Moanaiki near the hypnotizing rock at Waikiki Aquarium.)
 
@@ -251,7 +251,7 @@ Moanaiki: (Surrounded by creatures) "As you can see, I'm in a bit of a bind here
 
 (Player is assigned the Nene and the Hawk quest.)
 
-Scene 7: The Nene and the Hawk Quest
+### Scene 7: The Nene and the Hawk Quest
 
 (Player locates Io Ire and Nene Nefarious, purifying them and receiving items and fun facts.)
 
@@ -271,7 +271,7 @@ Item Drop: "Nene's Feather of Flight. A feather of the Nene goose, representing 
 
 Moanaiki: "Mahalo nui loa for your kokua! Your actions have calmed the storm in the hearts of these creatures, restoring peace."
 
-Scene 8: Kaiāulu's Quest at the War Memorial
+### Scene 8: Kaiāulu's Quest at the War Memorial
 
 (Player finds Kaiāulu at the Roll of Honor, War Memorial.)
 
@@ -297,7 +297,7 @@ A sparkling crystal mistaken for a diamond by early sailors. It's not a true dia
 
 Kaiāulu: "Mahalo nui loa! You have much kindness, friend. The memories of our heroes are now free from corruption, their spirits at peace thanks to your efforts. Your actions honor not only them but all of us."
 
-Scene 9: Makamae's Quest in Nā Kūʻai Square
+### Scene 9: Makamae's Quest in Nā Kūʻai Square
 
 (Player finds Makamae at the White Sands Waikiki entrance)
 
@@ -323,7 +323,7 @@ Fun Fact: Most Hawaiian cockroaches are introduced species. Item: Woodroach Hibi
 
 Makamae: "Mahalo! Your efforts have brought peace back to Nā Kūʻai Square. The market thrives when harmony reigns."
 
-Scene 10: Kānehoa's Quest in the Royal Grounds
+### Scene 10: Kānehoa's Quest in the Royal Grounds
 
 (Kānehoa greets player at the Hard Rock Cafe Rooftop)
 
@@ -343,7 +343,7 @@ Item: Whisker of Wanderlust
 
 Pohaku: "The spirits of these little ones are now at peace. Seek the Menehune King!"
 
-Scene 11: King's Quest
+### Scene 11: King's Quest
 
 (Player follows map to find King Kalolani)
 
@@ -357,7 +357,7 @@ Hōkūleʻa: "I was caught in a whirlpool of negative mana. Thanks to you, I'm b
 
 Kalolani: "Winds of fate shift, but your efforts returned our Navigator! Our path to balance is clearer."
 
-Scene 12: Bonus Quest - Save Ahi
+### Scene 12: Bonus Quest - Save Ahi
 
 (Side quest - Player finds Ahi ensnared at the Surfer statue) Ahi: "A crafty spirit has me ensnared. Can you free me?" (Player locates and frees the Monk Seal)
 
