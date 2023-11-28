@@ -1,9 +1,9 @@
-﻿#Secret of the Menehune: Complete Quest Document#
+﻿# Secret of the Menehune: Complete Quest Document
 
 [![Watch the video](https://raw.githubusercontent.com/cperos-xr/ARDK3-URP/DemoLevel/Assets/_Art/Video/thumbnail.png)](https://drive.google.com/file/d/1WeZQqjThRvCwOpKHncUB-yIC5x1VAMeB/view?usp=sharing)
 
 
-##Introduction##
+##Introduction
 
 Embark on "Secret of the Menehune," a captivating AR quest that is not only a game but a showcase of the ARDK Creator Toolkit, a tool I personally developed to revolutionize AR experiences in Unity. This toolkit, demonstrates the innovative use of Niantic's ARDK and Maps, enabling rapid and efficient creation of complex AR quests.
 
@@ -17,9 +17,9 @@ Join us in this enchanting exploration of Hawaii's cultural and natural beauty, 
 
 Map Layout:![](Aspose.Words.a19bdf19-ca9a-4b17-aafa-7bc101e89c99.001.jpeg)
 
-##Main Quest Chain: Menehune-Centric Structure:**
+## Main Quest Chain: Menehune-Centric Structure:**
 
-####1. Nui - Aloha Waters
+#### 1. Nui - Aloha Waters
 - Quest 1: Map Quest (Initial Quest)
   - Objective: Retrieve the Menehune map for navigating Niantic maps.
   - Locations: Key areas in Waikiki.
@@ -29,46 +29,46 @@ Map Layout:![](Aspose.Words.a19bdf19-ca9a-4b17-aafa-7bc101e89c99.001.jpeg)
     - Sacred Gardens (Guardian: Lanihuli)
     - Nā Kūʻai Square (Guardian: Makamae)
     - Royal Grounds (Guardian: Kānehoa)
-####2. Lanihuli - Sacred Garden
+#### 2. Lanihuli - Sacred Garden
 - Quest 1: Old Stone Fountain
   - Objective: Uncover the mystery of the Old Stone Fountain.
 - Quest 2: Monkey Business
   - Objective: Address the chaos caused by monkeys near the Honolulu Zoo.
 - Quest 3: Find Two Others
   - Objective: Locate Moanaiki near the Hypnotizing Rock by Waikiki Aquarium and Kaiāulu at the Roll of Honor, War Memorial.
-####3. Kaiāulu - Roll of Honor, War Memorial
+#### 3. Kaiāulu - Roll of Honor, War Memorial
 - Quest: Calm the Lurker
   - Objective: Pacify a mysterious entity causing unrest.
-####4. Moanaiki - Hypnotizing Rock near Waikiki Aquarium
+#### 4. Moanaiki - Hypnotizing Rock near Waikiki Aquarium
 - Quest: Save Moanaiki from Nene and Hawk
   - Objective: Protect Moanaiki from the cursed creatures.
-####5. Makamae - Nā Kūʻai Square
+#### 5. Makamae - Nā Kūʻai Square
    1. Quests: Complete three tasks set by Makamae.
-####6. Kānehoa - Royal Grounds
+#### 6. Kānehoa - Royal Grounds
 - Quest: Urgent Delivery
   - Objective: Deliver an important item to Kānehoa.
-####7. Pohaku - US Prefab Pill Box
+#### 7. Pohaku - US Prefab Pill Box
 - Quest 1: Find 3 Kittens
 - Quest 2: King's Quest
-####8. King Kalolani - Menehune King Statue
+#### 8. King Kalolani - Menehune King Statue
 - Quest: A Navigator Lost
   - Objective: Assist in finding a lost navigator.
-####9. Hōkūleʻa - Ilikai Hotel Sign
+#### 9. Hōkūleʻa - Ilikai Hotel Sign
    1. *Note*: No quests currently assigned.
-####10. Ahi - Surfer On Wave (Bonus Quest)
-    1. Quest: Save Ahi from Monk Seal
-       1. Objective: Rescue Ahi from a perilous situation.
+#### 10. Ahi - Surfer On Wave (Bonus Quest)
+- Quest: Save Ahi from Monk Seal
+  - Objective: Rescue Ahi from a perilous situation.
 
-##Game Mechanics:
+## Game Mechanics:
 
-###**Mana Lens**
+### Mana Lens
 
-####Introduction to Mana Lens
+#### Introduction to Mana Lens
 
 - Primary Tool: Given by Nui at the start of the game.
 - Functions: Has 'Extract Mode', 'Seek Mode', and 'Off'.
 
-####Extract Mode
+#### Extract Mode
 
 - Functionality: Utilizes Niantic's semantic segmentation to extract essences from the real world.
 - Essence Collection: Players can gather different essences based on their environment (e.g., Honua, Lani, Wai).
@@ -80,7 +80,7 @@ Map Layout:![](Aspose.Words.a19bdf19-ca9a-4b17-aafa-7bc101e89c99.001.jpeg)
   - Certain combinations of essences can be more effective or harmful.
   - Each creature has unique susceptibilities; players need to decipher clues from dialogues to identify effective essences.
 
-####Seek Mode
+#### Seek Mode
 
 Functionality: An alternative way to locate and interact with cursed entities. Realms Division: Waikiki is divided into five realms, each with distinct entities. Entity Appearance:
 
@@ -91,43 +91,43 @@ Quest Completion: Provides players with alternative methods to complete quests i
 
 Scarcity Levels: Example - Kitties may commonly appear in foliage in the Royal Grounds when a specific essence is activated.
 
-##Menehune Map and Niantic Maps Integration
+## Menehune Map and Niantic Maps Integration
 
-####Menehune Map: The Core Navigation Tool
+#### Menehune Map: The Core Navigation Tool
 
 - Purpose: Acts as the primary guide for players in the game.
 - Functionality: Reveals the five distinct realms of Waikiki, each with unique characteristics and quests.
 - Interactivity: Players can interact with the map to discover new locations and track their progress through various quests.
 
-####Niantic Maps: Real-World Integration
+#### Niantic Maps: Real-World Integration
 
 - Integration with Menehune Map: Niantic Maps underpins the Menehune Map, providing real-world geographical data and location services.
 - Realms Outline:
   - Each of the five realms is distinctly outlined on the map.
   - The realms are differentiated by specific thematic elements, environmental features, and the type of quests available.
 
-####Points of Interest (POIs)
+#### Points of Interest (POIs)
 
 - Identification: Key locations, such as where Menehune are found or where certain quests begin, are marked as POIs on the map.
 - Real-World Anchoring: POIs are anchored to real-world locations in Waikiki, encouraging exploration and physical movement.
 
-####Gameplay Enhancement
+#### Gameplay Enhancement
 
 - Strategic Exploration: Players use the map to plan their exploration strategies, choosing which realms to visit based on their current quests and objectives.
 
-####Educational and Cultural Integration
+#### Educational and Cultural Integration
 
 - Cultural Landmarks: The map can help highlight culturally significant locations, providing educational insights into Hawaiian history and culture.
 - Environmental Awareness: Emphasizes the importance of the natural environment and its preservation, in line with the game's themes.
 
-##Cursed Creature Purification Mechanic
+## Cursed Creature Purification Mechanic
 
-####Overview
+#### Overview
 
 - Purpose: Players encounter cursed creatures during quests, which they must heal using essences.
 - Essence Pouch: A virtual pouch where players store essences collected through the Mana Lens.
 
-####Battle Mechanics
+#### Battle Mechanics
 
 - Initiation: Encounters with cursed creatures start a purification 'battle'.
 - Essence Use: Players select three essences from their pouch to attempt healing.
@@ -136,33 +136,33 @@ Scarcity Levels: Example - Kitties may commonly appear in foliage in the Royal G
   - Players must choose combinations wisely based on clues and creature characteristics.
   - Certain combinations have multiplier effects, either amplifying healing or worsening the curse.
 
-####Universal Healing Essence: Pono
+#### Universal Healing Essence: Pono
 
 - Special Essence: Pono is a unique essence that can partially heal any entity, offering a universal healing power.
 - Healing Power: It consistently heals 10 points of any creature's curse, regardless of its nature.
 
-####Battle Strategy
+#### Battle Strategy
 
 - Clue Analysis: Players are encouraged to look for hints in dialogues and creature descriptions to identify weaknesses.
 - Trial and Error: Experimentation with different essence combinations is key to understanding the most effective healing strategies.
 
-####Rewards for Successful Purification
+#### Rewards for Successful Purification
 
 - Fun Fact: After purifying a creature, players receive an educational snippet about the creature or related Hawaiian culture.
 - Item Acquisition: Each purified creature drops a unique item, adding to the player's collection and often aiding in further quests.
 
-####Gameplay Impact
+#### Gameplay Impact
 
 - Educational Value: The fun facts serve to educate players about Hawaiian wildlife and culture.
 - Progression: Successfully healing creatures is essential for quest advancement and unlocking new areas or challenges.
 
-####Example Scenario
+#### Example Scenario
 
 Creature Encounter: Player encounters 'Hexed He'e', a cursed reef squid. Battle Strategy: Player selects a combination of essences based on the squid's characteristics and hints received earlier.
 
 Outcome: Successful purification rewards the player with a fun fact about the Hawaiian bobtail squid and a special item related to the creature.
 
-##Game Script: "Secret of the Menehune"
+## Game Script: "Secret of the Menehune"
 
 Scene 1: Introduction at Duke Kahanamoku Statue
 
@@ -364,124 +364,124 @@ Monk Seal: "Once peaceful, now disturbing the calm of the seas."
 
 Ahi: "You have great strength and kindness. May your journey continue, blessed by the spirit of aloha!"
 
-##Appendices
+## Appendices
 
-###Glossary of Definitions and Hawaiian Terms
+### Glossary of Definitions and Hawaiian Terms
 
-####Menehune Names, Descriptions, and Translations:
+#### Menehune Names, Descriptions, and Translations:
 
-Nui
+##### Nui
 
 - Description: The first Menehune encountered, gives the Mana Lens.
 - Translation: "Large" or "important."
 
-Lanihuli
+##### Lanihuli
 
 - Description: Guardian of the Sacred Gardens.
 - Translation: "Heavenly turn" or "heavenly change."
 
-Makamae
+##### Makamae
 
 - Description: Guardian of Nā Kūʻai Square.
 - Translation: "Precious" or "beloved."
 
-Kānehoa
+##### Kānehoa
 
 - Description: Guardian at the Royal Grounds.
 - Translation: "Breathing man" or "man's breath."
 
-Kaiāulu
+##### Kaiāulu
 
 - Description: Located at the Roll of Honor, War Memorial.
 - Translation: "Sea breeze."
 
-Moanaiki
+##### Moanaiki
 
 - Description: Near the Hypnotizing Rock by Waikiki Aquarium.
 - Translation: "Small ocean" or "small expanse of sea."
 
-Pohaku
+##### Pohaku
 
 - Description: At the US Prefab Pill Box.
 - Translation: "Stone" or "rock."
 
-King Kalolani
+##### King Kalolani
 
 - Description: The Menehune King, at the Menehune King Statue.
 - Translation: "Kalolani" is a compound of "Kalo," a significant plant in Hawaiian culture, and "Lani," meaning "heaven" or "sky."
 
-Hōkūleʻa
+##### Hōkūleʻa
 
 - Description: At the Ilikai Hotel Sign.
 - Translation: "Star of gladness." Named after the famous Hawaiian voyaging canoe, symbolizing exploration and navigation.
 
-Ahi
+##### Ahi
 
 - Description: Near the Surfer On Wave statue.
 - Translation: "Fire" or "tuna" (specifically yellowfin tuna).
 
-####Cursed Animal Names
+#### Cursed Animal Names
 
-Hexed He'e: The reef squid cursed with deep-sea sorcery.
+##### Hexed He'e: The reef squid cursed with deep-sea sorcery.
 
 - Translation: "He'e" means "octopus" or "squid" in Hawaiian.
 - Cultural Context: In Hawaiian mythology, the octopus or squid is sometimes associated with the supernatural and the mysterious aspects of the ocean.
 
-'Ea Enigma: The mystically cloaked green sea turtle.
+##### 'Ea Enigma: The mystically cloaked green sea turtle.
 
 - Translation: "'Ea" can refer to the Hawaiian green sea turtle, also known as "Honu."
 - Cultural Context: The green sea turtle is a symbol of good luck, endurance, and long life in Hawaiian culture.
 
-Moʻo Mischief: The lizard causing pandemonium.
+##### Moʻo Mischief: The lizard causing pandemonium.
 
 - Translation: "Moʻo" means "lizard" in Hawaiian.
 - Cultural Context: Moʻo are often depicted in Hawaiian mythology as guardian spirits, sometimes with shapeshifting abilities.
 
-Moa Marauder: The once-vigilant bird turned chaotic.
+##### Moa Marauder: The once-vigilant bird turned chaotic.
 
 - Translation: "Moa" means "chicken" or "fowl" in Hawaiian.
 - Cultural Context: Chickens or moa are common in Hawaiian folklore, often symbolizing watchfulness and alertness.
 
-Keko Chaos: The mischievous monkeys in the treetops.
+##### Keko Chaos: The mischievous monkeys in the treetops.
 
 - Translation: "Keko" is a term used for monkeys.
 - Cultural Context: Monkeys, while not native to Hawaii. In Waikiki, the sounds of monkeys, originating from the Honolulu Zoo, contribute to the unique auditory landscape of the area, blending with the natural and urban sounds of this region.
 
-Io Ire: The Hawaiian hawk diving through despair.
+##### Io Ire: The Hawaiian hawk diving through despair.
 
 - Translation: "Io" is the Hawaiian hawk.
 - Cultural Context: The io is considered sacred in Hawaiian culture and is a symbol of royalty and power.
 
-Nene Nefarious: The Nene goose, a harbinger of havoc.
+##### Nene Nefarious: The Nene goose, a harbinger of havoc.
 
 - Translation: "Nene" is the Hawaiian goose.
 - Cultural Context: The nene is Hawaii's state bird and is revered in Hawaiian culture, often symbolizing adaptability and resilience.
 
-Alāmona of Anarchy: The mongoose stalking the streets.
+##### Alāmona of Anarchy: The mongoose stalking the streets.
 
 - Translation: "Alāmona" is used here to represent the mongoose.
 - Cultural Context: The mongoose is an invasive species in Hawaii, known for its impact on native birds and ecosystems.
 
-Evil 'Uli: The cockroach spreading corruption.
+##### Evil 'Uli: The cockroach spreading corruption.
 
 - Translation: "'Uli" does not directly translate to cockroach, but darkness
 
-Lele Lurker: The unknown entity at Diamond Head.
+##### Lele Lurker: The unknown entity at Diamond Head.
 
 - Translation: "Lele" means "to fly" or "to leap" in Hawaiian.
 - Cultural Context: This term may imply a creature that is elusive, agile, and possibly airborne, fitting for a mysterious entity.
 
-Pōpoki Peril: The stray cat turned harbinger of misfortune.
+##### Pōpoki Peril: The stray cat turned harbinger of misfortune.
 
 - Translation: "Pōpoki" means "cat" in Hawaiian.
 - Cultural Context: Cats are not native to Hawaii and, like the mongoose, have impacted native wildlife. They are often associated with independence and mystery.
 
-Maluhia Mauler: The monk seal wrapped in dark sorcery.
+##### Maluhia Mauler: The monk seal wrapped in dark sorcery.
 
 - Translation: "Maluhia" means "peace" or "tranquility" in Hawaiian.
 - Cultural Context: The Hawaiian monk seal is a critically endangered species and is deeply respected in Hawaiian culture, often seen as a symbol of conservation and the need to protect natural resources.
 
-####Hawaiian Terms in Dialogue
+#### Hawaiian Terms in Dialogue
 
 - Aloha: A Hawaiian word used when greeting or parting from someone. It also means love, affection, peace, compassion, and mercy.
 - Aloha mai kākou: Greetings to all of us/welcome to us all.
@@ -502,109 +502,109 @@ Maluhia Mauler: The monk seal wrapped in dark sorcery.
 - Menehune: Mythical dwarf-like beings in Hawaiian folklore, known as skilled craftsmen and builders.
 - Duke Kahanamoku: Renowned Hawaiian surfer and Olympic swimmer, often referred to as the father of modern surfing.
 
-####Essences, Semantic Channels, and Hawaiian Translations:
+#### Essences, Semantic Channels, and Hawaiian Translations:
 
-Honua Hana Lima
+##### Honua Hana Lima
 
 - Semantic Channel: 'artificial\_ground'.
 - Translation: "Honua" means "earth" or "ground," and "Hana Lima" implies "handiwork" or "craft."
 
-Hale
+##### Hale
 
 - Semantic Channel: 'building'.
 - Translation: "House" or "building."
 
-Lepo
+##### Lepo
 
 - Semantic Channel: 'dirt\_experimental'.
 - Translation: "Dirt" or "soil."
 
-Pua
+##### Pua
 
 - Semantic Channel: 'flower\_experimental'.
 - Translation: "Flower."
 
-La'au
+##### La'au
 
 - Semantic Channel: 'foliage'.
 - Translation: "Tree" or "wood."
 
-Mea'ai
+##### Mea'ai
 
 - Semantic Channel: 'food\_experimental'.
 - Translation: "Food."
 
-Mau'u
+##### Mau'u
 
 - Semantic Channel: 'grass'.
 - Translation: "Grass."
 
-Honua
+##### Honua
 
 - Semantic Channel: 'ground'.
 - Translation: "Earth" or "ground."
 
-Ho'omaha
+##### Ho'omaha
 
 - Semantic Channel: 'loungeable\_experimental'.
 - Translation: "Rest" or "relaxation."
 
-Honua Maoli
+##### Honua Maoli
 
 - Semantic Channel: 'natural\_ground'.
 - Translation: "Real" or "true earth/ground."
 
-Kānaka
+##### Kānaka
 
 - Semantic Channel: 'person'.
 - Translation: "Human" or "person." In a broader cultural context, it refers to the people, especially Native Hawaiians. Note the cultural significance: this term refers to people in general, not specifically to Native Hawaiians (Kanaka Maoli).
 
-Holoholona Hoʻokipa
+##### Holoholona Hoʻokipa
 
 - Semantic Channel: 'pet\_experimental'.
 - Translation: "Welcoming animal" or "pet." "Holoholona" means "animal," and "Hoʻokipa" implies "hospitality" or "welcoming."
 
-Pono/Pono'ī
+##### Pono/Pono'ī
 
 - Semantic Channel: Represents harmony.
 - Translation: "Righteousness" or "excellence." "Pono'ī" refers to oneself, so it implies self-righteousness or personal excellence.
 
-Kōneoneo
+##### Kōneoneo
 
 - Semantic Channel: 'sand\_experimental'.
 - Translation: "Sand." "Kōneoneo" is a variation of "one," which means "sand." (Note: "One" was avoided to prevent confusion with the number one.)
 
-Lani
+##### Lani
 
 - Semantic Channel: 'sky'.
 - Translation: "Sky" or "heaven."
 
-Hau
+##### Hau
 
 - Semantic Channel: 'snow\_experimental'.
 - Translation: "Snow" or "dew."
 
-Kumu La'au
+##### Kumu La'au
 
 - Semantic Channel: 'tree\_trunk\_experimental'.
 - Translation: "Tree trunk." "Kumu" means "trunk" or "source," and "La'au" means "tree."
 
-Kīwī
+##### Kīwī
 
 - Semantic Channel: 'tv\_experimental'.
 - Translation: "TV." This is a transliteration of the English word "TV."
 
-Ka'a
+##### Ka'a
 
 - Semantic Channel: 'vehicle\_experimental'.
 - Translation: "Vehicle" or "car."
 
-Wai
+##### Wai
 
 - Semantic Channel: 'water'.
 - Translation: "Water."
 
-####Additional Cultural References
+#### Additional Cultural References
 
 - Duke Kahanamoku: Renowned Hawaiian surfer and Olympic swimmer, often referred to as the father of modern surfing.
 - Diamondhead Deception Gem: A fictional gem in the game, symbolizing the historical misconception about Diamond Head, a volcanic tuff cone on Oahu, Hawaii. The name "Diamond Head" originated in the 19th century when British sailors mistakenly believed the calcite crystals in the rock were diamonds. This gem in the game represents this historical misidentification.
