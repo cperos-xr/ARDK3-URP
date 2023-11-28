@@ -15,7 +15,8 @@ At its core, the game leverages Niantic's semantic segmentation technology, allo
 
 Join us in this enchanting exploration of Hawaii's cultural and natural beauty, where the boundaries between technology, education, and tradition are seamlessly blended for an unforgettable experience.
 
-Map Layout:![](Aspose.Words.a19bdf19-ca9a-4b17-aafa-7bc101e89c99.001.jpeg)
+## Map Layout:
+![](Aspose.Words.a19bdf19-ca9a-4b17-aafa-7bc101e89c99.001.jpeg)
 
 ## Main Quest Chain: Menehune-Centric Structure:
 
