@@ -5359,6 +5359,18 @@ PrefabInstance:
       propertyPath: setObjectsActiveStatus.Array.data[7].objectToSet
       value: 
       objectReference: {fileID: 2044002780}
+    - target: {fileID: 1618029529848774051, guid: 3e086e2fbb7bfa442b2d4c16e7586e1b, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[3].uponThisInteractionProgression
+      value: 
+      objectReference: {fileID: 11400000, guid: 0ef1b394d2665234c9b5f0df0ff87bc5, type: 2}
+    - target: {fileID: 1618029529848774051, guid: 3e086e2fbb7bfa442b2d4c16e7586e1b, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[4].uponThisInteractionProgression
+      value: 
+      objectReference: {fileID: 11400000, guid: 60e003dc5b3e77e44b104f16f5c2e20d, type: 2}
+    - target: {fileID: 1618029529848774051, guid: 3e086e2fbb7bfa442b2d4c16e7586e1b, type: 3}
+      propertyPath: setObjectsActiveStatus.Array.data[5].uponThisInteractionProgression
+      value: 
+      objectReference: {fileID: 11400000, guid: 904d77362b53b3342a7681b132d3b74a, type: 2}
     - target: {fileID: 4341256091980969620, guid: 3e086e2fbb7bfa442b2d4c16e7586e1b, type: 3}
       propertyPath: setObjectsActiveStatus.Array.size
       value: 3
