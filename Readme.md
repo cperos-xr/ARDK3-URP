@@ -22,8 +22,11 @@ Join us in this enchanting exploration of Hawaii's cultural and natural beauty, 
 
 #### 1. Nui - Aloha Waters
 - Quest 1: Map Quest (Initial Quest)
-  - Objective: Retrieve the Menehune map for navigating Niantic maps.
-  - Locations: Key areas in Waikiki.
+  - Start at Duke Kahanamoku Statue
+  - Objective: Retrieve the Materials for Menehune map for navigating Niantic maps.
+  - Task Locations: 
+    - Dolphins Sculpture
+    - 3d Cheeseburger in Paradise
 - Quest 2: Find Three Others
   - Objective: Locate three other Menehune in different realms.
   - Specific Realms and Guardians:
@@ -31,30 +34,43 @@ Join us in this enchanting exploration of Hawaii's cultural and natural beauty, 
     - Nā Kūʻai Square (Guardian: Makamae)
     - Royal Grounds (Guardian: Kānehoa)
 #### 2. Lanihuli - Sacred Garden
+- Location: Aloha Girl in Kapiolani Park
 - Quest 1: Old Stone Fountain
   - Objective: Uncover the mystery of the Old Stone Fountain.
 - Quest 2: Monkey Business
   - Objective: Address the chaos caused by monkeys near the Honolulu Zoo.
 - Quest 3: Find Two Others
   - Objective: Locate Moanaiki near the Hypnotizing Rock by Waikiki Aquarium and Kaiāulu at the Roll of Honor, War Memorial.
-#### 3. Kaiāulu - Roll of Honor, War Memorial
+#### 3. Kaiāulu - Lēʻahi Domain
+- Location: Roll of Honor, War Memorial
 - Quest: Calm the Lurker
   - Objective: Pacify a mysterious entity causing unrest.
-#### 4. Moanaiki - Hypnotizing Rock near Waikiki Aquarium
+#### 4. Moanaiki - Lēʻahi Domain 
+- Location: Hypnotizing Rock near Waikiki Aquarium
 - Quest: Save Moanaiki from Nene and Hawk
   - Objective: Protect Moanaiki from the cursed creatures.
 #### 5. Makamae - Nā Kūʻai Square
-   1. Quests: Complete three tasks set by Makamae.
+- Location: White Sands Tiki
+- Quest: Collect three items for Makamae.
+-   - Task Locations: 
+    - Tiki Mural of Tapas Waikiki Alley
+    - Waikiki Banyan Lobby
+    - Paul Whitney Trousdale
 #### 6. Kānehoa - Royal Grounds
+- Location: Rooftop Guitar Collection at the Hard Rock Cafe
 - Quest: Urgent Delivery
   - Objective: Deliver an important item to Kānehoa.
-#### 7. Pohaku - US Prefab Pill Box
+  - Objective Location: US Prefab Pill Box
+#### 7. Pohaku - Royal Grounds 
+- Location: US Prefab Pill Box
 - Quest 1: Find 3 Kittens
 - Quest 2: King's Quest
-#### 8. King Kalolani - Menehune King Statue
+#### 8. King Kalolani - Royal Grounds
+- Location: Menehune King Statue
 - Quest: A Navigator Lost
   - Objective: Assist in finding a lost navigator.
-#### 9. Hōkūleʻa - Ilikai Hotel Sign
+#### 9. Hōkūleʻa - Royal Grounds 
+- Location: Ilikai Hotel Sign
    1. *Note*: No quests currently assigned.
 #### 10. Ahi - Surfer On Wave (Bonus Quest)
 - Quest: Save Ahi from Monk Seal
