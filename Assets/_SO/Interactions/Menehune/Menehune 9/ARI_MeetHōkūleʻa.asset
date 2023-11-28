@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
+  m_Name: "ARI_MeetH\u014Dk\u016Ble\u02BBa"
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: b68d2bacda9f35b4485bf2f64dfe643d, type: 2}
+    newInteraction: {fileID: 11400000, guid: 47042069c617c82479438b956a36b649, type: 2}
+    returnToPreviousInsteadOfNewInteraction: 0
+  - entity: {fileID: 11400000, guid: 887838075c29eb14fb9f9170e87a0a95, type: 2}
+    newInteraction: {fileID: 11400000}
+    returnToPreviousInsteadOfNewInteraction: 0
+  InteractionName: "Meet H\u014Dk\u016Ble\u02BBa"
+  itemDatas: []
+  quest: {fileID: 0}
+  notification:
+    notificationHeading: Aloha
+    notificationContent: Mahalo for finding me. I was charting the energies of this
+      area when I got caught in a whirlpool of negative mana. It's easy to lose one's
+      way amidst such turmoil. But thanks to you, I'm back on course.
+    buttonText0: 
+    buttonText1: 
+    notificationIcon: {fileID: 1484426590, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
+    notificationType: 0
+  arEntity: {fileID: 11400000, guid: 887838075c29eb14fb9f9170e87a0a95, type: 2}

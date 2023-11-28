@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5832900709881742758}
   - component: {fileID: 1673339505063980495}
   - component: {fileID: 5062728828894960976}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Duke Icon Layer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

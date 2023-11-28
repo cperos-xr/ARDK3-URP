@@ -7,18 +7,40 @@ public class Inventory
 {
     public List<ItemSlot> items = new List<ItemSlot>();
 
-    public void AddItem(SO_ItemData item, int amount = 1)
+    public int totalCapacity; // Maximum number of items
+
+    public bool AddItem(SO_ItemData item, int amount = 1)
     {
         // Add item logic
-        var itemSlot = items.Find(i => i.item == item);
-        if (itemSlot != null)
+        if (GetCurrentItemCount() < totalCapacity)
         {
-            itemSlot.amount += amount;
+            var itemSlot = items.Find(i => i.item == item);
+            if (itemSlot != null)
+            {
+                itemSlot.amount += amount;
+            }
+            else
+            {
+                items.Add(new ItemSlot(item, amount));
+            }
+            return true;
         }
         else
         {
-            items.Add(new ItemSlot(item, amount));
+            Debug.Log("Cannot Add item, Inventory Capacity has been met");
+            return false;
+
         }
+    }
+
+    public int GetCurrentItemCount()
+    {
+        int itemCount = 0;
+        foreach (var item in items)
+        {
+            itemCount += item.amount;
+        }
+        return itemCount;
     }
 
     public void RemoveItem(SO_ItemData item)

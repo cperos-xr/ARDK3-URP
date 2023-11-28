@@ -1,9 +1,13 @@
 using Niantic.Lightship.Maps.Core.Coordinates;
-using Niantic.Lightship.Maps.ObjectPools;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerState
+{
+    normal,
+    purification,
+    notification,
+    menuOpen,
+}
 public class PlayerManager : MonoBehaviour
 {
     static public PlayerManager Instance;
@@ -13,21 +17,7 @@ public class PlayerManager : MonoBehaviour
 
     [HideInInspector] public LatLng PlayerGPS;
 
-
-
-    // Other variables such as health, magic, etc.
-    public int health;
-    public int magic;
-    public int stepsTaken;
-
-    // Initialization, update player stats, etc.
-    void Start()
-    {
-        // Load data from PlayerData
-        //health = playerData.initialHealth;
-        //magic = playerData.initialMagic;
-        // ... more initialization
-    }
+    public PlayerState currentPlayerState = PlayerState.normal;
 
     private void Awake()
     {
@@ -41,12 +31,18 @@ public class PlayerManager : MonoBehaviour
             // If an instance already exists, destroy this one
             Destroy(gameObject);
         }
+
     }
 
     public void UseItem(SO_ItemData item)
     {
         // Use item logic
         inventory.RemoveItem(item);
+    }
+
+    public void SetPlayerBackToNormal()
+    {
+        currentPlayerState = PlayerState.normal;
     }
 
     public void PlacePlayerObject() => playerData._cubeGOP.PlaceInstance(PlayerGPS);

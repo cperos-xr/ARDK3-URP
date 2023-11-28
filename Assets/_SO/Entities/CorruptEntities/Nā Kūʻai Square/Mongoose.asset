@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
+  m_Name: Mongoose
+  m_EditorClassIdentifier: 
+  entityName: "Al\u0101mona of Anarchy "
+  startingInteraction: {fileID: 0}
+  corruptEntityName: "Al\u0101mona of Anarchy"
+  corruptEntityDescription: A mongoose, its playful nature twisted into mischievous
+    malevolence, stalking the streets.
+  funFact: The mongooses found in Hawai'i are native to India and were originally
+    introduced to Hawai'i Island in 1883 by the sugar industry to control rats in
+    sugarcane fields
+  essenceMaterialType: {fileID: 11400000, guid: f073f9f7daac0044580750aa747fb925, type: 2}
+  spawnableAreas:
+  - areaData: {fileID: 11400000, guid: 3eab2a47301376742aa8be9758841f1d, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 3
+  - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 3
+  ItemsDroppedUponPurification:
+  - item: {fileID: 11400000, guid: 75d6596852de5b04883e430ac927c89a, type: 2}
+    dropRate: 1
+  InteractionToCompleteUponPurification: {fileID: 0}
+  essenceEffectivenessList:
+  - essenceMaterialType: {fileID: 11400000, guid: 2ca56bd43a0928f4184df63b8b18a55b, type: 2}
+    effectiveness: 2
+  - essenceMaterialType: {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}
+    effectiveness: 2
+  - essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
+    effectiveness: 4
+  - essenceMaterialType: {fileID: 11400000, guid: 2f790e2943fc210419e97430dda9251b, type: 2}
+    effectiveness: 3
+  - essenceMaterialType: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
+    effectiveness: 3
+  - essenceMaterialType: {fileID: 11400000, guid: 5654f2f89ceb1aa42bab5661b365a517, type: 2}
+    effectiveness: -2
+  - essenceMaterialType: {fileID: 11400000, guid: 68146c278b6c57c49acdd306f27ff912, type: 2}
+    effectiveness: -3
+  - essenceMaterialType: {fileID: 11400000, guid: 9b76473e442f62142bae32c903da1646, type: 2}
+    effectiveness: -2
+  - essenceMaterialType: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
+    effectiveness: -1
+  - essenceMaterialType: {fileID: 11400000, guid: c423dd4d148474442a17f78c15f34dde, type: 2}
+    effectiveness: -3
+  - essenceMaterialType: {fileID: 11400000, guid: a1bfb80bdfe9ad44ba0469ce84e17fd0, type: 2}
+    effectiveness: 10
+  combinationMultipliersList:
+  - essenceMaterialType1: {fileID: 11400000, guid: 2ca56bd43a0928f4184df63b8b18a55b, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}
+    multiplier: 1.5
+  - essenceMaterialType1: {fileID: 11400000, guid: 2f790e2943fc210419e97430dda9251b, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
+    multiplier: 1.7
+  - essenceMaterialType1: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}
+    multiplier: 1.6
+  - essenceMaterialType1: {fileID: 11400000, guid: 9b76473e442f62142bae32c903da1646, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}
+    multiplier: 0.75
+  corruptedStateSprite: {fileID: 21300000, guid: c75c90ae922a22341bece6d5497b8026, type: 3}
+  healedStateSprite: {fileID: 21300000, guid: 7461272b8e367f54bbabef3d8df24c45, type: 3}
+  corruptionLevelRangeMinMax: {x: 10, y: 20}
+  model: {fileID: 0}

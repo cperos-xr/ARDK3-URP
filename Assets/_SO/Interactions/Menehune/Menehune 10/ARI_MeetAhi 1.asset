@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
+  m_Name: ARI_MeetAhi 1
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 966b88ca0bd601742abf9fd259260ef6, type: 2}
+    newInteraction: {fileID: 11400000}
+    returnToPreviousInsteadOfNewInteraction: 0
+  InteractionName: 
+  itemDatas: []
+  quest: {fileID: 0}
+  notification:
+    notificationHeading: "E k\u014Dkua mai"
+    notificationContent: A crafty spirit has me ensnared. Your unique abilities could
+      be just what's needed to free me. Care to assist?
+    buttonText0: Will Do!
+    buttonText1: 
+    notificationIcon: {fileID: -1794054071, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
+    notificationType: 0
+  arEntity: {fileID: 11400000, guid: 966b88ca0bd601742abf9fd259260ef6, type: 2}

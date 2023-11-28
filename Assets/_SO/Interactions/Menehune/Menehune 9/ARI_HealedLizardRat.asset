@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
+  m_Name: ARI_HealedLizardRat
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 887838075c29eb14fb9f9170e87a0a95, type: 2}
+    newInteraction: {fileID: 11400000}
+    returnToPreviousInsteadOfNewInteraction: 0
+  InteractionName: Lizard and Rat Healed
+  itemDatas: []
+  quest: {fileID: 0}
+  notification:
+    notificationHeading: Mahalo nui loa!
+    notificationContent: Your efforts have brought light back to these creatures,
+      and in turn, to our land. You've shown great compassion and understanding of
+      our interconnected world. Your journey is a testament to the power of healing
+      and harmony.
+    buttonText0: Pono
+    buttonText1: 
+    notificationIcon: {fileID: 1484426590, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
+    notificationType: 0
+  arEntity: {fileID: 11400000, guid: 887838075c29eb14fb9f9170e87a0a95, type: 2}

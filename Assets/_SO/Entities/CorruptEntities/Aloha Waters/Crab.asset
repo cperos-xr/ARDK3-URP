@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
+  m_Name: Crab
+  m_EditorClassIdentifier: 
+  entityName: Pilikua Pincer
+  startingInteraction: {fileID: 0}
+  corruptEntityName: Pilikua Pincer
+  corruptEntityDescription: A cursed crab that now devours the corals it once cherished,
+    spreading decay with every pinch.
+  funFact: "the pom-pom crab har a habit of carrying a sea anemone around in each
+    of its claws.  Its Hawaiian name is k\u016Bmimi pua, means \"inedible flower
+    crab\""
+  essenceMaterialType: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
+  spawnableAreas:
+  - areaData: {fileID: 11400000, guid: 73ef1a5567e9f2e469a26aa4100d4aef, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 2
+  - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 2
+  ItemsDroppedUponPurification:
+  - item: {fileID: 11400000, guid: 5d5c243b14861134190f89f758e9b133, type: 2}
+    dropRate: 1
+  InteractionToCompleteUponPurification: {fileID: 0}
+  essenceEffectivenessList:
+  - essenceMaterialType: {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
+    effectiveness: 4
+  - essenceMaterialType: {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}
+    effectiveness: 3
+  - essenceMaterialType: {fileID: 11400000, guid: 8e2c4d819d6b0aa4d9ba259ac5c68fea, type: 2}
+    effectiveness: 2
+  - essenceMaterialType: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
+    effectiveness: 1
+  - essenceMaterialType: {fileID: 11400000, guid: 28125671f9205fa4abb0a91015785627, type: 2}
+    effectiveness: -1
+  - essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
+    effectiveness: -2
+  - essenceMaterialType: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
+    effectiveness: -1
+  - essenceMaterialType: {fileID: 11400000, guid: c423dd4d148474442a17f78c15f34dde, type: 2}
+    effectiveness: -3
+  - essenceMaterialType: {fileID: 11400000, guid: 68146c278b6c57c49acdd306f27ff912, type: 2}
+    effectiveness: -1
+  - essenceMaterialType: {fileID: 11400000, guid: 5654f2f89ceb1aa42bab5661b365a517, type: 2}
+    effectiveness: -2
+  - essenceMaterialType: {fileID: 11400000, guid: a1bfb80bdfe9ad44ba0469ce84e17fd0, type: 2}
+    effectiveness: 10
+  combinationMultipliersList:
+  - essenceMaterialType1: {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
+    multiplier: 1.5
+  - essenceMaterialType1: {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 8e2c4d819d6b0aa4d9ba259ac5c68fea, type: 2}
+    multiplier: 1.4
+  - essenceMaterialType1: {fileID: 11400000, guid: 2ca56bd43a0928f4184df63b8b18a55b, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
+    multiplier: 1.3
+  - essenceMaterialType1: {fileID: 11400000, guid: 68146c278b6c57c49acdd306f27ff912, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
+    multiplier: 0.8
+  - essenceMaterialType1: {fileID: 11400000, guid: c423dd4d148474442a17f78c15f34dde, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 8f7615222207eed4ea6e4200e234e30a, type: 2}
+    multiplier: 0.4
+  corruptedStateSprite: {fileID: 21300000, guid: baef61e0fad79854fa37bff1dfcb8c2b, type: 3}
+  healedStateSprite: {fileID: 21300000, guid: 376b977053bdcef47a8afadd3c11f58e, type: 3}
+  corruptionLevelRangeMinMax: {x: 10, y: 20}
+  model: {fileID: 5692774359906596949, guid: 02f6522f4e55c1745b40186b387745d5, type: 3}

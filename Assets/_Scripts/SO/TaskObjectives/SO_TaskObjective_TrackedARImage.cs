@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.XR.ARSubsystems;
 
-[CreateAssetMenu(fileName = "SO_TaskObjective_TrackedARImage", menuName = "Game/Quest System/Task Objective/TrackedARImage")]
+[CreateAssetMenu(fileName = "TO_TaskObjective_TrackedARImage", menuName = "Game/Quest System/Task Objective/TrackedARImage")]
 public class SO_TaskObjective_TrackedARImage : SO_TaskObjective
 {
     public bool isRetroactive;

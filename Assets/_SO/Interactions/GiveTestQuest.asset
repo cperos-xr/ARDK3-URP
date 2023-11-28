@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5adebe046a44fa548931b0aea32bf529, type: 3}
   m_Name: GiveTestQuest
   m_EditorClassIdentifier: 
-  changes: []
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 1071243610f7cfc49b8697b982b00dcd, type: 2}
+    newInteraction: {fileID: 0}
   InteractionName: Give Test Quest
-  maxInteractions: 1
   itemDatas: []
   quest: {fileID: 11400000, guid: 1b981ae416222564a9b5eda796157953, type: 2}
   notification:

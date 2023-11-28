@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
+  m_Name: ARI_GiveQuest5HiddenKittens
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: aa1803fbff44c1c49a806c0bb814625a, type: 2}
+    newInteraction: {fileID: 11400000, guid: 498c3b3fa4e0de54c95c4924aaaff319, type: 2}
+    returnToPreviousInsteadOfNewInteraction: 0
+  InteractionName: 
+  itemDatas: []
+  quest: {fileID: 11400000, guid: 7025e625bd5894244b28148b38aeea90, type: 2}
+  notification:
+    notificationHeading: "Pohaku's P\u014Dpoki"
+    notificationContent: The park's serenity is disrupted by hidden kitten spirits,
+      once gentle but now corrupted. They're adorable yet harmful to our wildlife.
+      Can you find and purify at least 3 of them in Fort De Russy Park? There are
+      more, but helping these 3 will make a significant difference.
+    buttonText0: On it, Right Meow!
+    buttonText1: 
+    notificationIcon: {fileID: 21300000, guid: 98623b3cb25d7ab408d350e272dea3b5, type: 3}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
+    notificationType: 0
+  arEntity: {fileID: 11400000, guid: aa1803fbff44c1c49a806c0bb814625a, type: 2}

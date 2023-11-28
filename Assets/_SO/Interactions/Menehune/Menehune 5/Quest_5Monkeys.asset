@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85fb361c81613845bfed8c2913aaaff, type: 3}
+  m_Name: Quest_5Monkeys
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
+  questID: 
+  questTitle: Heal 5 Monkeys
+  questDescription: The Monkeys, once residents of the Honolulu Zoo, now roam free
+    in Queen Kapiolani Park.  Find and Heal 5 of them, although there are more, 5
+    should be enough to make an impact.
+  tasks:
+  - {fileID: 11400000, guid: a122eff4e5c988346b2ef49a90d53e5e, type: 2}
+  experienceReward: 5000
+  rewardItem: {fileID: 0}

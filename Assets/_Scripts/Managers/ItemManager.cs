@@ -1,44 +1,26 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 
 public class ItemManager : MonoBehaviour
 {
     [SerializeField] public List<SO_MapEntityData> currentInteractiveEntities = new List<SO_MapEntityData>();
-    //[SerializeField] public PlayerManager playerManager;
     [SerializeField] private ItemStateManager itemStateManager;
 
     public delegate void PlayerGivenItemEvent(SO_ItemData item);
     public static event PlayerGivenItemEvent OnPlayerGivenItem;
 
-    public void LoadEntityItems(SO_MapEntityData entityData)
-    {
-        if (!currentInteractiveEntities.Contains(entityData))
-        {
-            currentInteractiveEntities.Add(entityData);
-        }
 
-        foreach (SO_ItemData itemData in entityData.associatedItems)
-        {
-            if (!itemData.isLocked)
-            {
-                if (itemData.isDuplicable || !itemStateManager.HasEntityGivenItem(entityData, itemData))
-                {
-                    AddItemToPlayerInventory(itemData, entityData);
-                }
-            }
-        }
+
+
+    private void OnEnable()
+    {
+        InteractionManager.OnPlayerReceiveItem += AddItemToPlayerInventory;
     }
 
-    public void RemoveEntity(SO_MapEntityData entity)
+    private void OnDisable()
     {
-        if (currentInteractiveEntities.Contains(entity))
-        {
-            currentInteractiveEntities.Remove(entity);
-        }
+        InteractionManager.OnPlayerReceiveItem -= AddItemToPlayerInventory;
     }
 
     public void AddItemToPlayerInventory(SO_ItemData itemData, BaseEntityData entity)
@@ -53,6 +35,11 @@ public class ItemManager : MonoBehaviour
         OnPlayerGivenItem?.Invoke(itemData);
 
         Debug.Log($"Adding Item {itemData.itemName} to player inventory");
+
+        //updating any interactions that may have changed
+        InteractionManager.Instance.UpdateAllEntityInteractions(itemData);
+
+        QuestUIHandler.Instance.CheckQuests();
 
 
     }

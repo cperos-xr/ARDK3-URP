@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd371c013f334b74f8a4b18a18aeacda, type: 3}
+  m_Name: PurifySquid
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
+  InteractionName: Purify Squid
+  itemDatas: []
+  quest: {fileID: 0}
+  notification:
+    notificationHeading: A Cursed Creature!
+    notificationContent: Choose wisely from your Essence Pouch to restore the creature's
+      harmony.  Some essences soothe the curse, while others may worsen it
+    buttonText0: Got it!
+    buttonText1: 
+    notificationIcon: {fileID: 21300000, guid: 1569aad05b910e3419479f89953054e5, type: 3}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
+    notificationType: 0
+  corruptEntity: {fileID: 11400000, guid: 774a8e0dcaee1134280431fbca7855f8, type: 2}

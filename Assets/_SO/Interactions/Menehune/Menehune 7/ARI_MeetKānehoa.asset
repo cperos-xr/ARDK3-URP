@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
+  m_Name: "ARI_MeetK\u0101nehoa"
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 1858894ddc5a461439e796f28051e6d8, type: 2}
+    newInteraction: {fileID: 11400000, guid: 268b069da80fa3045a7a4608e9ad715a, type: 2}
+    returnToPreviousInsteadOfNewInteraction: 0
+  InteractionName: "Meet K\u0101nehoa"
+  itemDatas: []
+  quest: {fileID: 0}
+  notification:
+    notificationHeading: Aloha!
+    notificationContent: "Aloha! I'm K\u0101nehoa, the Royal Grounds' very own Whispering
+      Warrior. Don't let the title fool you \u2013 I'm more about fun than fights!
+      These grounds are full of stories and laughter. Ready to make some history
+      of our own?"
+    buttonText0: 
+    buttonText1: 
+    notificationIcon: {fileID: -1321869479, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
+    notificationType: 0
+  arEntity: {fileID: 11400000, guid: 1858894ddc5a461439e796f28051e6d8, type: 2}

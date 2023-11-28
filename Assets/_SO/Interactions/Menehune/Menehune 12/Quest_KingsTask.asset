@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85fb361c81613845bfed8c2913aaaff, type: 3}
+  m_Name: Quest_KingsTask
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
+  questID: 
+  questTitle: A Navigator Lost
+  questDescription: The Royal Navigator, the best in all the seas, has gone to the
+    Illikai and hasn't come back.
+  tasks:
+  - {fileID: 11400000, guid: 14c0cbe386df0254c9471ebd38fb89dc, type: 2}
+  experienceReward: 1500
+  rewardItem: {fileID: 0}

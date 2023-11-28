@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
+  m_Name: ARI_GiveQuestFinedMenehuneKing
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: aa1803fbff44c1c49a806c0bb814625a, type: 2}
+    newInteraction: {fileID: 11400000, guid: 8954af7f68815c8499ffa0a07b1c4199, type: 2}
+    returnToPreviousInsteadOfNewInteraction: 0
+  InteractionName: Kings Quest
+  itemDatas: []
+  quest: {fileID: 11400000, guid: 2057a6d04986e54418b7164d6f213e76, type: 2}
+  notification:
+    notificationHeading: Mahalo nui
+    notificationContent: You have much kindness, friend. The spirits of these little
+      ones are now at peace. But our journey to heal the land doesn't end here. The
+      Menehune King, our wise and ancient leader, awaits your arrival.
+    buttonText0: To the King!
+    buttonText1: 
+    notificationIcon: {fileID: 1490737176, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
+    notificationColor: {r: 1, g: 1, b: 1, a: 1}
+    notificationType: 0
+  arEntity: {fileID: 11400000, guid: aa1803fbff44c1c49a806c0bb814625a, type: 2}

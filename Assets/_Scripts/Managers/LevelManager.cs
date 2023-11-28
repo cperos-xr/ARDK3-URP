@@ -65,7 +65,7 @@ public class LevelManager : MonoBehaviour
         {
             // Player position has changed, broadcast the event
             OnPlayerPositionChanged?.Invoke(PlayerManager.Instance.PlayerGPS);
-            Debug.Log("Player position has changed");
+            //Debug.Log("Player position has changed");
         }
 
     }

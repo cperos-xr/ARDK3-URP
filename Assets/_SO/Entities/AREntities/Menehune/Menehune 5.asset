@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda2ea000fab5d449a8ce97c9c6f7c5d, type: 3}
+  m_Name: Menehune 5
+  m_EditorClassIdentifier: 
+  entityName: Lanihuli
+  startingInteraction: {fileID: 11400000, guid: 60e003dc5b3e77e44b104f16f5c2e20d, type: 2}
+  gpsCoordinates:
+    _latitude: 21.26910972595215
+    _longitude: -157.82106018066406
+  interactionRadius: 0
+  associatedItems: []
+  _cubeGOP: {fileID: 9158753300364065724, guid: 53a83992f51549847a031997d0faf17b, type: 3}

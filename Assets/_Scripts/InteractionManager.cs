@@ -1,11 +1,12 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using static InteractionProgression;
 
 public class InteractionManager : MonoBehaviour
 {
     public static InteractionManager Instance;
-    [SerializeField] ItemManager itemManager;
+    //[SerializeField] ItemManager itemManager;
 
     public delegate void PlayerInteractionEvent(SO_Interaction EntityNotifyPlayer);
     public static event PlayerInteractionEvent OnPlayerInteraction;
@@ -13,12 +14,28 @@ public class InteractionManager : MonoBehaviour
     public delegate void PlayerEntityInteractionEvent(BaseEntityData entity);
     public static event PlayerEntityInteractionEvent OnPlayerEntityInteraction;
 
-    private Dictionary<BaseEntityData, Dictionary<SO_Interaction, int>> entityInteractionCounts = new Dictionary<BaseEntityData, Dictionary<SO_Interaction, int>>();
+    public delegate void PlayerCorruptEntityInteractionEvent(SO_CorruptEntity corruptEntity);
+    public static event PlayerCorruptEntityInteractionEvent OnPlayerCorruptEntityInteraction;
+
+    public delegate void PlayerAREntityInteractionEvent(SO_InteractionAREntity arEntityInteraction);
+    public static event PlayerAREntityInteractionEvent OnPlayerAREntityInteraction;
+
+    public delegate void PlayerReceiveItemEvent(SO_ItemData itemData, BaseEntityData entityData);
+    public static event PlayerReceiveItemEvent OnPlayerReceiveItem;
+
 
     public Dictionary<BaseEntityData, SO_Interaction> interactionProgressionDictionary = new Dictionary<BaseEntityData, SO_Interaction>();
 
+    public Dictionary<BaseEntityData, SO_Interaction> previousInteractionDictionary = new Dictionary<BaseEntityData, SO_Interaction>();
+
+    public struct InteractionContainer
+    {
+        public SO_Interaction interaction;
+        public SO_Interaction previousInteraction;
+    }
     //[SerializeField] QuestManager questManager;
 
+    private Animator anim;
 
     private void Awake()
     {
@@ -36,6 +53,7 @@ public class InteractionManager : MonoBehaviour
 
     public void HandleEntityInteraction(BaseEntityData entity)
     {
+        // Check if the entity is null
         if (entity == null)
         {
             Debug.LogError("Entity is null.");
@@ -45,57 +63,145 @@ public class InteractionManager : MonoBehaviour
         Debug.Log("Handling Entity Interaction for " + entity.entityName);
         OnPlayerEntityInteraction?.Invoke(entity);
 
-        // Get the current interaction from the progression dictionary or the default starting interaction
-        SO_Interaction currentInteraction = interactionProgressionDictionary.ContainsKey(entity)
-            ? interactionProgressionDictionary[entity]
-            : entity.interactions[entity.startingInteractionIndex];
-
-        // Perform the interaction
-        OnPlayerInteraction?.Invoke(currentInteraction);
-
-        // ... (rest of your existing code for handling items and quests)
-
-        // Check if there's a next interaction defined for the current interaction
-        if (currentInteraction.interactionModifications != null && currentInteraction.interactionModifications.Count > 0)
+        // Check if this is the first interaction with the entity
+        if (!interactionProgressionDictionary.ContainsKey(entity))
         {
-            foreach (var interactionModification in currentInteraction.interactionModifications)
+            // If it is, use the starting interaction
+            if (entity.startingInteraction != null)
             {
-                // Update the interaction to the next one
-                UpdateInteraction(entity, interactionModification.newInteraction);
+                previousInteractionDictionary.Add(entity, null); // no previous interaction
+                interactionProgressionDictionary.Add(entity, entity.startingInteraction);
+                QuestUIHandler.Instance.CheckQuests();
+            }
+            else
+            {
+                Debug.Log("Starting interaction for entity " + entity.entityName + " is null.");
+                return; // Exit the method to avoid further issues.
             }
         }
-        else
+
+        // Retrieve the current interaction for the entity
+        SO_Interaction interaction = interactionProgressionDictionary[entity];
+
+        // Ensure that the interaction is not null
+        if (interaction == null)
         {
-            // If there's no next interaction, this interaction should occur only once
-            // You can remove the entity from the dictionary to prevent further interactions
-            interactionProgressionDictionary.Remove(entity);
-            Debug.Log("No next interaction specified for " + entity.entityName + ", interaction will not repeat.");
+            Debug.Log("Interaction for entity " + entity.entityName + " is null.");
+            return; // Exit the method to avoid further issues.
+        }
+
+        // Invoke the interaction event
+        OnPlayerInteraction?.Invoke(interaction);
+
+        //Update all entity interactions
+        if (interaction.entityInteractionUpdates.Count > 0)
+        {
+            Debug.Log("entityInteractionUpdates has count greater than 0 " + interaction.InteractionName);
+            UpdateAllEntityInteractions(interaction);
+
+        }
+
+
+        // Handle items if any are associated with this interaction
+        if (interaction.itemDatas != null)
+        {
+            foreach (SO_ItemData itemData in interaction.itemDatas)
+            {
+                OnPlayerReceiveItem?.Invoke(itemData, entity);
+            }
+        }
+
+        // Handle quests if any are associated with this interaction
+        if (interaction.quest != null)
+        {
+            // Ensure QuestManager.Instance is not null
+            if (QuestManager.Instance != null)
+            {
+                QuestManager.Instance.AssignQuest(interaction.quest);
+            }
+            else
+            {
+                Debug.LogError("QuestManager.Instance is null.");
+                return; // Exit the method to avoid further issues.
+            }
+        }
+
+        if (interaction is SO_PurifyInteraction purifyInteraction)
+        {
+            OnPlayerCorruptEntityInteraction?.Invoke(purifyInteraction.corruptEntity);
+        }
+        else if (interaction is SO_InteractionAREntity arEntityInteraction)
+        {
+            OnPlayerAREntityInteraction?.Invoke(arEntityInteraction); // line 140
+        }
+
+        // If you want to update the interaction after handling, you can do so here
+        // For example, if the interaction should change after being handled once:
+        // UpdateInteractionIndex(entity, interaction.nextInteraction);
+    }
+
+    public void UpdateAllEntityInteractions(InteractionProgression interactionProgression)
+    {
+       foreach (EntityInteractionChange entityInteractionUpdate in interactionProgression.entityInteractionUpdates)
+        {
+            if (entityInteractionUpdate.entity == null)
+            {
+                Debug.LogWarning($"New interaction Entity is null...");
+                return;
+            }
+
+            if (entityInteractionUpdate.returnToPreviousInsteadOfNewInteraction 
+                && previousInteractionDictionary.TryGetValue(entityInteractionUpdate.entity, out var value))
+            {
+                Debug.Log($"New interaction is now the previous interaction again for {entityInteractionUpdate.entity.entityName}...");
+                UpdateInteraction(entityInteractionUpdate.entity, previousInteractionDictionary[entityInteractionUpdate.entity]);
+            }
+            else if (entityInteractionUpdate.newInteraction != null)
+            {
+                Debug.Log($"New interaction is not null for {entityInteractionUpdate.entity.entityName}...");
+                UpdateInteraction(entityInteractionUpdate.entity, entityInteractionUpdate.newInteraction);
+            }
+            else
+            {
+                Debug.Log($"New interaction is null for {entityInteractionUpdate.entity.entityName}...");
+                UpdateInteraction(entityInteractionUpdate.entity, null);
+            }
+
+
         }
     }
 
     internal void UpdateInteraction(BaseEntityData entity, SO_Interaction newInteraction)
     {
+        InteractionContainer interactionContainer = new InteractionContainer();
+        interactionContainer.interaction = newInteraction;
+
         if (newInteraction == null)
         {
-            // If newInteraction is null, it means this interaction should not repeat
-            interactionProgressionDictionary.Remove(entity);
-            Debug.Log("Interaction for " + entity.entityName + " is set to not repeat and will be removed from progression.");
+            Debug.Log("null interaction occured, no current interaction assigned for entity...");
         }
-        else if (interactionProgressionDictionary.ContainsKey(entity))
+
+        if (previousInteractionDictionary.ContainsKey(entity) && interactionProgressionDictionary.ContainsKey(entity))
         {
-            // Update the interaction in the progression dictionary
-            interactionProgressionDictionary[entity] = newInteraction;
-            Debug.Log("Updating Entity Interaction for " + entity.entityName + " to " + newInteraction.name);
+            previousInteractionDictionary[entity] = interactionProgressionDictionary[entity];
         }
         else
         {
-            // If the entity is not in the progression dictionary, add it with the new interaction
-            interactionProgressionDictionary.Add(entity, newInteraction);
-            Debug.Log("Setting initial Entity Interaction for " + entity.entityName + " to " + newInteraction.name);
+            previousInteractionDictionary.Add(entity, null);
         }
+
+        if (interactionProgressionDictionary.ContainsKey(entity))
+        {
+
+            //interactionContainer.previousInteraction = interactionProgressionDictionary[entity].interaction;
+            interactionProgressionDictionary[entity] = newInteraction;
+        }
+        else
+        {
+            //interactionContainer.previousInteraction = null;
+            interactionProgressionDictionary.Add(entity, newInteraction);
+        }
+
+        // Here you can add additional code to handle the interaction update, such as triggering events or saving the state
     }
-
-
-
 }
-

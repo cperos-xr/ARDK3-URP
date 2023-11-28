@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d84b52c63b5a4468928409f37905ff, type: 3}
+  m_Name: Kitty
+  m_EditorClassIdentifier: 
+  entityName: "P\u014Dpoki Peril"
+  startingInteraction: {fileID: 0}
+  corruptEntityName: "P\u014Dpoki Peril"
+  corruptEntityDescription: Once a common sight in alleys and backstreets, this stray
+    cat has become a harbinger of misfortune, its silent steps bringing a sense of
+    impending doom to those who cross its path.
+  funFact: Although cute, feral cats are one of the most devastating predators of
+    Hawai'i's unique wildlife
+  essenceMaterialType: {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
+  spawnableAreas:
+  - areaData: {fileID: 11400000, guid: 021cf3f44138b8c42bce8054291d1c56, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 3
+  - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 3
+  - areaData: {fileID: 11400000, guid: 4a58ed3b4ae1c1e4cacb7a335887f4fb, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 3
+  - areaData: {fileID: 11400000, guid: 3eab2a47301376742aa8be9758841f1d, type: 2}
+    scarcityLevel:
+      ScarcityLevel: 3
+  ItemsDroppedUponPurification:
+  - item: {fileID: 11400000, guid: bd1bd17b62c4ad54aa854ff7fb493f8b, type: 2}
+    dropRate: 1
+  InteractionToCompleteUponPurification: {fileID: 0}
+  essenceEffectivenessList:
+  - essenceMaterialType: {fileID: 11400000, guid: 68146c278b6c57c49acdd306f27ff912, type: 2}
+    effectiveness: 2
+  - essenceMaterialType: {fileID: 11400000, guid: 2ca56bd43a0928f4184df63b8b18a55b, type: 2}
+    effectiveness: 3
+  - essenceMaterialType: {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}
+    effectiveness: 4
+  - essenceMaterialType: {fileID: 11400000, guid: 2f790e2943fc210419e97430dda9251b, type: 2}
+    effectiveness: 2
+  - essenceMaterialType: {fileID: 11400000, guid: c423dd4d148474442a17f78c15f34dde, type: 2}
+    effectiveness: 3
+  - essenceMaterialType: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
+    effectiveness: -2
+  - essenceMaterialType: {fileID: 11400000, guid: 0427fcf0ce3220d48bb07abb75ac9e81, type: 2}
+    effectiveness: -2
+  - essenceMaterialType: {fileID: 11400000, guid: 8e2c4d819d6b0aa4d9ba259ac5c68fea, type: 2}
+    effectiveness: -4
+  - essenceMaterialType: {fileID: 11400000, guid: 84c063cd72320b141be350ea6114174f, type: 2}
+    effectiveness: -3
+  - essenceMaterialType: {fileID: 11400000, guid: 1c0bd690c5d034e459f3ae90c062bfbc, type: 2}
+    effectiveness: -1
+  - essenceMaterialType: {fileID: 11400000, guid: a1bfb80bdfe9ad44ba0469ce84e17fd0, type: 2}
+    effectiveness: 10
+  combinationMultipliersList:
+  - essenceMaterialType1: {fileID: 11400000, guid: 68146c278b6c57c49acdd306f27ff912, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 2ca56bd43a0928f4184df63b8b18a55b, type: 2}
+    multiplier: 1.6
+  - essenceMaterialType1: {fileID: 11400000, guid: ee3e3d02fa1ed6441a785e60a0287eb8, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 2f790e2943fc210419e97430dda9251b, type: 2}
+    multiplier: 1.9
+  - essenceMaterialType1: {fileID: 11400000, guid: c423dd4d148474442a17f78c15f34dde, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 68146c278b6c57c49acdd306f27ff912, type: 2}
+    multiplier: 1.4
+  - essenceMaterialType1: {fileID: 11400000, guid: f91d0adf5d8ebe64192a902cbcf8ddab, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 64f7f3742d5dd0e42874724b69cb9d78, type: 2}
+    multiplier: 0.5
+  - essenceMaterialType1: {fileID: 11400000, guid: 84c063cd72320b141be350ea6114174f, type: 2}
+    essenceMaterialType2: {fileID: 11400000, guid: 48d496d19d8c50640a4622759664463e, type: 2}
+    multiplier: 0.7
+  corruptedStateSprite: {fileID: 21300000, guid: c3fbd1dea158eca4b8d4b97f34b8d4e2, type: 3}
+  healedStateSprite: {fileID: 21300000, guid: 98623b3cb25d7ab408d350e272dea3b5, type: 3}
+  corruptionLevelRangeMinMax: {x: 25, y: 35}
+  model: {fileID: 432779166287252926, guid: 8859f2284398ba548a076b37f17a67f6, type: 3}

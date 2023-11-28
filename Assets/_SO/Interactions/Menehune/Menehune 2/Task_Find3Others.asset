@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e318418990b8954db7c230119f3f47c, type: 3}
+  m_Name: Task_Find3Others
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
+  taskID: 
+  taskName: Find 3 Others
+  icon: {fileID: -1821777005, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
+  taskDescription: "Seek the guardians in Waikiki: one lies west in the Royal Grounds,
+    another east in the Sacred Gardens, and the third in the heart of N\u0101 K\u016B\u02BBai
+    Square. Their locations are marked on your map."
+  objectives:
+  - {fileID: 11400000, guid: 4c906d4ec11081e44a9f86577e63980a, type: 2}
+  - {fileID: 11400000, guid: f0d2ee5cf88707d4980108700833faea, type: 2}
+  - {fileID: 11400000, guid: 910d47653778d60428bfb2a7fe51c8f6, type: 2}
+  experienceReward: 1000
+  itemRewards:
+  - {fileID: 11400000, guid: a1bfb80bdfe9ad44ba0469ce84e17fd0, type: 2}

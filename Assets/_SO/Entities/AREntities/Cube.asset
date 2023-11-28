@@ -13,19 +13,4 @@ MonoBehaviour:
   m_Name: Cube
   m_EditorClassIdentifier: 
   entityName: Cube
-  interactionIndex: 0
-  interactions:
-  - name: Give Item
-    isRepeatable: 0
-    interactionCount: 0
-    maxInteractions: 5
-    itemDatas:
-    - {fileID: 11400000, guid: b81d7e6f294a867419ad776dcf38f8f1, type: 2}
-    notification:
-      notificationHeading: Cube Gives
-      notificationContent: Here is a gift from the Cubic One
-      buttonText0: Accept
-      buttonText1: 
-      notificationIcon: {fileID: 21300000, guid: 465a4b4f09175f040b5dddeda97cd4f3,
-        type: 3}
-    interactionIsLocked: 0
+  startingInteraction: {fileID: 11400000, guid: f2fdd0bfeb6419a4386895f72c8adf44, type: 2}

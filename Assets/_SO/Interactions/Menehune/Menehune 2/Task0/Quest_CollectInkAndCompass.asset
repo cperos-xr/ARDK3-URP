@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85fb361c81613845bfed8c2913aaaff, type: 3}
+  m_Name: Quest_CollectInkAndCompass
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
+  questID: 
+  questTitle: Squid & Turtle - Aloha Waters
+  questDescription: 'Nui, the Cartographer Menehune, can create a special map for
+    your journey, but needs two key items: the mystical ink sac from a Bobtail Squid
+    and the compass from a Green Sea Turtle. Find and heal these creatures nearby
+    to obtain their gifts.'
+  tasks:
+  - {fileID: 11400000, guid: 3fcfe34b9d5b87049b0fd73a66b33678, type: 2}
+  experienceReward: 0
+  rewardItem: {fileID: 0}

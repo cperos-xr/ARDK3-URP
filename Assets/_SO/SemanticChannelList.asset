@@ -12,4 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72fa381f77ca7d24ab5e544882eb95f7, type: 3}
   m_Name: SemanticChannelList
   m_EditorClassIdentifier: 
-  channelNames: []
+  channelNames:
+  - sky
+  - ground
+  - natural_ground
+  - artificial_ground
+  - water
+  - person
+  - building
+  - foliage
+  - grass
+  - flower_experimental
+  - tree_trunk_experimental
+  - pet_experimental
+  - sand_experimental
+  - tv_experimental
+  - dirt_experimental
+  - vehicle_experimental
+  - food_experimental
+  - loungeable_experimental
+  - snow_experimental
+  - harmony

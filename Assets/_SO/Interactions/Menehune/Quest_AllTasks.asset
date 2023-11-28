@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85fb361c81613845bfed8c2913aaaff, type: 3}
+  m_Name: Quest_AllTasks
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates: []
+  questID: 
+  questTitle: Complete All the Tasks
+  questDescription: Seek out all the menehune and provede assistance.  Each one will
+    have at least one task to give you so talk to them and see what they have to
+    say.
+  tasks:
+  - {fileID: 11400000, guid: 3fcfe34b9d5b87049b0fd73a66b33678, type: 2}
+  - {fileID: 11400000, guid: fe58eb7a7e88dee4b8a8f5466577aefe, type: 2}
+  - {fileID: 11400000, guid: 9adfc73f82c95864fb88ff392b86f28b, type: 2}
+  - {fileID: 11400000, guid: c119abd8fabb3ea41b530dc9193c6729, type: 2}
+  - {fileID: 11400000, guid: a122eff4e5c988346b2ef49a90d53e5e, type: 2}
+  - {fileID: 11400000, guid: 0183242a467cb7248aefa24163258e58, type: 2}
+  - {fileID: 11400000, guid: a3459e27af553094fbc912e9a538d4be, type: 2}
+  - {fileID: 11400000, guid: a737c2d33b6fd6547b803ca3530aa99d, type: 2}
+  - {fileID: 11400000, guid: d4cf95419fe70f0469f703f6ccd57b92, type: 2}
+  - {fileID: 11400000, guid: edafaafc6c117d3449bc83047037c38b, type: 2}
+  - {fileID: 11400000, guid: e5ac966623f843248a105adf269f1eb6, type: 2}
+  - {fileID: 11400000, guid: a46b20d5a57dc244bb74ea0f8668b736, type: 2}
+  - {fileID: 11400000, guid: 9d5c3f48611bd154eaaf185e50645b57, type: 2}
+  - {fileID: 11400000, guid: 14c0cbe386df0254c9471ebd38fb89dc, type: 2}
+  experienceReward: 10000
+  rewardItem: {fileID: 0}

@@ -46,7 +46,7 @@ public class TaskObjectiveHandler : MonoBehaviour
         ItemManager.OnPlayerGivenItem += HandlePlayerGivenItem;
         InteractionManager.OnPlayerInteraction += HandlePlayerInteraction;
         InteractionManager.OnPlayerEntityInteraction += HandlePlayerEntityInteraction;
-        SemanticChannelDetector.OnSemanticChannelIdentified += HandleSemanticChannelIdentified;
+        SemanticChannelDetector.OnSemanticChannelIdentified += HandleSemanticChannelsIdentified;
 
         //AR Image Tracking is called from ARTrack
 
@@ -59,7 +59,7 @@ public class TaskObjectiveHandler : MonoBehaviour
         ItemManager.OnPlayerGivenItem -= HandlePlayerGivenItem;
         InteractionManager.OnPlayerInteraction -= HandlePlayerInteraction;
         InteractionManager.OnPlayerEntityInteraction -= HandlePlayerEntityInteraction;
-        SemanticChannelDetector.OnSemanticChannelIdentified -= HandleSemanticChannelIdentified;
+        SemanticChannelDetector.OnSemanticChannelIdentified -= HandleSemanticChannelsIdentified;
 
     }
 
@@ -180,11 +180,11 @@ public class TaskObjectiveHandler : MonoBehaviour
         }
     }
 
-    private void HandleSemanticChannelIdentified(List <string> identifiedChannels)
+    private void HandleSemanticChannelsIdentified(List <string> identifiedChannels, Vector2 point)
     {
         Debug.Log("Handle Sematic Channel");
         // Assuming you have a dictionary to track the completion status of semantic objectives
-        foreach (var channel in identifiedChannels)
+        foreach (string channel in identifiedChannels)
         {
             Debug.Log("channel is " + channel);
             HandleSemanticChannelIdentified (channel);
@@ -237,9 +237,6 @@ public class TaskObjectiveHandler : MonoBehaviour
         Debug.Log("No match: false");
         return false;
     }
-
-
-
 
     public bool IsObjectiveCompleted(SO_TaskObjective objective)
     {
@@ -349,61 +346,48 @@ public class TaskObjectiveHandler : MonoBehaviour
             return;
         }
 
-        // Check and add for SO_TaskObjective_ItemCollection
+        // Define a generic method to handle adding objectives to their respective dictionaries.
+        void AddObjective<T>(Dictionary<T, bool> dictionary, T key) where T : SO_TaskObjective
+        {
+            if (!dictionary.ContainsKey(key))
+            {
+                dictionary.Add(key, false);
+            }
+            else
+            {
+                Debug.LogWarning($"Objective {key.objectiveName} already exists in the dictionary and will not be added again.");
+                // Optionally, you could handle updating the existing entry here if needed.
+            }
+        }
+
+        // Use the generic method for each objective type.
         if (objective is SO_TaskObjective_ItemCollection taskObjective_ItemCollection)
         {
-            if (!itemCollectionObjectives.ContainsKey(taskObjective_ItemCollection))
-            {
-                itemCollectionObjectives.Add(taskObjective_ItemCollection, false);
-            }
+            AddObjective(itemCollectionObjectives, taskObjective_ItemCollection);
         }
-        // Check and add for SO_TaskObjective_GPSLocation
         else if (objective is SO_TaskObjective_GPSLocation taskObjective_GPSLocation)
         {
-            if (!gpsLocationObjectives.ContainsKey(taskObjective_GPSLocation))
-            {
-                gpsLocationObjectives.Add(taskObjective_GPSLocation, false);
-            }
+            AddObjective(gpsLocationObjectives, taskObjective_GPSLocation);
         }
-        // Check and add for SO_TaskObjective_TrackedARImage
         else if (objective is SO_TaskObjective_TrackedARImage taskObjective_TrackedARImage)
         {
-            if (!arTrackedImageObjectives.ContainsKey(taskObjective_TrackedARImage))
-            {
-                arTrackedImageObjectives.Add(taskObjective_TrackedARImage, false);
-            }
+            AddObjective(arTrackedImageObjectives, taskObjective_TrackedARImage);
         }
-        // Check and add for SO_TaskObjective_EnterArea
         else if (objective is SO_TaskObjective_EnterArea taskObjective_EnterArea)
         {
-            if (!enterAreaObjectives.ContainsKey(taskObjective_EnterArea))
-            {
-                enterAreaObjectives.Add(taskObjective_EnterArea, false);
-            }
+            AddObjective(enterAreaObjectives, taskObjective_EnterArea);
         }
-        // Check and add for SO_TaskObjective_EntityInteraction
         else if (objective is SO_TaskObjective_EntityInteraction taskObjective_EntityInteraction)
         {
-            if (!entityInteractionObjectives.ContainsKey(taskObjective_EntityInteraction))
-            {
-                entityInteractionObjectives.Add(taskObjective_EntityInteraction, false);
-            }
+            AddObjective(entityInteractionObjectives, taskObjective_EntityInteraction);
         }
-        // Check and add for SO_TaskObjective_Interaction
         else if (objective is SO_TaskObjective_Interaction taskObjective_Interaction)
         {
-            if (!interactionObjectives.ContainsKey(taskObjective_Interaction))
-            {
-                interactionObjectives.Add(taskObjective_Interaction, false);
-            }
+            AddObjective(interactionObjectives, taskObjective_Interaction);
         }
-        // Check and add for SO_TaskObjective_Semantic
         else if (objective is SO_TaskObjective_Semantic taskObjective_Semantic)
         {
-            if (!semanticObjectives.ContainsKey(taskObjective_Semantic))
-            {
-                semanticObjectives.Add(taskObjective_Semantic, false);
-            }
+            AddObjective(semanticObjectives, taskObjective_Semantic);
         }
         // Add similar cases for other objective types...
     }

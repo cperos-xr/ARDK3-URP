@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
+  m_Name: ARI_JourneyMarket
+  m_EditorClassIdentifier: 
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 9318d58208d72ae49b8f58f9b34282a5, type: 2}
+    newInteraction: {fileID: 11400000, guid: 2661e3452191ea643a3bcd4f5f143c80, type: 2}
+    returnToPreviousInsteadOfNewInteraction: 0
+  InteractionName: 
+  itemDatas: []
+  quest: {fileID: 0}
+  notification:
+    notificationHeading: "N\u0101 K\u016B\u02BBai Square"
+    notificationContent: "In N\u0101 K\u016B\u02BBai Square's bustling center, find
+      the guardian. Their insight is crucial. Refer to your map for guidance."
+    buttonText0: Got It!
+    buttonText1: 
+    notificationIcon: {fileID: -1821777005, guid: 8e132cfcd956ed8418e40a4bdaf8ffd8, type: 3}
+    notificationColor: {r: 0, g: 0.5019608, b: 0.5019608, a: 1}
+    notificationType: 0
+  arEntity: {fileID: 11400000, guid: 9318d58208d72ae49b8f58f9b34282a5, type: 2}

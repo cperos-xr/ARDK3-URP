@@ -24,18 +24,12 @@ public class ScreenTapRaycaster : MonoBehaviour
     private void Update()
     {
         // Check for a screen tap on mobile
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) //liun 27
         {
             Vector2 touchPosition = Input.GetTouch(0).position;
             PerformRaycastFromTap(touchPosition);  // line 30
         }
 
-        // Check for raycast from the middle of the screen
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector2 screenCenter = new Vector2(Screen.width / 2, Screen.height / 2);
-            PerformRaycastFromScreenCenter(screenCenter);
-        }
     }
 
     public void PerformRaycastFromTap(Vector2 tapPosition)
@@ -49,7 +43,7 @@ public class ScreenTapRaycaster : MonoBehaviour
             // ...
 
             AREntity arEntity = hitObject.GetComponent<AREntity>();
-            if (arEntity)
+            if (arEntity && PlayerManager.Instance.currentPlayerState == PlayerState.normal)
             {
                 SO_ArEntityData sO_ArEntityData = arEntity.arEntityData;
                 if (interactionManager != null)
@@ -66,40 +60,6 @@ public class ScreenTapRaycaster : MonoBehaviour
         {
             Debug.Log("No object was hit (from tap).");
             hitTextHit.text = "No Hit";
-        }
-    }
-
-    private void PerformRaycastFromScreenCenter(Vector2 screenCenter)
-    {
-        Ray ray = mainCamera.ScreenPointToRay(screenCenter);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
-        {
-            GameObject hitObject = hit.collider.gameObject;
-            Debug.Log("Hit object (from screen center): " + hitObject.name);
-            Debug.Log("Hit point: " + hit.point);
-            Debug.Log("Hit normal: " + hit.normal);
-            hitTextCenter.text = hitObject.name;
-
-            AREntity arEntity = hitObject.GetComponent<AREntity>();
-            if (arEntity)
-            {
-                SO_ArEntityData sO_ArEntityData = arEntity.arEntityData;
-                if (interactionManager != null)
-                {
-                    interactionManager.HandleEntityInteraction(sO_ArEntityData);
-                }
-                else
-                {
-                    Debug.LogError("interactionManager is null.");
-                }
-            }
-        }
-        else
-        {
-            Debug.Log("No object was hit (from screen center).");
-            hitTextCenter.text = "No Hit";
         }
     }
 }

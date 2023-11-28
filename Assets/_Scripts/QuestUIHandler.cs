@@ -6,15 +6,27 @@ using UnityEngine.UI;
 
 public class QuestUIHandler : MonoBehaviour
 {
+    public static QuestUIHandler Instance;
     [SerializeField] private GameObject buttonTemplate;
     [SerializeField] private GameObject content;
 
     [SerializeField] private List<InventoryButton> buttonObjects;
 
-    //private Dictionary <IButtonObject, InventoryButton> iButtonDictionary = new Dictionary<IButtonObject, InventoryButton>();
 
 
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        // Ensure there is only one instance of QuestManager
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            // If an instance already exists, destroy this one
+            Destroy(gameObject);
+        }
+    }
 
     private void OnEnable()
     {

@@ -25,6 +25,9 @@ public class AreaManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI currentAreaName;
 
+    public delegate void PlayerEnterAreaEvent(SO_AreaData area);
+    public static event PlayerEnterAreaEvent OnPlayerEnterArea;
+
     private void Awake()
     {
         // Ensure there is only one instance of QuestManager
@@ -64,13 +67,6 @@ public class AreaManager : MonoBehaviour
         layerSetter.SetLayerRecursive();
 
     }
-    private void Start()
-    {
-        foreach(SO_AreaData area in allAreas)
-        {
-            area.hasBeenVisited = false;
-        }
-    }
 
     private void OnEnable()
     {
@@ -84,7 +80,7 @@ public class AreaManager : MonoBehaviour
 
     private void HandlePlayerPositionChanged(LatLng newPosition)
     {
-        Debug.Log("handle player position change");
+        //Debug.Log("handle player position change");
 
         List<SO_AreaData> newCurrentAreas = new List<SO_AreaData>();
 
@@ -93,13 +89,13 @@ public class AreaManager : MonoBehaviour
             if (IsPlayerInArea(areaData, newPosition))
             {
                 newCurrentAreas.Add(areaData);
-                areaData.hasBeenVisited = true;
 
                 if (!currentAreas.Contains(areaData))
                 {
                     // Player has entered a new area
                     Debug.Log($"Player has entered area {areaData.name}");
                     EntityManager.Instance.LoadAllEntities(areaData);
+                    InteractionManager.Instance.UpdateAllEntityInteractions(areaData);
                 }
             }
             else if (currentAreas.Contains(areaData))

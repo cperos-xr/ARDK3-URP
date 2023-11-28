@@ -1,7 +1,36 @@
 using Niantic.Lightship.AR.Semantics;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
+
+
+[Serializable]
+public enum ESemanticChannel
+{
+    sky,
+    ground,
+    natural_ground,
+    artificial_ground,
+    water,
+    person,
+    building,
+    foliage,
+    grass,
+    flower_experimental,
+    tree_trunk_experimental,
+    pet_experimental,
+    sand_experimental,
+    tv_experimental,
+    dirt_experimental,
+    vehicle_experimental,
+    food_experimental,
+    loungeable_experimental,
+    snow_experimental,
+    harmony
+}
+
 
 public class SemanticChannelDetector : MonoBehaviour
 {
@@ -11,8 +40,10 @@ public class SemanticChannelDetector : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _semanticsText;
 
-    public delegate void IdentifySemanticChannelEvent(List<string> semanticChannels);
+    public delegate void IdentifySemanticChannelEvent(List<string> semanticChannels, Vector2 point);
     public static event IdentifySemanticChannelEvent OnSemanticChannelIdentified;
+
+    [SerializeField] private ManaLens manaLens;
 
     private void Update()
     {
@@ -33,38 +64,88 @@ public class SemanticChannelDetector : MonoBehaviour
         // Get the semantic channels at the tap position
         List<string> channelsAtPoint = _semanticsManager.GetChannelNamesAt(x, y);
         _semanticsText.text = "";
+
+// For in editor testing only, will send a random channel
+#if UNITY_EDITOR
+
+        ESemanticChannel randomChannel = (ESemanticChannel)UnityEngine.Random.Range(0, Enum.GetNames(typeof(ESemanticChannel)).Length);
+        channelsAtPoint.Add(randomChannel.ToString());
+        _semanticsText.text = randomChannel.ToString();
+
+#endif
         if (channelsAtPoint.Count == 0)
         {
-            Debug.Log($"No semantic channels at tap");
+            Debug.Log($"No semantic channels at tap {x},{y}");
             _semanticsText.text = "No semantic channels";
+
+
         }
-        // Process the channels as needed
-        foreach (var channel in channelsAtPoint)
+        else
         {
-            // Check if the channel matches any task objectives, etc.
-            Debug.Log($"Detected semantic channel at tap: {channel}");
-            _semanticsText.text = _semanticsText.text + channel + " ";
+            // Process the channels as needed
+            foreach (var channel in channelsAtPoint)
+            {
+                // Check if the channel matches any task objectives, etc.
+                Debug.Log($"Detected semantic channel at tap {x},{y}: {channel}");
+                _semanticsText.text = _semanticsText.text + channel + " ";
+            }
+
+            OnSemanticChannelIdentified(channelsAtPoint, point);
         }
 
-        OnSemanticChannelIdentified(channelsAtPoint);
     }
 
 #if UNITY_EDITOR
 
+    [Serializable]
+    struct ChannelIntergerConatainer
+    {
+        [SerializeField]
+        public ESemanticChannel selectedChannel;
+
+        [SerializeField]
+        public int channelCount;
+
+    }
+
+
+    [SerializeField] private List <ChannelIntergerConatainer> testChannels = new List<ChannelIntergerConatainer>();
+
+
+
     public void TestSemanticBroadcast()
     {
-        string loungeable = "loungeable_experimental";
-        string grass = "grass";
+        List<ESemanticChannel> semanticChannelList = new List<ESemanticChannel>();
 
-        List<string> list = new List<string>();
+        // Add each enum value to the list
 
-        list.Add(loungeable);
-        list.Add(grass);
+        foreach (ChannelIntergerConatainer selectedChannel in testChannels)
+        {
+            for (int i = 0; i <= selectedChannel.channelCount; i++)
+            {
+                semanticChannelList.Add(selectedChannel.selectedChannel);
+            }
 
-        OnSemanticChannelIdentified(list);
+        }
+
+        // Convert the enum list to a string list for the method call
+        List<string> semanticChannelStringList = semanticChannelList.Select(c => c.ToString()).ToList();
+
+        OnSemanticChannelIdentified(semanticChannelStringList, new Vector2(600f, 600f));
     }
 
 #endif
+
+    public void GivePono()
+    {
+        ManaLens.ELensState originalLensState = manaLens.lensState;
+        manaLens.lensState = ManaLens.ELensState.Extracting;
+        ESemanticChannel pono = ESemanticChannel.harmony;
+        List<string> semanticChannelStringList = new List<string>();
+        semanticChannelStringList.Add(pono.ToString());
+        OnSemanticChannelIdentified(semanticChannelStringList, new Vector2(600f, 600f));
+        manaLens.lensState = originalLensState;
+    }
 
     public bool DoesChannelExistAtPoint(Vector2 point, string channelName)
     {
