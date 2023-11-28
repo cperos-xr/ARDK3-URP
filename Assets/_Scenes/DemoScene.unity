@@ -6676,7 +6676,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d8b642f2df48f4985665437a5ace85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questUIHandler: {fileID: 1307342720}
 --- !u!1001 &579873961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8946,7 +8945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActiveTasks: []
-  CompletedTasks: []
+  completedTasks: []
   CompletedTaskObjectives: []
 --- !u!114 &803832438
 MonoBehaviour:
@@ -14211,6 +14210,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8499139588984013142, guid: 6f003d5a200da364d9f4c518267dc09e, type: 3}
   m_PrefabInstance: {fileID: 1263173799}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1266343988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1266343989}
+  - component: {fileID: 1266343990}
+  m_Layer: 0
+  m_Name: ScreenSettings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1266343989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266343988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2067728289}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1266343990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266343988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182fa652dd17deb4a90119a35bc33ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1277593951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19802,10 +19845,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _semanticsManager: {fileID: 1654950865}
   _semanticsText: {fileID: 596167505}
+  manaLens: {fileID: 414302069}
   testChannels:
   - selectedChannel: 19
     channelCount: 30
-  manaLens: {fileID: 414302069}
 --- !u!1001 &1616212855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26114,6 +26157,7 @@ Transform:
   - {fileID: 1367395506}
   - {fileID: 2134344524}
   - {fileID: 774333934}
+  - {fileID: 1266343989}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

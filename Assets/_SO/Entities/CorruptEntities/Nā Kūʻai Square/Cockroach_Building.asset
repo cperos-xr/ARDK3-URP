@@ -24,7 +24,7 @@ MonoBehaviour:
   - areaData: {fileID: 11400000, guid: 7bd940ac9d678e74eb5751a5c7e42261, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
-  - areaData: {fileID: 11400000, guid: 73ef1a5567e9f2e469a26aa4100d4aef, type: 2}
+  - areaData: {fileID: 11400000, guid: 3eab2a47301376742aa8be9758841f1d, type: 2}
     scarcityLevel:
       ScarcityLevel: 1
   ItemsDroppedUponPurification:

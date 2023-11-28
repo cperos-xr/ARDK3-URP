@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07116859d1d3bf24cb615448d2190737, type: 3}
   m_Name: ARI_GiveQuestArmyMuseum
   m_EditorClassIdentifier: 
-  entityInteractionUpdates: []
+  entityInteractionUpdates:
+  - entity: {fileID: 11400000, guid: 1858894ddc5a461439e796f28051e6d8, type: 2}
+    newInteraction: {fileID: 11400000, guid: d7ce5e5ebc11f0d4b8c4968b33f618fb, type: 2}
+    returnToPreviousInsteadOfNewInteraction: 0
   InteractionName: 
   itemDatas: []
   quest: {fileID: 11400000, guid: e4f74b795ea31604b97f9e765c5a2600, type: 2}
