@@ -3,7 +3,7 @@
 [![Watch the video](https://raw.githubusercontent.com/cperos-xr/ARDK3-URP/DemoLevel/Assets/_Art/Video/thumbnail.png)](https://drive.google.com/file/d/1WeZQqjThRvCwOpKHncUB-yIC5x1VAMeB/view?usp=sharing)
 
 
-##Introduction
+## Introduction
 
 Embark on "Secret of the Menehune," a captivating AR quest that is not only a game but a showcase of the ARDK Creator Toolkit, a tool I personally developed to revolutionize AR experiences in Unity. This toolkit, demonstrates the innovative use of Niantic's ARDK and Maps, enabling rapid and efficient creation of complex AR quests.
 
@@ -17,7 +17,7 @@ Join us in this enchanting exploration of Hawaii's cultural and natural beauty, 
 
 Map Layout:![](Aspose.Words.a19bdf19-ca9a-4b17-aafa-7bc101e89c99.001.jpeg)
 
-## Main Quest Chain: Menehune-Centric Structure:**
+## Main Quest Chain: Menehune-Centric Structure:
 
 #### 1. Nui - Aloha Waters
 - Quest 1: Map Quest (Initial Quest)
