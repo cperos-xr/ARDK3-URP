@@ -21,18 +21,22 @@ Join us in this enchanting exploration of Hawaii's cultural and natural beauty, 
 ## Main Quest Chain: Menehune-Centric Structure:
 
 #### 1. Nui - Aloha Waters
+- Location: Duke Kahanamoku Statue
 - Quest 1: Map Quest (Initial Quest)
-  - Start at Duke Kahanamoku Statue
   - Objective: Retrieve the Materials for Menehune map for navigating Niantic maps.
   - Task Locations: 
     - Dolphins Sculpture
     - 3d Cheeseburger in Paradise
 - Quest 2: Find Three Others
   - Objective: Locate three other Menehune in different realms.
-  - Specific Realms and Guardians:
+  - Find 3 Specific Realms and Guardians:
     - Sacred Gardens (Guardian: Lanihuli)
     - Nā Kūʻai Square (Guardian: Makamae)
     - Royal Grounds (Guardian: Kānehoa)
+  - Task Locations: 
+    - Aloha Girl in Kapiolani Park
+    - White Sands Tiki
+    - Rooftop Guitar Collection at the Hard Rock Cafe
 #### 2. Lanihuli - Sacred Garden
 - Location: Aloha Girl in Kapiolani Park
 - Quest 1: Old Stone Fountain
