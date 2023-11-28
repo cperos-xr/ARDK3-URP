@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: "Al\u0101mona of Anarchy "
   startingInteraction: {fileID: 0}
-  corruptEntityName: "Al\u0101mona of Anarchy "
+  corruptEntityName: "Al\u0101mona of Anarchy"
   corruptEntityDescription: A mongoose, its playful nature twisted into mischievous
     malevolence, stalking the streets.
   funFact: The mongooses found in Hawai'i are native to India and were originally

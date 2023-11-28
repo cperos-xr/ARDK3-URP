@@ -20,7 +20,7 @@ MonoBehaviour:
   itemDatas: []
   quest: {fileID: 11400000, guid: b5339967e74d18b42ac56c1b1e206fde, type: 2}
   notification:
-    notificationHeading: "Aloha mai k\u0101kou!"
+    notificationHeading: "K\u014Dkua!"
     notificationContent: "N\u0101 K\u016B\u02BBai Square buzzes with hidden treasures.
       Find the Woodroach's Hibiscus, Mongoose's Marble, and Tilapia's Scale. They're
       key to a vital essence recipe."
