@@ -2,7 +2,7 @@
 
 [![Watch the video](https://raw.githubusercontent.com/cperos-xr/ARDK3-URP/DemoLevel/Assets/_Art/Video/thumbnail.png)](https://drive.google.com/file/d/1WeZQqjThRvCwOpKHncUB-yIC5x1VAMeB/view?usp=sharing)
 
-##Indigenous Land Acknowledgement
+## Indigenous Land Acknowledgement
 
 I am fortunate to call Hawaii home, but I recognize that these islands are not my own. They are the ancestral lands of a sovereign, independent indigenous kingdom. In 1893, this kingdom was overthrown with the support of the U.S. government and American business interests. This interference paved the way for the annexation of the kingdom by 1898, during which the U.S. government "ceded" these lands without the consent of the Native Hawaiian people, known as Kānaka Maoli.
 
