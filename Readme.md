@@ -1,6 +1,6 @@
 ﻿# Secret of the Menehune: Complete Quest Document
 
-[![Watch the video](https://raw.githubusercontent.com/cperos-xr/ARDK3-URP/DemoLevel/Assets/_Art/Video/thumbnail.png)](https://drive.google.com/file/d/1WeZQqjThRvCwOpKHncUB-yIC5x1VAMeB/view?usp=sharing)
+[![Watch the video](https://raw.githubusercontent.com/cperos-xr/ARDK3-URP/DemoLevel/Assets/_Art/Video/thumbnail.png)](https://drive.google.com/file/d/17KcX1YycrbV58SCmOJbdodVyTBTdwLS-/view?usp=sharing)
 
 ## Indigenous Land Acknowledgement
 
