@@ -11,6 +11,7 @@ Since then, these lands have been exploited for their resources and have undergo
 For those who wish to delve deeper into this history and its ongoing impact, I encourage you to explore resources such as the Office of Hawaiian Affairs. You can find more information at [Office of Hawaiian Affairs](https://www.oha.org/).
 
 Mahalo,
+
 Constantine Peros
 
 ## Introduction
