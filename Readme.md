@@ -2,6 +2,16 @@
 
 [![Watch the video](https://raw.githubusercontent.com/cperos-xr/ARDK3-URP/DemoLevel/Assets/_Art/Video/thumbnail.png)](https://drive.google.com/file/d/1WeZQqjThRvCwOpKHncUB-yIC5x1VAMeB/view?usp=sharing)
 
+**Indigenous Land Acknowledgement**
+
+I am fortunate to call Hawaii home, but I recognize that these islands are not my own. They are the ancestral lands of a sovereign, independent indigenous kingdom. In 1893, this kingdom was overthrown with the support of the U.S. government and American business interests. This interference paved the way for the annexation of the kingdom by 1898, during which the U.S. government "ceded" these lands without the consent of the Native Hawaiian people, known as Kānaka Maoli.
+
+Since then, these lands have been exploited for their resources and have undergone irreversible changes in the name of violence, power, and destruction. Ecological atrocities have occurred here on scales beyond human comprehension, leaving indelible marks on the land, as exemplified by the bombings of Kahoʻolawe. Despite these scars, Hawaii remains one of the most beautiful places on earth.
+
+For those who wish to delve deeper into this history and its ongoing impact, I encourage you to explore resources such as the Office of Hawaiian Affairs. You can find more information at [Office of Hawaiian Affairs](https://www.oha.org/).
+
+Mahalo,
+Constantine Peros
 
 ## Introduction
 
@@ -174,8 +184,9 @@ Scarcity Levels: Example - Kitties may commonly appear in foliage in the Royal G
 
 #### Universal Healing Essence: Pono
 
-- Special Essence: Pono is a unique essence that can partially heal any entity, offering a universal healing power.
+- Special Essence: Pono is a unique essence that can partially heal any entity (10pts), offering a universal healing power.
 - Healing Power: It consistently heals 10 points of any creature's curse, regardless of its nature.
+- Often given as a gift for completing quests
 
 #### Battle Strategy
 
